@@ -7,10 +7,10 @@
     margin: auto;
 } 
 .sportnames{
-    width: 8rem; 
-    height: 34px;
-     border-radius: 5px;
-      border:2px solid black
+    width: 8rem;
+    height: 29px;
+    border-radius: 0px;
+    border: 1px solid black;
 }
 .sportname{
     width: 8rem; 
