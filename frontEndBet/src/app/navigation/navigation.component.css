@@ -21,7 +21,9 @@
   height: 30px !important;
   width:100%;
 }
-
+.dropdown-menu{
+  background-color: #212121 !important;
+}
 .nav-item a {
   color: #ffffff !important;
   font-size: 12px;
