@@ -17,12 +17,29 @@
   padding-left:7%;
   padding-right:5%;
 }
-#navbarSupportedContent{
+#navbarSupportedContent,ul{
   height: 30px !important;
+  width:100%;
 }
 
 .nav-item a {
   color: #ffffff !important;
   font-size: 12px;
   font-weight: bold;
+}
+.right{
+  padding-left:8%;
+  display: flex;
+  width:25%;
+}
+.nav-item .tz{
+  color:lightgray !important;
+  font-weight: normal;
+}
+.nav-item .tz span{
+  color:#fff !important;
+}
+.nav-item{
+  border-left: 1px solid;
+  border-right:1px solid;
 }
