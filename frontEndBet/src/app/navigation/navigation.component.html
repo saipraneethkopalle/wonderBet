@@ -1,35 +1,66 @@
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+<nav class="navbar navbar-light bg-light topnav">
+  <a class="navbar-brand" role="button">
     WONDERBET
   </a>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light secondnav">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Downline List <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" routerLinkActive="active">Downline List</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#" routerLinkActive="active">My Account</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          My Report
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Profit / Loss Report by Downline</a>
+          <a class="dropdown-item" href="#">Profit / Loss Report by Market</a>
+          <a class="dropdown-item" href="#">Casino Profit / Loss Report by Date</a>
+          <a class="dropdown-item" href="#">Profit / Loss Downline</a>
+          <a class="dropdown-item" href="#">Profit / Loss Sports Wise</a>
+          <a class="dropdown-item" href="#">Match Profit / Loss</a>
+          <a class="dropdown-item" href="#">Casino P/L Downline Monthly</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#" routerLinkActive="active">BetList</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="active">BetListLive</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="active">Risk Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="active">Banking</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="active">Block Market</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="active">Sport Setting</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="active">Admin Setting</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLinkActive="active">Result</a>
+      </li>
+      <li class="nav-item ls">
+        <a class="nav-link" routerLink="/addMatch" routerLinkActive="active">Add Match</a>
+      </li>
+      <div class="right">
+      <li class="nav-item">
+        <a class="nav-link tz" role="button" routerLinkActive="active">Time Zone : <span> GMT + 5:30</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" role="button" routerLinkActive="active">Logout </a>
+      </li>
+      </div>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
