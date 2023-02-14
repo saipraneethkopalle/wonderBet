@@ -7,14 +7,55 @@
   </div>
 </div>
 <div class="searchblock">
-
+  <div class="searchtd">
+    <!-- <div class="input-group">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-primary">search</button>
+    </div> -->
+  </div>
+  <div class="statusfilter">
+    Status
+    <select>
+      <option>ACTIVE</option>
+      <option>SUSPENDED</option>
+      <option>LOCKED</option>
+      <option>ALL</option>
+  </select></div>
+  <div class="addAdminblock">
+    <button type="button" class="addAdmin"><i class="fa fa-user-plus" aria-hidden="true"></i>
+      Add Super Admin</button>
+    <button type="button" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i>
+    </button>
+  </div>
 </div>
 <div class="statistics">
-
+  <div class="stats1"><li>Total Balance</li>
+    <li class="pbu">PBU 613,771,780.316</li>
+    </div>
+  <div class="stats2">
+    <li>Total Exposure</li>
+    <li class="pbu">PBU 22.00</li>
+  </div>
+  <div class="stats3">
+    <li>Total Avail. bal.</li>
+    <li class="pbu">PBU 613,771,758.316</li>
+  </div>
+  <div class="stats4">
+    <li>Balance</li>
+    <li class="pbu">PBU 389,175,898.50</li>
+  </div>
+  <div class="stats5">
+    <li>Available Balance</li>
+    <li class="pbu">PBU 1,002,947,656.816</li>
+  </div>
+  <div class="stats6">
+    <li>Total Player Balance</li>
+    <li class="pbu">PBU 130,779,882.99</li>
+  </div>
 </div>
 <div class="data">
 <table class="accountdetails">
-  <tr>
+  <tr class="th">
     <td>Account</td>
     <td>Credit Ref.</td>
     <td>Balance</td>
@@ -25,17 +66,29 @@
     <td>Status</td>
     <td>Action</td>
   </tr>
-  <tr *ngFor="let item of accountDetails">
-    <td>{{item.account}}</td>
-    <td>{{item.creditRef}}</td>
-    <td>{{item.balance}}</td>
-    <td>{{item.exposure}}</td>
+  <tr *ngFor="let item of accountDetails" class="accountData">
+    <td><span class="badge badge-primary">{{item.accountType}}</span> &nbsp;<a href="#">{{item.account}}</a></td>
+    <td><a href="#" class="credRef">{{item.creditRef}}</a> <i class='fas fa-pen'></i></td>
+    <td><a href="#" class="bal">{{item.balance}}</a></td>
+    <td><button type="button" class="exposure">{{item.exposure}}</button></td>
     <td>{{item.availBal}}</td>
     <td>{{item.playerBal}}</td>
     <td>{{item.refPL}}</td>
-    <td>{{item.status}}</td>
-    <td>Action</td>
+    <td><button type="button" class="status">{{item.status}}</button></td>
+    <td>
+      <!-- <button type="button"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
+      <button type="button"></button>
+      <button type="button"><i class="fa fa-gear"></i></button>
+      <button type="button"><i class="material-icons">person</i></button> -->
+    </td>
   </tr>
 </table>
+</div>
+<div class="bottomBlock">
+  <div class="changeStatus">Change Status</div>
+  <div class="profile">Profile</div>
+  <div class="bH">Betting History</div>
+  <div class="betPL">Betting Profit & Loss</div>
+  <div class="bank">Bank</div>
 </div>
 </div>
