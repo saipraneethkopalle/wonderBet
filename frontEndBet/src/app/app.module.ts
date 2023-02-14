@@ -7,6 +7,22 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { MyaccountComponent } from './myaccount/myaccount.component';
+import { BetlistComponent } from './betlist/betlist.component';
+import { BetlistliveComponent } from './betlistlive/betlistlive.component';
+import { RiskmanagementComponent } from './riskmanagement/riskmanagement.component';
+import { BankingComponent } from './banking/banking.component';
+import { BlockmarketComponent } from './blockmarket/blockmarket.component';
+import { SportsettingComponent } from './sportsetting/sportsetting.component';
+import { AdminsettingsComponent } from './adminsettings/adminsettings.component';
+import { ResultComponent } from './result/result.component';
+import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
+import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
+import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
+import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
+import { SportWiseProfitlossComponent } from './sport-wise-profitloss/sport-wise-profitloss.component';
+import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
+import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +30,23 @@ import { LoginPageComponent } from './login-page/login-page.component';
     NavigationComponent,
     AddmatchComponent,
     HomeComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    MyaccountComponent,
+    BetlistComponent,
+    BetlistliveComponent,
+    RiskmanagementComponent,
+    BankingComponent,
+    BlockmarketComponent,
+    SportsettingComponent,
+    AdminsettingsComponent,
+    ResultComponent,
+    DownlineProfitlossComponent,
+    MarketProfitlossComponent,
+    CasinoProfitlossDateComponent,
+    DownlineReportProfitlossComponent,
+    SportWiseProfitlossComponent,
+    MatchProfitlossComponent,
+    CasinoProfitlossMonthlyComponent
   ],
   imports: [
     BrowserModule,
