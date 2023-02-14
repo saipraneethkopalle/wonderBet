@@ -1,0 +1,72 @@
+
+.login-wrap{
+    position: absolute;
+    top: 15%;
+    left: calc(50% - 540px/2);
+    width: 540px;
+    height: 408px;
+    background-color: rgba(240, 232, 232, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 50%);
+}
+.login-panel {
+    color: #243a48;
+    margin-left: 230px;
+    margin-top: 80px;
+}
+.login-panel dt {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+.login-panel dd {
+    position: relative;
+    width: 220px;
+    margin-bottom: 7px;
+}
+.login-panel input{
+    width: 100%;
+    height: 33px;
+    font-size: 14px;
+    line-height: 21px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0px 2px 0px 0px rgb(0 0 0 / 10%);
+    margin: 0;
+    border-radius: 5px;
+}
+dt {
+    display: block;
+    white-space: nowrap;
+}
+#canvas{
+    position: absolute;
+    width: 70px;
+    right: -15px;
+    top: 6px;
+    font-weight: bold;
+    text-align: right;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.kv {
+    width: 250px;
+    height: 95%;
+    background: #ffb80c url(/assets/bg-login_wrap.webp) no-repeat;
+    border-radius: 8px 0 0 8px;
+    padding-top: 20px;
+}
+.login-panel .btn-send {
+    width: 218px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 15px;
+    margin: 15px 0 0;
+}
+.btn-send {
+    background-color: #ffa00c;
+    border: 2px solid #cb8009;
+    font-family: Tahoma, Helvetica, sans-serif;
+    border-radius: 5px;
+}
