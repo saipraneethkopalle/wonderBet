@@ -11,18 +11,17 @@
 .login-panel {
     color: #243a48;
     margin-left: 110%;
-    margin-top: 80px;
 }
 .login-panel dt {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-family: Tahoma, Helvetica, sans-serif;
 }
 .login-panel dd {
     position: relative;
     width: 220px;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
 .login-panel input{
     width: 100%;
@@ -37,16 +36,18 @@
 dt {
     display: block;
     white-space: nowrap;
+    font-weight: 300;
 }
-#canvas{
+#randomCode{
     position: absolute;
-    width: 70px;
-    right: -15px;
-    top: 6px;
+    width: 90px;
+    right: 10px;
+    top: 2px;
     font-weight: bold;
     text-align: right;
     overflow-clip-margin: content-box;
     overflow: clip;
+    font-size: 21px;
 }
 .kv {
     width: 250px;
@@ -55,16 +56,23 @@ dt {
     border-radius: 8px 0 0 8px;
     padding-top: 20px;
 }
-.login-panel .btn-send {
+.login-panel{
     width: 218px;
     height: 36px;
     line-height: 36px;
-    font-size: 15px;
-    margin: 15px 0 0;
+    font-size: 15.5px;
+    margin-top: 80px;
 }
 .btn-send {
+    width: 218px;
     background-color: #ffa00c;
     border: 2px solid #cb8009;
     font-family: Tahoma, Helvetica, sans-serif;
     border-radius: 5px;
+    font-weight: bold;
+    padding-top:1px;
+    padding-bottom: 1px;
+}
+input::placeholder {
+    padding: 3.5px;
 }
