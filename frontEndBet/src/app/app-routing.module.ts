@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path:"addMatch",component:AddmatchComponent
   },
-  {path:"loginPage",component:LoginPageComponent} 
+  {path:"login",component:LoginPageComponent} 
 ];
 
 @NgModule({
