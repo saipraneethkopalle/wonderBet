@@ -39,3 +39,9 @@
 .statistics{
   height: 100px;
 }
+table,tr{
+  width:100%;
+}
+td{
+  width:fit-content;
+}
