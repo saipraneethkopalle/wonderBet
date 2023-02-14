@@ -6,4 +6,36 @@
     <marquee class="message"><i class="idate">31 Jul 2022</i>Notice: S RAJU RUN FANCY WRONG ODDS BETS WILL BE DELETED</marquee>
   </div>
 </div>
+<div class="searchblock">
+
+</div>
+<div class="statistics">
+
+</div>
+<div class="data">
+<table class="accountdetails">
+  <tr>
+    <td>Account</td>
+    <td>Credit Ref.</td>
+    <td>Balance</td>
+    <td>Exposure</td>
+    <td>Avail. bal.</td>
+    <td>Player Balance</td>
+    <td>Ref. P/L</td>
+    <td>Status</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let item of accountDetails">
+    <td>{{item.account}}</td>
+    <td>{{item.creditRef}}</td>
+    <td>{{item.balance}}</td>
+    <td>{{item.exposure}}</td>
+    <td>{{item.availBal}}</td>
+    <td>{{item.playerBal}}</td>
+    <td>{{item.refPL}}</td>
+    <td>{{item.status}}</td>
+    <td>Action</td>
+  </tr>
+</table>
+</div>
 </div>
