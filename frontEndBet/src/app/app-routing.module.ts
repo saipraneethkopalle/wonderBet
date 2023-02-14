@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { AdminsettingsComponent } from './adminsettings/adminsettings.component';
+import { AsetfancyresultComponent } from './asetfancyresult/asetfancyresult.component';
 import { BankingComponent } from './banking/banking.component';
 import { BetlistComponent } from './betlist/betlist.component';
 import { BetlistliveComponent } from './betlistlive/betlistlive.component';
@@ -17,6 +18,7 @@ import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.co
 import { MyaccountComponent } from './myaccount/myaccount.component';
 import { ResultComponent } from './result/result.component';
 import { RiskmanagementComponent } from './riskmanagement/riskmanagement.component';
+import { SetmarketresultComponent } from './setmarketresult/setmarketresult.component';
 import { SportWiseProfitlossComponent } from './sport-wise-profitloss/sport-wise-profitloss.component';
 import { SportsettingComponent } from './sportsetting/sportsetting.component';
 
@@ -39,7 +41,9 @@ const routes: Routes = [
   {path:"dowlineprofitloss",component:DownlineProfitlossComponent},
   {path:"sportWiseprofitloss",component:SportWiseProfitlossComponent},
   {path:"matchProfitloss",component:MatchProfitlossComponent},
-  {path:"casinoProfitByMonth",component:CasinoProfitlossMonthlyComponent}
+  {path:"casinoProfitByMonth",component:CasinoProfitlossMonthlyComponent},
+  {path:"aSetFancyResult",component:AsetfancyresultComponent},
+  {path:"aSetMarketResult",component:SetmarketresultComponent}
 ];
 
 @NgModule({

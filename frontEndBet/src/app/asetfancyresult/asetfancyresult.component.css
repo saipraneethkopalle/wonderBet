@@ -1,0 +1,55 @@
+.wrapper{
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    width: 98%;
+    margin: auto;
+} 
+.sportnames{
+    width: 8rem; 
+    height: 34px;
+     border-radius: 5px;
+      border:2px solid black
+}
+.sportname{
+    width: 8rem; 
+    height: 34px;
+}
+th{
+    color: #243a48;
+    background-color: #e4e4e4;
+    border: 1px solid #7e97a7;
+    border-width: 1px 0 1px 0;
+    padding: 6px
+}
+.sportsn{
+    width: 8rem; 
+    height: 24px;
+     border-radius: 2px;
+      border:2px solid black
+}
+.match_btn{
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 77px;
+    margin-right: 1px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+}
+.match_bttn{
+    background: #dc143c;
+    /* border-color: #cb8009; */
+    width: 79px;
+    margin-right: 1px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+}
