@@ -44,6 +44,42 @@
 .searchtd{
   width:23%;
 }
+.searchbox{
+  display:flex;
+  color:#212121;
+  width:fit-content;
+  border-radius:4px;
+  border: 1px solid #aaa;
+  box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+}
+.fa-search{
+  padding:5px;
+  border: 1px solid #aaa;
+  box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+  background-color: white;
+  border-right:none;
+  padding-top:10px;
+}
+.searchTB{
+  height:27px;
+  width:185px;
+  font-size:12px;
+  padding:1px;
+  padding-left:4px;
+  border: 1px solid #aaa;
+  box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+  border-left:none;
+  border-bottom:none;
+}
+.btnSearch{
+background-color: #FFC726;
+border:none;
+color:#212121;
+border-radius:4px;
+margin:1px;
+font-weight: bold;
+font-size:12px;
+}
 .statusfilter{
   width:15%;
 }
@@ -106,7 +142,8 @@ table,tr{
 .th td{
   color:#243a48;
   padding:5px;
-  font-weight:bold;
+  font-weight: 600;
+  font-size:13px;
 }
 td{
   width:fit-content;

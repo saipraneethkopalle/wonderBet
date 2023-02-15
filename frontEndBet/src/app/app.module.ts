@@ -23,6 +23,8 @@ import { DownlineReportProfitlossComponent } from './downline-report-profitloss/
 import { SportWiseProfitlossComponent } from './sport-wise-profitloss/sport-wise-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
 import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
+import { AsetfancyresultComponent } from './asetfancyresult/asetfancyresult.component';
+import { SetmarketresultComponent } from './setmarketresult/setmarketresult.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/ca
     DownlineReportProfitlossComponent,
     SportWiseProfitlossComponent,
     MatchProfitlossComponent,
-    CasinoProfitlossMonthlyComponent
+    CasinoProfitlossMonthlyComponent,
+    AsetfancyresultComponent,
+    SetmarketresultComponent
   ],
   imports: [
     BrowserModule,

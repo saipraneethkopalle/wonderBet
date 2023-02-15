@@ -1,0 +1,21 @@
+.wrap_function{
+    width: 86%;
+    margin: auto;
+    padding: 10px 10px 0;
+    background-color: #E0E6E6;
+    border-bottom: 1px solid #7e97a7;
+    /* margin-bottom: 10px */
+}
+
+.col-lg-12{
+    position: relative;
+    min-height: 1px;
+    
+}
+.suspend{
+    background-size: cover;
+    width: 140px !important;
+    height: 115px !important;
+    border: 0 !important;
+    border-radius: 10px;
+}
