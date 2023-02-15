@@ -142,7 +142,8 @@ table,tr{
 .th td{
   color:#243a48;
   padding:5px;
-  font-weight:bold;
+  font-weight: 600;
+  font-size:13px;
 }
 td{
   width:fit-content;

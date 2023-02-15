@@ -57,6 +57,8 @@ td{
 .tbox td{
   padding:10px;
   text-align: right;
+  font-weight: 600;
+  font-size:13px;
 }
 .tbox .sno{
   text-align: left;

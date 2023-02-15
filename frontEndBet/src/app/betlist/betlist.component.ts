@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./betlist.component.css']
 })
 export class BetlistComponent implements OnInit {
-
+  betListData:any;
   constructor() { }
 
   ngOnInit(): void {
