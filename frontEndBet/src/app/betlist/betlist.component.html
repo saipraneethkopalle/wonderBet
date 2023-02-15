@@ -54,7 +54,17 @@
   </div>
   <br>
   <div class="betlistfilter">
-
+    <div class="filter1">
+      <label>Bet Status:</label><select><option>Selected</option><option>Cancelled</option><option>Voided</option></select>
+      <label>Period </label><input type="date" class="date" [value]="currentDate"><input type="time"/>
+       <span>to</span>
+       <input type="date" class="date"><input type="time"/>
+    </div>
+    <div class="filter2">
+      <button type="button" class="btn1">Just For Today</button>
+      <button type="button" class="btn2">From Yesterday</button>
+      <button type="button" class="btn3">Get History</button>
+    </div>
   </div>
   <div class="betDetails">
     Bet List enables you to review the bets you have placed.<br>
@@ -76,7 +86,7 @@
       <td>Liability</td>
       <td>Profit / Loss</td>
     </tr>
-    <tr *ngFor="let item of betListData">
+    <tr *ngFor="let item of betListData" class="bet">
       <td>{{item.plId}}</td>
       <td>{{item.betId}}</td>
       <td>{{item.betPlaced}}</td>
@@ -88,6 +98,17 @@
       <td>{{item.stake}}</td>
       <td>{{item.liability}}</td>
       <td>{{item.profitLoss}}</td>
+    </tr>
+    <tr *ngIf="error" class="err"><td colspan="2" scope="col">You have no bets in this time period.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </table>
 </div>

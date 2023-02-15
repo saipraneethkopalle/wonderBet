@@ -16,12 +16,17 @@
   border-bottom: 1px solid #7e97a7;
   margin-bottom: 10px;
 }
+label{
+  font-size:12px;
+}
 .betDetails{
   padding:5px;
   font-size:12px;
 }
 table,tr{
 width:100%;
+border-collapse: collapse;
+border-bottom: 1px solid #7e97a7;
 }
 .betlisttb{
     border-top:1px solid #7e97a7;
@@ -33,4 +38,11 @@ width:100%;
   padding:10px;
   font-weight: 600;
   font-size:13px;
+}
+.bet,.err{
+  background-color: #ffffff;
+}
+.err td{
+  font-weight: normal;
+  font-size:12px;
 }

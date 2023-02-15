@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BetlistComponent implements OnInit {
   betListData:any;
+  error:any =true;
+  currentDate:any=new Date();
   constructor() { }
 
   ngOnInit(): void {
