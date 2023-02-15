@@ -55,10 +55,10 @@
   <br>
   <div class="betlistfilter">
     <div class="filter1">
-      <label>Bet Status:</label><select><option>Selected</option><option>Cancelled</option><option>Voided</option></select>
-      <label>Period </label><input type="date" class="date" [value]="currentDate"><input type="time"/>
+      <label>Bet Status :</label><select class="betStatus"><option>Settled</option><option>Cancelled</option><option>Voided</option></select>
+      <label>Period </label><input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
        <span>to</span>
-       <input type="date" class="date"><input type="time"/>
+       <input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
     </div>
     <div class="filter2">
       <button type="button" class="btn1">Just For Today</button>
