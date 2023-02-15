@@ -1,1 +1,114 @@
 <app-navigation></app-navigation>
+<div class="main">
+  <h5>Bet List</h5>
+  <div class="selectGroup">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+      <label class="form-check-label" for="inlineRadio1">Soccer</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+      <label class="form-check-label" for="inlineRadio2">Tennis</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+      <label class="form-check-label" for="inlineRadio1">Cricket</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+      <label class="form-check-label" for="inlineRadio2">Cricket / Fancy Bet</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+      <label class="form-check-label" for="inlineRadio1">Cricket / Fancy1 Bet</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+      <label class="form-check-label" for="inlineRadio2">BOOK Cricket</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+      <label class="form-check-label" for="inlineRadio1">Toss</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+      <label class="form-check-label" for="inlineRadio2">Casino</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+      <label class="form-check-label" for="inlineRadio1">Election/Fancy Bet</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+      <label class="form-check-label" for="inlineRadio2">FancyBet</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+      <label class="form-check-label" for="inlineRadio1">Premium Fancy</label>
+    </div>
+  </div>
+  <br>
+  <div class="betlistfilter">
+    <div class="filter1">
+      <label>Bet Status :</label><select class="betStatus"><option>Settled</option><option>Cancelled</option><option>Voided</option></select>
+      <label>Period </label><input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
+       <span>to</span>
+       <input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
+    </div>
+    <div class="filter2">
+      <button type="button" class="btn1">Just For Today</button>
+      <button type="button" class="btn2">From Yesterday</button>
+      <button type="button" class="btn3">Get History</button>
+    </div>
+  </div>
+  <div class="betDetails">
+    Bet List enables you to review the bets you have placed.<br>
+    Specify the time period during which your bets were placed, the type of markets on which the bets were placed, and
+    the sport.<br>
+    Bet List is available online for the past 30 days.
+  </div>
+  <table class="betlisttb">
+    <tr class="betlisthead">
+      <td>PL ID</td>
+      <td>Bet ID</td>
+      <td>Bet placed</td>
+      <td>IP Address</td>
+      <td>Market</td>
+      <td>Selection</td>
+      <td>Type</td>
+      <td>Odds req.</td>
+      <td>Stake</td>
+      <td>Liability</td>
+      <td>Profit / Loss</td>
+    </tr>
+    <tr *ngFor="let item of betListData" class="bet">
+      <td>{{item.plId}}</td>
+      <td>{{item.betId}}</td>
+      <td>{{item.betPlaced}}</td>
+      <td>{{item.ipAddress}}</td>
+      <td>{{item.market}}</td>
+      <td>{{item.selection}}</td>
+      <td>{{item.type}}</td>
+      <td>{{item.oddsReq}}</td>
+      <td>{{item.stake}}</td>
+      <td>{{item.liability}}</td>
+      <td>{{item.profitLoss}}</td>
+    </tr>
+    <tr *ngIf="error" class="err"><td colspan="2" scope="col">You have no bets in this time period.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
