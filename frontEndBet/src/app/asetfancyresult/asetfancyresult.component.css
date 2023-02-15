@@ -15,6 +15,9 @@
     border-radius: 0px;
     border: 1px solid black;
 } */
+.sportnames{
+    margin-right: 5px
+}
 .sportname{
     width: 8rem; 
     height: 34px;
@@ -30,7 +33,8 @@ th{
     width: 8rem; 
     height: 24px;
      border-radius: 2px;
-      border:1px solid black
+      border:1px solid black;
+      margin-right: 5px;
 }
 .match_btn{
     background: #ffb90e;
@@ -55,6 +59,7 @@ th{
     font-weight: bold;
     line-height: 23px;
     font-size: 12px;
+    color: white;
 }
 
 .total-all .sportnames{
@@ -89,4 +94,8 @@ th{
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
 
+}
+
+label{
+    margin-right: 8px;
 }

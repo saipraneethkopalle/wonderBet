@@ -1,0 +1,96 @@
+h2{
+    font-size: 13px;
+    line-height: 20px;
+    padding-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 113px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.funtion_wraper {
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 23px;
+    width: 87%;
+    margin: auto;
+    background-color: #E0E6E6;
+    border-bottom: 1px solid #7e97a7;
+    
+}
+td{
+    font-weight: 700;
+    font-size: 13px;
+    border-top: 1px solid #eee;
+    padding: 6px 10px;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.total-all .sportnames{
+    height: 26px;
+    line-height: 30px;
+    margin: 0;
+    width: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.match_btn{
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 77px;
+    margin-right: 1px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+}
+.funtion_wrapers {
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 23px;
+    width: 87%;
+    margin: auto;
+    
+    /* border-bottom: 1px solid #7e97a7; */
+    
+}
+.searchbtn{
+    margin-left: 5px;
+    width: 257px;
+    height: 29px;
+    margin-top: 4px;
+    border-radius: 2px;
+    border: none;
+    margin-left: 5px;
+    padding-left: 31px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.field{
+    position: relative;
+}
+.search{
+    position: absolute;
+    border: none;
+    margin-top: 5px;
+    background-color: white;
+    margin-left: 59px;
+    border: none; 
+    z-index: 1;
+    top: 3%;
+    left: -50px;
+    font-size:13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cal-input{
+    border: none;
+    border-radius: 3px;
+    border-style: inset;
+}
