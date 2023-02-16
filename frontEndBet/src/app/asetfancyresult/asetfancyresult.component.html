@@ -1,76 +1,72 @@
 <app-navigation></app-navigation>
 <section style="background-color: #f0ece1;">
-    <div class="wrapper">
-        <div class="sports">
+  <div class="wrapper">
+    <div class="sports">
             <h5 class="main  head p-2"  style="font-size: 14px;font-weight: 550;">Set Fancy Result</h5>
-            <div class="d-flex p-2 total-all" >
-                <label class="mt-2 main " ><small>Select Sport:</small> </label>
-                <td>
-              <select class="sportnames "   >
-                <option class="main" value="-1" >Select Sport</option>
-                <option >Cricket</option>
-                <option >Tennis</option>
-                <option >Soccer</option>
-               </select>
-              </td>
-
-                <label class="mt-2 main" ><small >Select Match:</small></label>
-                <td>
-                  <select class="sportnames" >
-                    <option class="main">Select Sport</option>
-                    <option class="main" >Saab</option>
-                    <option class="main" >Opel</option>
-                    <option class="main" >Audi</option>
-                    </select>
-                </td>
-              
-           </div>
-           <div>
-
-            <table class="table">
-                <thead class="">
+      <div class="d-flex p-2 total-all" >
+        <label class="mt-2 main " ><small>Select Sport:</small> </label>
+          <td>
+            <select class="sportnames "   >
+              <option class="main" value="-1" >Select Sport</option>
+              <option >Cricket</option>
+              <option >Tennis</option>
+              <option >Soccer</option>
+            </select>
+          </td>
+          <label class="mt-2 main" ><small >Select Match:</small></label>
+            <td>
+              <select class="sportnames" >
+                <option class="main">Select Sport</option>
+                <option class="main" >Saab</option>
+                <option class="main" >Opel</option>
+                <option class="main" >Audi</option>
+              </select>
+            </td>   
+      </div>
+      <div>
+        <table class="table">
+            <thead class="">
                   <tr>
                     <th class="main" scope="col">Sport</th>
                     <th class="main" scope="col">Fancy ID</th>
                     <th class="main" scope="col">Fancy Name</th>
                     <th class="main" scope="col">Match Name</th>
                   </tr>
-                </thead>
-                <tbody style="background-color: white;">
-                  <tr>
-                    <td class="main">Cricket</td>
-                    <td class="main">32019308-6291000.FY</td>
-                    <td class="main">Who will win the Toss</td>
-                    <td class="main">Canterbury v Central Districts
-                    </td>
-                  </tr>
-                  <tr>
-                    <td >
-                        <select class="sportsn " >
-                            <option class="main">Select </option>
-                            <option class="main" value="saab">Canterbury</option>
-                            <option class="main" value="opel">Central Districts</option>
-                           </select>
-                    </td>
-                    <td><button class="match_btn">Set</button></td>
-                    <td><button class="match_bttn">Suspended</button></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-
-           </div>
-           
-
+            </thead>
+            <tbody style="background-color: white;">
+              <tr>
+                <td class="main">Cricket</td>
+                <td class="main">32019308-6291000.FY</td>
+                <td class="main">Who will win the Toss</td>
+                <td class="main">Canterbury v Central Districts</td>
+              </tr>
+              <tr>
+                <td >
+                  <select class="sportsn " >
+                    <option class="main">Select </option>
+                    <option class="main" value="saab">Canterbury</option>
+                    <option class="main" value="opel">Central Districts</option>
+                  </select>
+                </td>
+                <td><button class="match_btn">Set</button></td>
+                <td><button class="match_bttn">Suspended</button></td>
+                <td></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="funtion_wraper ">
+        <div class="sports_winner" >
+          <div>
+              <label class="inputs">Sport:</label><select class="options"><option>Cricket</option><option>Soccer</option><option>Tenis</option></select>
+               <label  class="inputbody">Form</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
+               <label  class="inputbody">to</label><input class="date"  [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
+               <button class="match_button">Search</button>
+               <input class="searchbtn"  placeholder="Search Match">
+               
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
-
-<!-- <section> -->
-    <div class="wrapper">
-        <div class="sportSetting">
-       
-            
-        </div>
-    </div>
-<!-- </section> -->

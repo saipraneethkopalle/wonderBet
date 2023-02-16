@@ -14,8 +14,8 @@ export class SetmarketresultComponent implements OnInit {
   ngOnInit(): void {
     console.log("current date",this.currentDate)
   }
-  get(v:any){
-    console.log("clicked",v.target.value)
-  }
+  // get(v:any){
+  //   console.log("clicked",v.target.value)
+  // }
 
 }
