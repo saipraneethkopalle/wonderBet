@@ -1,0 +1,78 @@
+.full-wrap {
+    position: relative;
+    min-width: 80%;
+    max-width: calc(100% - 40px);
+    padding-left: 20px;
+}
+
+h2 {
+    font-size: 13px;
+    line-height: 20px;
+    padding-top: 6px;
+    margin-bottom: 6px;
+    font-weight: 900;
+}
+
+.banking-top{
+    display: flex;
+    margin: 10px 0 10px 0;
+    font-family:Verdana,Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+#searchUserId{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 290px;
+    border-radius: 5px;
+    border: none;
+    border-style: inset;
+    border-width: 2px;
+}
+
+
+element.style {
+    font-weight: bold;
+}
+
+.table01 {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 15px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-top: 1px solid #7e97a7;
+}
+
+thead{
+    background-color: #e4e4e4;
+    font-size: 13px;
+    border-top: 1px solid #7e97a7;;
+}
+
+.total_all .input-list .btn-send, .total_all .filter-list .btn-send, .nova88exch .total_all .input-list .search-but, .nova88exch .total_all .filter-list .search-but {
+    width: max-content;
+    padding: 0 8px;
+    height: 32px;
+    line-height: 28px;
+}
+
+.banking-btn{
+    background-color: #ffa00c;
+    color: black;
+    font-weight: 900;
+    margin-right: 8px;
+    border: 1px solid #cd8009;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bank-li{
+    list-style: none;
+}

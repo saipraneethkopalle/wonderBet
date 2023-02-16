@@ -25,6 +25,9 @@ import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.co
 import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
 import { AsetfancyresultComponent } from './asetfancyresult/asetfancyresult.component';
 import { SetmarketresultComponent } from './setmarketresult/setmarketresult.component';
+import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
+import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-setting/admin-setting-website-setting.component';
+import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { SetmarketresultComponent } from './setmarketresult/setmarketresult.comp
     MatchProfitlossComponent,
     CasinoProfitlossMonthlyComponent,
     AsetfancyresultComponent,
-    SetmarketresultComponent
+    SetmarketresultComponent,
+    AdminSettingSearchUserComponent,
+    AdminSettingWebsiteSettingComponent,
+    AdminSettingSurveillanceSettingsComponent
   ],
   imports: [
     BrowserModule,

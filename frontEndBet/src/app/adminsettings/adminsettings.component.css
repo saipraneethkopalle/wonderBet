@@ -1,45 +1,29 @@
 .main-wrap {
     position: relative;
-    width: 1350px;
+    width: 80%;
     margin: 0 auto;
-}
-
-.col-lg-12 {
-    width: 100%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-.abc{
-    border-bottom: 1.5px solid rgb(88, 86, 86);
-    background-color: rgb(218, 222, 226);
-    margin-bottom: 5px;
 }
 h2 {
     font-size: 13px;
     line-height: 20px;
     padding-top: 6px;
     margin-bottom: 6px;
+    font-weight: 700    ;
+
+}
+ul {
+    display: flex;
+    list-style: none; 
+    padding: 0; 
 }
 
-.status_but {
-    width: 351px;
-}
-.status_but li{
-    display: block;
-}
-
-li {
-    cursor: pointer !important;
-}
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+.my-3{
+    border-bottom: 1.5px solid rgb(88, 86, 86);
+    background-color: rgb(218, 222, 226);
+    margin-bottom: 5px;
 }
 
-.status_but .but_suspend img{
+img{
     color: #E83523;
     line-height: 20px;
     border: 2px solid #1e1e1e !important;
@@ -47,25 +31,12 @@ li {
     width: 165px;
     margin-right: 9px;
 }
-
-.function-wrap {
-    padding-left: 5px !important;
-}
-ul {
-    display: flex;
-    list-style: none; 
-    padding: 0; 
-}
-h2{
-    font-weight: 700    ;
-}
-
 /* change password pop up css */
 .modal-content{
     position: fixed;
     top: 95px;
     left: 50%;
-    background-color: #eee;
+    background-color: rgb(212, 211, 211);
     width: 430px;
     border-radius: 5px;
     padding: 15px;
@@ -76,10 +47,12 @@ h2{
     background: #ffa00c url(/adminfiles/img/bg-send.gif) repeat-x;
     border-color: #be7f1a;
     color: #1e1e1e;
-    font-weight: 900;
-    font-size: 10px;
-    width: 35%;
+}
+.btn-primary#cpBtn{
     margin-right: 120px;
+    width: 35%;
+    font-size: 10px;
+    font-weight: 900;
 }
 
 h4{
@@ -128,3 +101,32 @@ label{
     padding-left: 40px;
 }
 
+/* Deposite Chips css */
+
+#amt{
+    margin-left: 105px;
+    width: 50%;
+    border: solid 0.3px black;
+    background-color: rgb(223, 227, 230);
+}
+
+#balance{
+    color: #3b5160;
+    font-size: 15px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+.modal-body#dcmodal{
+    border-bottom: solid 0.5px rgb(44, 43, 43);
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 2px;
+}
+.btn-primary#dcBtn{
+ margin-top: 20px;
+ width: 20%;
+ font-size: 13px;
+ font-weight: 900;
+ padding : 1px 0px
+}

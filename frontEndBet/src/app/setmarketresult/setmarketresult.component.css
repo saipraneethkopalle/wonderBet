@@ -1,0 +1,136 @@
+.main{
+    width:100%;
+    min-height: 650px;
+    height:auto;
+    overflow:hidden;
+    padding-left:7%;
+    padding-right:6%;
+    font-size:14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:5px;
+  }
+
+  h2{
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+  
+.sportsBody{
+    padding: 10px 10px 0;
+    background-color: #E0E6E6;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 10px;
+  }
+  label{
+    font-size:12px;
+    
+  }
+  .filter1,.filter2{
+    padding:5px;
+  }
+  .filter1 label{
+    padding-right:5px;
+  }
+  .sportStatus{
+    height: 27px;
+    width: 128px;
+    border-radius: 1px;
+  }
+  .input{
+    margin-right: 5px;
+  }
+  .inputbody{
+    margin-left: 13px
+  }
+  .match_btn{
+    margin-left: 31px;
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 77px;
+    margin-right: 1px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+  }
+  .sports{
+    width: 121px;
+    height: 32px;
+    margin-left: 10px;
+  }
+  .sports_option{
+    margin-left: 10px;
+  }
+  .date{
+    font-family: Tahoma, Helvetica, sans-serif;
+      color: #1e1e1e;
+      font-size: 12px;
+      border: 0px #aaa solid;
+      background: #fff;
+      box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+      border-radius: 4px;
+      padding: 5px;
+      margin: 0 5px 5px 0;
+      box-sizing: border-box;
+      height: 28px;
+      width: 153px;
+      margin-left: 13px;
+  }
+  .match_button{
+    margin-left: 7px;
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 58px;
+    margin-right: 1px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+    height: 31px
+  }
+  
+  .search{
+    position: relative;
+    border: none;
+    margin-top: 5px;
+    background-color: white;
+    border: none; 
+    /* z-index: 1; */
+    top: 3%;
+    left: 31px;
+    font-size:13px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+.searchbtn{
+  margin-left: 5px;
+  width: 257px;
+  height: 29px;
+  margin-top: 4px;
+  border-radius: 2px;
+  border: none;
+  margin-left: 5px;
+  padding-left: 31px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+}
+.sports_winner{
+  margin-bottom: 10px;
+}
+.table_data{
+  background-color: #E0E6E6;
+    border-bottom: 1px solid #7e97a7;
+    border-top: 1px solid #7e97a7;
+    margin-bottom: 10px;
+}
+th{
+  color: #243a48;
+  background-color: #e4e4e4;
+  border: 1px solid #7e97a7;
+  border-width: 1px 0 1px 0;
+  padding: 8px 10px
+}
