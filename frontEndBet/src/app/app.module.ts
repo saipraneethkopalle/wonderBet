@@ -28,6 +28,8 @@ import { SetmarketresultComponent } from './setmarketresult/setmarketresult.comp
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
 import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-setting/admin-setting-website-setting.component';
 import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,9 @@ import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surve
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

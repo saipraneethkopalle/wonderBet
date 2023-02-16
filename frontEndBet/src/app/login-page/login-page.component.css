@@ -12,6 +12,10 @@
     color: #243a48;
     margin-left: 110%;
 }
+.red{
+  color:red;
+  font-size:12px;
+}
 .login-panel dt {
     font-size: 20px;
     line-height: 24px;
