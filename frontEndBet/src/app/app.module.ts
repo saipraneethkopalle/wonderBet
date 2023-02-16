@@ -27,6 +27,7 @@ import { AsetfancyresultComponent } from './asetfancyresult/asetfancyresult.comp
 import { SetmarketresultComponent } from './setmarketresult/setmarketresult.component';
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
 import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-setting/admin-setting-website-setting.component';
+import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-set
     AsetfancyresultComponent,
     SetmarketresultComponent,
     AdminSettingSearchUserComponent,
-    AdminSettingWebsiteSettingComponent
+    AdminSettingWebsiteSettingComponent,
+    AdminSettingSurveillanceSettingsComponent
   ],
   imports: [
     BrowserModule,
