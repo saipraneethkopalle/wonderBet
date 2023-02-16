@@ -9,11 +9,9 @@ export class SetmarketresultComponent implements OnInit {
   betListData:any;
   error:any =true;
   currentDate:any=moment().format("YYYY-MM-DD hh:mm:ss");
-  // currentTime:any=moment().format("hh:mm");
   constructor() { }
 
   ngOnInit(): void {
-    // this.currentDate = "2023-02-25 03:54:18 PM"
     console.log("current date",this.currentDate)
   }
   get(v:any){
