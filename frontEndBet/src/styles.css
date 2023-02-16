@@ -3,3 +3,10 @@
     background: #1D2C38 url(/assets/bg-login.jpg) no-repeat center;
     background-size: cover;
 } */
+/* body {
+  transform: scale(2);
+  transform-origin: 0 0;
+} */
+* {
+  box-sizing: border-box;
+}
