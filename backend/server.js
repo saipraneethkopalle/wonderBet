@@ -7,8 +7,9 @@ const routes = require("./routes/routes");
 const db = require("./constants/db");
 const auth = require("./middleware/auth");
 const dotenv = require("dotenv");
-app.use(helmet())
-app.use(cors())
+app.use(helmet());
+app.use(cors());
+app.use(express.json());
 app.set(dotenv.config())
 app.use('/api/v1',auth);
 app.use('/api/v1',routes);
