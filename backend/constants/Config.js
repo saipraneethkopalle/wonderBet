@@ -1,4 +1,4 @@
-exports.DBURL_DEV = "mongodb://localhost:27017/admin"
+exports.DBURL_DEV = "mongodb://localhost:27017/wonderBet"
 exports.STATUS =
     { BAD_REQUEST: 400, 
     UNAUTHORIZED: 401 ,

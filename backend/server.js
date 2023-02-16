@@ -7,12 +7,14 @@ const routes = require("./routes/routes");
 const db = require("./constants/db");
 const auth = require("./middleware/auth");
 const dotenv = require("dotenv");
+const beforelogin = require("./routes/beforelogin");
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.set(dotenv.config())
-app.use('/api/v1',auth);
-app.use('/api/v1',routes);
+app.use('/api/v1/auth',auth);
+app.use('/api/v1/auth',routes);
+app.use('/api/v1/noAuth',beforelogin);
 app.get('/',(req,res)=>{
     // console.log("Backend is running");
     res.send({message:"API is working"});

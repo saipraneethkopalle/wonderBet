@@ -1,7 +1,7 @@
 var jwt = require("jsonwebtoken");
 
 function generateAccessToken(data) {
-    return jwt.sign(data, process.env.TOKEN_SECRET,"Stack", {expiresIn: "3h"});
+    return jwt.sign(data, process.env.TOKEN_SECRET);
   }
 
 module.exports = generateAccessToken;
