@@ -197,3 +197,104 @@ td{
   padding-right:25px;
   float:right;
 }
+/* Add super admin pop up */
+.modal-content{
+  position: fixed;
+  top: 95px;
+  left: 50%;
+  background-color: rgb(212, 211, 211);
+  width: 430px;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transform: translate(-50%, 0);
+  border-radius: 7px;
+}
+.btn-primary{
+  background: #ffa00c url(/adminfiles/img/bg-send.gif) repeat-x;
+  border-color: #be7f1a;
+  color: #1e1e1e;
+}
+.btn-primary#cpBtn{
+  margin-top: 25px;
+  margin-right: 120px;
+  margin-bottom: 15px;
+  width: 35%;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+h4{
+  font-size: 17px;
+  font-weight: bolder;
+  color: #3b5160;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+input{
+  height: 24px;
+  width: 160px;
+  margin-left: 8px;
+  border-radius: 5px;
+  border: none;
+  border-style: inset;
+  border-width: 1px;
+}
+input::placeholder{
+  padding-left: 3px;
+}
+tr{
+  font-size: 12px;
+}
+.must{
+  font-size: 15px;
+  color: #d0021b;
+}
+
+.modal-footer{
+  /* background-color: #d0021b; */
+  padding: 0;
+  border: none;
+}
+
+.modal-header{
+  padding: 0;
+  border: none;
+}
+
+.modal-body{
+  padding: 0;
+}
+
+label{
+  padding-top: 3px;
+  padding-left: 40px;
+  font-weight: 500;
+  margin: 0;
+}
+
+select {
+  width: 160px;
+  height: 27px;
+  margin: 0;
+  margin-left: 8px;
+  padding-top: 3px;
+  border-radius: 3px;
+}
+table,tr{
+  width:100%;
+}
+
+#lb{
+  text-align: right;
+  width: 35%;
+}
+.passwordConfrim{
+  border-bottom: solid 1px gray;
+}
+td{
+  padding: 0;
+  padding-bottom: 10px;
+}

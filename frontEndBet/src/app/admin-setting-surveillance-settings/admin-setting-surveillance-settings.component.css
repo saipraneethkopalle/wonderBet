@@ -1,0 +1,33 @@
+.main-wrap {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 13px;
+    line-height: 20px;
+    padding-top: 6px;
+    margin-bottom: 6px;
+    font-weight: 700    ;
+
+}
+ul {
+    display: flex;
+    list-style: none; 
+    padding: 0; 
+}
+
+.my-3{
+    border-bottom: 1.5px solid rgb(88, 86, 86);
+    background-color: rgb(218, 222, 226);
+    margin-bottom: 5px;
+}
+
+img{
+    color: #E83523;
+    line-height: 20px;
+    border: 2px solid #1e1e1e !important;
+    border-radius: 8px;
+    width: 165px;
+    margin-right: 9px;
+}
