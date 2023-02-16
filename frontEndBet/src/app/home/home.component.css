@@ -197,3 +197,84 @@ td{
   padding-right:25px;
   float:right;
 }
+/* Add super admin pop up */
+.modal-content{
+  position: fixed;
+  top: 95px;
+  left: 50%;
+  background-color: rgb(212, 211, 211);
+  width: 430px;
+  border-radius: 5px;
+  padding: 15px;
+  transform: translate(-50%, 0);
+  border-radius: 7px;
+}
+.btn-primary{
+  background: #ffa00c url(/adminfiles/img/bg-send.gif) repeat-x;
+  border-color: #be7f1a;
+  color: #1e1e1e;
+}
+.btn-primary#cpBtn{
+  margin-right: 120px;
+  width: 35%;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+h4{
+  font-size: 16px;
+  color: #3b5160;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+input{
+  height: 24px;
+  width: 160px;
+  margin-left: 8px;
+  border-radius: 5px;
+  border: none;
+  border-style: inset;
+  border-width: 1px;
+}
+tr{
+  font-size: 12px;
+}
+.must{
+  font-size: 13px;
+  color: #d0021b;
+}
+
+.modal-footer{
+  /* background-color: #d0021b; */
+  padding: 0;
+  border: none;
+}
+
+.modal-header{
+  padding: 0;
+  border: none;
+}
+
+.modal-body{
+  padding: 0;
+}
+
+label{
+  padding-left: 40px;
+}
+
+select {
+  width: 160px;
+  margin: 0;
+  margin-left: 8px;
+}
+table,tr{
+  width:100%;
+}
+#lb{
+  text-align: right;
+}
+.passwordConfrim{
+  border-bottom: solid 1px gray;
+}

@@ -21,7 +21,7 @@
       <option>ALL</option>
   </select></div>
   <div class="addAdminblock">
-    <button type="button" class="addAdmin"><i class="fa fa-user-plus" aria-hidden="true"></i>
+    <button type="button" class="addAdmin" data-toggle="modal" data-target="#superAdminpop"><i class="fa fa-user-plus" aria-hidden="true"></i>
       Add Super Admin</button>
     <button type="button" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i>
     </button>
@@ -90,4 +90,66 @@
   <div class="betPL">Betting Profit & Loss</div>
   <div class="bank">Bank</div>
 </div>
+</div>
+
+<!-- Add super admin popup -->
+<div class="modal fade" id="superAdminpop" role="dailog">
+  <div class="modal-dailog modal-sm">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Add Super Admin</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span id="crs" aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <table>
+                  <tr><td id="lb"><label>Select Website</label></td><td><select name="webs" id="openselectWebsite">
+                    <option>Select Website</option>
+                    <option>wonderbets.in</option>
+                    <option>laserbook23.com</option>
+                  </select><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>E-mail</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>Username</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>Password</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                  <tr class="passwordConfrim"><td id="lb"><label>Confrim Password</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>First Name</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>Last Name</label></td><td><input type="text" placeholder="Enter"></td></tr>
+                  <tr><td id="lb"><label>Phone</label></td><td><input type="text" placeholder="Enter"></td></tr>
+                  <tr><td id="lb"><label>Time Zone</label></td><td><select name="timezone" id="opentimezone">
+                    <option value="Pacific/Midway">Pacific/Midway(GMT-11:00)</option>
+                    <option value="Pacific/Honolulu GMT-10:00">Pacific/Honolulu(GMT-10:00)</option>
+                    <option value="America/Juneau GMT-9:00">America/Juneau(GMT-9:00)</option>
+                    <option value="America/Los_Angeles GMT-8:00">America/Los_Angeles(GMT-8:00)</option>
+                    <option value="America/Phoenix GMT-7:00">America/Phoenix(GMT-7:00)</option>
+                    <option value="America/Chicago GMT-6:00">America/Chicago(GMT-6:00)</option>
+                    <option value="America/New_York GMT-5:00">America/New_York(GMT-5:00)</option>
+                    <option value="America/Santiago GMT-4:00">America/Santiago(GMT-4:00)</option>
+                    <option value="America/Sao_Paulo GMT-3:00">America/Sao_Paulo(GMT-3:00)</option>
+                    <option value="Atlantic/South_Georgia GMT-2:00">Atlantic/South_Georgia(GMT-2:00)</option>
+                    <option value="Atlantic/Azores GMT-1:00">Atlantic/Azores(GMT-1:00)</option>
+                    <option value="Europe/London GMT+0:00">Europe/London(GMT+0:00)</option>
+                    <option value="Europe/Paris GMT+1:00">Europe/Paris(GMT+1:00)</option>
+                    <option value="Africa/Cairo GMT+2:00">Africa/Cairo(GMT+2:00)</option>
+                    <option value="Asia/Qatar GMT+3:00">Asia/Qatar(GMT+3:00)</option>
+                    <option value="Asia/Dubai GMT+4:00">Asia/Dubai(GMT+4:00)</option>
+                    <option value="Asia/Karachi GMT+5:00">Asia/Karachi(GMT+5:00)</option>
+                    <option value="IST GMT+5:30" selected="selected">IST(Bangalore / Bombay / New Delhi) (GMT+5:30)</option>
+                    <option value="Asia/Kathmandu GMT+5:45">Asia/Kathmandu(GMT+5:45)</option>
+                    <option value="Asia/Dhaka GMT+6:00">Asia/Dhaka(GMT+6:00)</option>
+                    <option value="Asia/Bangkok GMT+7:00">Asia/Bangkok(GMT+7:00)</option>
+                    <option value="Asia/Hong_Kong GMT+8:00">Asia/Hong_Kong(GMT+8:00)</option>
+                    <option value="Asia/Tokyo GMT+9:00">Asia/Tokyo(GMT+9:00)</option>
+                    <option value="Australia/Adelaide GMT+9:30">Australia/Adelaide(GMT+9:30)</option>
+                    <option value="Australia/Melbourne GMT+10:00">Australia/Melbourne(GMT+10:00)</option>
+                    <option value="Asia/Magadan GMT+11:00">Asia/Magadan(GMT+11:00)</option>
+                    <option value="Pacific/Fiji GMT+12:00">Pacific/Fiji(GMT+12:00)</option>
+                  </select><span class="must">*</span></td></tr>
+              </table>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="cpBtn">Create</button>
+          </div>
+      </div>
+  </div>
 </div>
