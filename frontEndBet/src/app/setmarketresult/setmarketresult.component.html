@@ -1,57 +1,55 @@
 <app-navigation></app-navigation>
-<section style="background-color: #f0ece1">
-  <div class="full-body">
-    <h2 class="fw-bold">Market Result</h2>
-    <div class="funtion_wraper col-lg-12 d-flex ">
-
-        <div class=" total-all d-flex " >
-           <label class="mt-2">Select Sport</label>
-            <td class="">
-                <select class="sportnames">
-                 <option class="main" value="-1">Select Sport</option>
-                  <option>Cricket</option>
-                 <option>Tennis</option>
-                 <option>Soccer</option>
-                </select>
-            </td>
-        </div>
-
-
-        <div class=" total-all d-flex  text-center" >
-             <label class="mt-2">Select Math</label>
-            <td class="">
-                <select class="sportnames" >
-               </select>
-            </td>
-        
-        </div>
-
-
-      <div class=" total-all d-flex  text-center" >
-        <label class="mt-2">Select Market</label>
-        <td class="">
-          <select class="sportnames" >
-          </select>
-        </td>
-        
-      </div>
-
-      <div class=" total-all d-flex  text-center" >
-        <label class="mt-2">Select Winner</label>
-        <td class="">
-          <select class="sportnames" >
-            <!-- <option class="main" value="-1"></option> -->
+<div class="main" style="background-color: #f0ece1;">
+    <h2 class="header">Market Result</h2>
+    <div class="funtion_wraper ">
+        <div class="sportsBody" >
+          <div>
+              <label>Select Sport :</label><select class="sportStatus"><option>Select Sport</option><option>Cricket</option><option>Soccer</option><option>Tenis</option></select>
+              <!-- <label>Period </label><input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
+               <span>to</span>
+               <input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/> -->
+               <label class="inputbody">Select Match :</label><select class="sportStatus"></select>
+               <label class="inputbody">Select Market :</label><select class="sportStatus"></select>
+               <label class="inputbody">Select Winner :</label><select class="sportStatus"></select>
+               <button class="match_btn ">Set Result</button>
+          </div>
             
-          </select>
-        </td>
-        
-      </div>
-      <div>
-        <td><button class="match_btn">Set Result</button></td>
+        </div>
+    </div>
+    <div class="funtion_wraper ">
+      <div class="sports_winner" >
+        <div>
+            <label>Sport:</label><select class="sports"><option>Select </option><option>Cricket</option><option>Soccer</option><option>Tenis</option></select>
+             <label class="inputbody">Form</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
+             <label class="inputbody">to</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
+             <button class="match_button">Search</button>
+             <button class="search" style="height: 1px;"><i class="fa-solid fa-magnifying-glass" ></i></button>
+             <input class="searchbtn "  placeholder="Search here...">
+             
+        </div>
       </div>
     </div>
+    <div>
+      <table class="table table_data" >
+        <thead>
+          <tr style="font-size: 12px;">
+            <th scope="col">Sport</th>
+            <th scope="col">Match ID</th>
+            <th scope="col">Match Name</th>
+            <th scope="col">Market</th>
+            <th scope="col">Winner</th>
+            <th scope="col">IP</th>
+            <th scope="col">Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
 
-    <div class="funtion_wrapers col-lg-12 d-flex ">
+    <!-- <div class="funtion_wrapers col-lg-12 d-flex ">
 
         <div class=" total-all d-flex " >
            <label class="mt-2">Sport:</label>
@@ -69,7 +67,7 @@
         <div class=" total-all d-flex  text-center" >
              <label class="mt-2">From</label>
             <td class="">
-               <input class="cal-input" type="datetime-local" placeholder="YYY-MM-DD">
+               <input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
             </td>
         
         </div>
@@ -78,7 +76,7 @@
       <div class=" total-all d-flex  text-center" >
         <label class="mt-2">To</label>
         <td class="">
-            <input class="cal-input" type="datetime-local" placeholder="YYY-MM-DD">
+            <input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD a">
         </td>
         
       </div>
@@ -91,7 +89,31 @@
         
       </div>
       
-    </div>
-
-  </div>
-</section>
+    </div> -->
+    
+    <!-- <div>
+      <table class="table table_data">
+        <thead class="">
+          <tr>
+            <th class="main" scope="col">Sport</th>
+            <th class="main" scope="col">Match Id</th>
+            <th class="main" scope="col">Match Name</th>
+            <th class="main" scope="col">Market</th>
+            <th class="main" scope="col">Winner</th>
+            <th class="main" scope="col">Ip</th>
+            <th class="main" scope="col">Date</th>
+            <th class="main" scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody style="background-color: white;">
+          <tr>
+            
+          </tr>
+          <tr>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+    <!-- </div> -->
+</div>
