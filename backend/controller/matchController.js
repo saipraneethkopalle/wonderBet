@@ -4,8 +4,8 @@ const cryp = require("../constants/cryptojs");
 const match = require("../models/match");
 exports.addMatches = async(req,res)=>{
     try{
-        let data = cryp.decryptPayload(req.body)
-        let result = await match.insertOne(data)
+        let data = await cryp.decryptData(req.body.payload)
+        let result = new match(data)
         result.save()
         res.status(STATUS.OK).send({"message":"Successfully stored","data":data})
     }catch(err){
