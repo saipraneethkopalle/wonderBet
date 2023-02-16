@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
+import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-setting/admin-setting-website-setting.component';
 import { AdminsettingsComponent } from './adminsettings/adminsettings.component';
 import { AsetfancyresultComponent } from './asetfancyresult/asetfancyresult.component';
 import { BankingComponent } from './banking/banking.component';
@@ -45,7 +46,8 @@ const routes: Routes = [
   {path:"casinoProfitByMonth",component:CasinoProfitlossMonthlyComponent},
   {path:"aSetFancyResult",component:AsetfancyresultComponent},
   {path:"aSetMarketResult",component:SetmarketresultComponent},
-  {path:"adminSettingSearchUser",component:AdminSettingSearchUserComponent}
+  {path:"adminSettingSearchUser",component:AdminSettingSearchUserComponent},
+  {path:"adminSettingWebsiteSetting",component:AdminSettingWebsiteSettingComponent}
 ];
 
 @NgModule({
