@@ -59,8 +59,8 @@
         <div class="sports_winner" >
           <div>
               <label class="inputs">Sport:</label><select class="options"><option>Cricket</option><option>Soccer</option><option>Tenis</option></select>
-               <label  class="inputbody">Form</label><input class="date"  type="datetime-local" placeholder="YYY-MM-DD">
-               <label  class="inputbody">to</label><input class="date"  type="datetime-local" placeholder="YYY-MM-DD">
+               <label  class="inputbody">Form</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
+               <label  class="inputbody">to</label><input class="date"  [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
                <button class="match_button">Search</button>
                <input class="searchbtn"  placeholder="Search Match">
                
