@@ -19,10 +19,12 @@ export class LoginPageComponent implements OnInit {
     validationCode:new FormControl('')
   })
   ngOnInit(): void {
+  this.generateValidationCode()
+  }
+  generateValidationCode(){
     var val = Math.floor(1000 + Math.random() * 9000);
     this.validationCode = val;
   }
-
   homePage(){
     let payload = {userName:this.register.value.userName,password:this.register.value.password,validationCode:this.register.value.validationCode}
     if(this.validationCode == payload.validationCode){
@@ -33,6 +35,7 @@ export class LoginPageComponent implements OnInit {
     })
     }else{
       this.error = "Invalid Code"
+      this.generateValidationCode();
     }
   }
 
