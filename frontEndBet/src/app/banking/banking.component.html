@@ -1,1 +1,117 @@
 <app-navigation></app-navigation>
+<div class="full-wrap">
+    <h2>Search Users</h2>
+    <div class="total_all banking-top">
+      <div class="search-wrap" id="userSearchUl">
+        <div>
+          <input class="search-input" id="searchUserId" type="text" placeholder="Enter userId...">
+        </div>
+      </div>
+      <ul class="input-list" id="companySearchUl">
+        <li class="bank-li">
+          <button class="btn-send banking-btn" id="search">Search</button>
+        </li>
+      </ul>
+      <ul class="input-list" id="accountStatusUl">
+        <li class="bank-li">
+            <label id="status">Status</label>
+        </li>
+        <li class="bank-li">
+            <select name="accountStatus" id="openaccountStatus">
+                <option>ACTIVE</option>
+                <option>SUSPENDED</option>
+                <option>LOCKED</option>
+                <option>ALL</option>
+            </select>
+        </li>
+      </ul>
+    </div>
+    <div class="table-wrap">
+      <div class="function-wrap">
+        <div class="banking-head float-l">
+            <dt>Your Balance</dt>
+            <dd>
+                <span>PBU</span>
+               <label>389,175,898.50</label> 
+            </dd>
+        </div>
+      </div>  
+      <table id="table_log" class="table01">
+        <thead>
+          <tr>
+            <th class="align-L">UID</th>
+            <th class="align-L">Balance</th>
+            <th class="align-L">Available D/W</th>
+            <th class="align-L">Exposer</th>
+            <th class="align-L" id="hDpWd">Deposite/Withdraw</th>
+            <th class="align-L">Creadit Refrence</th>
+            <th class="align-L">Refrence P/l</th>
+            <th class="align-L">Remark</th>
+            <th class="align-L">logs</th>
+          </tr>
+        </thead>
+        <tbody id="content">
+          <tr>
+            <td class="align-L" id="ad"><span class="order">1.</span>main</td>
+            <td class="align-L" id="sa">604,135,082.246</td>
+            <td class="align-L" id="ma">54,560,390.39</td>
+            <td class="align-L" id="exp">0.00</td>
+            <td class="align-L DW-amount" id="sm">
+                <ul id="ulDWmain" class="btn_list-DW">
+                    <li>
+                        <button>D</button>
+                    </li>
+                    <li>
+                        <button>W</button>
+                    </li>
+                </ul>
+                <input type="number" name="amount" id="amountmain" placeholder="0">
+                <button id="dpWdFullBtn">Full</button>
+            </td>
+            <td class="align-L credit-amount" id="mm">
+                <a href id="usercreditrefrencemain">600,000,000.00</a>
+                <button id="editcreditbtrefrenacemain">Edit</button>
+            </td>
+            <td class="align-L" id="agm">4,135,082.246</td>
+            <td class="align-L" id="client">
+                <input type="text" placeholder="Remark">
+            </td>
+            <td class="align-L" id="client">
+                <button id="log">Log</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="paginationlist">
+      <ul class="pages" id="pageNumberContent">
+        <li id="prev">
+          <button id="prevBtn">Prev</button>
+        </li>
+        <li id="pageNumber">
+          <button id="pageNumberBtn">1</button>
+        </li>
+        <li id="next">
+          <button id="nextBtn">Next</button>
+        </li>
+        <li>
+        <input type="text" id="goToPageNumber_1">
+        </li>
+        <li>
+        <button id="goPageBtn_1">GO</button>
+        </li>
+      </ul>
+    </div>
+    <div class="submit-wrap" id="settlementBar">
+        <ul id="settlementBarul">
+            <li class="clr-btn">
+                <button class="btn" id="clearAllBtn">Clear All</button>
+            </li>
+            <li class="submit-payment">
+                <input id="paymentProcess" type="password" placeholder="Password">
+                <button>Submit<span id="submitCount">0</span>Payment</button>
+            </li>
+        </ul>
+    </div>
+</div>
+  
