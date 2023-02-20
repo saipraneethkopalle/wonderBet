@@ -89,7 +89,7 @@
         </div>
         <div class="function-wrap col-12 my-3">
             <div class="col-12">
-                <h2>User Settings</h2>   
+                <h2>User Settings</h2>
             </div>
             <ul class="list-unstyled">
                 <li>
@@ -116,7 +116,7 @@
                 </li>
             </ul>
         </div>
-    </div>            
+    </div>
 </div>
 <div class="modal fade" id="myModal" role="dailog">
     <div class="modal-dailog modal-sm">
@@ -128,12 +128,15 @@
                 </button>
             </div>
             <div class="modal-body">
+              <form method="post" autocomplete="off" [formGroup]="changePassword">
                 <table>
-                    <tr><td><label>New Password</label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                    <tr><td><label>New Password </label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                    <tr><td><label>New Password</label><input type="text" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
+                    <tr><td><label>New Password </label><input type="text" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
                     <tr><td class="confrimPassword">Confrim</td></tr>
-                    <tr><td><label>Your Password</label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                </table>
+                    <tr><td><label>Your Password</label><input type="text" placeholder="Enter" formControlName="oldPassword"><span class="must">*</span></td></tr>
+                  <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
+                  </table>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="cpBtn">Change</button>
