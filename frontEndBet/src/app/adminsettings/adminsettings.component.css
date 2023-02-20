@@ -81,6 +81,12 @@ tr{
   color:#E83523;
   font-size:12px;
 }
+.btBox{
+  text-align: center;
+}
+#cpBtn{
+  width:80px;
+}
 .must{
     font-size: 13px;
     color: #d0021b;
