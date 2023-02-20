@@ -13,13 +13,13 @@
     line-height: 20px;
     width: 95%;
     margin: auto;
-} 
+}
 .table_data{
     background-color: white;
     width: 95%;
     margin: auto;
     font-size: 15px;
-   
+
 }
  th{
     color: #243a48;
@@ -35,7 +35,7 @@
  .game_name{
     color: #4083a9;
     font-size: 14px;
-} 
+}
 .match_btn{
     background: #ffb90e;
     border-color: #cb8009;
@@ -47,9 +47,15 @@
     font-weight: bold;
     line-height: 23px;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .games
 {
     padding-top: 10px;
+}
+.table_body{
+    font-weight: 600;
+            height: 1rem !important;
+            border-bottom: 1px solid black;
 }

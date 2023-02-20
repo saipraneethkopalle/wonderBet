@@ -12,52 +12,19 @@
             <th scope="align-L" style="width: 20%">Action</th>
           </tr>
         </thead>
-        <tbody
-          style="
-            font-weight: 600;
-            height: 1rem !important;
-            border-bottom: 1px solid black;
-          ">
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
+        <tbody >
+          <tr *ngFor="let item of cricketList;let i=index;">
+            <td>{{item.eventId}}</td>
+            <td>{{item.marketId}}</td>
             <td>
               <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
+                {{item.openDate}}
               </li>
               <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
+                {{item.eventName}}
               </li>
             </td>
-            <td><button class="match_btn">Add Match</button></td>
-          </tr>
-
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
-            <td>
-              <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
-              </li>
-              <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
-              </li>
-            </td>
-            <td><button class="match_btn">Add Match</button></td>
-          </tr>
-
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
-            <td>
-              <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
-              </li>
-              <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
-              </li>
-            </td>
-            <td><button class="match_btn">Add Match</button></td>
+            <td><button class="match_btn" (click)="addMatch(item)">Add Match</button></td>
           </tr>
         </tbody>
       </table>
@@ -82,46 +49,18 @@
             border-bottom: 1px solid black;
           "
         >
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
+        <tr *ngFor="let item of soccerList;let i=index;">
+            <td>{{item.eventId}}</td>
+            <td>{{item.marketId}}</td>
             <td>
               <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
+                {{item.openDate}}
               </li>
               <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
+                {{item.eventName}}
               </li>
             </td>
-            <td><button class="match_btn">Add Match</button></td>
-          </tr>
-
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
-            <td>
-              <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
-              </li>
-              <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
-              </li>
-            </td>
-            <td><button class="match_btn">Add Match</button></td>
-          </tr>
-
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
-            <td>
-              <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
-              </li>
-              <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
-              </li>
-            </td>
-            <td><button class="match_btn">Add Match</button></td>
+            <td><button class="match_btn" (click)="addMatch(item)">Add Match</button></td>
           </tr>
         </tbody>
       </table>
@@ -146,49 +85,22 @@
             border-bottom: 1px solid black;
           "
         >
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
+        <tr *ngFor="let item of tennisList;let i=index;">
+            <td>{{item.eventId}}</td>
+            <td>{{item.marketId}}</td>
             <td>
               <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
+                {{item.openDate}}
               </li>
               <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
+                {{item.eventName}}
               </li>
             </td>
-            <td><button class="match_btn">Add Match</button></td>
-          </tr>
-
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
-            <td>
-              <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
-              </li>
-              <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
-              </li>
-            </td>
-            <td><button class="match_btn">Add Match</button></td>
-          </tr>
-
-          <tr>
-            <td>32055407</td>
-            <td>1.209133980</td>
-            <td>
-              <li class="game_date" style="list-style: none">
-                Tue, 14 Feb 2023 20:00:00
-              </li>
-              <li class="game_name" style="list-style: none">
-                Karachi Kings v Peshawar Zalmi
-              </li>
-            </td>
-            <td><button class="match_btn">Add Match</button></td>
+            <td><button class="match_btn" (click)="addMatch(item)">Add Match</button></td>
           </tr>
         </tbody>
       </table>
+
     </div>
   </div>
 </section>
