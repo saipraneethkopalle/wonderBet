@@ -1,11 +1,11 @@
 #firstContainer{
     background-color: rgb(240, 248, 245);
 }
- .main #datasource{
-    margin: 5px;
-}
 li{
     list-style: none;
+}
+.main #datasource{
+  margin: 5px;
 }
 .main{
     width:100%;
@@ -105,7 +105,8 @@ li{
   }
   .function_wrapper label #lable1{
     padding-left: 1%;
-    margin-left: 10px;  }
+    margin-left: 10px;  
+  }
 
   .date1{
    
@@ -129,49 +130,52 @@ li{
     font-weight: bold;    padding-top: 6px;
     margin-bottom: 6px;
 }
- 
-
-.table-pt {
-    table-layout: fixed;
-    font-size: 11px;
-    margin: 20px 0 0;
-}
-tr {
-    display: table-row;
+ tr{
+    display: table-row ;
     vertical-align: inherit;
-    border-color: inherit;
-}
+   
+  }
 
-table {
-    border-collapse: separate;
-    text-indent: initial;
-    border-spacing: 2px;
-}
 
-.table01 th, .table-s th, .table_one th {
+  table {
     color: #243a48;
-    background-color: #e4e4e4;
-    border: 1px solid #7e97a7;
-    border-width: 1px 0 1px 0;
-    padding: 8px 10px;
-}
-th {
-    padding: 8px 5px;
-}
-table #header_event #header_eventName{
-    padding-left: 30px;
-}
-
-.table01, .table-s, .table_one {
     width: 100%;
-    background-color: #fff;
-    border-collapse: collapse;
-    border-bottom: 1px solid #7e97a7;
-    margin-bottom: 15px;
+    height: auto;
     text-align: right;
-}
+    display: block;
+    overflow-y: scroll !important;
 
-table tr #first_clomum {
+    }
+  td{
+    width:18.9%;
+    padding:10px;
+  }
+  table .heading{
+    padding:10px;
+    border-top:1px solid #7e97a7;
+    border-bottom:1px solid #7e97a7;
+    background-color: #e4e4e4;
+    color:#243a48;
+  }
+  .heading .headingcolm{
+    padding-right: 60px;
+  }
+
+  .headindata{
+    padding-right: 60px;
+
+
+  }
+  table tr #first_clomum {
     text-align: left;
     padding-left: 10px;
 }
+
+
+table tr{
+  background-color: #fff;
+}
+  
+
+
+

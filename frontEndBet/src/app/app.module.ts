@@ -30,6 +30,7 @@ import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-set
 import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     SetmarketresultComponent,
     AdminSettingSearchUserComponent,
     AdminSettingWebsiteSettingComponent,
-    AdminSettingSurveillanceSettingsComponent
+    AdminSettingSurveillanceSettingsComponent,
+    CasinoProfitByDateComponent,
   ],
   imports: [
     BrowserModule,
