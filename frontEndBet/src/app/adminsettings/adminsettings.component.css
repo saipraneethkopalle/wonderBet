@@ -13,8 +13,8 @@ h2 {
 }
 ul {
     display: flex;
-    list-style: none; 
-    padding: 0; 
+    list-style: none;
+    padding: 0;
 }
 
 .my-3{
@@ -76,6 +76,10 @@ tr{
 }
 .confrimPassword{
     padding-left: 80px;
+}
+.error{
+  color:#E83523;
+  font-size:12px;
 }
 .must{
     font-size: 13px;
