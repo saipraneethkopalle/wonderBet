@@ -126,6 +126,7 @@ h2 {
     background-color: white;    
 }
 
+
 #companySearchUl{
     padding: 0;
     margin-left: 10px;
@@ -328,6 +329,14 @@ li #goToPageNumber_1 {
     text-align: left;
 }
 
+#dexp{
+    border-right: 1px solid black;
+}
+
+#exp{
+    border-right: 1px solid black;
+}
+
 #sa {
     font-size: 12px;
 }
@@ -353,6 +362,11 @@ li #goToPageNumber_1 {
 #hDpWd {
     text-align: center;
     width: 10%;
+    border-right: 1px solid black;
+}
+
+#sm{
+    border-right: 1px solid black;
 }
 
 #ulDWmain{
@@ -374,6 +388,19 @@ li #goToPageNumber_1 {
 
 #hrefpl{
     width: 15%;
+    border-right: 1px solid black;
+}
+
+#agm{
+    border-right: 1px solid black;
+}
+
+#hrmk{
+    border-right: 1px solid black;
+}
+
+#client{
+    border-right: 1px solid black;
 }
 
 #dpWdFullBtn {
