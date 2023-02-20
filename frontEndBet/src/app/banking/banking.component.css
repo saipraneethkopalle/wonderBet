@@ -1,8 +1,11 @@
 .full-wrap {
     position: relative;
-    min-width: 80%;
+    min-width: 100%;
     max-width: calc(100% - 40px);
     padding-left: 20px;
+    background-color: rgb(230, 229, 222);
+    height: 100vh;
+    overflow: hidden;
 }
 
 h2 {
@@ -12,6 +15,35 @@ h2 {
     margin-bottom: 6px;
     font-weight: 900;
 }
+
+  .searchbox{
+    display:flex;
+    color:#212121;
+    width:fit-content;
+    border-radius:4px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+  }
+  .fa-search{
+    padding:5px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+    background-color: white;    
+    border-right:none;
+    padding-top:10px;
+  }
+  .searchUserId{
+    height:27px;
+    width:185px;
+    font-size:12px;
+    padding:1px;
+    padding-left:4px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+    border-left:none;
+    border-bottom:none;
+  }
+
 
 .banking-top {
     display: flex;
@@ -85,11 +117,18 @@ h2 {
 #searchUserId {
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 290px;
+    width: 260px;
     border-radius: 5px;
     border: none;
-    border-style: inset;
+    /* border-style: inset; */
     border-width: 2px;
+    height: 32px;
+    background-color: white;    
+}
+
+#companySearchUl{
+    padding: 0;
+    margin-left: 10px;
 }
 
 .table01 {
@@ -98,6 +137,7 @@ h2 {
     border-collapse: collapse;
     border-bottom: 1px solid #7e97a7;
     margin-bottom: 15px;
+    text-align: right;
 }
 
 tbody {
@@ -201,7 +241,7 @@ thead {
 }
 
 #settlementBarul {
-    background-color: #f8f8f8;
+    background-color: #ececec;
     padding-top: 10px;
     padding-bottom: 8px;
 }
@@ -285,6 +325,7 @@ li #goToPageNumber_1 {
     padding-bottom: 4px;
     padding-right: 10px;
     padding-left: 10px;
+    text-align: left;
 }
 
 #sa {
@@ -311,6 +352,28 @@ li #goToPageNumber_1 {
 
 #hDpWd {
     text-align: center;
+    width: 10%;
+}
+
+#ulDWmain{
+    padding: 0;
+    padding-left: 7px;
+}
+
+.align-L{
+    padding: 7px;
+}
+
+#hrmk{
+    width: 17%;
+}
+
+#huid{
+    text-align: left;
+}
+
+#hrefpl{
+    width: 15%;
 }
 
 #dpWdFullBtn {
@@ -365,6 +428,8 @@ li #goToPageNumber_1 {
 #client input {
     border: solid 1px gray;
     border-radius: 5px;
+    width: 90%;
+    height: 35px;
 }
 
 #client input::placeholder {
