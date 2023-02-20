@@ -10,6 +10,7 @@ import { BankingComponent } from './banking/banking.component';
 import { BetlistComponent } from './betlist/betlist.component';
 import { BetlistliveComponent } from './betlistlive/betlistlive.component';
 import { BlockmarketComponent } from './blockmarket/blockmarket.component';
+import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
 import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
 import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
@@ -40,7 +41,7 @@ const routes: Routes = [
   {path:"result",component:ResultComponent},
   {path:"profitdownline",component:DownlineReportProfitlossComponent},
   {path:"profitmarket",component:MarketProfitlossComponent},
-  {path:"casinoProfitByDate",component:CasinoProfitlossDateComponent},
+  {path:"casinoProfitByDate",component:CasinoProfitByDateComponent},
   {path:"dowlineprofitloss",component:DownlineProfitlossComponent},
   {path:"sportWiseprofitloss",component:SportWiseProfitlossComponent},
   {path:"matchProfitloss",component:MatchProfitlossComponent},

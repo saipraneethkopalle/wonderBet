@@ -9,7 +9,7 @@ export class ApiServicesService {
   secretKey = "WB13579";
   headers:any = {'authorization':localStorage.getItem("token") };
   constructor(private http:HttpClient) { }
-  
+
   encrypt(value : string) : string{
     return CryptoJS.AES.encrypt(value, this.secretKey.trim()).toString();
   }
@@ -21,5 +21,23 @@ export class ApiServicesService {
     data = {payload:this.encrypt(JSON.stringify(data))};
     const url = environment.url + "/api/v1/noAuth/login"
     return this.http.post(url,data)
+  }
+  getMatches(){
+    const url = environment.customUrl + "/api/v1-custom/customMatches"
+    return this.http.get(url)
+  }
+  addMatches(data:any){
+    data = {payload:this.encrypt(JSON.stringify(data))};
+    const url =  environment.url + "/api/v1/auth/addMatch"
+    return this.http.post(url,data,{headers:this.headers})
+  }
+  getAllMatches(){
+    const url =  environment.url + "/api/v1/auth/getAllMatches"
+    return this.http.get(url,{headers:this.headers})
+  }
+  changePassword(data:any){
+    data = {payload:this.encrypt(JSON.stringify(data))};
+    const url =  environment.url + "/api/v1/auth/changePassword"
+    return this.http.post(url,data,{headers:this.headers})
   }
 }

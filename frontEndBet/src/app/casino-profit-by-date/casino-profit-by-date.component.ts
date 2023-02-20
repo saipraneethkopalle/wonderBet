@@ -3,11 +3,11 @@ import * as moment from 'moment';
 
 
 @Component({
-  selector: 'app-downline-profitloss',
-  templateUrl: './downline-profitloss.component.html',
-  styleUrls: ['./downline-profitloss.component.css']
+  selector: 'app-casino-profit-by-date',
+  templateUrl: './casino-profit-by-date.component.html',
+  styleUrls: ['./casino-profit-by-date.component.css']
 })
-export class DownlineProfitlossComponent implements OnInit {
+export class CasinoProfitByDateComponent implements OnInit {
   currentDate:any=moment().format("YYYY-MM-DD");
   currentTime:any=moment().format("hh:mm");
 
