@@ -20,6 +20,6 @@ app.get('/',(req,res)=>{
     res.send({message:"API is working"});
     // console.log("env",process.env.TOKEN_SECRET);
 })
-http.listen(3000,(req,res)=>{
+http.listen(4000,(req,res)=>{
     console.log("Server is running");
 });
