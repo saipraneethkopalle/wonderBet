@@ -1,1 +1,73 @@
 <app-navigation></app-navigation>
+<div class="main" style="background-color: #f0ece1;">
+    <h2>Sport Settings</h2>
+    <div class="funtion_wraper ">
+        <div class="sportsBody" >
+          <div>
+               <button [class]="currentcompo==0?'match':'match_btn' "(click)="findcompo(0)">Cricket</button>
+               <button [class]="currentcompo==1?'match':'match_btn' " (click)="findcompo(1)">Tennis</button>
+               <button [class]="currentcompo==2?'match':'match_btn' " (click)="findcompo(2)">Soccer</button>
+          </div>
+            
+        </div>
+        <div *ngIf="currentcompo==0">
+            <table class="table table_data" >
+              <thead>
+                <tr  class="table_row" >
+                  <th id="accountTh" class="align_L" style="width: 10%" >Match ID</th>
+                  <th class="align_L table_col" style="width: 7%;">Match Name</th>
+                  <th class="align_L table_col" style="width: 5%;  ">Market Id</th>
+                  <th class="align_L table_col" style="width: 6%;  ">Open Date	</th>
+                  <th class="align_L table_col" style="width: 15%; ">Action</th>
+                </tr>
+              </thead>
+              <tbody class="table_body">
+                <tr >
+                    <!-- <th scope="row">1</th> -->
+                    <td>32055407</td>
+                    <td class="table_col">Karachi Kings v Peshawar Zalmi</td>
+                    <td class="table_col">1.209133980</td>
+                    <td class="table_col">2023-02-14 20:00:00</td>
+                    <td class="table_col">
+                        <button class="matchs">Set Limit</button>
+                        <button class="matchs">Set Bookmaker</button>
+                        <button class="matchs">Manuplation</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+        <div *ngIf="currentcompo==1">
+            <table class="table table_data" >
+              <thead>
+                <tr  class="table_row" >
+                  <th id="accountTh" class="align_L" style="width: 10%" >Match ID</th>
+                  <th class="align_L table_col" style="width: 7%;">Match Name</th>
+                  <th class="align_L table_col" style="width: 5%;  ">Market Id</th>
+                  <th class="align_L table_col" style="width: 6%;  ">Open Date	</th>
+                  <th class="align_L table_col" style="width: 15%; ">Action</th>
+                </tr>
+              </thead>
+              <tbody class="table_body">
+                
+              </tbody>
+            </table>
+        </div>
+        <div *ngIf="currentcompo==2">
+            <table class="table table_data" >
+              <thead>
+                <tr  class="table_row" >
+                  <th id="accountTh" class="align_L" style="width: 10%" >Match ID</th>
+                  <th class="align_L table_col" style="width: 7%;">Match Name</th>
+                  <th class="align_L table_col" style="width: 5%;  ">Market Id</th>
+                  <th class="align_L table_col" style="width: 6%;  ">Open Date	</th>
+                  <th class="align_L table_col" style="width: 15%; ">Action</th>
+                </tr>
+              </thead>
+              <tbody class="table_body">
+                
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>

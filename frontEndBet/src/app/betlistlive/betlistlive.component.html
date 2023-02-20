@@ -1,5 +1,5 @@
 <app-navigation></app-navigation>
-<div class="main">
+<section class="main">
   <h5>Bet List Live</h5>
   <div class="betlistfilter">
     <div class="selectGroup">
@@ -58,7 +58,86 @@
       </div>
     </div>
     <div class="filter2">
-      <label></label>
+      <div class="funtion_wraper " style="font-size: 13px;">
+        <div class="sportsBody" >
+          <div>
+              <label class="input">Order of display:</label><select class="sportStatus"><option>Stake</option><option>Player Id</option><option>Time</option></select>
+               <label class="inputbody input">of</label><select class="sportStatus"><option>Ascending</option><option>Descending</option></select>
+               <label class="inputbody input">Last:</label><select class="sportStatus"><option value="100">100 Txn</option><option value="50">50 Txn</option><option value="25" selected>25 Txn</option></select>
+               <label class="inputbody input">Auto Refresh (Seconds)</label><select class="sportStatus"><option value="stop">Stop</option><option value="60">60</option><option value="30" >30</option> <option value="15" selected>15</option> <option value="5" >5</option> <option value="2">2</option></select>
+               <label class="inputbody input">Bet Status:</label><select class="sportStatus"><option value="All">All</option></select>
+               <button class="match_btn">Refresh</button>
+          </div>
+        </div>
+    </div>
     </div>
   </div>
-</div>
+
+  <div>
+ <!-- <h2 class="heading">Cricket</h2> -->
+      <table class="table table_data mb-2">
+        <thead>
+          <tr class="fw-bold" >
+            <th class="head" scope="align-L table_head" >UnMatched</th>
+          </tr>
+        </thead>
+        <tbody class="table_body"
+          >
+            <tr>
+              <td class="table_data">You have no bets in this time period.</td>
+            </tr>
+        </tbody>
+      </table>
+  </div>
+  <div>
+    <table class="table table_data mb-2">
+      <thead>
+        <tr class="fw-bold" >
+          <th class="head" scope="align-L">Matched</th>
+        </tr>
+      </thead>
+      <table class="table table_data ">
+        <thead>
+          <tr class="fw-bold"  style="font-size: 12px;">
+            <th scope="align-L" style="width: 5%;">PL ID</th>
+            <th scope="align-L" style="width: 10%">Bet ID</th>
+            <th scope="align-L" style="width: 10%">Bet placed</th>
+            <th scope="align-L" style="width: 10%">IP Address</th>
+            <th scope="align-L" style="width: 26%">Market</th>
+            <th scope="align-L" style="width: 10%">Selection</th>
+            <th scope="align-L" style="width: 10%">Type</th>
+            <th scope="align-L" style="width: 10%">Odds req.	</th>
+            <th scope="align-L" style="width: 10%">Stake</th>
+            <th scope="align-L" style="width: 10%">Liability</th>
+          </tr>
+        </thead>
+        <tbody  class="table_body_section">
+          <tr>
+            <td>nasir</td>
+            <td><a href="#">9ae1420</a></td>
+            
+            <td>
+              <li class="game_date" style="list-style: none">
+                Wed Aug 03 
+              </li>
+              <li class="game_name" style="list-style: none">
+                04:36:55
+              </li>
+              <li class="game_name" style="list-style: none">
+                IST 2022              
+              </li>
+            </td>
+            <td>223.233.7.178</td>
+            <td>Cricket <i class="fa fa-play" style="color:beige;"></i> <strong>Ireland v South Africa</strong><i class="fa fa-play" style="color:beige;"></i> Match odds</td>
+            <td>South Africa</td>
+            <td> <a href="#">Lay</a></td>
+            <td>0.21</td>
+            <td>20</td>
+            <td>4.2</td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+  </div>
+  
+</section>

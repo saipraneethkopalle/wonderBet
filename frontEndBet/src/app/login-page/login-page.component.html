@@ -1,19 +1,19 @@
 <div class="main">
     <div class="login-wrap">
         <div class="kv">
-            <form name="loginForm">
+            <form name="loginForm" method="post" [formGroup]="register" autocomplete="off">
                 <dl class="login-panel">
                     <dt>Agent login</dt>
                     <dd>
-                        <input id="userid" name="userid" type="text" placeholder="Username">
+                        <input id="userid" name="userid" type="text" placeholder="Username" formControlName="userName">
                     </dd>
                     <dd>
-                        <input id="password" name="password" type="password" placeholder="Password">
+                        <input id="password" name="password" type="password" placeholder="Password" formControlName="password">
                     </dd>
                     <dd class="valid-code">
-                        <input id="validCode" type="number" name="code" placeholder="Validation Code" maxlength="4">
+                        <input id="validCode" type="number" name="code" placeholder="Validation Code" maxlength="4" formControlName="validationCode">
                         <span id="randomCode">
-                            4141
+                            {{validationCode}}
                         </span>
                     </dd>
                     <dd>
@@ -21,9 +21,10 @@
                             Login
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M20.7 12l-9.9-9.9c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l9 9-9 9c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l9.9-9.9c.4-.4.4-1 0-1.4z"/></svg>
                         </button>
+                        <small *ngIf="error" class="red">{{error}}</small>
                     </dd>
                 </dl>
             </form>
         </div>
-    </div>  
+    </div>
 </div>

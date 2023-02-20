@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
-  constructor() { }
+  isActive:Boolean = false;
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+    let token = localStorage.getItem("token")
+    console.log("token",token);
+    if(token != null){
+        this.isActive = true
+    }else{
+      this.isActive =false
+      this.router.navigate(['/login'])
+    }
+  }
+  logout(){
+    localStorage.removeItem("token");
+    this.isActive=false
+    this.router.navigate(['/login'])
   }
 
 }
