@@ -1,0 +1,384 @@
+.full-wrap {
+    position: relative;
+    min-width: 80%;
+    max-width: calc(100% - 40px);
+    padding-left: 20px;
+}
+
+h2 {
+    font-size: 13px;
+    line-height: 20px;
+    padding-top: 6px;
+    margin-bottom: 6px;
+    font-weight: 900;
+}
+
+.banking-top {
+    display: flex;
+    margin: 10px 0 10px 0;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.banking-head {
+    display: flex;
+    background-color: #e4e4e4;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 0;
+    border-bottom: solid 1px #3b5160;
+    color: #3b5160;
+}
+
+.banking-head dt {
+    font-size: 13px;
+    padding-top: 8px;
+    padding-right: 9px;
+    padding-left: 9px;
+    border-right: solid 1px #3b5160;
+}
+
+.DW-amount {
+    display: flex;
+}
+
+#ulDWmain {
+    display: flex;
+    list-style: none;
+}
+
+.banking-head dd {
+    padding-left: 10px;
+    height: 20px;
+}
+
+.banking-head dd span {
+    font-size: 13px;
+    padding-right: 6px;
+}
+
+.banking-head dd label {
+    font-weight: bold;
+    margin: 0;
+    height: 18px;
+    font-size: 24px;
+}
+
+#accountStatusUl {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#openaccountStatus {
+    height: 30px;
+    width: 120px;
+    margin-left: 5px;
+}
+
+#status {
+    font-weight: bold;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+#searchUserId {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 290px;
+    border-radius: 5px;
+    border: none;
+    border-style: inset;
+    border-width: 2px;
+}
+
+.table01 {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 15px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-top: 1px solid #7e97a7;
+}
+
+thead {
+    background-color: #e4e4e4;
+    font-size: 13px;
+    border-top: 1px solid #7e97a7;
+    ;
+}
+
+.total_all .input-list .btn-send,
+.total_all .filter-list .btn-send,
+.nova88exch .total_all .input-list .search-but,
+.nova88exch .total_all .filter-list .search-but {
+    width: max-content;
+    padding: 0 8px;
+    height: 32px;
+    line-height: 28px;
+}
+
+.banking-btn {
+    background-color: #ffa00c;
+    color: black;
+    font-weight: 900;
+    margin-right: 8px;
+    border: 1px solid #cd8009;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bank-li {
+    list-style: none;
+}
+
+.clr-btn {
+    list-style: none;
+}
+
+.submit-payment {
+    list-style: none;
+}
+
+#settlementBarul {
+    display: flex;
+}
+
+.submit-payment button {
+    background-color: #ffa00c;
+    border: 1px solid #cd8009;
+    color: black;
+    font-weight: 900;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+    height: 35px;
+    font-size: 15px;
+    width: 230px;
+}
+
+.submit-payment button span {
+    background-color: #CB8009;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    border-radius: 50%;
+    vertical-align: top;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5.5px;
+    padding-right: 5.5px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.submit-payment {
+    background-color: #d6d8da;
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#paymentProcess {
+    width: 45%;
+    height: 35px;
+    border: none;
+    border-style: inset;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+#paymentProcess::placeholder {
+    padding-left: 30%;
+    font-size: 14px;
+}
+
+#settlementBarul {
+    background-color: #f8f8f8;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+#clearAllBtn {
+    background-color: #f0f0f0;
+    border: solid 1px black;
+    margin-top: 3px;
+    margin-right: 8px;
+    margin-left: 550px;
+    width: 130px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 13px;
+    border: solid 1px gray;
+}
+
+.pages {
+    list-style: none;
+    display: flex;
+}
+
+#pageNumberContent {
+    margin-left: 40%;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    width: 40%;
+    padding: 0;
+
+}
+
+#prevBtn {
+    border-radius: 5px;
+    border: solid 1px gray;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+#pageNumberBtn {
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+    background-color: #ffa00c;
+    border: solid 1px #cd8009;
+    width: 30px;
+}
+
+#nextBtn {
+    border-radius: 5px;
+    border: solid 1px gray;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+#goPageBtn_1 {
+    border-radius: 5px;
+    border: solid 1px gray;
+    font-size: 12px;
+    height: 22px;
+}
+
+li #goToPageNumber_1 {
+    border: none;
+    border-style: inset;
+    border-radius: 6px;
+    margin-right: 5px;
+    border-width: 2px;
+    width: 60px;
+    height: 25px;
+}
+
+.order {
+    color: gray;
+    font-size: 12px;
+    margin-right: 13px;
+}
+
+#ad {
+    font-size: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#sa {
+    font-size: 12px;
+}
+
+#ma {
+    font-size: 12px;
+}
+
+#exp {
+    font-size: 12px;
+}
+
+#ulDWmain li button {
+    border-width: 1px;
+    font-size: 12px;
+    margin-top: 9px;
+    color: #3b5160;
+    border-color: #3b5160;
+    border-radius: 5px;
+    height: 26px;
+}
+
+#hDpWd {
+    text-align: center;
+}
+
+#dpWdFullBtn {
+    border-width: 1px;
+    font-size: 12px;
+    margin-top: 9px;
+    color: #3b5160;
+    border-color: #3b5160;
+    border-radius: 5px;
+    height: 26px;
+}
+
+#amountmain {
+    border: none;
+    border-style: inset;
+    border-radius: 6px;
+    margin-right: 5px;
+    border-width: 2px;
+    width: 140px;
+    height: 25px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+#amountmain::placeholder {
+    padding-left: 80%;
+}
+
+#mm {
+    font-size: 12px;
+}
+
+#editcreditbtrefrenacemain {
+    border-width: 1px;
+    font-size: 12px;
+    margin-top: 9px;
+    color: #3b5160;
+    border-color: #3b5160;
+    border-radius: 5px;
+    height: 26px;
+    margin-left: 8px;
+}
+
+#usercreditrefrencemain {
+    color: rgb(61, 160, 199);
+}
+
+#agm {
+    font-size: 12px;
+}
+
+#client input {
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+#client input::placeholder {
+    font-size: 12px;
+    padding-left: 78%;
+}
+
+#log {
+    border-width: 1px;
+    font-size: 12px;
+    margin-top: 9px;
+    color: #3b5160;
+    border-color: #3b5160;
+    border-radius: 5px;
+    height: 26px;
+    width: 55px;
+}
