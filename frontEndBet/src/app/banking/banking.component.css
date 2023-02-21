@@ -63,7 +63,11 @@ h2 {
     border-bottom: solid 1px #3b5160;
     color: black;
 }
-
+#pbu{
+    border: none;
+    font-weight: normal;
+    font-size: 12px;
+}
 .banking-head dt {
     font-size: 13px;
     padding-top: 8px;
@@ -82,19 +86,11 @@ h2 {
 }
 
 .banking-head dd {
-    padding-left: 10px;
     height: 20px;
-}
-
-.banking-head dd span {
-    font-size: 13px;
-    padding-right: 6px;
 }
 
 .banking-head dd label {
     font-weight: bold;
-    margin: 0;
-    height: 18px;
     font-size: 24px;
 }
 
@@ -154,13 +150,9 @@ thead {
     background-color: #e4e4e4;
     font-size: 13px;
     border-top: 1px solid #7e97a7;
-    ;
 }
 
-.total_all .input-list .btn-send,
-.total_all .filter-list .btn-send,
-.nova88exch .total_all .input-list .search-but,
-.nova88exch .total_all .filter-list .search-but {
+ .btn-send{
     width: max-content;
     padding: 0 8px;
     height: 32px;
@@ -216,10 +208,10 @@ thead {
     vertical-align: top;
     padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 5.5px;
-    padding-right: 5.5px;
-    margin-left: 6px;
-    margin-right: 6px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .submit-payment {
@@ -351,26 +343,37 @@ li #goToPageNumber_1 {
     font-size: 12px;
 }
 
-#ulDWmain li button {
+#dbtn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     border-width: 1px;
     font-size: 14px;
     color: black;
     border-color: #c4c9ce;
-    /* border-radius: 5px; */
     height: 32px;
     font-weight: bold;
     width: 33px;
 }
 
-#dbtn {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
 #wbtn {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-width: 1px;
+    font-size: 14px;
+    color: black;
+    border-color: #c4c9ce;
+    height: 32px;
+    font-weight: bold;
+    width: 33px;
 }
+
+td {
+    padding: 4px 10px;
+    line-height: 25px;
+}
+/* .DW-amount{
+    padding: 4px 10px;
+} */
 
 #hDpWd {
     text-align: center;
@@ -383,7 +386,6 @@ li #goToPageNumber_1 {
 }
 
 #ulDWmain {
-    padding: 0;
     padding-left: 7px;
 }
 
@@ -458,7 +460,7 @@ li #goToPageNumber_1 {
     font-weight: 700;
 }
 
-#mm {
+#mm,#agm {
     font-size: 12px;
 }
 
@@ -478,9 +480,9 @@ li #goToPageNumber_1 {
     color: rgb(61, 160, 199);
 }
 
-#agm {
+/* #agm {
     font-size: 12px;
-}
+} */
 
 #client input {
     border: solid 1px gray;
@@ -491,6 +493,7 @@ li #goToPageNumber_1 {
 
 #client input::placeholder {
     font-size: 12px;
+    padding: 0;
     padding-left: 78%;
 }
 
