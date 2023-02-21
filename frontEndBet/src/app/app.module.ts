@@ -31,6 +31,8 @@ import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surve
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
+import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
+import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-prof
     AdminSettingWebsiteSettingComponent,
     AdminSettingSurveillanceSettingsComponent,
     CasinoProfitByDateComponent,
+    AactiveMatchComponent,
+    InactiveMatchComponent,
   ],
   imports: [
     BrowserModule,

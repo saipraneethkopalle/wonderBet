@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
 import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
@@ -16,6 +17,7 @@ import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/ca
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { HomeComponent } from './home/home.component';
+import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
@@ -50,7 +52,9 @@ const routes: Routes = [
   {path:"aSetMarketResult",component:SetmarketresultComponent},
   {path:"adminSettingSearchUser",component:AdminSettingSearchUserComponent},
   {path:"adminSettingWebsiteSetting",component:AdminSettingWebsiteSettingComponent},
-  {path:"adminSettingSurveillanceSettings",component:AdminSettingSurveillanceSettingsComponent}
+  {path:"adminSettingSurveillanceSettings",component:AdminSettingSurveillanceSettingsComponent},
+  {path:"AactiveMatch",component:AactiveMatchComponent},
+  {path:"AinactiveMatch",component:InactiveMatchComponent}
 ];
 
 @NgModule({
