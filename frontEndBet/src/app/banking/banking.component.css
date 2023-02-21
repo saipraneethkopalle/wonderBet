@@ -430,7 +430,7 @@ td {
 
 #dpWdFullBtn {
     border-width: 1px;
-    font-size: 12px;
+    font-size: 13px;
     /* margin-top: 9px; */
     color: black;
     border-color: #c4c9ce;
@@ -466,13 +466,13 @@ td {
 
 #editcreditbtrefrenacemain {
     border-width: 1px;
-    font-size: 12px;
+    font-size: 13px;
     color: black;
     border-color: #c4c9ce;
     border-radius: 5px;
     height: 32px;
     margin-left: 6px;
-    width: 20%;
+    width: 52px;
     font-weight: bold;
 }
 
@@ -499,7 +499,7 @@ td {
 
 #log {
     border-width: 1px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     color: black;
     border-color: #c4c9ce;
