@@ -33,6 +33,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
 import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
+import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fancy-status.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { InactiveMatchComponent } from './inactive-match/inactive-match.componen
     CasinoProfitByDateComponent,
     AactiveMatchComponent,
     InactiveMatchComponent,
+    AupdateFancyStatusComponent,
   ],
   imports: [
     BrowserModule,

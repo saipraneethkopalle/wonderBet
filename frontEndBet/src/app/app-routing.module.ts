@@ -7,6 +7,7 @@ import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surve
 import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-setting/admin-setting-website-setting.component';
 import { AdminsettingsComponent } from './adminsettings/adminsettings.component';
 import { AsetfancyresultComponent } from './asetfancyresult/asetfancyresult.component';
+import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fancy-status.component';
 import { BankingComponent } from './banking/banking.component';
 import { BetlistComponent } from './betlist/betlist.component';
 import { BetlistliveComponent } from './betlistlive/betlistlive.component';
@@ -54,7 +55,8 @@ const routes: Routes = [
   {path:"adminSettingWebsiteSetting",component:AdminSettingWebsiteSettingComponent},
   {path:"adminSettingSurveillanceSettings",component:AdminSettingSurveillanceSettingsComponent},
   {path:"AactiveMatch",component:AactiveMatchComponent},
-  {path:"AinactiveMatch",component:InactiveMatchComponent}
+  {path:"AinactiveMatch",component:InactiveMatchComponent},
+  {path:"AupdateFancyStatus",component:AupdateFancyStatusComponent}
 ];
 
 @NgModule({
