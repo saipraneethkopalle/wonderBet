@@ -102,3 +102,40 @@ h5{
   font-size: 0.9rem;
   font-weight: 700;
 }
+.align{
+  font-size: 12px;
+}
+.align-L1{
+  width: 5%
+}
+.align-L2{
+  width: 10%
+}
+.align-L3{
+  width: 10%
+}
+.align-L4{
+  width: 10%
+}
+.align-L5{
+  width: 26%
+}
+
+.align-L6{
+  width: 10%
+}
+.align-L7{
+  width: 10%
+}
+.align-L8{
+  width: 10%
+}
+.align-L9{
+  width: 10%
+}
+.align-L10{
+  width: 10%
+}
+.play{
+  color:beige;
+}

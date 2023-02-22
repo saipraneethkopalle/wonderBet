@@ -8,6 +8,7 @@
     font-size:14px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top:10px;
+    background-color: #f0ece1;
 }
 
 h2{
@@ -92,7 +93,23 @@ h2{
   .table_col{
     text-align: right;
   }
-  .align_L{
+  .align_L1{
     font-family: Arial, Helvetica, sans-serif;
-
+    width: 10%
+  }
+  .align_L2{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 7%
+  }
+  .align_L3{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 5%
+  }
+  .align_L4{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 6%
+  }
+  .align_L5{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15%
   }
