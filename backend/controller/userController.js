@@ -29,3 +29,13 @@ exports.addSuperAdmin =async(req,res)=>{
         return res.status(STATUS.BAD_REQUEST).send(err);
     }
 }
+exports.getSuperAdmin = async(req,res)=>{
+    try{
+        let adminDetails = await superUser.find().lean().exec();
+        return res.status(STATUS.OK).send({message:'Success',data:adminDetails})
+
+    }catch(err) {
+        return res.status(STATUS.BAD_REQUEST).send({message:'error',error:err.message})
+
+    }
+}

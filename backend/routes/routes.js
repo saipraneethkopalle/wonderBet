@@ -6,5 +6,6 @@ router.post('/addMatch',matchController.addMatches)
 router.get('/getAllMatches',matchController.getAllMatches)
 router.get('/changePassword',userController.changePassword)
 router.post('/addSuperAdmin',userController.addSuperAdmin)
+router.get('/getSuperAdmin',userController.getSuperAdmin)
 router.get('/health',(req,res)=>{res.send({"message":"apis working fine"})})
 module.exports = router;
