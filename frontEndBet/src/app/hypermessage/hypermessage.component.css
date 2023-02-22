@@ -21,13 +21,12 @@ h2{
     font-weight: 600;
 }
 .searchbtn{
-    margin-left: 5px;
     width: 257px;
     height: 29px;
     margin-top: 4px;
     border-radius: 2px;
     border: none;
-    margin-left: 5px;
+    margin-left: 0px;
     padding-left: 4px;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
@@ -158,3 +157,10 @@ h2{
     margin-top: 1rem;
     margin-left: 1.3rem !important
   }
+  .border-table{
+    font-size: 0.8rem;
+}
+.border-table td{
+    padding: 4px;
+    line-height: 36px;
+}
