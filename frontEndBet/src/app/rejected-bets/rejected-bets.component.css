@@ -81,3 +81,18 @@ select{
     line-height: 90%;
     font-size: 13px;
 }
+
+tbody tr{
+  background-color: rgb(135, 135, 254);
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
