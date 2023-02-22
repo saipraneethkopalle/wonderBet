@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
+    this.getAdmin();
   }
   superUserForm=new FormGroup({
     site:new FormControl('',[Validators.required]),
@@ -48,5 +49,11 @@ export class HomeComponent implements OnInit {
     //     this.error = "Invalid details"
     // }
     )
+  }
+  getAdmin() {
+    this.apiService.getSuperUser().subscribe((res:any)=>{
+      console.log(res)
+      this.accountDetails = res.data;
+    })
   }
 }
