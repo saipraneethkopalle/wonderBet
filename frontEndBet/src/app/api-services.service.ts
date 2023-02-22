@@ -45,4 +45,8 @@ export class ApiServicesService {
     const url = environment.url + "/api/v1/auth/addSuperAdmin"
     return this.http.post(url,data,{headers:this.headers})
   }
+  getSuperUser() {
+    const url = environment.url + "/api/v1/auth/getSuperAdmin"
+    return this.http.get(url,{headers:this.headers})
+  }
 }

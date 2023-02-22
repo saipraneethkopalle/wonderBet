@@ -1,0 +1,177 @@
+.main{
+    width:100%;
+    min-height: 650px;
+    height:auto;
+    overflow:hidden;
+    padding-left:7%;
+    padding-right:6%;
+    font-size:14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2px;;
+    background-color: #f0ece1;
+}
+.sportsBody{
+    padding: 10px 10px 0;
+    background-color: #E0E6E6;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h2{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.searchbtn{
+    margin-left: 5px;
+    width: 257px;
+    height: 29px;
+    margin-top: 4px;
+    border-radius: 2px;
+    border: none;
+    margin-left: 5px;
+    padding-left: 4px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+  }
+  .date{
+    color: #1e1e1e;
+    font-size: 12px;
+    border: 0px #aaa solid;
+    background: #fff;
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    margin: 0 5px 5px 0;
+    box-sizing: border-box;
+    height: 102px;
+    width: 323px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  textarea{
+    color: #1e1e1e;
+    font-size: 12px;
+    border: 0px #aaa solid;
+    background: #fff;
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+    box-sizing: border-box;
+  }
+  .match_button{
+    margin-left: 1px;
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 105px;
+    margin-right: 9px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+    height: 31px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .sportStatus{
+    height: 30px;
+    width: 128px;
+    border-radius: 1px;
+  }
+  .input{
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  .match_btn{
+    margin-left: 8px;
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 77px;
+    margin-right: 1px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 13px;
+    height: 31px;
+  }
+
+  .table_data{
+    background-color: #E0E6E6;
+      border-bottom: 1px solid #7e97a7;
+      border-top: 1px solid #7e97a7;
+      margin-bottom: 10px;
+  }
+  th{
+    color: #243a48;
+    background-color: #e4e4e4;
+    border: 1px solid #7e97a7;
+    border-width: 1px 0 1px 0;
+    padding: 8px 10px
+  }
+  .table_data,.h tr{
+    font-size: 12px
+  }
+  .match_buttons{
+    margin-left: 1px;
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 105px;
+    margin-right: 9px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 13px;
+    height: 28px;
+    margin-bottom: 11px;
+  }
+  tbody{
+    background-color: white;
+  }
+  .button_section{
+    font-weight: bold;
+  }
+  .align1{
+    width: 9%
+  }
+  .align2{
+    width: 24%
+  }
+  .align3{
+    width: 20%
+  }
+  .align4{
+    width: 17%
+  }
+  .align5{
+    width: 12%
+  }
+  .action{
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+  .check{
+    margin-top: -1rem;
+    margin-left: 8rem !important;
+  }
+  .h2{
+    font-size: 22px;
+    color: red;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 0.23;
+    
+  }
+  .p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 13px;
+  }
