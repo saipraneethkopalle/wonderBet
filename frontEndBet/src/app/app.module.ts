@@ -34,6 +34,10 @@ import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-prof
 import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fancy-status.component';
+import { RejectedBetsComponent } from './rejected-bets/rejected-bets.component';
+import { SuspendedResultsComponent } from './suspended-results/suspended-results.component';
+import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
+import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +71,10 @@ import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fanc
     AactiveMatchComponent,
     InactiveMatchComponent,
     AupdateFancyStatusComponent,
+    RejectedBetsComponent,
+    SuspendedResultsComponent,
+    SuspendedfancyResultComponent,
+    SuspendedmarketResultComponent,
   ],
   imports: [
     BrowserModule,
