@@ -34,16 +34,13 @@ import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-prof
 import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fancy-status.component';
-<<<<<<< HEAD
 import { UsermessageComponent } from './usermessage/usermessage.component';
 import { HypermessageComponent } from './hypermessage/hypermessage.component';
 import { ImportantmessageComponent } from './importantmessage/importantmessage.component';
-=======
 import { RejectedBetsComponent } from './rejected-bets/rejected-bets.component';
 import { SuspendedResultsComponent } from './suspended-results/suspended-results.component';
 import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
->>>>>>> 44ec0f5c7793d484357eafbc6e872776f83b6e2e
 
 @NgModule({
   declarations: [
@@ -77,16 +74,13 @@ import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspend
     AactiveMatchComponent,
     InactiveMatchComponent,
     AupdateFancyStatusComponent,
-<<<<<<< HEAD
     UsermessageComponent,
     HypermessageComponent,
     ImportantmessageComponent,
-=======
     RejectedBetsComponent,
     SuspendedResultsComponent,
     SuspendedfancyResultComponent,
     SuspendedmarketResultComponent,
->>>>>>> 44ec0f5c7793d484357eafbc6e872776f83b6e2e
   ],
   imports: [
     BrowserModule,
