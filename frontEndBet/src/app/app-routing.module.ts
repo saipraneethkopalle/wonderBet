@@ -34,6 +34,7 @@ import { SportsettingComponent } from './sportsetting/sportsetting.component';
 import { SuspendedResultsComponent } from './suspended-results/suspended-results.component';
 import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
+import { UsermessageComponent } from './usermessage/usermessage.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -66,7 +67,10 @@ const routes: Routes = [
   {path:"AdeletedBets",component:RejectedBetsComponent},
   {path:"AsuspendedResults",component:SuspendedResultsComponent},
   {path:"AsuspendedfancyResult",component:SuspendedfancyResultComponent},
-  {path:"suspendedmarketResult",component:SuspendedmarketResultComponent}
+  {path:"suspendedmarketResult",component:SuspendedmarketResultComponent},
+  {path:"AUserMessage",component:UsermessageComponent},
+  {path:"AHyperMessage",component:HypermessageComponent},
+  {path:"AImpMessage",component:ImportantmessageComponent}
 ];
 
 @NgModule({
