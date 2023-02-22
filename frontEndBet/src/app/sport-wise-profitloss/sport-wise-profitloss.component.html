@@ -1,60 +1,49 @@
 <app-navigation></app-navigation>
 <div class="main">
-    <h6>Profit/Loss Report by Downline</h6>
-    <div>
-        <label for="">Data Source: <select class="select"><option>DB</option><option>ELK</option></select></label>
+  <h6>Profit/Loss Report by Downline</h6>
+  <div>
+    <label for=""
+      >Data Source:
+      <select class="select">
+        <option>DB</option>
+        <option>ELK</option>
+      </select></label
+    >
+  </div>
+  <div class="betlistfilter">
+    <div class="filter1">
+      <label>Type:</label>
+      <select class="betStatus">
+        <option>Sports</option>
+        <option>Diamond Casino</option>
+        <option>International Casino</option>
+      </select>
+      <label class="period">Period </label
+      ><input type="date" class="date" [value]="currentDate" /><input
+        type="time"
+        class="time"
+        [value]="currentTime"
+      />
+      <span>to</span>
+      <input type="date" class="date" [value]="currentDate" /><input
+        type="time"
+        class="time"
+        [value]="currentTime"
+      />
     </div>
-    <div class="betlistfilter">
-        <div class="filter1">
-          <label>Type:</label>
-          <select class="betStatus">
-            <option>Sports</option>
-            <option>Diamond Casino</option>
-            <option>International Casino</option>
-          </select>
-          <label class="period">Period </label><input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
-           <span>to</span>
-           <input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
-        </div>
-        <div class="filter2">
-          <button type="button" class="btn1">Just For Today</button>
-          <button type="button" class="btn2">From Yesterday</button>
-          <button type="button" class="btn3">Get P&L</button>
-        </div>
-      </div>
-      <table class="betlisttb">
-        <tr class="betlisthead">
-          <td class="width1">UID</td>
-          <td class="width2">Sports PL</td>
-          <td class="width3">Casino P/L</td>
-          <td class="width4">Comm.</td>
-          <td>Total P/L</td>
-          
-        </tr>
-        <!-- <tr *ngFor="let item of betListData" class="bet">
-          <td>{{item.plId}}</td>
-          <td>{{item.betId}}</td>
-          <td>{{item.betPlaced}}</td>
-          <td>{{item.ipAddress}}</td>
-          <td>{{item.market}}</td>
-          <td>{{item.selection}}</td>
-          <td>{{item.type}}</td>
-          <td>{{item.oddsReq}}</td>
-          <td>{{item.stake}}</td>
-          <td>{{item.liability}}</td>
-          <td>{{item.profitLoss}}</td>
-        </tr> -->
-        <!-- <tr  class="err"><td colspan="2" scope="col">You have no bets in this time period.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr> -->
-      </table>
-
+    <div class="filter2">
+      <button type="button" class="btn1">Just For Today</button>
+      <button type="button" class="btn2">From Yesterday</button>
+      <button type="button" class="btn3">Get P&L</button>
+    </div>
+  </div>
+  <table class="betlisttb">
+    <tr class="betlisthead">
+      <td class="width1">UID</td>
+      <td class="width2">Sports PL</td>
+      <td class="width3">Casino P/L</td>
+      <td class="width4">Comm.</td>
+      <td>Total P/L</td>
+    </tr>
+  </table>
 </div>

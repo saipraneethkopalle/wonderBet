@@ -1,63 +1,46 @@
 <app-navigation></app-navigation>
 <div class="main">
-    <h6><b>Profit Loss</b></h6>
-    <div class="betlistfilter">
-        <div class="filter1">
-          <label>Period </label><input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
-           <span>to</span>
-           <input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
-           <button class="btn3">Apply</button>
-           <button class="btn2">clear</button>
-        </div>
-      </div>
-      <div class="filter1">
-        <button class="btn4">Cricket</button> <button class="btn5">Soccer</button><button class="btn6">Tennis</button>
+  <h6><b>Profit Loss</b></h6>
+  <div class="betlistfilter">
+    <div class="filter1">
+      <label>Period </label
+      ><input type="date" class="date" [value]="currentDate" /><input
+        type="time"
+        class="time"
+        [value]="currentTime"
+      />
+      <span>to</span>
+      <input type="date" class="date" [value]="currentDate" /><input
+        type="time"
+        class="time"
+        [value]="currentTime"
+      />
+      <button class="btn3">Apply</button>
+      <button class="btn2">clear</button>
     </div>
-      <table class="betlisttb">
-        <tr class="betlisthead">
-          <td class="bod">S.No.</td>
-          <td class="bod1">Match Name</td>
-          <td class="bod2">Match Date</td>
-          <td class="bod3">Pnl+</td>
-          <td class="bod4">Pnl-</td>
-          <td class="bod5">Commission</td>
-          <td class="bod6">Final P&L</td>
-
-          
-        </tr>
-        <tr>
-          <td ></td>
-          <td class="td1">Total</td>
-          <td class="td1"></td>
-          <td class="td2">0</td>
-          <td class="td3">0</td>
-          <td class="td4">0</td>
-          <td class="td1">0</td>
-        </tr>
-        <!-- <tr *ngFor="let item of betListData" class="bet">
-          <td>{{item.plId}}</td>
-          <td>{{item.betId}}</td>
-          <td>{{item.betPlaced}}</td>
-          <td>{{item.ipAddress}}</td>
-          <td>{{item.market}}</td>
-          <td>{{item.selection}}</td>
-          <td>{{item.type}}</td>
-          <td>{{item.oddsReq}}</td>
-          <td>{{item.stake}}</td>
-          <td>{{item.liability}}</td>
-          <td>{{item.profitLoss}}</td>
-        </tr> -->
-        <!-- <tr  class="err"><td colspan="2" scope="col">You have no bets in this time period.</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr> -->
-      </table>
-
+  </div>
+  <div class="filter3">
+    <button class="btn4">Cricket</button> <button class="btn5">Soccer</button
+    ><button class="btn6">Tennis</button>
+  </div>
+  <table class="betlisttb">
+    <tr class="betlisthead">
+      <td class="bod">S.No.</td>
+      <td class="bod1">Match Name</td>
+      <td class="bod2">Match Date</td>
+      <td class="bod3">Pnl+</td>
+      <td class="bod4">Pnl-</td>
+      <td class="bod5">Commission</td>
+      <td class="bod6">Final P&L</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="td1">Total</td>
+      <td class="td1"></td>
+      <td class="td2">0</td>
+      <td class="td3">0</td>
+      <td class="td4">0</td>
+      <td class="td1">0</td>
+    </tr>
+    </table>
 </div>

@@ -12,6 +12,7 @@ export class MatchProfitlossComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("i am inside ng on init function")
   }
 
 }
