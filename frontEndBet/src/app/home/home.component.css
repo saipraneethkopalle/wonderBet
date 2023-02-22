@@ -212,7 +212,7 @@ td{
   border-radius: 7px;
 }
 .btn-primary{
-  background: #ffa00c url(/adminfiles/img/bg-send.gif) repeat-x;
+  background: #ffa00c;
   border-color: #be7f1a;
   color: #1e1e1e;
 }
