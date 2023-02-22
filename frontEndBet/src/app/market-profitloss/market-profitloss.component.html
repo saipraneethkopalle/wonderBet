@@ -1,84 +1,96 @@
 <app-navigation></app-navigation>
 <div class="main">
-    <h6>Profit/Loss Report by Market</h6>
-    <div>
-        <label for="">Data Source: <select class="select"><option>DB</option><option>ELK</option></select></label>
+  <h6>Profit/Loss Report by Market</h6>
+  <div>
+    <label for=""
+      >Data Source:
+      <select class="select">
+        <option>DB</option>
+        <option>ELK</option>
+      </select></label
+    >
+  </div>
+  <div class="betlistfilter">
+    <div class="filter1">
+      <label>Sports</label>
+      <select class="betStatus">
+        <option>ALL</option>
+        <option>SOCCER</option>
+        <option>TENNIS</option>
+        <option>CRICKET</option>
+        <option>CRICKET_FANCY</option>
+        <option>CRICKET_FANCY1</option>
+        <option>CRICKET_BOOk</option>
+        <option>CRICKET_PREMIUM</option>
+        <option>Toss</option>
+        <option>CRICKET_FANCY</option>
+        <option>ELECTION_FANCY</option>
+        <option>CRICKET_FANCY</option>
+        <option>FANCYBET</option>
+        <option>POLITICS</option>
+        <option>KABADDI</option>
+        <option>CASINO</option>
+        <option>BPOKER</option>
+        <option>MT5</option>
+        <option>SABA</option>
+        <option>BINARY</option>
+      </select>
+      <label>Time Zone</label>
+      <select class="betStatus">
+        <option>Pacific/Midway(GMT-11:00)</option>
+        <option>Pacific/Honolulu(GMT-10:00)</option>
+        <option>America/Juneau(GMT-9:00)</option>
+        <option>America/Los_Angeles(GMT-8:00)</option>
+        <option>America/Phoenix(GMT-7:00)</option>
+        <option>America/Chicago(GMT-6:00)</option>
+        <option>America/New_York(GMT-5:00)</option>
+        <option>America/Santiago(GMT-4:00)</option>
+        <option>America/Sao_Paulo(GMT-3:00)</option>
+        <option>Atlantica/South_Georgia(GMT-2:00)</option>
+        <option>Atlantica/Azores(GMT-1:00)</option>
+        <option>Europe/London(GMT+0:00)</option>
+        <option>Europe/Paris(GMT+1:00)</option>
+        <option>Africa/Cairo(GMT+2:00)</option>
+        <option>Asia/Qatar(GMT-3:00)</option>
+        <option>Asia/Dubai(GMT+4:00)</option>
+        <option>Asia/Karachi(GMT+5:00)</option>
+        <option>IST(Bangalore / Bombay / New Delhi(GMT+5:30)</option>
+        <option>Asia/Kathmandu(GMT+5:45)</option>
+        <option>Asia/Dhaka(GMT+6:00)</option>
+        <option>Asia/Bangkok(GMT+7:00)</option>
+        <option>Asia/Hong_Kong(GMT+8:00)</option>
+        <option>Asia/Tokyo(GMT+9:00)</option>
+        <option>Australia/Adelaide(GMT+5:45)</option>
+        <option>Australia/Melbourne(GMT+9:30)</option>
+        <option>Asia/Magadan(GMT+11:00)</option>
+        <option>Pacific/Fiji(GMT+12:00)</option>
+      </select>
+      <label>Period </label><input type="date" class="date" [value]="currentDate" /><input
+        type="time"
+        class="time"
+        [value]="currentTime"
+      />
+      <span>to</span>
+      <input type="date" class="date" [value]="currentDate" /><input
+        type="time"
+        class="time"
+        [value]="currentTime"
+      />
     </div>
-    <div class="betlistfilter">
-        <div class="filter1">
-          <label>Sports</label>
-          <select>
-            <option>ALL</option>
-            <option>SOCCER</option>
-            <option>TENNIS</option>
-            <option>CRICKET</option>
-            <option>CRICKET_FANCY</option>
-            <option>CRICKET_FANCY1</option>
-            <option>CRICKET_BOOk</option>
-            <option>CRICKET_PREMIUM</option>
-            <option>Toss</option>
-            <option>CRICKET_FANCY</option>
-            <option>ELECTION_FANCY</option>
-            <option>CRICKET_FANCY</option>
-            <option>FANCYBET</option>
-            <option>POLITICS</option>
-            <option>KABADDI</option>
-            <option>CASINO</option>
-            <option>BPOKER</option>
-            <option>MT5</option>
-            <option>SABA</option>
-            <option>BINARY</option>
-        </select>
-          <label>Time Zone</label>
-          <select class="betStatus">
-            <option>Pacific/Midway(GMT-11:00)</option>
-            <option>Pacific/Honolulu(GMT-10:00)</option>
-            <option>America/Juneau(GMT-9:00)</option>
-            <option>America/Los_Angeles(GMT-8:00)</option>
-            <option>America/Phoenix(GMT-7:00)</option>
-            <option>America/Chicago(GMT-6:00)</option>
-            <option>America/New_York(GMT-5:00)</option>
-            <option>America/Santiago(GMT-4:00)</option>
-            <option>America/Sao_Paulo(GMT-3:00)</option>
-            <option>Atlantica/South_Georgia(GMT-2:00)</option>
-            <option>Atlantica/Azores(GMT-1:00)</option>
-            <option>Europe/London(GMT+0:00)</option>
-            <option>Europe/Paris(GMT+1:00)</option>
-            <option>Africa/Cairo(GMT+2:00)</option>
-            <option>Asia/Qatar(GMT-3:00)</option>
-            <option>Asia/Dubai(GMT+4:00)</option>
-            <option>Asia/Karachi(GMT+5:00)</option>
-            <option>IST(Bangalore / Bombay / New Delhi(GMT+5:30)</option>
-            <option>Asia/Kathmandu(GMT+5:45)</option>
-            <option>Asia/Dhaka(GMT+6:00)</option>
-            <option>Asia/Bangkok(GMT+7:00)</option>
-            <option>Asia/Hong_Kong(GMT+8:00)</option>
-            <option>Asia/Tokyo(GMT+9:00)</option>
-            <option>Australia/Adelaide(GMT+5:45)</option>
-            <option>Australia/Melbourne(GMT+9:30)</option>
-            <option>Asia/Magadan(GMT+11:00)</option>
-            <option>Pacific/Fiji(GMT+12:00)</option>
-          </select>
-          <label>Period </label><input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
-           <span>to</span>
-           <input type="date" class="date" [value]="currentDate"><input type="time" class="time" [value]="currentTime"/>
-        </div>
-        <div class="filter2">
-          <button type="button" class="btn1">Just For Today</button>
-          <button type="button" class="btn2">From Yesterday</button>
-          <button type="button" class="btn3">Get P&L</button>
-        </div>
-      </div>
-      <table class="betlisttb">
-        <tr class="betlisthead">
-          <td class="width1">UID</td>
-          <td class="width2">Stake</td>
-          <td class="width3">Downline P/L</td>
-          <td class="width4">Player P/L</td>
-          <td class="width5">Comm.</td>
-          <td>Upline P/L</td>
-        </tr>
-       
-      </table>
-
+    <div class="filter2">
+      <button type="button" class="btn1">Just For Today</button>
+      <button type="button" class="btn2">From Yesterday</button>
+      <button type="button" class="btn3">Get P&L</button>
+    </div>
+  </div>
+  <table class="betlisttb">
+    <tr class="betlisthead">
+      <td class="width1">UID</td>
+      <td class="width2">Stake</td>
+      <td class="width3">Downline P/L</td>
+      <td class="width4">Player P/L</td>
+      <td class="width5">Comm.</td>
+      <td>Upline P/L</td>
+    </tr>
+  </table>
 </div>

@@ -25,12 +25,15 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { RejectedBetsComponent } from './rejected-bets/rejected-bets.component';
 import { ResultComponent } from './result/result.component';
 import { RiskmanagementComponent } from './riskmanagement/riskmanagement.component';
 import { SetmarketresultComponent } from './setmarketresult/setmarketresult.component';
 import { SportWiseProfitlossComponent } from './sport-wise-profitloss/sport-wise-profitloss.component';
 import { SportsettingComponent } from './sportsetting/sportsetting.component';
-import { UsermessageComponent } from './usermessage/usermessage.component';
+import { SuspendedResultsComponent } from './suspended-results/suspended-results.component';
+import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
+import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -60,9 +63,10 @@ const routes: Routes = [
   {path:"AactiveMatch",component:AactiveMatchComponent},
   {path:"AinactiveMatch",component:InactiveMatchComponent},
   {path:"AupdateFancyStatus",component:AupdateFancyStatusComponent},
-  {path:"AUserMessage",component:UsermessageComponent},
-  {path:"AHyperMessage",component:HypermessageComponent},
-  {path:"AImpMessage",component:ImportantmessageComponent}
+  {path:"AdeletedBets",component:RejectedBetsComponent},
+  {path:"AsuspendedResults",component:SuspendedResultsComponent},
+  {path:"AsuspendedfancyResult",component:SuspendedfancyResultComponent},
+  {path:"suspendedmarketResult",component:SuspendedmarketResultComponent}
 ];
 
 @NgModule({

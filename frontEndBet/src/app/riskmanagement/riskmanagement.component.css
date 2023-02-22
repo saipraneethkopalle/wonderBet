@@ -295,3 +295,74 @@ th{
     margin-left: 89.5%;
     background-color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////// */
+
+
+.main_heading{
+    justify-content: space-between;
+}
+
+.mai_div .main_heading  h3{
+    display: flex;
+    font-size: 2px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+}
+
+
+.h3, h3 {
+    font-size: 0.95rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
