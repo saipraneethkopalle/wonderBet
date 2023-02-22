@@ -10,20 +10,13 @@
     padding-top:5px;
     background-color: #f0ece1;
   }
-  .main{
-    width:100%;
-    min-height: 650px;
-    height:auto;
-    overflow:hidden;
-    padding-left:7%;
-    padding-right:7%;
-    font-size:14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top:5px;
-    background-color: #f0ece1;
-  }
+ h6{
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+ }
   .betlistfilter{
-    padding: 10px 10px 0;
+    padding: 10px 0px 0;
     background-color: #E0E6E6;
     border-bottom: 1px solid #7e97a7;
     margin-bottom: 10px;
@@ -31,11 +24,16 @@
   label{
     font-size:12px;
   }
-  .filter1,.filter2{
+  /* .filter1,.filter2{
     padding:5px;
+  } */
+  .filter2{
+    margin-left: 10px;
+    margin-bottom: 10px;
   }
   .filter1 label{
-    padding-right:5px;
+    padding-right:15px;
+    margin-left: 12px;
   }
   .betStatus{
     height:28px;
@@ -70,9 +68,9 @@
     border-color: #cb8009;
     border-radius: 4px;
     color: #1e1e1e;
-    font-weight: bold;
-    line-height: 23px;
-    font-size: 12px;
+    line-height: 20px;
+    font-size: 14px;
+    width:7.7rem;
   }
   .betDetails{
     padding:5px;
@@ -101,4 +99,26 @@
     font-weight: normal;
     font-size:12px;
   }
-  
+  .betlisthead{
+    line-height: 10px;
+  }
+.width1{
+  width: 32%;
+}
+.width2{
+  width: 21%
+}
+.width3{
+  width: 23%;
+}
+.width4{
+  width: 18%;
+}
+.select{
+  width: 7rem;
+  height: 29px;
+}
+ span {
+  margin-right: 15px;
+    margin-left: 12px;
+}
