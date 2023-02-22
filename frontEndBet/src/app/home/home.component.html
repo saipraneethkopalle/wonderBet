@@ -147,6 +147,7 @@
                     <option value="Asia/Magadan GMT+11:00">Asia/Magadan(GMT+11:00)</option>
                     <option value="Pacific/Fiji GMT+12:00">Pacific/Fiji(GMT+12:00)</option>
                   </select><span class="must">*</span></td></tr>
+                  <tr><td class="er" *ngIf="error">{{error}}</td><td></td></tr>
               </table>
               <div class="modal-footer">
               <button type="submit" class="btn btn-primary" id="cpBtn">Create</button>

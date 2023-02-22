@@ -10,6 +10,7 @@ import { ApiServicesService } from '../api-services.service';
 })
 export class HomeComponent implements OnInit {
   accountDetails:any=[{account:"main",accountType:"SUA",creditRef:"60,00,000",balance:"60,000,000",exposure:"0.00",availBal:"6,00,00,000",playerBal:"2,00,000",refPL:"4,34,00,345",status:"Active"}];
+  error:any;
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
@@ -42,6 +43,10 @@ export class HomeComponent implements OnInit {
         title:"Created Super Admin",
         text:"Successfully Created!"
       })
-    })
+    }
+    // ,(error:any)=>{
+    //     this.error = "Invalid details"
+    // }
+    )
   }
 }
