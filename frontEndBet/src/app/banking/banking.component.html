@@ -3,8 +3,8 @@
     <h2>Banking</h2>
     <div class="total_all banking-top">
       <div class="search-wrap" id="userSearchUl">
-        <div>
-          <input class="search-input" id="searchUserId" type="text" placeholder="Enter userId...">
+        <div class="search-wrap searchbox">
+          <i class="fa fa-search"></i><input class="search-input" id="searchUserId" type="text" placeholder="Enter userId...">
         </div>
       </div>
       <ul class="input-list" id="companySearchUl">
@@ -30,8 +30,8 @@
       <div class="function-wrap">
         <div class="banking-head float-l">
             <dt>Your Balance</dt>
+            <dt id="pbu">PBU</dt>
             <dd>
-                <span>PBU</span>
                <label>389,175,898.50</label> 
             </dd>
         </div>
@@ -39,15 +39,15 @@
       <table id="table_log" class="table01">
         <thead>
           <tr>
-            <th class="align-L">UID</th>
-            <th class="align-L">Balance</th>
-            <th class="align-L">Available D/W</th>
-            <th class="align-L">Exposure</th>
-            <th class="align-L" id="hDpWd">Deposit/Withdraw</th>
-            <th class="align-L">Credit Reference</th>
-            <th class="align-L">Reference P/l</th>
-            <th class="align-L">Remark</th>
-            <th class="align-L">logs</th>
+            <th class="align-L hd" id="huid">UID</th>
+            <th class="align-L hd">Balance</th>
+            <th class="align-L hd">Available D/W</th>
+            <th class="align-L hd" id="dexp">Exposure</th>
+            <th class="align-L hd" id="hDpWd">Deposit/Withdraw</th>
+            <th class="align-L hd">Credit Reference</th>
+            <th class="align-L hd" id="hrefpl">Reference P/l</th>
+            <th class="align-L hd" id="hrmk">Remark</th>
+            <th class="align-L hd" id="hlgs">logs</th>
           </tr>
         </thead>
         <tbody id="content">
@@ -57,14 +57,8 @@
             <td class="align-L" id="ma">54,560,390.39</td>
             <td class="align-L" id="exp">0.00</td>
             <td class="align-L DW-amount" id="sm">
-                <ul id="ulDWmain" class="btn_list-DW">
-                    <li>
-                        <button>D</button>
-                    </li>
-                    <li>
-                        <button>W</button>
-                    </li>
-                </ul>
+                <button id="dbtn">D</button>
+                <button id="wbtn">W</button>
                 <input type="number" name="amount" id="amountmain" placeholder="0">
                 <button id="dpWdFullBtn">Full</button>
             </td>
@@ -83,7 +77,7 @@
         </tbody>
       </table>
     </div>
-    <div class="paginationlist">
+    <!-- <div class="paginationlist">
       <ul class="pages" id="pageNumberContent">
         <li id="prev">
           <button id="prevBtn">Prev</button>
@@ -101,7 +95,7 @@
         <button id="goPageBtn_1">GO</button>
         </li>
       </ul>
-    </div>
+    </div> -->
     <div class="submit-wrap" id="settlementBar">
         <ul id="settlementBarul">
             <li class="clr-btn">

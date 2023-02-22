@@ -1,8 +1,11 @@
 .full-wrap {
     position: relative;
-    min-width: 80%;
+    min-width: 100%;
     max-width: calc(100% - 40px);
     padding-left: 20px;
+    background-color: rgb(230, 229, 222);
+    height: 100vh;
+    overflow: hidden;
 }
 
 h2 {
@@ -12,6 +15,37 @@ h2 {
     margin-bottom: 6px;
     font-weight: 900;
 }
+
+.searchbox {
+    display: flex;
+    color: #212121;
+    width: fit-content;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+}
+
+.fa-search {
+    padding: 5px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-right: none;
+    padding-top: 10px;
+}
+
+.searchUserId {
+    height: 27px;
+    width: 185px;
+    font-size: 12px;
+    padding: 1px;
+    padding-left: 4px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+    border-left: none;
+    border-bottom: none;
+}
+
 
 .banking-top {
     display: flex;
@@ -27,9 +61,13 @@ h2 {
     height: 40px;
     padding: 0;
     border-bottom: solid 1px #3b5160;
-    color: #3b5160;
+    color: black;
 }
-
+#pbu{
+    border: none;
+    font-weight: normal;
+    font-size: 12px;
+}
 .banking-head dt {
     font-size: 13px;
     padding-top: 8px;
@@ -48,19 +86,11 @@ h2 {
 }
 
 .banking-head dd {
-    padding-left: 10px;
     height: 20px;
-}
-
-.banking-head dd span {
-    font-size: 13px;
-    padding-right: 6px;
 }
 
 .banking-head dd label {
     font-weight: bold;
-    margin: 0;
-    height: 18px;
     font-size: 24px;
 }
 
@@ -85,11 +115,19 @@ h2 {
 #searchUserId {
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 290px;
+    width: 260px;
     border-radius: 5px;
     border: none;
-    border-style: inset;
+    /* border-style: inset; */
     border-width: 2px;
+    height: 32px;
+    background-color: white;
+}
+
+
+#companySearchUl {
+    padding: 0;
+    margin-left: 10px;
 }
 
 .table01 {
@@ -98,6 +136,7 @@ h2 {
     border-collapse: collapse;
     border-bottom: 1px solid #7e97a7;
     margin-bottom: 15px;
+    text-align: right;
 }
 
 tbody {
@@ -111,13 +150,9 @@ thead {
     background-color: #e4e4e4;
     font-size: 13px;
     border-top: 1px solid #7e97a7;
-    ;
 }
 
-.total_all .input-list .btn-send,
-.total_all .filter-list .btn-send,
-.nova88exch .total_all .input-list .search-but,
-.nova88exch .total_all .filter-list .search-but {
+ .btn-send{
     width: max-content;
     padding: 0 8px;
     height: 32px;
@@ -160,7 +195,7 @@ thead {
     margin-left: 8px;
     height: 35px;
     font-size: 15px;
-    width: 230px;
+    width: 50%;
 }
 
 .submit-payment button span {
@@ -173,10 +208,10 @@ thead {
     vertical-align: top;
     padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 5.5px;
-    padding-right: 5.5px;
-    margin-left: 6px;
-    margin-right: 6px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .submit-payment {
@@ -201,7 +236,7 @@ thead {
 }
 
 #settlementBarul {
-    background-color: #f8f8f8;
+    background-color: #ececec;
     padding-top: 10px;
     padding-bottom: 8px;
 }
@@ -210,9 +245,9 @@ thead {
     background-color: #f0f0f0;
     border: solid 1px black;
     margin-top: 3px;
-    margin-right: 8px;
+    margin-right: 20px;
     margin-left: 550px;
-    width: 130px;
+    width: 15%;
     height: 35px;
     font-weight: bold;
     font-size: 13px;
@@ -285,6 +320,15 @@ li #goToPageNumber_1 {
     padding-bottom: 4px;
     padding-right: 10px;
     padding-left: 10px;
+    text-align: left;
+}
+
+#dexp {
+    border-right: 1px solid black;
+}
+
+#exp {
+    border-right: 1px solid black;
 }
 
 #sa {
@@ -299,86 +343,169 @@ li #goToPageNumber_1 {
     font-size: 12px;
 }
 
-#ulDWmain li button {
+#dbtn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     border-width: 1px;
-    font-size: 12px;
-    margin-top: 9px;
-    color: #3b5160;
-    border-color: #3b5160;
-    border-radius: 5px;
-    height: 26px;
+    font-size: 14px;
+    color: black;
+    border-color: #c4c9ce;
+    height: 32px;
+    font-weight: bold;
+    width: 33px;
 }
+
+#wbtn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-width: 1px;
+    font-size: 14px;
+    color: black;
+    border-color: #c4c9ce;
+    height: 32px;
+    font-weight: bold;
+    width: 33px;
+}
+
+td {
+    padding: 4px 10px;
+    line-height: 25px;
+}
+/* .DW-amount{
+    padding: 4px 10px;
+} */
 
 #hDpWd {
     text-align: center;
+    width: 10%;
+    border-right: 1px solid black;
+}
+
+#sm {
+    border-right: 1px solid black;
+}
+
+#ulDWmain {
+    padding-left: 7px;
+}
+
+.align-L {
+    padding-right: 7px;
+}
+
+.hd {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+#hrmk {
+    width: 17%;
+}
+
+#huid {
+    text-align: left;
+}
+
+#hlgs {
+    text-align: left;
+    padding-left: 5px;
+}
+
+#hrefpl {
+    width: 15%;
+    border-right: 1px solid black;
+}
+
+#agm {
+    border-right: 1px solid black;
+}
+
+#hrmk {
+    border-right: 1px solid black;
+}
+
+#client {
+    border-right: 1px solid black;
 }
 
 #dpWdFullBtn {
     border-width: 1px;
-    font-size: 12px;
-    margin-top: 9px;
-    color: #3b5160;
-    border-color: #3b5160;
+    font-size: 13px;
+    /* margin-top: 9px; */
+    color: black;
+    border-color: #c4c9ce;
     border-radius: 5px;
-    height: 26px;
+    height: 32px;
+    width: 50px;
+    font-weight: bold;
 }
 
 #amountmain {
     border: none;
     border-style: inset;
+    color: black;
+    border-color: #c4c9ce;
     border-radius: 6px;
     margin-right: 5px;
-    border-width: 2px;
+    border-width: 1px;
     width: 140px;
-    height: 25px;
-    margin-top: 8px;
+    height: 32px;
+    /* margin-top: 8px; */
     margin-left: 5px;
 }
 
 #amountmain::placeholder {
     padding-left: 80%;
+    font-size: 13px;
+    font-weight: 700;
 }
 
-#mm {
+#mm,#agm {
     font-size: 12px;
 }
 
 #editcreditbtrefrenacemain {
     border-width: 1px;
-    font-size: 12px;
-    margin-top: 9px;
-    color: #3b5160;
-    border-color: #3b5160;
+    font-size: 13px;
+    color: black;
+    border-color: #c4c9ce;
     border-radius: 5px;
-    height: 26px;
-    margin-left: 8px;
+    height: 32px;
+    margin-left: 6px;
+    width: 52px;
+    font-weight: bold;
 }
 
 #usercreditrefrencemain {
     color: rgb(61, 160, 199);
 }
 
-#agm {
+/* #agm {
     font-size: 12px;
-}
+} */
 
 #client input {
     border: solid 1px gray;
     border-radius: 5px;
+    width: 90%;
+    height: 35px;
 }
 
 #client input::placeholder {
     font-size: 12px;
+    padding: 0;
     padding-left: 78%;
 }
 
 #log {
     border-width: 1px;
-    font-size: 12px;
-    margin-top: 9px;
-    color: #3b5160;
-    border-color: #3b5160;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+    border-color: #c4c9ce;
     border-radius: 5px;
-    height: 26px;
-    width: 55px;
+    height: 32px;
+    width: 65px;
+    margin-right: 5px;
+    padding: 0;
 }
