@@ -2,9 +2,14 @@
     margin: 0;
     padding: 0;
 }
-/* .full-body{
-    border-right-width:1px solid #ffb90e
-} */
+
+.main{
+    width:100%;
+    min-height: 650px;
+    height:auto;
+    overflow:hidden;
+    background-color: #f0ece1
+}
 .heading{
     background: #ffb90e;
     margin: 0;
@@ -30,7 +35,8 @@
 }
 .game_date{
     color: #113a17;
-    font-size: 12px
+    font-size: 12px;
+    list-style: none
 }
  .game_name{
     color: #4083a9;
@@ -52,10 +58,32 @@
 
 .games
 {
+    padding-top: 1px;
+}
+.games1
+{
     padding-top: 10px;
 }
-.table_body{
+
+.games2
+{
+    padding-top: 10px;
+}
+
+.align-L1{
+    width: 10%
+}
+.align-L2{
+    width: 10%
+}
+.align-L3{
+    width: 60%
+}
+.align-L4{
+    width: 20%
+}
+.tbody{
     font-weight: 600;
-            height: 1rem !important;
-            border-bottom: 1px solid black;
+        height: 1rem !important;
+        border-bottom: 1px solid black;
 }

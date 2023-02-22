@@ -1,5 +1,5 @@
 <app-navigation></app-navigation>
-<div class="main" style="background-color: #f0ece1;">
+<div class="main" >
     <h2 class="header">Market Result</h2>
     <div class="funtion_wraper ">
         <div class="sportsBody" >
@@ -21,7 +21,7 @@
              <label class="inputbody">Form</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
              <label class="inputbody">to</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
              <button class="match_button">Search</button>
-             <button class="search" style="height: 1px;"><i class="fa-solid fa-magnifying-glass" ></i></button>
+             <button class="search" ><i class="fa-solid fa-magnifying-glass" ></i></button>
              <input class="searchbtn "  placeholder="Search here...">
              
         </div>
@@ -29,8 +29,8 @@
     </div>
     <div>
       <table class="table table_data" >
-        <thead>
-          <tr style="font-size: 12px;">
+        <thead class="h">
+          <tr>
             <th scope="col">Sport</th>
             <th scope="col">Match ID</th>
             <th scope="col">Match Name</th>
