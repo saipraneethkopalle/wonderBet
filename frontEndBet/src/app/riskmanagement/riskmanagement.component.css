@@ -329,9 +329,31 @@ th{
 
 /* ///////////////////////////////////////////////////////////////// */
 
-
+tbody tr{
+    background-color: #fff;
+}
 .main_heading{
-    justify-content: space-between;
+    background-color: #1b1c1d;
+    
+}
+.main_div{
+    width: 80%;
+    background-color: #d0e0eb;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.main_heading .sss{
+    padding-left: 60px;
+    background-color: #4ba7e1;
+    height: 20px;
+    color: whitesmoke;
+    display: block;
+    z-index: 1;
+}
+.main_heading .dddd{
+    background-color: #d0e0eb;
+    z-index: 1;
+
 }
 
 .mai_div .main_heading  h3{
