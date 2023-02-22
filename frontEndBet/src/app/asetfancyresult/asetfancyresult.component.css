@@ -19,7 +19,9 @@
     width: 98%;
     margin: auto;
 } 
-
+.head{
+    font-size: 14px;font-weight: 550
+}
 .sportnames{
     margin-right: 5px
 }
@@ -177,4 +179,7 @@ label{
     line-height: 23px;
     font-size: 12px;
     height: 26px;
+  }
+  tbody{
+    background-color: white;
   }
