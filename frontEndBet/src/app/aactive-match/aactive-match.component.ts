@@ -10,6 +10,7 @@ export class AactiveMatchComponent implements OnInit {
 
   constructor(private apiService:ApiServicesService) { }
   matchList:any;
+  searchTerm:any='';
   ngOnInit(): void {
     this.getMatches();
   }
@@ -22,13 +23,19 @@ export class AactiveMatchComponent implements OnInit {
           if(element.isActive===true && element.isResult===false){
             console.log(element);
             return res.data;
-            
+
           }
-          
+
         }
       })
       // console.log("this.matchList",this.matchList)
     })
+  }
+  searchValue(value:any) {
+    console.log(value.target.value);
+    this.matchList = this.matchList.filter((val:any) =>
+      val.eventName.toLowerCase().includes(value.target.value)
+    );
   }
 
 }
