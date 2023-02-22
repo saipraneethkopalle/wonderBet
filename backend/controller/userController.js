@@ -17,7 +17,11 @@ exports.changePassword=async(req,res)=>{
 exports.addSuperAdmin =async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload);
-        console.log(payload);
+        // console.log(payload);
+        let exist = await superUser.find({userName:payload.userName}).lean();
+        if(exist.length > 0){
+            return res.status(STATUS.BAD_REQUEST).send({"error":"Already Exist"})
+        }
         let addSuperAdmin = new superUser(payload);
         addSuperAdmin.save();
         return res.status(STATUS.OK).send({"message":"Super User Admin added Successfully"})
