@@ -3,11 +3,11 @@
     <h2>Active Matches</h2>
     <div class="total_all banking-top">
       <div class="search-wrap" id="userSearchUl">
-  
-    
+
+
     <div class="search-wrap searchbox">
         <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search" class="searchTB" >
+        <input type="text" placeholder="Search" class="searchTB" (keyup)="searchValue($event)">
       </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
                   </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of matchList;let i=index;">
+                <tr *ngFor="let item of matchList | searchFilter: searchTerm;let i=index;">
                     <td class="align-L1" id="ad">{{item.sportName}}</td>
                     <td class="align-L2" id="sa">{{item.eventId}}</td>
                     <td class="align-L3" id="ma">{{item.marketId}}</td>
@@ -42,4 +42,3 @@
           </table>
     </div>
   </div>
-  
