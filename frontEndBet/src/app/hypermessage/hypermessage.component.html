@@ -1,0 +1,56 @@
+<app-navigation></app-navigation>
+<div class="main">
+    
+    <div class="funtion_wraper ">
+        <div class="sportsBody" >
+          <div>
+            <h2>Set Message For Mgmt</h2>
+            <input class="searchbtn"  placeholder="Title">
+            <input class="date" [value]="currentDate"  type="date" placeholder="YYY-MM-DD">
+          </div>
+
+          <div class="mt-2">
+            <textarea rows="6" cols="65" placeholder=""></textarea>
+            <br>
+          </div>
+          <div>
+            <button class="match_button">Save Message</button>
+          </div>
+          
+        </div>
+        <div class="action">
+            <label class="input">Message List :</label><select class="sportStatus"><option>Select Action</option><option>Lock Message</option><option>Open Message</option><option>Delete Message</option></select>
+                
+                <button class="match_btn ">Action</button>
+        </div> 
+        <div>
+            <table class="table table_data" >
+              <thead class="h">
+                <tr>
+                  <th class="align1" >S.No.</th>
+                  <th class="align2" >Msg_ID</th>
+                  <th class="align3" >Msg_Title</th>
+                  <th class="align4" >Msg_Date</th>
+                  <th class="align5" >IsLock</th>
+                  <th class="align6">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="button_section">
+                    <div class="d-flex">
+                        <td>1 </td>
+                        <input type="checkbox" class="form-check-input check" id="exampleCheck1">
+                    </div>
+                    <td>62e6fc8dc082827502188467</td>
+                    <td>Notice</td>
+                    <td>2022-08-01</td>
+                    <td>false</td>
+                    <td>
+                      <button class="match_buttons">Edit</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>      
+    </div>
+</div>

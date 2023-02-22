@@ -34,6 +34,9 @@ import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-prof
 import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fancy-status.component';
+import { UsermessageComponent } from './usermessage/usermessage.component';
+import { HypermessageComponent } from './hypermessage/hypermessage.component';
+import { ImportantmessageComponent } from './importantmessage/importantmessage.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +70,9 @@ import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fanc
     AactiveMatchComponent,
     InactiveMatchComponent,
     AupdateFancyStatusComponent,
+    UsermessageComponent,
+    HypermessageComponent,
+    ImportantmessageComponent,
   ],
   imports: [
     BrowserModule,

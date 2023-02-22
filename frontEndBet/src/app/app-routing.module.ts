@@ -18,6 +18,8 @@ import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/ca
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { HomeComponent } from './home/home.component';
+import { HypermessageComponent } from './hypermessage/hypermessage.component';
+import { ImportantmessageComponent } from './importantmessage/importantmessage.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
@@ -28,6 +30,7 @@ import { RiskmanagementComponent } from './riskmanagement/riskmanagement.compone
 import { SetmarketresultComponent } from './setmarketresult/setmarketresult.component';
 import { SportWiseProfitlossComponent } from './sport-wise-profitloss/sport-wise-profitloss.component';
 import { SportsettingComponent } from './sportsetting/sportsetting.component';
+import { UsermessageComponent } from './usermessage/usermessage.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -56,7 +59,10 @@ const routes: Routes = [
   {path:"adminSettingSurveillanceSettings",component:AdminSettingSurveillanceSettingsComponent},
   {path:"AactiveMatch",component:AactiveMatchComponent},
   {path:"AinactiveMatch",component:InactiveMatchComponent},
-  {path:"AupdateFancyStatus",component:AupdateFancyStatusComponent}
+  {path:"AupdateFancyStatus",component:AupdateFancyStatusComponent},
+  {path:"AUserMessage",component:UsermessageComponent},
+  {path:"AHyperMessage",component:HypermessageComponent},
+  {path:"AImpMessage",component:ImportantmessageComponent}
 ];
 
 @NgModule({
