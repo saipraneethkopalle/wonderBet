@@ -8,7 +8,7 @@
                <button [class]="currentcompo==1?'match':'match_btn' " (click)="findcompo(1)">Tennis</button>
                <button [class]="currentcompo==2?'match':'match_btn' " (click)="findcompo(2)">Soccer</button>
           </div>
-            
+
         </div>
         <div *ngIf="currentcompo==0">
             <table class="table table_data" >
@@ -22,12 +22,12 @@
                 </tr>
               </thead>
               <tbody class="table_body">
-                <tr >
+                <tr *ngFor="let item of cricketList;let i=index;">
                     <!-- <th scope="row">1</th> -->
-                    <td>32055407</td>
-                    <td class="table_col">Karachi Kings v Peshawar Zalmi</td>
-                    <td class="table_col">1.209133980</td>
-                    <td class="table_col">2023-02-14 20:00:00</td>
+                    <td>{{item.eventId}}</td>
+                    <td class="table_col">{{item.eventName}}</td>
+                    <td class="table_col">{{item.marketId}}</td>
+                    <td class="table_col">{{item.openDate}}</td>
                     <td class="table_col">
                         <button class="matchs">Set Limit</button>
                         <button class="matchs">Set Bookmaker</button>
@@ -49,7 +49,18 @@
                 </tr>
               </thead>
               <tbody class="table_body">
-                
+                <tr *ngFor="let item of tennisList;let i=index;">
+                    <!-- <th scope="row">1</th> -->
+                    <td>{{item.eventId}}</td>
+                    <td class="table_col">{{item.eventName}}</td>
+                    <td class="table_col">{{item.marketId}}</td>
+                    <td class="table_col">{{item.openDate}}</td>
+                    <td class="table_col">
+                        <button class="matchs">Set Limit</button>
+                        <button class="matchs">Set Bookmaker</button>
+                        <button class="matchs">Manuplation</button>
+                    </td>
+                  </tr>
               </tbody>
             </table>
         </div>
@@ -65,7 +76,18 @@
                 </tr>
               </thead>
               <tbody class="table_body">
-                
+                <tr *ngFor="let item of soccerList;let i=index;">
+                    <!-- <th scope="row">1</th> -->
+                    <td>{{item.eventId}}</td>
+                    <td class="table_col">{{item.eventName}}</td>
+                    <td class="table_col">{{item.marketId}}</td>
+                    <td class="table_col">{{item.openDate}}</td>
+                    <td class="table_col">
+                        <button class="matchs">Set Limit</button>
+                        <button class="matchs">Set Bookmaker</button>
+                        <button class="matchs">Manuplation</button>
+                    </td>
+                  </tr>
               </tbody>
             </table>
         </div>

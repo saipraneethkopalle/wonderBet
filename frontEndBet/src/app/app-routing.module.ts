@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
 import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
 import { AdminSettingWebsiteSettingComponent } from './admin-setting-website-setting/admin-setting-website-setting.component';
 import { AdminsettingsComponent } from './adminsettings/adminsettings.component';
 import { AsetfancyresultComponent } from './asetfancyresult/asetfancyresult.component';
+import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fancy-status.component';
 import { BankingComponent } from './banking/banking.component';
 import { BetlistComponent } from './betlist/betlist.component';
 import { BetlistliveComponent } from './betlistlive/betlistlive.component';
 import { BlockmarketComponent } from './blockmarket/blockmarket.component';
+import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
 import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
 import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { HomeComponent } from './home/home.component';
+import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
@@ -40,7 +44,7 @@ const routes: Routes = [
   {path:"result",component:ResultComponent},
   {path:"profitdownline",component:DownlineReportProfitlossComponent},
   {path:"profitmarket",component:MarketProfitlossComponent},
-  {path:"casinoProfitByDate",component:CasinoProfitlossDateComponent},
+  {path:"casinoProfitByDate",component:CasinoProfitByDateComponent},
   {path:"dowlineprofitloss",component:DownlineProfitlossComponent},
   {path:"sportWiseprofitloss",component:SportWiseProfitlossComponent},
   {path:"matchProfitloss",component:MatchProfitlossComponent},
@@ -49,7 +53,10 @@ const routes: Routes = [
   {path:"aSetMarketResult",component:SetmarketresultComponent},
   {path:"adminSettingSearchUser",component:AdminSettingSearchUserComponent},
   {path:"adminSettingWebsiteSetting",component:AdminSettingWebsiteSettingComponent},
-  {path:"adminSettingSurveillanceSettings",component:AdminSettingSurveillanceSettingsComponent}
+  {path:"adminSettingSurveillanceSettings",component:AdminSettingSurveillanceSettingsComponent},
+  {path:"AactiveMatch",component:AactiveMatchComponent},
+  {path:"AinactiveMatch",component:InactiveMatchComponent},
+  {path:"AupdateFancyStatus",component:AupdateFancyStatusComponent}
 ];
 
 @NgModule({

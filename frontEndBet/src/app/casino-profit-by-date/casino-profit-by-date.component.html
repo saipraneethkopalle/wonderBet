@@ -1,21 +1,22 @@
 <app-navigation></app-navigation>
 <div class="main">
-        <h2>Profit/Loss Report by Downline
-        </h2>
+        <h2>Profit/Loss Report by Market</h2>
          <label>Data source :</label>
-        <select class="firstseletor" id="datasource">
+          <select class="firstseletor" id="datasource">
         <option  value="11">DB</option>
         <option value="12">ELK</option>
       </select>
    <div class="function_wrapper">
+        <label class="input">Sports </label><select class="sportStatus"><option>CASINO</option></select>
          <label class="inputbody input">Time Zone  </label><select class="sportStatus"><option>Pacific/Midway(GMT-11:00)</option><option>Pacific/Honolulu(GMT-10:00)</option>America/Juneau(GMT-9:00)<option>America/Los_Angeles(GMT-8:00)</option>
           <option>America/Phoenix(GMT-7:00)</option><option>America/Chicago(GMT-6:00)</option><option>America/New_York(GMT-5:00)</option><option>America/Santiago(GMT-4:00)</option>
           <option>America/Sao_Paulo(GMT-3:00)</option><option>Atlantic/South_Georgia(GMT-2:00)</option><option>Atlantic/Azores(GMT-1:00)</option><option>Europe/London(GMT+0:00)</option>
           <option>Europe/Paris(GMT+1:00)</option><option>Africa/Cairo(GMT+2:00)</option><option>Asia/Qatar(GMT+3:00)</option><option>Asia/Dubai(GMT+4:00)</option>
           <option>Asia/Karachi(GMT+5:00)</option><option>IST(Bangalore/Bombay/New Delhi)(GMT+5:30)</option><option>Asia/Kathmandu(GMT+5:45)</option><option>Aisa/Dhaka(GMT+6:00)</option></select>
-          <label class="inputbody input">Period </label><input type="date" class="date" [value]="currentDate"><input class="date1" type="time"  [value]="currentTime"/>
-       <span class="inputbody input">to</span>
-       <input type="date" class="date" [value]="currentDate"><input class="date1" type="time"  [value]="currentTime"/>
+         <label class="inputbody input">Period</label><input class="inputbody1" type="date"  placeholder="YYY-MM-DD">
+         <input class="date1"  type="time-local" placeholder="00:00:00"/>
+         <label class="inputbody input">to</label><input class="inputbody1" type="date"  placeholder="YYY-MM-DD">
+         <input class="date1"  type="time-local" placeholder="00:00:00"/>
 
          <div >
          <button class='match_btn' >Just For Today</button>
@@ -23,20 +24,36 @@
          <button class='match' >Get P & L</button>
          </div>
     </div>
-
-    <table id="table_DL" class="table01 table-pt">
-        <tr id="head">
-            <th id="first_clomum" width class=align-L>UID</th>
-            <th class="">Sports PL</th>
-            <th id="header_profitLoss_downLine" class="">Casino P/L</th>
-            <th id="header_tax_agent_1" class=""> Comm.</th>
-            <th class="">Total P/L</th>
-            
-        </tr>
-
-    </table>
     
+<table>
+  <tr class="heading">
+    <th id="first_clomum" width class=align-L>UID</th>
+    <th >Stake</th>
+    <th>Downline P/L</th>
+    <th>Player P/L</th>
+    <th class="headingcolm">Comm.</th>
+    <th>Upline P/L</th>
+  </tr>
+  <tr>
+    <td  id="first_clomum" width class=align-L>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td>Germany</td>
+    <td class="headindata">Germany</td>
+    <td>Germany</td>
 
+  </tr>
+  <tr>
+    <td  id="first_clomum" >Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td>Germany</td>
+    <td class="headindata">Germany</td>
+    <td>Germany</td>
+
+  </tr>
+  
+</table>
 
 </div>
 

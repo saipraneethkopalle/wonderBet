@@ -39,13 +39,13 @@
             </div>
             <ul class="list-unstyled">
                 <li>
-                    <a id="suspendedBtn" class="but_suspend aactivematch">
-                        <img src="/assets/activelist.png" alt="ActiveMatch" class="img-fluid">
+                    <a  id="suspendedBtn" class="but_suspend aactivematch">
+                        <img src="/assets/activelist.png" routerLink="/AactiveMatch" alt="ActiveMatch" class="img-fluid">
                     </a>
                 </li>
                 <li>
                     <a id="suspendedBtn" class="but_suspend ainactivematch">
-                        <img src="/assets/inactivelist.png" alt="In-activeMatch" class="img-fluid">
+                        <img src="/assets/inactivelist.png" routerLink="/AinactiveMatch" alt="In-activeMatch" class="img-fluid">
                     </a>
                 </li>
                 <li>
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                     <a id="suspendedBtn" class="but_suspend aupdatestatus">
-                        <img src="/assets/updatestatus.png" alt="UpdateFancyStatus" class="img-fluid">
+                        <img src="/assets/updatestatus.png" routerLink="/AupdateFancyStatus" alt="UpdateFancyStatus" class="img-fluid">
                     </a>
                 </li>
                 <li>
@@ -89,7 +89,7 @@
         </div>
         <div class="function-wrap col-12 my-3">
             <div class="col-12">
-                <h2>User Settings</h2>   
+                <h2>User Settings</h2>
             </div>
             <ul class="list-unstyled">
                 <li>
@@ -116,7 +116,7 @@
                 </li>
             </ul>
         </div>
-    </div>            
+    </div>
 </div>
 <div class="modal fade" id="myModal" role="dailog">
     <div class="modal-dailog modal-sm">
@@ -128,16 +128,19 @@
                 </button>
             </div>
             <div class="modal-body">
+              <form method="post" autocomplete="off" [formGroup]="changePassword">
                 <table>
-                    <tr><td><label>New Password</label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                    <tr><td><label>New Password </label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                    <tr><td class="confrimPassword">Confrim</td></tr>
-                    <tr><td><label>Your Password</label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                </table>
+                    <tr><td><label>New Password</label><input type="text" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
+                    <tr><td><label>New Password </label><input type="text" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
+                    <tr><td class="confrimPassword">Confirm</td></tr>
+                    <tr><td><label>Your Password</label><input type="text" placeholder="Enter" formControlName="oldPassword"><span class="must">*</span></td></tr>
+                  <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
+                  </table>
+                <div class="btBox"><button type="submit" class="btn btn-primary" id="cpBtn">Change</button></div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="cpBtn">Change</button>
-            </div>
+            <!-- <div class="modal-footer"> -->
+            <!-- </div> -->
         </div>
     </div>
 </div>

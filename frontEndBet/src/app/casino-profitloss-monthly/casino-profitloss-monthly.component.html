@@ -1,1 +1,36 @@
 <app-navigation></app-navigation>
+<div class="main">
+        <h2>Profit/Loss Report by Downline</h2>
+         <label>Data source :</label>
+        <select class="firstseletor" id="datasource">
+        <option  value="11">DB</option>
+        <option value="12">ELK</option>
+      </select>
+   <div class="function_wrapper">
+         <label class="inputbody input">Type</label><select class="sportStatus"><option>All</option><option>Diamond Casino</option><option>AWS Casino</option></select>
+          <label class="inputbody input">Period </label><input type="date" class="date" [value]="currentDate"><input class="date1" type="time"  [value]="currentTime"/>
+       <span class="inputbody input">to</span>
+       <input type="date" class="date" [value]="currentDate"><input class="date1" type="time"  [value]="currentTime"/>
+
+         <div >
+         <button class='match_btn' >Just For Today</button>
+        <button class='match_btn'>Form Yesterday</button>
+         <button class='match' >Get P & L</button>
+         </div>
+    </div>
+
+    <table id="table_DL" class="table01 table-pt">
+        <tr id="head">
+            <th id="first_clomum" width class=align-L>UID</th>
+            <th id="header_profitLoss_downLine" class="">Casino P/L</th>
+            <th id="header_tax_agent_1" class=""> Comm.</th>
+            <th class="">Total P/L</th>
+            
+        </tr>
+
+    </table>
+    
+
+
+</div>
+
