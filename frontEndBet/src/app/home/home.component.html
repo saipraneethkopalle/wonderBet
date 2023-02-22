@@ -103,21 +103,22 @@
               </button>
           </div>
           <div class="modal-body">
+            <form method="post" autocomplete="off" [formGroup]="superUserForm" (ngSubmit)="createAdmin()">
               <table class="table2">
-                  <tr><td id="lb"><label>Select Website</label></td><td><select name="webs" id="openselectWebsite">
+                  <tr><td id="lb"><label>Select Website</label></td><td><select name="webs" id="openselectWebsite" formControlName="site">
                     <option>Select Website</option>
                     <option>wonderbets.in</option>
                     <option>laserbook23.com</option>
                   </select><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>E-mail</label></td><td><input type="text" placeholder="Enter Email"><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>Username</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>Password</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                  <tr class="passwordConfrim"><td id="lb"><label>Confrim Password</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>E-mail</label></td><td><input type="text" placeholder="Enter Email" formControlName="email"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>Username</label></td><td><input type="text" placeholder="Enter" formControlName="userName"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>Password</label></td><td><input type="text" placeholder="Enter" formControlName="password"><span class="must">*</span></td></tr>
+                  <tr class="passwordConfrim"><td id="lb"><label>Confrim Password</label></td><td><input type="text" formControlName="confirmPassword" placeholder="Enter"><span class="must">*</span></td></tr>
                   <tr><td></td></tr>
-                  <tr id="pad"><td id="lb"><label>First Name</label></td><td><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>Last Name</label></td><td><input type="text" placeholder="Enter"></td></tr>
-                  <tr><td id="lb"><label>Phone</label></td><td><input type="text" placeholder="Enter"></td></tr>
-                  <tr><td id="lb"><label>Time Zone</label></td><td><select name="timezone" id="opentimezone">
+                  <tr id="pad"><td id="lb"><label>First Name</label></td><td><input type="text" placeholder="Enter" formControlName="firstName"><span class="must">*</span></td></tr>
+                  <tr><td id="lb"><label>Last Name</label></td><td><input type="text" placeholder="Enter" formControlName="lastName"></td></tr>
+                  <tr><td id="lb"><label>Phone</label></td><td><input type="text" placeholder="Enter" formControlName="phone"></td></tr>
+                  <tr><td id="lb"><label>Time Zone</label></td><td><select name="timezone" formControlName="timezone" id="opentimezone">
                     <option value="Pacific/Midway">Pacific/Midway(GMT-11:00)</option>
                     <option value="Pacific/Honolulu GMT-10:00">Pacific/Honolulu(GMT-10:00)</option>
                     <option value="America/Juneau GMT-9:00">America/Juneau(GMT-9:00)</option>
@@ -147,10 +148,11 @@
                     <option value="Pacific/Fiji GMT+12:00">Pacific/Fiji(GMT+12:00)</option>
                   </select><span class="must">*</span></td></tr>
               </table>
+              <button type="submit" class="btn btn-primary" data-dismiss="modal" id="cpBtn">Create</button>
+              </form>
           </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="cpBtn">Create</button>
-          </div>
+          <!-- <div class="modal-footer"> -->
+          <!-- </div> -->
       </div>
   </div>
 </div>
