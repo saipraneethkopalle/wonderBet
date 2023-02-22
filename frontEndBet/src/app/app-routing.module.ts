@@ -18,6 +18,8 @@ import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/ca
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { HomeComponent } from './home/home.component';
+import { HypermessageComponent } from './hypermessage/hypermessage.component';
+import { ImportantmessageComponent } from './importantmessage/importantmessage.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';

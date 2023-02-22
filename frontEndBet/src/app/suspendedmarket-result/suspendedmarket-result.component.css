@@ -61,7 +61,7 @@ thead{
     margin-left: 2px;
     background: #ffb90e;
     border-color: #cb8009;
-    width: 118px;
+    width: 138px;
     margin-right: 1px;
     border: 1px solid #bbb;
     border-radius: 4px;
@@ -91,7 +91,7 @@ thead{
     font-weight: bold;
   }
   .align-L4{
-    width: 19%;
+    width: 13%;
     font-size: 12px;
     font-weight: bold;
   }
@@ -101,9 +101,20 @@ thead{
     font-weight: bold;
   }
   .align-L6{
-    width: 25%;
+    width: 13%;
     font-size: 12px;
     font-weight: bold;
+  }
+  .align-L7{
+    width: 15%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .align-L8{
+    width: 17%;
+    font-size: 12px;
+    font-weight: bold;
+    /* text-align: right; */
   }
 
   .searchblock{
