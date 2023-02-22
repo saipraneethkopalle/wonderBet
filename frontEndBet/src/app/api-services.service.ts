@@ -40,4 +40,9 @@ export class ApiServicesService {
     const url =  environment.url + "/api/v1/auth/changePassword"
     return this.http.post(url,data,{headers:this.headers})
   }
+  createSuperUser(data:any){
+    data = {payload:this.encrypt(JSON.stringify(data))};
+    const url = environment.url + "/api/v1/auth/addSuperAdmin"
+    return this.http.post(url,data,{headers:this.headers})
+  }
 }
