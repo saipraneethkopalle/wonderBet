@@ -30,5 +30,12 @@ export class InactiveMatchComponent implements OnInit {
       })
     })
   }
+  searchValue(value:any) {
+    console.log(value.target.value);
+    this.matchList = this.matchList.filter((val:any) =>
+      val.eventName.toLowerCase().includes(value.target.value)
+    );
+  }
+
 
 }

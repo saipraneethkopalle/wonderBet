@@ -73,17 +73,56 @@ thead{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 6px;
   }
- 
-  .column2{
-    width: 12%;
-  }
-  .column3{
-    width: 12%;
-  }
-  .column4{
-    width: 12%;
+
+  thead{
     text-align: right;
   }
+
+  tbody{
+    /* text-align: right; */
+  }
+ 
+ .align-L1{
+  width: 12%;
+  text-align: left;
+ }
+ .align-L2{
+  width: 12%;
+  text-align: left;
+
+
+ }
+ .align-L3{
+  width: 12%;
+  text-align: left;
+
+ }
+ .align-L4{
+  width: 12%;
+  text-align: left;
+
+
+ }
+ .align-L5{
+  width: 12%;
+  text-align: left;
+
+
+ }
+ .align-L6{
+  width: 12%;
+  text-align: left;
+
+
+ }
+ .align-L7{
+  width: 12%;
+  text-align: left;
+
+ }
+
+
+
   .searchblock{
     height:60px;
     padding-top:10px;

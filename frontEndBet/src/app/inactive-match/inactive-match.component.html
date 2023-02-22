@@ -7,7 +7,7 @@
     
     <div class="search-wrap searchbox">
         <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search..." class="searchTB" >
+        <input type="text" placeholder="Search..." class="searchTB"  (keyup)="searchValue($event)"  >
       </div>
       </div>
     </div>
@@ -15,13 +15,13 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Sports</th>
-                <th scope="col">Event Id	</th>
-                <th scope="col">Market Id</th>
-                <th scope="col" class="column1">Match</th>
-                <th scope="col" class="column2">Date</th>
-                <th scope="col" class="column3">Status</th>
-                <th scope="col" class="column4">Action</th>
+                <th class="align-L1" scope="col">Sports</th>
+                <th class="align-L2" scope="col">Event Id	</th>
+                <th class="align-L3" scope="col">Market Id</th>
+                <th class="align-L4" scope="col" class="column1">Match</th>
+                <th class="align-L5" scope="col" class="column2">Date</th>
+                <th class="align-L6" scope="col" class="column3">Status</th>
+                <th class="align-L7" scope="col" class="column4">Action</th>
 
 
               </tr>
