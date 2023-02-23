@@ -7,7 +7,7 @@
     
     <div class="search-wrap searchbox">
         <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search..." class="searchTB" >
+        <input type="text" placeholder="Search..." class="searchTB"  (keyup)="searchValue($event)"  >
       </div>
       </div>
     </div>
@@ -15,24 +15,24 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Sports</th>
-                <th scope="col">Event Id	</th>
-                <th scope="col">Market Id</th>
-                <th scope="col" class="column1">Match</th>
-                <th scope="col" class="column2">Date</th>
-                <th scope="col" class="column3">Status</th>
-                <th scope="col" class="column4">Action</th>
+                <th class="align-L1 pp" scope="col">Sports</th>
+                <th class="align-L2" scope="col">Event Id	</th>
+                <th class="align-L3" scope="col">Market Id</th>
+                <th class="align-L4" scope="col" class="column1">Match</th>
+                <th class="align-L5" scope="col" class="column2">Date</th>
+                <th class="align-L6" scope="col" class="column3">Status</th>
+                <th class="align-L7" scope="col" class="column4">Action</th>
 
 
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of matchList;let i=index;">
-                  <td class="align-L1" id="ad">{{item.sportName}}</td>
-                  <td class="align-L2" id="sa">{{item.eventId}}</td>
-                  <td class="align-L3" id="ma">{{item.marketId}}</td>
-                  <td class="align-L4" id="sm">{{item.eventName}}</td>
-                  <td class="align-L5" id="mm">{{item.openDate}}</td>
+              <tr *ngFor="let item of matchList | searchFilter: searchTerm;let i=index;">
+                  <td class="align-L1">{{item.sportName}}</td>
+                  <td class="align-L2">{{item.eventId}}</td>
+                  <td class="align-L3">{{item.marketId}}</td>
+                  <td class="align-L4">{{item.eventName}}</td>
+                  <td class="align-L5">{{item.openDate}}</td>
                   <td class="align-L6" id="agm">{{item.isActive}}</td>
                   <td class="align-L" id="client">
                       <button class="matchs">Mark Inactive</button>

@@ -11,6 +11,9 @@ export class InactiveMatchComponent implements OnInit {
   constructor(private apiService:ApiServicesService) { }
 
   matchList:any;
+  beforeList:any;
+  searchTerm:any='';
+
   ngOnInit(): void {
     this.getMatches();
   }
@@ -28,7 +31,19 @@ export class InactiveMatchComponent implements OnInit {
           
         }
       })
+      this.beforeList = this.matchList
+
     })
+  }
+  searchValue(value:any) {
+    console.log(value.target.value);
+    if(value.target.value != null && value.target.value != ''){
+    this.matchList = this.matchList.filter((val:any) =>
+      val.eventName.toLowerCase().includes(value.target.value)
+    );
+    }else{
+      this.matchList = this.beforeList
+    }
   }
 
 }
