@@ -42,6 +42,8 @@ import { SuspendedResultsComponent } from './suspended-results/suspended-results
 import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { AddWebsiteSettingComponent } from './add-website-setting/add-website-setting.component';
+import { ManageLinksComponent } from './manage-links/manage-links.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,8 @@ import { SearchFilterPipe } from './search-filter.pipe';
     SuspendedfancyResultComponent,
     SuspendedmarketResultComponent,
     SearchFilterPipe,
+    AddWebsiteSettingComponent,
+    ManageLinksComponent,
   ],
   imports: [
     BrowserModule,
