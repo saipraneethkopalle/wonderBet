@@ -42,6 +42,7 @@ import { SuspendedResultsComponent } from './suspended-results/suspended-results
 import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import { SearchFilterPipe } from './search-filter.pipe';
     SuspendedfancyResultComponent,
     SuspendedmarketResultComponent,
     SearchFilterPipe,
+    LivemarketbetComponent,
   ],
   imports: [
     BrowserModule,

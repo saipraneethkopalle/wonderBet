@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { HypermessageComponent } from './hypermessage/hypermessage.component';
 import { ImportantmessageComponent } from './importantmessage/importantmessage.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
+import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
@@ -70,7 +71,8 @@ const routes: Routes = [
   {path:"suspendedmarketResult",component:SuspendedmarketResultComponent},
   {path:"AUserMessage",component:UsermessageComponent},
   {path:"AHyperMessage",component:HypermessageComponent},
-  {path:"AImpMessage",component:ImportantmessageComponent}
+  {path:"AImpMessage",component:ImportantmessageComponent},
+  {path:"AliveMatchbets",component:LivemarketbetComponent}
 ];
 
 @NgModule({
