@@ -44,6 +44,7 @@ import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspend
 import { SearchFilterPipe } from './search-filter.pipe';
 import { AddWebsiteSettingComponent } from './add-website-setting/add-website-setting.component';
 import { ManageLinksComponent } from './manage-links/manage-links.component';
+import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { ManageLinksComponent } from './manage-links/manage-links.component';
     SearchFilterPipe,
     AddWebsiteSettingComponent,
     ManageLinksComponent,
+    CheatBetComponent,
   ],
   imports: [
     BrowserModule,
