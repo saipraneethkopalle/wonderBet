@@ -35,6 +35,7 @@ import { SuspendedResultsComponent } from './suspended-results/suspended-results
 import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 import { UsermessageComponent } from './usermessage/usermessage.component';
+import { UserplComponent } from './userpl/userpl.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -70,7 +71,8 @@ const routes: Routes = [
   {path:"suspendedmarketResult",component:SuspendedmarketResultComponent},
   {path:"AUserMessage",component:UsermessageComponent},
   {path:"AHyperMessage",component:HypermessageComponent},
-  {path:"AImpMessage",component:ImportantmessageComponent}
+  {path:"AImpMessage",component:ImportantmessageComponent},
+  {path:'userpl',component:UserplComponent}
 ];
 
 @NgModule({
