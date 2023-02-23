@@ -42,8 +42,10 @@ import { SuspendedResultsComponent } from './suspended-results/suspended-results
 import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { AddWebsiteSettingComponent } from './add-website-setting/add-website-setting.component';
+import { ManageLinksComponent } from './manage-links/manage-links.component';
+import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +86,10 @@ import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component'
     SuspendedfancyResultComponent,
     SuspendedmarketResultComponent,
     SearchFilterPipe,
-    LivemarketbetComponent,
+    AddWebsiteSettingComponent,
+    ManageLinksComponent,
+    CheatBetComponent,
+    LivemarketbetComponent
   ],
   imports: [
     BrowserModule,

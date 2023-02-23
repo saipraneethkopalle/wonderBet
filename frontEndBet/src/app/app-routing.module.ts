@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
+import { AddWebsiteSettingComponent } from './add-website-setting/add-website-setting.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
 import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
@@ -23,6 +24,7 @@ import { ImportantmessageComponent } from './importantmessage/importantmessage.c
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
 import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { ManageLinksComponent } from './manage-links/manage-links.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
@@ -72,7 +74,9 @@ const routes: Routes = [
   {path:"AUserMessage",component:UsermessageComponent},
   {path:"AHyperMessage",component:HypermessageComponent},
   {path:"AImpMessage",component:ImportantmessageComponent},
-  {path:"AliveMatchbets",component:LivemarketbetComponent}
+  {path:"AAddWebsiteSetting",component:AddWebsiteSettingComponent},
+  {path:"AManageLinks",component:ManageLinksComponent},
+  {path:"liveMarket",component:LivemarketbetComponent}
 ];
 
 @NgModule({
