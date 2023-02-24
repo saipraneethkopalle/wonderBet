@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
+import { AddWebsiteSettingComponent } from './add-website-setting/add-website-setting.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
 import { AdminSettingSurveillanceSettingsComponent } from './admin-setting-surveillance-settings/admin-setting-surveillance-settings.component';
@@ -15,16 +16,20 @@ import { BlockmarketComponent } from './blockmarket/blockmarket.component';
 import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
 import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
 import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
+import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { HomeComponent } from './home/home.component';
 import { HypermessageComponent } from './hypermessage/hypermessage.component';
 import { ImportantmessageComponent } from './importantmessage/importantmessage.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
+import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { ManageLinksComponent } from './manage-links/manage-links.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { PrematchplComponent } from './prematchpl/prematchpl.component';
 import { RejectedBetsComponent } from './rejected-bets/rejected-bets.component';
 import { ResultComponent } from './result/result.component';
 import { RiskmanagementComponent } from './riskmanagement/riskmanagement.component';
@@ -72,7 +77,12 @@ const routes: Routes = [
   {path:"AUserMessage",component:UsermessageComponent},
   {path:"AHyperMessage",component:HypermessageComponent},
   {path:"AImpMessage",component:ImportantmessageComponent},
-  {path:'userpl',component:UserplComponent}
+  {path:'userpl',component:UserplComponent},
+  {path:"AAddWebsiteSetting",component:AddWebsiteSettingComponent},
+  {path:"AManageLinks",component:ManageLinksComponent},
+  {path:"liveMarket",component:LivemarketbetComponent},
+  {path:'AbetCount',component:CheatBetComponent},
+  {path:'prematchpl',component:PrematchplComponent}
 ];
 
 @NgModule({

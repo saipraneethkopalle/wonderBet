@@ -1,0 +1,49 @@
+<app-navigation></app-navigation>
+<div class="main">
+  <h6><b>Profit Loss</b></h6>
+  <div class="filter3">
+    <button class="btn4">Cricket</button> <button class="btn5">Soccer</button
+    ><button class="btn6">Tennis</button>
+  </div>
+  <div class="table-wrap">
+    <table class="table table01">
+        <thead>
+            <tr>
+                <th class="align-L1  pp">Sport</th>
+                <th class="align-L2">Event Id</th>
+                <th class="align-L3">Market Id</th>
+                <th class="align-L4">Match</th>
+                <th class="align-L5">Date</th>
+                <th class="align-L6">Status</th>
+                <th class="align-L7">Action</th>
+                <th></th>
+              </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of matchList">
+              <td class="align-L1" id="ad">{{item.sportName}}</td>
+              <td class="align-L2" id="sa">{{item.eventId}}</td>
+              <td class="align-L3" id="ma">{{item.marketId}}</td>
+              <td class="align-L4" id="sm">{{item.eventName}}</td>
+              <td class="align-L5" id="mm">{{item.openDate}}</td>
+              <td class="align-L6" id="agm">{{item.isActive}}</td>
+              <td class="align-L6"><select class="betStatus">
+                <option>Select Team</option>
+                <option>{{item.matchRunners[0].name}}</option>
+                <option>{{item.matchRunners[1].name}}</option>
+              </select></td>
+              <td class="align-L" id="client">
+                <button class="btn4 margin">View P/L</button>
+                  <button class="btn4">Master</button>
+                  <button class="btn4">CheatIps</button>
+                  <button class="btn4">Match Bet</button>
+                  <button class="btn4">Fancy Bet</button>
+
+
+              </td>
+            </tr>
+      </tbody>
+      </table>
+</div>
+ 
+</div>
