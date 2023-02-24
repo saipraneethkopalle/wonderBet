@@ -7,7 +7,15 @@ exports.addMatches = async(req,res)=>{
         let data = await cryp.decryptData(req.body.payload)
         let result = new match(data)
         result.save()
-        res.status(STATUS.OK).send({"message":"Successfully stored","data":data})
+        return res.status(STATUS.OK).send({"message":"Successfully stored","data":data})
+    }catch(err){
+        return res.status(STATUS.BAD_REQUEST).send(err.message);
+    }
+}
+exports.getAllMatches = async(req,res)=>{
+    try{
+        let data = await match.find().lean()
+        res.status(STATUS.OK).send({"message":"Result Fetched!",data:data})
     }catch(err){
         res.status(STATUS.BAD_REQUEST).send(err.message);
     }
