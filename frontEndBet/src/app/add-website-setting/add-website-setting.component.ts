@@ -11,7 +11,9 @@ export class AddWebsiteSettingComponent implements OnInit {
   constructor(private apiService:ApiServicesService) { }
   websites:any
   beforeList:any
+  site:any=null;
   searchTerm:any='';
+  error:any;
 
   ngOnInit(): void {
     this.getAllWebsite();
@@ -27,15 +29,24 @@ export class AddWebsiteSettingComponent implements OnInit {
 
   }
 
-  searchValue(value:any) {
+  addWebsite(value:any) {
     console.log(value.target.value);
-    if(value.target.value != null && value.target.value != ''){
-    this.websites = this.websites.filter((val:any) =>
-      val.eventName.toLowerCase().includes(value.target.value)
-    );
-    }else{
-      this.websites = this.beforeList
-    }
+    this.site=value.target.value
+
+  }
+  addSite(){
+    console.log("site",this.site)
+    if(this.site != null && this.site != ''){
+    let addwesitName={"websiteName":this.site}
+    this.apiService.createWebsite(addwesitName).subscribe((res:any)=>{
+      console.log("success");
+      this.getAllWebsite()
+      this.error='';
+      this.site ='';
+    })
+  }else{
+    this.error="Enter website name"
+  }
   }
 
 }
