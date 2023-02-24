@@ -76,7 +76,7 @@ const routes: Routes = [
   {path:"AImpMessage",component:ImportantmessageComponent},
   {path:"AAddWebsiteSetting",component:AddWebsiteSettingComponent},
   {path:"AManageLinks",component:ManageLinksComponent},
-  {path:"liveMarket",component:LivemarketbetComponent}
+  {path:"AliveMatchbets",component:LivemarketbetComponent}
 ];
 
 @NgModule({
