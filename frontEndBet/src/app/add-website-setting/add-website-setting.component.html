@@ -4,10 +4,10 @@
     <div class="total_all banking-top">
         <div class="search-wrap" id="userSearchUl">
             <div class="searchbox" >
-            <input class="search-input searchTB" id="searchUserId" type="text" placeholder="Enter Website Name..." (keyup)="searchValue($event)" >
+            <input class="search-input searchTB" id="searchUserId" type="text" placeholder="Enter Website Name..." [value]="site" (keyup)="addWebsite($event)" required>
             </div>
         </div>
-        <button class="btn-send banking-btn" id="search">Add</button>
+        <button type="button" class="btn-send banking-btn" id="search" (click)="addSite()">Add</button><span class="error" *ngIf="error">{{error}}</span>
     </div>
     <div>
         <table class="table">
