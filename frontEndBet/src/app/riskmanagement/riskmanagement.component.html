@@ -3,57 +3,44 @@
     <h2 class="header">Risk Management Summary</h2>
 
     <div class="main_div">
-      <div class="main_heading  d-flex">
-        <h3 class="dddd">Top 10 Matched Amount Player</h3>
-        <h3 class="sss">Top 10 Exposure Player</h3>
+      <!-- <div class="main_heading  d-flex">
+        <h3 [class]="currentTab == 0 ?'dddd' :'sss'" (click)="listPlayer(0)">Top 10 Matched Amount Player</h3>
+        <h3 [class]="currentTab == 1 ?'dddd' :'sss'" (click)="listPlayer(1)">Top 10 Exposure Player</h3>
+      </div> -->
+      <div class="tabs tab-left">
+        <nav>
+          <a role="button" [id]="currentTab == 0 ? 'tab1' :'tab2'" [class]="currentTab == 0 ?'dddd' :'sss'" (click)="listPlayer(0)">Top 10 Matched Amount Player</a>
+          <a role="button" [id]="currentTab == 1 ? 'tab1' :'tab2'"  [class]="currentTab == 1 ?'dddd' :'sss'" (click)="listPlayer(1)">Top 10 Exposure Player</a>
+        </nav>
       </div>
-      <div  class="d-flex">
-        <div>
-          <table class="table">
+      <div class="d-flex">
+          <table class="tab">
             <thead>
               <tr>
                 <th scope="col">UID</th>
                 <th scope="col">Exposure</th>
                 <th scope="col">Matched Amount</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div>
-          <table class="table">
-            <thead>
-              <tr>
                 <th scope="col">UID</th>
                 <th scope="col">Exposure</th>
                 <th scope="col">Matched Amount</th>
-                <th scope="col">Handle</th>
+                <!-- <th scope="col">Handle</th> -->
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td scope="row">1 u1</td>
+                <td class="exposure">(22.00)</td>
+                <td>22.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
-        </div>
-       
       </div>
-
     </div>
 
-  
+
     <div class="wrap_match">
         <div class="table_head d-flex ">
             <h2>Match Odds</h2>
@@ -100,7 +87,7 @@
                 <th class="align-L6 bg_yellow sky-align">2</th>
               </tr>
             </thead>
-            
+
             <tbody>
               <tr class="border-table">
                 <td class="align-L " >
@@ -180,7 +167,7 @@
               <th class="align-L6 bg_yellow sky-align">2</th>
             </tr>
           </thead>
-          
+
           <tbody>
             <tr>
               <td colspan="7">
@@ -212,7 +199,7 @@
             <th class="align-L6 bg_yellow sky-align">MAX</th>
           </tr>
         </thead>
-        
+
         <tbody>
           <tr>
             <td colspan="7">
@@ -241,7 +228,7 @@
           <th class="align-C22 " >Matched Amount</th>
         </tr>
       </thead>
-      
+
       <tbody>
         <tr>
           <td colspan="7">
@@ -271,7 +258,7 @@
           <th class="align-C22 " >Matched Amount</th>
         </tr>
       </thead>
-      
+
       <tbody>
         <tr>
           <td colspan="7">
@@ -304,7 +291,7 @@
               <th class="align-L6 bg_yellow sky-align">MAX</th>
             </tr>
           </thead>
-          
+
           <tbody>
             <tr>
               <td colspan="7">
@@ -322,7 +309,7 @@
         <!-- <a class="justify-content-end tablea"><i class="fa fa-rotate-right" style="font-size:24px"></i></a> -->
         <a class="btnn7"><i class="fa fa-rotate-right" ></i></a>
     </div>
-  
+
       <table class="table table01">
         <thead>
           <tr >
@@ -333,18 +320,18 @@
             <th class="align-C22 " >Matched Amount</th>
           </tr>
         </thead>
-        
+
         <tbody>
           <tr>
             <td colspan="7">
                 <p>No Data</p>
             </td>
           </tr>
-  
+
         </tbody>
       </table>
   </div>
-  
+
 
 
 </div>
