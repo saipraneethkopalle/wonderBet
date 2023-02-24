@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { HypermessageComponent } from './hypermessage/hypermessage.component';
 import { ImportantmessageComponent } from './importantmessage/importantmessage.component';
 import { InactiveMatchComponent } from './inactive-match/inactive-match.component';
+import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ManageLinksComponent } from './manage-links/manage-links.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
@@ -74,7 +75,8 @@ const routes: Routes = [
   {path:"AHyperMessage",component:HypermessageComponent},
   {path:"AImpMessage",component:ImportantmessageComponent},
   {path:"AAddWebsiteSetting",component:AddWebsiteSettingComponent},
-  {path:"AManageLinks",component:ManageLinksComponent}
+  {path:"AManageLinks",component:ManageLinksComponent},
+  {path:"liveMarket",component:LivemarketbetComponent}
 ];
 
 @NgModule({
