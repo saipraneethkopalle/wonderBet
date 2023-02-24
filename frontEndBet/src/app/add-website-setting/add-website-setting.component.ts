@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServicesService } from '../api-services.service';
 
 @Component({
   selector: 'app-add-website-setting',
@@ -7,9 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddWebsiteSettingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:ApiServicesService) { }
+  websites:any
+  beforeList:any
+  searchTerm:any='';
 
   ngOnInit(): void {
+    this.getAllWebsite();
+  }
+  getAllWebsite(){
+    this.apiService.getAllWebsite().subscribe((res:any)=>{
+      this.websites = res.data
+
+      this.beforeList = this.websites
+
+    })
+
+
+  }
+
+  searchValue(value:any) {
+    console.log(value.target.value);
+    if(value.target.value != null && value.target.value != ''){
+    this.websites = this.websites.filter((val:any) =>
+      val.eventName.toLowerCase().includes(value.target.value)
+    );
+    }else{
+      this.websites = this.beforeList
+    }
   }
 
 }

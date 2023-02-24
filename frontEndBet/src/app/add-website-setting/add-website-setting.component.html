@@ -4,7 +4,7 @@
     <div class="total_all banking-top">
         <div class="search-wrap" id="userSearchUl">
             <div class="searchbox" >
-            <input class="search-input searchTB" id="searchUserId" type="text" placeholder="Enter Website Name..." >
+            <input class="search-input searchTB" id="searchUserId" type="text" placeholder="Enter Website Name..." (keyup)="searchValue($event)" >
             </div>
         </div>
         <button class="btn-send banking-btn" id="search">Add</button>
@@ -18,6 +18,13 @@
                 <th scope="col">Used For</th>
               </tr>
             </thead>
+            <tbody>
+              <tr *ngFor="let item of websites;let i=index;">
+                  <td>{{item.websiteName}}</td>
+                  <td >{{item.isUsed}}</td>
+                  <td>{{item.usedFor}}</td>
+                </tr>
+          </tbody>
           </table>
     </div>
 
