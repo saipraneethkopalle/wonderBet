@@ -13,10 +13,10 @@ export class AactiveMatchComponent implements OnInit {
   beforeList:any;
   searchTerm:any='';
   ngOnInit(): void {
-    this.getMatches();
+    this.getAllMatches();
   }
-  getMatches(){
-    this.apiService.getMatches().subscribe((res:any)=>{
+  getAllMatches(){
+    this.apiService.getAllMatches().subscribe((res:any)=>{
       this.matchList = res.data.filter((element:any)=>{
         console.log("res.data",res.data)
         if(element.sportId==='4'){
