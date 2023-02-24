@@ -29,3 +29,15 @@ exports.getAllWebsite = async(req,res)=>{
         res.status(STATUS.BAD_REQUEST).send(err.message);
     }
 }
+
+
+exports.updateSite=async(req,res)=>{
+    try{
+        let payload = await cryp.decryptData(req.body.payload);
+        let data=await addWebsites.updateOne({_id:payload._id},{$set:{isUsed:payload.isUsed,usedFor:payload.usedFor}})
+        return res.status(STATUS.OK).send({"message":"Update Successfully"});
+
+    }catch(err){
+        res.status(STATUS.BAD_REQUEST).send(err.message);
+    }
+}
