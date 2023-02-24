@@ -316,16 +316,19 @@ tbody tr{
     background-color: #1b1c1d;
     display: block;
     width:100%;
+    height: auto;
+    overflow: hidden;
 }
 .main_div{
     width: 65%;
-    margin-top: 2%;
     margin-bottom: 2%;
     display:block;
 }
 .main_heading .sss{
-    background-color: #4ba7e1;
-    height: 30px;
+    /* background-color: #4ba7e1; */
+    height: 0;
+    border-bottom: 30px solid #4ba7e1;
+    border-right: 40px solid transparent;
     color: whitesmoke;
     display: block;
     margin:0;
@@ -340,9 +343,76 @@ tbody tr{
     color:#212121;
     font-weight: bold;
     padding:8px;
-    background-color: #e4e4e4;
+    background-color: #f0ece1;
     margin:0;
-    height: 30px;
+    height: 0;
+    border-bottom: 30px solid #e4e4e4;
+    border-right: 40px solid transparent;
+}
+
+.tab-left nav a::before { transform-origin: bottom left; }
+nav {
+  position: relative;
+  z-index: 1;
+  background-color: #3a526e;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 10%);
+  background-position: 0 -7368px;
+}
+ nav > a {
+    position: relative;
+    width: 220px;
+    display: inline-block;
+    /* padding: .7em 2em .5em; */
+    padding:5px;
+    color: #212121;
+    text-decoration: none;
+    margin: 0 -.1em;
+    /* margin:0; */
+    font-size:12px;
+    font-weight: 600;
+  }
+
+  .dddd::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    border-bottom: none;
+    border-radius: .3em .3em 0 0;
+    background: #e4e4e4;
+    color:#3a526e !important;
+    transform: scale(1, 1.1) perspective(.5em) rotateX(1deg);
+  }
+  .sss::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    border-bottom: none;
+    border-radius: .3em .3em 0 0;
+    background: #7ea0c6;
+    opacity: 0.5;
+    transform: scale(1, 1.1) perspective(.5em) rotateX(1deg);
+    transform-origin: bottom;
+  }
+  #tab1{
+    color:#3a526e;
+  }
+  #tab2{
+    color: #ffffff;
+  }
+  nav .sss{
+    color:#fff;
+  }
+
+
+nav a.active {
+  z-index: 2;
+}
+nav a.active ::before {
+    background-color: #32557f;
+    margin-bottom: -.08em;
+
 }
 
 .mai_div .main_heading  h3{

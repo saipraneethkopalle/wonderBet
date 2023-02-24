@@ -1,0 +1,225 @@
+.main {
+    width: 100%;
+    min-height: 650px;
+    height: auto;
+    overflow: hidden;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    background-color: #f0ece1;
+  }
+  
+  .betlistfilter {
+    padding: 10px 10px 0;
+    background-color: #e0e6e6;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 10px;
+  }
+  label {
+    font-size: 12px;
+  }
+  .filter1 label {
+    padding-right: 15px;
+    margin-left: 12px;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+  .filter2 {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .betStatus {
+    height: 28px;
+    width: 120px;
+    margin-right: 5px;
+    border-radius: 2px;
+    margin-left: 6px;
+  }
+  .date {
+    font-family: Tahoma, Helvetica, sans-serif;
+    color: #1e1e1e;
+    font-size: 12px;
+    border: 0px #aaa solid;
+    background: #fff;
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+    box-sizing: border-box;
+    width: 6rem;
+  }
+  .time {
+    font-family: Tahoma, Helvetica, sans-serif;
+    color: #1e1e1e;
+    font-size: 12px;
+    border: 0px #aaa solid;
+    background: #fff;
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+    box-sizing: border-box;
+    width: 5rem;
+  }
+  .btn1,
+  .btn2 {
+    background: #eee;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: normal;
+    height: 30px;
+    width: 100px;
+    font-size: 12px;
+    margin-right: -21px;
+  }
+  .btn4,
+  .btn5,
+  .btn6 {
+    background: #ffa00c;
+    border-color: #cb8009;
+    border-radius: 6px;
+    color: #1e1e1e;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    font-size: 12px;
+    margin-left: 212px;
+    margin-right:5px;
+  }
+  .btn3 {
+    margin-left: 2px;
+    background: #ffb90e;
+    border-color: #cb8009;
+    width: 103px;
+    margin-right: 1px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 23px;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  span {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  .betDetails {
+    padding: 5px;
+    font-size: 12px;
+  }
+  table,
+  tr {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #7e97a7;
+  }
+  
+  .bod1 {
+    border-left: white 1px solid !important;
+    width: 350px;
+  }
+  .bod2 {
+    border-left: white 1px solid !important;
+    width: 180px;
+  }
+  .bod3 {
+    border-left: white 1px solid !important;
+    width: 180px;
+  }
+  .bod4 {
+    border-left: white 1px solid !important;
+    width: 250px;
+  }
+  .bod5 {
+    border-left: white 1px solid !important;
+    width: 250px;
+  }
+  .bod {
+    border-left: 1px solid #b7b7b7 !important;
+    width: 150px;
+  }
+  .bod6 {
+    border-left: 1px solid #b7b7b7 !important;
+    width: 150px;
+  }
+  .td1 {
+    border-left: 1px solid #b7b7b7;
+  }
+  .td2 {
+    border-left: 1px solid #b7b7b7;
+    color: red;
+  }
+  .td3,
+  .td4 {
+    border-left: 1px solid #b7b7b7;
+    color: green;
+  }
+  
+  .betlisttb {
+    border-top: 1px solid #7e97a7;
+    border-bottom: 1px solid #7e97a7;
+    background-color: #e4e4e4;
+    color: #243a48;
+  }
+  .betlisttb td {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .bet,
+  .err {
+    background-color: #ffffff;
+  }
+  .err td {
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .betlisthead {
+  line-height: 6px;
+}
+  
+
+  .filter3 {
+    margin-bottom: 10px;
+  }
+  .btn7 {
+    background: #ffa00c;
+    border-color: #cb8009;
+    border-radius: 6px;
+    color: #1e1e1e;
+    font-weight: bold;
+    height: 30px;
+    width: 99px;
+    font-size: 12px;
+  }
+  .para{
+    margin-top: -5px;
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+
+  .width1{
+width: 18%;
+  }
+  .width2{
+    width: 16%;
+  }
+  .width3{
+    width: 14%;
+  }
+  .width4{
+    width: 15%;
+  }
+  .width5{
+    width: 20%;
+  }
+  .width6{
+    width: 10%;
+  }

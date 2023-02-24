@@ -16,6 +16,7 @@ import { BlockmarketComponent } from './blockmarket/blockmarket.component';
 import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
 import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
 import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
+import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { HomeComponent } from './home/home.component';
@@ -28,6 +29,7 @@ import { ManageLinksComponent } from './manage-links/manage-links.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { PrematchplComponent } from './prematchpl/prematchpl.component';
 import { RejectedBetsComponent } from './rejected-bets/rejected-bets.component';
 import { ResultComponent } from './result/result.component';
 import { RiskmanagementComponent } from './riskmanagement/riskmanagement.component';
@@ -38,6 +40,7 @@ import { SuspendedResultsComponent } from './suspended-results/suspended-results
 import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspendedfancy-result.component';
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 import { UsermessageComponent } from './usermessage/usermessage.component';
+import { UserplComponent } from './userpl/userpl.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -74,9 +77,12 @@ const routes: Routes = [
   {path:"AUserMessage",component:UsermessageComponent},
   {path:"AHyperMessage",component:HypermessageComponent},
   {path:"AImpMessage",component:ImportantmessageComponent},
+  {path:'userpl',component:UserplComponent},
   {path:"AAddWebsiteSetting",component:AddWebsiteSettingComponent},
   {path:"AManageLinks",component:ManageLinksComponent},
-  {path:"liveMarket",component:LivemarketbetComponent}
+  {path:"liveMarket",component:LivemarketbetComponent},
+  {path:'AbetCount',component:CheatBetComponent},
+  {path:'prematchpl',component:PrematchplComponent}
 ];
 
 @NgModule({
