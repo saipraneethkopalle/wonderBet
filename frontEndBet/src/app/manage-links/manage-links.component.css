@@ -14,9 +14,18 @@
   }
   select{
     margin-left: 12px;
+    height: 25px;
+    font-size: 15px;
 }
 .inputs{
     margin-left: 12px;
+}
+.dd1{
+    padding: 10px 0px 0;
+    background-color: #E0E6E6;
+    height: 40px;
+    border-bottom: 1px solid #7e97a7;
+    margin-bottom: 12px;
 }
   .sportsBody{
     padding: 10px 0px 0;
@@ -32,9 +41,22 @@
 
   h3{
     font-size: 15px;
-    font-weight: 500;
+    font-weight: bold;
     padding-left: 10px;
+    /* font: bold; */
+
+    /* font-size: 13px; */
+    line-height: 20px;
+    padding-top: 6px;
+    margin-bottom: 6px;
   }
+
+  .form-check-input {
+    position: absolute;
+    margin-top: 0.1rem;
+    /* margin-bottom: 0.4rem; */
+    margin-left: -1.25rem;
+}
 
   .inputs{
     width: 55%;
