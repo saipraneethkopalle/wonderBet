@@ -12,11 +12,34 @@ export class PrematchplComponent implements OnInit {
   matchList:any;
   matchName:any
   ngOnInit(): void {
-    this.getMatches()
+    this.getMatches('cricket')
   }
-  getMatches() {
+  getMatches(sport:any) {
     this.apiService.getAllMatches().subscribe((res:any)=>{
-      this.matchList = res.data;
+      
+      if(sport=='cricket'){
+        this.matchList = res.data.filter((el:any)=>{
+          if(el.sportId=='4') {
+            return el;
+          }
+
+        })
+      } else if(sport=='soccer'){
+        this.matchList = res.data.filter((el:any)=>{
+          if(el.sportId=='1') {
+            return el;
+          }
+
+        })
+      } else{
+        this.matchList = res.data.filter((el:any)=>{
+          if(el.sportId=='2') {
+            return el;
+          }
+
+        })
+      }
+     
     })
   }
   
