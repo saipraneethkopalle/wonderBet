@@ -10,11 +10,22 @@ exports.addWebsite = async(req,res)=>{
         if(websiteData.length > 0){
             return res.status(STATUS.BAD_REQUEST).send({"error":"Already Exist"})
         }
-        let addWebsite = new superUser(data);
+        let addWebsite = new addWebsites(data);
         addWebsite.save();
         return res.status(STATUS.OK).send({"message":"Website Added  Successfully"})
        
     }catch(err){
         return res.status(STATUS.BAD_REQUEST).send(err);
+    }
+}
+
+
+
+exports.getAllWebsite = async(req,res)=>{
+    try{
+        let data = await addWebsites.find().lean()
+        res.status(STATUS.OK).send({"message":"Result Fetched!",data:data})
+    }catch(err){
+        res.status(STATUS.BAD_REQUEST).send(err.message);
     }
 }
