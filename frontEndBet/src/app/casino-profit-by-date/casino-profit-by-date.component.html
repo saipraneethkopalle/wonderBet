@@ -14,9 +14,9 @@
           <option>Europe/Paris(GMT+1:00)</option><option>Africa/Cairo(GMT+2:00)</option><option>Asia/Qatar(GMT+3:00)</option><option>Asia/Dubai(GMT+4:00)</option>
           <option>Asia/Karachi(GMT+5:00)</option><option>IST(Bangalore/Bombay/New Delhi)(GMT+5:30)</option><option>Asia/Kathmandu(GMT+5:45)</option><option>Aisa/Dhaka(GMT+6:00)</option></select>
          <label class="inputbody input">Period</label><input class="inputbody1" type="date"  placeholder="YYY-MM-DD">
-         <input class="date1"  type="time-local" placeholder="00:00:00"/>
-         <label class="inputbody input">to</label><input class="inputbody1" type="date"  placeholder="YYY-MM-DD">
-         <input class="date1"  type="time-local" placeholder="00:00:00"/>
+         <input class="date1"  type="time"  [value]="currentTime"   placeholder="00:00:00"/>
+         <label class="inputbody input">to</label><input class="inputbody1" type="date"   placeholder="YYY-MM-DD">
+         <input class="date1"  type="time"  [value]="currentTime" placeholder="00:00:00"/>
 
          <div >
          <button class='match_btn' >Just For Today</button>
