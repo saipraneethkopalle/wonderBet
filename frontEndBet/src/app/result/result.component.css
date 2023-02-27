@@ -10,7 +10,7 @@
 .col-lg-12{
     position: relative;
     min-height: 1px;
-    
+
 }
 .suspend1{
     background-size: cover;
@@ -34,7 +34,9 @@
 }
 .li1{
     list-style: none; margin-right: 5px;
+    cursor: pointer;
 }
 .li2{
     list-style: none;
+    cursor: pointer;
 }
