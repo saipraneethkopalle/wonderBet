@@ -82,6 +82,7 @@ const routes: Routes = [
   {path:'userpl',component:UserplComponent},
   {path:"AAddWebsiteSetting",component:AddWebsiteSettingComponent},
   {path:"AManageLinks",component:ManageLinksComponent},
+  {path:"AliveMatchbets",component:LivemarketbetComponent},
   {path:"liveMarket",component:LivemarketbetComponent},
   {path:'AbetCount',component:CheatBetComponent},
   {path:'prematchpl',component:PrematchplComponent},

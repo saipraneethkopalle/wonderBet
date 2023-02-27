@@ -13,7 +13,6 @@ img{
     padding: 10px 10px 0;
     background-color: #E0E6E6;
     border-bottom: 1px solid #7e97a7;
-    /* margin-bottom: 10px */
 }
 
 .col-lg-12{
@@ -21,10 +20,17 @@ img{
     min-height: 1px;
     
 }
-.suspend{
-    background-size: cover;
-    width: 140px !important;
-    height: 115px !important;
-    border: 0 !important;
-    border-radius: 10px;
+
+.title{
+    margin: none;
+}
+.h2{
+    font-size: 1.1rem; margin-left: 3%;
+}
+
+.suspend1{
+    list-style: none; margin-right: 5px;
+}
+.suspend2{
+    list-style: none;
 }

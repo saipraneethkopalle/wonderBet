@@ -10,12 +10,33 @@
 .col-lg-12{
     position: relative;
     min-height: 1px;
-    
+
 }
-.suspend{
+.suspend1{
+    background-size: cover;
+    /* background-image: url(../../assets/setfancyres\ \(1\).png) !important; */
+    background-image: url(../../assets/setfancyres.png)!important;
+    width: 140px !important;
+    height: 115px !important;
+    border: 0 !important;
+    border-radius: 10px;
+}
+.suspend2{
+    background-image: url(../../assets/setmarketres.png) !important;
     background-size: cover;
     width: 140px !important;
     height: 115px !important;
     border: 0 !important;
     border-radius: 10px;
+}
+.h2{
+    font-size: 1.1rem; margin-left: 3%;
+}
+.li1{
+    list-style: none; margin-right: 5px;
+    cursor: pointer;
+}
+.li2{
+    list-style: none;
+    cursor: pointer;
 }

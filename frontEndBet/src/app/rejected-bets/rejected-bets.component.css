@@ -67,7 +67,7 @@
 select{
     margin-left: 12px;
 }
-.daad{
+.inputt{
   padding-left: 1%;
 }
 
@@ -95,4 +95,7 @@ tr {
   display: table-row;
   vertical-align: inherit;
   border-color: inherit;
+}
+.funtion_wraper{
+  font-size: 13px;
 }

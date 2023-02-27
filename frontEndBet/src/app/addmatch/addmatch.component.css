@@ -41,6 +41,7 @@
  .game_name{
     color: #4083a9;
     font-size: 14px;
+    list-style: none;
 }
 .match_btn{
     background: #ffb90e;

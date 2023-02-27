@@ -136,3 +136,33 @@ th{
 .table_data,.h tr{
   font-size: 12px
 }
+.alignL1{
+  width: 17%; text-align: center;
+}
+.alignL2{
+  width: 13%;
+}
+.alignL3{
+  width: 7%;
+}
+.alignL4{
+  width: 10%;
+}
+.alignL5{
+  width: 11%;
+}
+.alignL6{
+  width: 11%;
+}
+.alignL7{
+  width: 10%;
+}
+.alignL8{
+  width: 9%;
+}
+.alignL9{
+  width: 6%;
+}
+.alignL10{
+  width: 20%;
+}
