@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AactiveMatchComponent } from './aactive-match/aactive-match.component';
+import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { AddWebsiteSettingComponent } from './add-website-setting/add-website-setting.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 import { AdminSettingSearchUserComponent } from './admin-setting-search-user/admin-setting-search-user.component';
@@ -83,7 +84,8 @@ const routes: Routes = [
   {path:"AliveMatchbets",component:LivemarketbetComponent},
   {path:"liveMarket",component:LivemarketbetComponent},
   {path:'AbetCount',component:CheatBetComponent},
-  {path:'prematchpl',component:PrematchplComponent}
+  {path:'prematchpl',component:PrematchplComponent},
+  {path:'Aaccountstatement',component:AccountStatementComponent}
 ];
 
 @NgModule({
