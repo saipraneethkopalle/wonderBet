@@ -49,6 +49,7 @@ import { ManageLinksComponent } from './manage-links/manage-links.component';
 import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
 import { PrematchplComponent } from './prematchpl/prematchpl.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +95,8 @@ import { PrematchplComponent } from './prematchpl/prematchpl.component';
     ManageLinksComponent,
     CheatBetComponent,
     LivemarketbetComponent,
-    PrematchplComponent
+    PrematchplComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
