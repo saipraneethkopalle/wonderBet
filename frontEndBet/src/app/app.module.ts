@@ -52,6 +52,7 @@ import { PrematchplComponent } from './prematchpl/prematchpl.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ActivitylogComponent } from './activitylog/activitylog.component';
+import { BlockMarketListComponent } from './block-market-list/block-market-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,6 +102,7 @@ import { ActivitylogComponent } from './activitylog/activitylog.component';
     AccountStatementComponent,
     ProfileComponent,
     ActivitylogComponent,
+    BlockMarketListComponent,
   
   ],
   imports: [

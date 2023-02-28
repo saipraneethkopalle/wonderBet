@@ -1,0 +1,84 @@
+
+.main{
+    width:100%;
+    min-height: 650px;
+    height:auto;
+    overflow:hidden;
+    padding-left:7%;
+    padding-right:7%;
+    font-size:14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:5px;
+    background-color: #f0ece1;
+  }
+
+  h5{
+    padding:5px;
+  }
+
+
+  table,tr{
+    width:100%;
+  }
+
+thead{
+    border-top:2px solid #7e97a7;
+    font-size: 12px;
+    border-bottom:2px solid #7e97a7;
+    background-color: #e4e4e4;
+    color:#243a48;
+    height: 20px;
+  }
+
+.filter1{
+    width: 15%;
+    padding-top: 0%;
+    padding-bottom: 3%;
+}
+
+.filter2{
+    width: 15%;
+    padding-top: 0%;
+    padding-bottom: 3%;
+
+}
+
+.filter3{
+    width: 15%;
+    padding-top: 0%;
+    padding-bottom: 3%;
+
+}
+
+.filter4{
+    width: 15%;
+    padding-top: 0%;
+    padding-bottom: 3%;
+}
+
+.filter5{
+    width: 15%;
+    padding-top: 0%;
+    padding-bottom: 3%;
+}
+
+.filter6{
+    width: 15%;
+    padding-top: 0%;
+    padding-bottom: 3%;
+}
+
+.filter7{
+    width: 11%;
+    padding-top: 0%;
+    padding-bottom: 3%;
+}
+
+.filter8{
+    width: 10%;
+}
+
+.filter9{
+    width: 10%;
+    padding-bottom: 2%;
+}
