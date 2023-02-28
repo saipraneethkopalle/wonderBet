@@ -234,7 +234,7 @@ th{
     width: 28px;
     padding: 7px;
     padding-left: 6px;
-    margin-left: 90%;
+    margin-left: 91.2%;
     background-color: white;
 }
 .bttn3{
@@ -248,7 +248,7 @@ th{
     width: 28px;
     padding: 4px;
     padding-left: 6px;
-    margin-left: 91%;
+    margin-left: 92.4%;
     background-color: white;
 }
 .btnn4{
@@ -262,7 +262,7 @@ th{
     width: 28px;
     padding: 4px;
     padding-left: 6px;
-    margin-left: 89.5%;
+    margin-left: 91.2%;
     background-color: white;
 }
 .btnn5{
@@ -276,7 +276,7 @@ th{
     width: 28px;
     padding: 4px;
     padding-left: 6px;
-    margin-left: 88%;
+    margin-left: 90%;
     background-color: white;
 }
 .btnn6{
@@ -290,7 +290,7 @@ th{
     width: 28px;
     padding: 4px;
     padding-left: 6px;
-    margin-left: 93.5%;
+    margin-left: 94.3%;
     background-color: white;
 }
 .btnn7{
@@ -304,10 +304,9 @@ th{
     width: 28px;
     padding: 4px;
     padding-left: 6px;
-    margin-left: 89.5%;
+    margin-left: 91.1%;
     background-color: white;
 }
-/* ///////////////////////////////////////////////////////////////// */
 
 tbody tr{
     background-color: #fff;
@@ -325,7 +324,6 @@ tbody tr{
     display:block;
 }
 .main_heading .sss{
-    /* background-color: #4ba7e1; */
     height: 0;
     border-bottom: 30px solid #4ba7e1;
     border-right: 40px solid transparent;
