@@ -11,5 +11,7 @@ export class MyaccountComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+clicked() {
+  console.log('cliecket')
+}
 }

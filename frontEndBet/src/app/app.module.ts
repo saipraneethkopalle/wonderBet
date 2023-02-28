@@ -49,9 +49,9 @@ import { ManageLinksComponent } from './manage-links/manage-links.component';
 import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { LivemarketbetComponent } from './livemarketbet/livemarketbet.component';
 import { PrematchplComponent } from './prematchpl/prematchpl.component';
+import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ActivitylogComponent } from './activitylog/activitylog.component';
-import { AccountSummryComponent } from './account-summry/account-summry.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,9 +98,10 @@ import { AccountSummryComponent } from './account-summry/account-summry.componen
     CheatBetComponent,
     LivemarketbetComponent,
     PrematchplComponent,
+    AccountStatementComponent,
     ProfileComponent,
     ActivitylogComponent,
-    AccountSummryComponent
+  
   ],
   imports: [
     BrowserModule,
