@@ -57,7 +57,8 @@ li{
   border-bottom: 1px solid #E0E6E6;
   font-size:12px;
   background-color: #ffffff;
-  padding:10px;
+  padding:5px;
+  cursor: pointer;
   color:#243a48;
 }
 
