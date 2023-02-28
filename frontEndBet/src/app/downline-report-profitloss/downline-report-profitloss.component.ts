@@ -32,14 +32,16 @@ export class DownlineReportProfitlossComponent implements OnInit {
     // var endDate = this.endDate;
     // console.log(startDate,"ggg",endDate);
     
-
-    this.matchDate = arr.filter(a => {
+  
+    this.matchDate = arr.filter((a:any) => {
       
       if(a.date >= this.currentDate && a.date <= this.endDate){
-        console.log(a.date,"date",this.currentDate);
+        console.log("date",a);
+        return a;
         
       }
     });
+    console.log("this.matchDate",this.matchDate)
     
 
    
