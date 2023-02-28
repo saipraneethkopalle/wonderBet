@@ -42,14 +42,15 @@
         <option>Asia/Magadan(GMT+11:00)</option>
         <option>Pacific/Fiji(GMT+12:00)</option>
       </select>
-      <label>Period </label
-      ><input type="date" class="date" [value]="currentDate" /><input
+      <label>Period </label>
+      <input
+        type="date" class="date" [value]="currentDate" /><input
         type="time"
         class="time"
         [value]="currentTime"
       />
       <span>to</span>
-      <input type="date" class="date" [value]="currentDate" /><input
+      <input type="date" class="date" [value]="endDate" /><input
         type="time"
         class="time"
         [value]="currentTime"
@@ -58,7 +59,7 @@
     <div class="filter2">
       <button type="button" class="btn1">Just For Today</button>
       <button type="button" class="btn2">From Yesterday</button>
-      <button type="button" class="btn3">Get P&L</button>
+      <button type="button" class="btn3" (click)='searchDate()'>Get P&L</button>
     </div>
   </div>
   <table class="betlisttb">

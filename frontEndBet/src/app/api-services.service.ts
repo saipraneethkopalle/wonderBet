@@ -6,6 +6,9 @@ import * as CryptoJS from 'crypto-js';
   providedIn: 'root'
 })
 export class ApiServicesService {
+  searchDate() {
+    throw new Error('Method not implemented.');
+  }
   secretKey = "WB13579";
   headers:any = {'authorization':localStorage.getItem("token") };
   constructor(private http:HttpClient) { }
