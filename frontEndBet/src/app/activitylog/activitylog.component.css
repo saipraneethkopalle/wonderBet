@@ -66,8 +66,9 @@ li {
   border-bottom: 1px solid #E0E6E6;
   font-size: 12px;
   background-color: #ffffff;
-  padding: 10px;
-  color: #243a48;
+  padding: 5px;
+  cursor: pointer;
+  color: rgb(18, 18, 253);
 }
 
 sub {

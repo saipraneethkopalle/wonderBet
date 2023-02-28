@@ -57,10 +57,11 @@
     border-bottom: 1px solid #E0E6E6;
     font-size:12px;
     background-color: #ffffff;
-    padding:10px;
+    padding:5px;
+    cursor: pointer;
     color:#243a48;
   }
-  
+
   .menu2{
     font-size: 15px;
       font-weight: bold;
@@ -83,7 +84,7 @@
     padding: 7px 10px 5px;
     border-bottom: 1px solid #7e97a7;
     margin-bottom: 15px;
-  
+
   }
   .user{
     border: 1px solid #7E97A7;
@@ -144,7 +145,7 @@
   .width5 {
     width: 18%;
     text-align: right;
-   
+
   }
   .width6 {
     width: 18%;
