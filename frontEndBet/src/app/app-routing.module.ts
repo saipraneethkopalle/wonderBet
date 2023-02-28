@@ -32,6 +32,7 @@ import { MarketProfitlossComponent } from './market-profitloss/market-profitloss
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
 import { PrematchplComponent } from './prematchpl/prematchpl.component';
+import { ProfileComponent } from './profile/profile.component';
 import { RejectedBetsComponent } from './rejected-bets/rejected-bets.component';
 import { ResultComponent } from './result/result.component';
 import { RiskmanagementComponent } from './riskmanagement/riskmanagement.component';
@@ -86,6 +87,7 @@ const routes: Routes = [
   {path:"liveMarket",component:LivemarketbetComponent},
   {path:'AbetCount',component:CheatBetComponent},
   {path:'prematchpl',component:PrematchplComponent},
+  {path:"Aprofile",component:ProfileComponent},
   {path:"activitylog",component:ActivitylogComponent},
   {path:"accountSummary",component:AccountSummryComponent}
 ];
