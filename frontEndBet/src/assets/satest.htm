@@ -1,0 +1,1592 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <title>WONDERBET</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> -->
+ 
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="SHORTCUT ICON" href="/adminfiles/img/favicon.ico?v=0.01" />
+  <link href="/adminfiles/css/style.css?v=0.5" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/adminfiles/js/handlebars3.0.0.js?v=0.16" type="text/javascript"></script>  
+   <script src="/adminfiles/js/handlebars-helper-x.js?v=0.16" type="text/javascript"></script>
+</head>
+
+<body style="background-color: #f0ece1;" class="wicketslive">
+    
+
+
+
+  
+   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.modal-backdrop.fade {
+  opacity: 0.5;
+}
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 406px;
+  margin-left: -212px;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  /* IE6-7 */
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: none;
+}
+.modal.fade {
+  -webkit-transition: opacity .3s linear, top .3s ease-out;
+  -moz-transition: opacity .3s linear, top .3s ease-out;
+  -o-transition: opacity .3s linear, top .3s ease-out;
+  transition: opacity .3s linear, top .3s ease-out;
+ // top: -25%;
+}
+.modal.fade.in {
+  top: 10%;
+}
+.modal-header {
+  padding: 9px 15px;
+  border-bottom: 1px solid #eee;
+}
+.modal-header .close {
+  margin-top: 2px;
+}
+.modal-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+.modal-form {
+  margin-bottom: 0;
+}
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+  *zoom: 1;
+}
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.modal-footer:after {
+  clear: both;
+}
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+  }
+  .modal.fade {
+    top: -100px;
+  }
+  .modal.fade.in {
+    top: 20px;
+  }
+} 
+</style>
+<div class="top">
+  <div class="header">
+    <h1><a id="mainLink">SKYEXCHANGE</a></h1>
+
+    <ul class="account-wrap">
+	  <li><span id="loginId">-</span><strong>admin</strong></li>
+	  
+      <li class="main-wallet no-multi">
+      	
+      	<a href="#multi-balance_pop" class="a-wallet">
+      		<ul>
+      			<li>
+      				<span>Main</span>
+      				<strong id="mainBalance">PBU 0.0</strong>
+      			</li>
+      		</ul>
+      		
+      		<p class="loading-bar" id="menuRefreshLoading" style="display:none;">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</p>
+      	</a>
+
+		<a id="topRefresh" class="a-refresh" style="cursor: pointer"><img src="/adminfiles/img/transparent.gif"></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Menu Wrap -->
+  <div class="menu-wrap">
+    <div class="main_wrap">
+      <ul class="menu" id="menuItems">
+	      <li><a id="menu_downline_list" class="" >Downline List
+	      </a></li>
+	      
+	      <li>
+		      <a id="menu_my_account" class="" href="/Amyaccount">My Account
+		      </a></li>
+	      <li><a id="menu_my_report" class="menu-drop" href="#">My Report
+	      </a>
+		      <ul>
+			      
+			      <li><a href="/Aprofitdownline">Profit/Loss Report by Downline
+			      </a></li>
+			      <li><a href="/Aprofitmarket">Profit/Loss Report by Market
+			      </a></li>
+			      <li id="casinoDateProfit"><a href="/ACasinoprofitAndLoss">Casino Profit/Loss Report by Date
+			      </a></li>
+			      <li><a href="/Adownlinepl">Profit/Loss Downline
+			      </a></li>
+			      
+			       <li><a href="/Adownlinesportspl">Profit/Loss Sports Wise
+			      </a></li>
+			      <li><a href="/statementByUser/0/0/1">Match Profit Loss
+			      </a></li>
+			      <!-- <li ><a href="/ACasinoprofitAndLossNew">Casino Profit/Loss New
+			      </a></li> -->
+			      <li ><a href="/ACasinoprofitAndLossDownlineNew">Casino P/L Downline Monthly
+			      </a></li>
+		      </ul>
+	      </li>
+	      
+	      
+	      
+	      <li><a id="menu_bet_list" class="" href="/Abetlist">BetList
+	      </a></li>
+	      <li><a id="menu_bet_list_live" class="" href="/Abetlistlive">BetListLive
+	      </a></li>
+	      
+	      
+	      
+	      <li><a id="menu_risk_management" class="" href="/Ariskmanagement">Risk Management
+	      </a></li>
+	      
+	      
+	      <li><a id="menu_banking" class="">Banking
+	      </a></li>
+	      <li><a id="block_Market" class="" href="/AblockMarket">Block Market
+	      </a></li>
+	      <li><a id="sportSetting" class="" href="/AsportSettings">Sport Setting
+	      </a></li>
+	      <li><a id="adminSetting" class="" href="/AAdminSettings">Admin Setting
+	      </a></li>
+	      <li><a id="adminResult" class="" href="/AsetResult">Result
+	      </a></li>
+	      <li><a id="addMatch" class="" href="/AaddMatch">Add Match
+	      </a></li>	      
+		  
+        <li class="logout" onclick="selfLogoutUser()">
+          <a id="logout" >Logout<img src="/adminfiles/img/transparent.gif"></a>
+        </li>
+        <li class="time_zone"><span>Time Zone :</span> <span  id="loginTimeZone" style="color:#fff;font-weight:bold">--</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="message" class="message-wrap" style="display:none ;  margin-top:8%;right: 11px;width:98%;">
+  <p id="userMessage" >
+</p>
+</div>
+
+    <div id="loading"  class="loading-wrap loader" style="display:none;">
+  <ul class="loading">
+    <li><img src="/adminfiles/img/loading40.gif"></li>
+    <li>Loading...</li>
+  </ul>
+</div>
+<div id="changepwdmodal" class="pop_bg">
+<div class="pop_box">
+    <a class="close_pop" href="javascript: void(0)" >close_pop</a>
+
+    <h3>Change Password</h3>
+
+    <dl class="form_list">
+
+      <dt>New Password</dt>
+      <dd>
+        <input id="newpass" type="password" placeholder="Enter" class="error">
+        <span class="must">*</span>
+        <span id="newpassError" class="error-text"></span>
+      </dd>
+      <dt>New Password Confirm</dt>
+      <dd>
+        <input id="cnfrm_newpass" type="password" placeholder="Enter">
+        <span class="must">*</span>
+        <span id="cnfrm_newpassError" class="error-text"></span>
+      </dd>
+      <dt>Your Password</dt>
+      <dd>
+        <input id="myPass" type="password" placeholder="Enter">
+        <span class="must" id="myPassError">*</span>
+      </dd>
+      <dd><a id="changePasswordBtn"  class="btn-send">Change</a></dd>
+
+    </dl>
+
+  </div>
+</div>
+
+<div id="confirmationmodal" role="dialog" class="modal fade" data-backdrop="static" data-keyboard="false" aria-hidden="false" style="display:none">
+        <div class="modal-dialog modal-md modal-dialog-scrollable">
+            <span tabindex="0"></span>
+            <div id="modal_content_" tabindex="-1" class="modal-content">
+                <header id="modal_header_" class="modal-header bg-success" style="background-color:#ffc21d">
+                    <h4 class="modal-title text-uppercase text-white" id="popup_title" style="color:#000"></h4>
+                    
+                </header>
+                <div id="modal_body_" class="modal-body">
+                    <!---->
+                    <div class="tabs" id="">
+                        <!---->
+                        <div class="">
+                            
+                        </div>
+                        <div class="form-group" style="display: table;width: 100%;margin: 5px 0px;">
+                        
+                        <div class="col-lg-12 col-12">
+                        <div role="alert" aria-live="polite" aria-atomic="true" class="alert alert-info" style="margin:0">
+                                <!---->
+                                <div direction="right"><span id="popup_msg" style="font-size:15px"></span></div>
+                            </div>
+                        </div>
+                                      
+                                    </div>
+                                      <div class="col-lg-12 col-12 text-right" style="display:flex;place-content:center;margin-top:20px">
+                                            <button style="width:100px" type="button" id="popup_confirm" data-dismiss="modal" class="btn-send close_modal">
+                                               <i class="fa fa-check-circle"></i>
+                                                Confirm
+                                            </button>
+                                            <button type="submit" data-dismiss="modal" class="btn-send close_modal" style="width:100px">
+                                              <i class="fa fa-times-circle"></i>
+                                                Cancel
+                                            </button>
+                                        </div>
+                    </div>
+                </div>
+                <!---->
+            </div>
+            <span tabindex="0"></span>
+        </div>
+		
+    </div>
+	 <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+   const firebaseConfig = {
+  apiKey: "AIzaSyDNxy0OIIxlWh_cIBeQMNVQS-rQntMTJAE",
+  authDomain: "exch-89c0d.firebaseapp.com",
+  databaseURL: "https://exch-db.firebaseio.com",
+  projectId: "exch-89c0d",
+  storageBucket: "exch-89c0d.appspot.com",
+  messagingSenderId: "603066242550",
+  appId: "1:603066242550:web:c9162d15c859b08a32a3d7",
+  measurementId: "G-DJD010M2LK"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+var user = {"lastName":"abc","myBalance":300000,"mobileNumber":"0987654321","childLiab":0,"mysportPl":1,"isActive":true,"userid":"admin","createdOn":"Jan 19, 2022, 11:07:51 PM","password":"wonder@123","websiteId":"1","ispasswordChanged":true,"adminId":"5bed21404aa1a721d46facff","myallPl":2,"mycasinoPl":1,"id":"5bed21404aa1a721d46facff","accType":"Admin","email":"abc@xyz.com","betLock":false,"partnership":{"userComm":0,"masterSportPart":0,"adminSportPart":100,"miniadminSportPart":0,"subadminSportPart":0,"supermasterSportPart":0},"accountLock":false,"usertype":0,"timeZone":"IST GMT+5:30","fixLimit":0,"updatedOn":"Jan 19, 2022, 11:07:51 PM","subadminUserId":"sa1","exposureLimit":0,"websiteName":"betx365.fun","username":"admin"}
+const nf = new Intl.NumberFormat('en-NZ', {
+	  minimumFractionDigits: 2,
+	});
+$(document).ready(function(){
+	if(0==0||0==1){
+		$("#casinoDateProfit").show()
+	}else{
+		$("#casinoDateProfit").hide()
+	}
+	if(user.ispasswordChanged==false&&window.location.pathname!="/ApasswordOnSignIn"){
+		location.replace("/ApasswordOnSignIn")	
+	}
+	$('input[type="text"]').attr('readonly',true);
+	$('input[type="text"]').attr('onfocus', 'this.removeAttribute("readonly")');
+	
+	
+	
+	if(user.usertype == 0){
+		$("#sportSetting").show();
+		$("#adminSetting").show();
+		$("#adminResult").show();
+		$("#addMatch").show();
+		$("#block_Market").show();
+	}else{
+		$("#sportSetting").hide();
+		$("#adminSetting").hide();
+		$("#adminResult").hide();
+		$("#addMatch").hide();
+		$("#block_Market").hide();
+	}
+	
+	if(user.usertype == 0){
+		$("#loginId").text("A");
+	}else if(user.usertype == 1){
+		$("#loginId").text("SA");
+	}else if(user.usertype == 2){
+		$("#loginId").text("SBA");
+	}else if(user.usertype == 3){
+		$("#loginId").text("SS");
+	}else if(user.usertype == 4){
+		$("#loginId").text("SA");
+	}else if(user.usertype == 5){
+		$("#loginId").text("A");
+	}
+	$("#loginTimeZone").html(user.timeZone.split(" ")[1]);
+	
+	var type = parseInt(user.usertype) + 1;
+	var a = document.getElementById("menu_downline_list");
+	var b = document.getElementById("mainLink");
+	var c = document.getElementById("menu_banking");
+	a.setAttribute("href" , "/Adminhome/0/"+type+"/1/100");
+	b.setAttribute("href" , "/Adminhome/0/"+type+"/1/100");
+	c.setAttribute("href" , "/Abanking/0/"+type+"/1/100");
+	getUserDetails();
+	MenuHandler.init();
+	
+});
+
+
+$("#topRefresh").click(function() {
+	loadBalance();
+});
+
+
+function loadBalance()
+{
+	
+	
+	$("#menuRefreshLoading").show();
+	$("#mainBalance").hide();
+	
+	setTimeout(() => {
+		$.ajax({
+			type:'POST',
+			url:'/api/getUserAccDetails',
+			success: function(jsondata, textStatus, xhr) {
+				if(xhr.status == 200)
+				{     
+					
+					$("#mainBalance").html("PBU "+nf.format(jsondata.secondarybalance));
+				}
+				
+		},complete : function(jsondata, textStatus, xhr) {
+			$("#menuRefreshLoading").hide();
+			$("#mainBalance").show();
+		}
+	});
+	}, 1000);
+}
+function getUserDetails()
+{
+
+
+		$.ajax({
+			type:'POST',
+			url:'/api/getUserAccDetails',
+			success: function(jsondata, textStatus, xhr) {
+				if(xhr.status == 200)
+				{    
+					
+					var bal =  nf.format(jsondata.secondarybalance);
+					$("#mainBalance").html("PBU "+bal);
+					$("#yourBalance").html(bal);
+					$("#depoOwnBal").html(bal+" PBU");
+				}
+				
+		},complete : function(jsondata, textStatus, xhr) {
+			
+		}
+	});
+}
+
+function selfLogoutUser(){
+	location.replace("/Alogin")	
+}
+
+var starCountRefLogin = firebase.database().ref('WDBET/' + 'admin');
+starCountRefLogin.on('value', function(snapshot) {
+  var results = {
+  'result':[]
+	};
+	
+	 
+	  snapshot.forEach(function(child) {
+		    
+			if(child.exists()){
+				var key1=child.key;
+			}		  
+			starCountRefLogin.child(key1).on("value", function(snapshot1){
+				
+					results.result.push({
+						'id':snapshot1.val()
+					});
+			
+			});
+		  }); 
+		  
+		
+	 var json_string = JSON.stringify(results);
+	 var obj1 = JSON.parse(json_string);
+	checkUserLogin();
+	 
+}); 
+
+function checkUserLogin()
+{
+
+
+	var ip = '0';
+	$.ajax({
+		type:'POST',
+	   			url:'/api/checkUserLogin',
+	  			success: function(jsondata, textStatus, xhr) {
+	  				if(xhr.status == 200){
+	  					location.replace("/Alogin")	
+
+	  				}
+	    		}
+	    	});  
+        	
+}
+var acIn="";
+
+function showMessage(type,message)
+{
+$("#message").show();
+
+if(type == "error"){
+$("#message").removeClass("success");
+$("#message").addClass("error");
+}else{
+$("#message").removeClass("error");
+$("#message").addClass("success");
+}
+
+$("#userMessage").text(message);
+
+ setTimeout(() => {
+ $("#message").hide();
+ },3000);
+
+}
+
+function removeSpecialCharNoSpace(id)  
+{  
+  var x = $("#"+id).val();
+  x = x.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''); 
+ if(x.match(/\s/g)){
+    x=x.replace(/\s/g,'');
+  }
+    $("#"+id).val(x);  
+} 
+
+
+function removeSpecialCharSpace(id)  
+{  
+var x = $("#"+id).val();
+x = x.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+$("#"+id).val(x);  
+} 
+
+function removeSpecialCharSpaceWihDot(id)  
+{  
+var x = $("#"+id).val();
+x = x.replace(/[`~!@#$%^&*()_|+\-=?;:'",<>\{\}\[\]\\\/]/gi, '');
+$("#"+id).val(x);  
+} 
+
+function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : evt.keyCode;
+if ((charCode == 46 || charCode == 43 || charCode == 45) && charCode > 31 
+  && (charCode < 48 || charCode > 57))
+   return false;
+
+return true;
+}
+
+function isNumberKeyWithDot(evt)
+{
+var charCode = (evt.which) ? evt.which : evt.keyCode;
+if (charCode != 46 && charCode > 31 
+  && (charCode < 48 || charCode > 57))
+   return false;
+
+return true;
+}
+
+function validatePassword(inputValue){
+	 var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/; 
+	 if(inputValue.match(passw)) 
+	 { 
+	 return true;
+	 }
+	 else
+	 { 
+	 return false;
+	 }
+}
+
+
+function convertToDDMMYY(date){
+		 var today = new Date(date);
+			var dd = String(today.getDate()).padStart(2, '0');
+			var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+			var yyyy = today.getFullYear();
+
+			today = dd + '/' + mm + '/' + yyyy;
+			return today;
+	 }
+	 
+	 function convertToDDMMYYHH(date){
+		 var today = new Date(date);
+		 var dd = String(today.getDate()).padStart(2, '0');
+			var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+			var yyyy = today.getFullYear();
+			var hh = addZero(today.getHours());
+			var min = addZero(today.getMinutes());
+			var ss = addZero(today.getSeconds());
+			today = dd + '/' + mm + '/' + yyyy + " "+ hh +":"+min +":"+ss;
+			return today;
+	 }
+	 
+	 function addZero(i) {
+		  if (i < 10) {
+		    i =  i + "0";
+		    i = i.split("").reverse().join("");
+		  }
+		  return i;
+		}
+</script> 
+   
+<div class="main_wrap">
+    <!-- agent path -->
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="agent_path">
+    <ul id="agentPath" class="agent_path-L" style="display: block;">
+        
+        <li id="patha" class="" style="display:none">
+            <a id="adminLink">
+                <span class="lv_0">
+                    A
+                </span>
+                <strong id="adminUser"></strong>
+            </a>
+        </li>
+        
+        <li id="pathsua" class="currency_tag" style="display:none">
+            <a id="suaLink">
+                <span class="lv_1">SUA</span>
+                <strong id="suaUser"> </strong>
+            </a>
+        </li>
+        
+        <li id="pathsab" class="" style="display:none">
+            <a id="sabLink">
+                <span class="lv_3">
+                    SAB
+                </span>
+                <strong id="sabUser"></strong>
+            </a>
+        </li>
+        
+     
+        
+        <li id="pathsup" class="" style="display:none">
+            <a id="supLink">
+                <span class="lv_4">
+                    SUP
+                </span>
+                <strong id="supUser"></strong>
+            </a>
+        </li>
+        
+        <li id="pathsa" class="" style="display:none">
+            <a id="saLink">
+                <span class="lv_2">
+                    SA
+                </span>
+                <strong id="saUser"> </strong>
+            </a>
+        </li>
+        
+        <li id="pathc" class="last_li" style="display:none">
+            <a id="userLink">
+                <span class="lv_3">
+                    A
+                </span>
+                <strong id="cUser"> </strong>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+   
+
+<div class="col-left">
+
+    <!-- Sub Menu and Path -->
+    <div class="sub_path">
+
+ <ul class="menu-list">
+            
+	            <li class="class">Position</li>
+	            <li>
+	                <a id="accountSummary" href="/Amemberactsmry/satest">Account Summary</a>
+	            </li>
+	
+	            <li class="class">Performance</li>
+	            
+	            <li>
+	                <a id="bettingHistory" href="/ABettingHistory/satest">Betting History</a>
+	            </li>
+	            <li>
+	                <a id="profitLoss" href="/AprofitAndLoss/satest" class="select">Betting Profit &amp; Loss</a>
+	            </li>
+	            
+	            
+	            <li>
+	                <a id="transactionHistory" href="/Atransactionhistory/satest/1">Transaction&nbsp;History
+	                </a>
+	            </li>
+	            <li>
+	                <a id="transactionHistory2" href="/Atransactionhistory2/satest/1">Transaction&nbsp;History 2
+	                </a>
+	            </li>
+	            <li><a id="_activityLog" href="/Aactivitylog/satest/1">Activity Log</a></li>
+
+            
+        </ul>
+    </div>
+</div>
+
+    <!--Agent Left Column end-->
+
+    <!-- Center Column -->
+    <div class="col-center report">
+        
+
+<!-- Loading Wrap -->
+<div id="loading" class="loading-wrap" style="display:none">
+  <ul class="loading">
+    <li><img src="/adminfiles/img/loading40.gif"></li>
+    <li>Loading...</li>
+  </ul>
+</div>
+
+<!-- Message -->
+<div id="message" class="message-wrap success">
+  <a class="btn-close">Close</a>
+  <p></p>
+</div>
+
+
+
+        <h2>Betting History</h2>
+
+        <!-- Tab -->
+        
+<ul class="report-tab-wrap" style="display:block">
+               <li class="report-tab  select" onclick="setNewBets('Odds')" id="reportType_Odds" data-reporttabtype="0">
+                    Exchange
+                </li>
+                <li class="report-tab " onclick="setNewBets('Fancy')" id="reportType_Fancy" data-reporttabtype="7">
+                    FancyBet
+                </li>
+                <li class="report-tab " onclick="setNewBets('Fancy1')" id="reportType_Fancy1" data-reporttabtype="7">
+                    Fancy1Bet
+                </li>
+                <li class="report-tab " onclick="setNewBets('Toss')" id="reportType_Toss" data-reporttabtype="7">
+                    Toss
+                </li>
+                <li class="report-tab " onclick="setNewBets('Casino')" id="reportType_Casino" data-reporttabtype="7">
+                    Casino Bet
+                </li>
+                <li class="report-tab " onclick="setNewBets('sportsBook')" id="reportType_sportsBook" data-reporttabtype="2">
+                    Sportsbook
+                </li>
+                <li class="report-tab " onclick="setNewBets('BooKMaker')" id="reportType_BooKMaker" data-reporttabtype="3">
+                    BookMaker
+                </li>
+                <li class="report-tab " onclick="setNewBets('Premium')" id="reportType_Premium" data-reporttabtype="5">
+                    Premium
+                </li>
+            </ul>
+
+
+
+        <!-- function -->
+        
+
+
+
+<div class="function-wrap">
+    <ul class="input-list">
+        <div id="statusCondition" style="">
+            <li><label>Bet Status:</label></li>
+            <li>
+                <select name="betStatus" onchange="changeStatus()" id="betStatus"><option value="2">Settled</option><option value="3">Cancelled</option><option value="4">Voided</option></select>
+            </li>
+        </div>
+
+        
+
+        
+        <li><label>Period</label></li>
+        <li>
+                        <input id="startDate" class="cal-input" type="date" placeholder="YYYY-MM-DD">
+                        <input id="startTime" class="time-input " type="text" placeholder="09:00" maxlength="5">
+                        to
+                        <input id="endDate" class="cal-input" type="date" placeholder="YYYY-MM-DD">
+                        <input id="endTime" class="time-input " type="text" placeholder="08:59" maxlength="5">
+                    </li>
+        <li style="display: none;">(TimeZone:IST)</li>
+    </ul>
+    
+    <ul class="input-list">
+                    <li><a id="today" onclick="changeDate('today')" class="btn">Just For Today</a></li>
+                    <li><a id="yesterday" onclick="changeDate('yesterday')" class="btn">From Yesterday</a></li>
+                    <li style="display: none;"><a id="last7days" href="#" class="btn">Last 7 days</a></li>
+                    <li style="display: none;"><a id="last30days" href="#" class="btn">Last 30 days</a></li>
+                    <li style="display: none;"><a id="last2months" href="#" class="btn">Last 2 Months</a></li>
+                    <li style="display: none;"><a id="last3months" href="#" class="btn">Last 3 Months</a></li>
+                    <li><a id="getPL" onclick="getBetHistory('all',1)" class="btn-send">Get History</a></li>
+                </ul>
+</div>
+<!-- No Report Message -->
+<div id="noReportMessage"><p>Betting History enables you to review the bets you have placed. <br>Specify the time period during which your bets were placed, the type of markets on which the bets were placed, and the sport.</p><p>Betting History is available online for the past 30 days.</p></div>
+
+
+
+        <!-- Report Table -->
+        
+<!-- Report Table -->
+<div id="report" style="">
+    <table id="matchTableTemplate" class="table-s" style="display: none">
+        <tbody>
+            <tr>
+                <th width="9%" class="align-L">Bet ID
+                </th>
+                <th width="9%" class="align-L">PL ID
+                </th>
+                <th width="7%" class="align-L" id="siteTitle" style="display: none;">Site
+                </th>
+                <th width="" class="align-L">Market
+                </th>
+                <th width="12%">Selection
+                </th>
+                <th width="4%">Type
+                </th>
+                <th width="8%">Bet placed
+                </th>
+                <th width="7%">Odds req.
+                </th>
+                <th width="8%">Stake
+                </th>
+                <th width="8%">Avg. odds matched
+                </th>
+                <th width="10%">Profit/Loss
+                </th>
+                <th width="10%" id="userCancelTitle" style="display: none;">User Cancel
+                </th>
+            </tr>
+
+            <tr id="matchRowTemplate" style="display: none">
+                <td class="align-L"><a id="betID" href="javascript: void(0);"></a></td>
+                <td class="align-L" id="playerID"></td>
+                <td class="align-L" id="siteName" style="display: none;"></td>
+                <td id="matchTitle" class="align-L"></td>
+                <td id="matchSelection"></td>
+                <td><span id="matchType"></span></td>
+                <td><span id="betPlaced" class="small-date"></span></td>
+                <td id="matchOddsReq"></td>
+                <td id="matchStake"></td>
+                <td id="matchAvgOdds"></td>
+                <td><span id="pol" class="small-date"></span></td>
+                <td id="userCancel"></td>
+            </tr>
+
+            <tr id="expandReductionRowTemplate" class="expand" style="display: none">
+                <td colspan="11">
+                    <img class="expand-arrow" src="/images/transparent.gif">
+                    <table id="txTableTemplate">
+                        <tbody>
+                            <tr>
+                                <th>Bet taken
+                                </th>
+                                <th width="14%">Odds req.
+                                </th>
+                                <th width="14%">Stake
+                                </th>
+                                <th width="14%">Liability
+                                </th>
+                                <th width="14%">Odds matched
+                                </th>
+                                <th width="14%">Reduction
+                                </th>
+                                <th width="14%">Actual Odds.
+                                </th>
+                            </tr>
+
+                            <tr id="txRowTemplate" style="display: none">
+                                <td><span id="betTaken" class="small-date"></span></td>
+                                <td id="txOddsReq"></td>
+                                <td id="txStake"></td>
+                                <td id="txLiability"></td>
+                                <td id="txOddsMatched"></td>
+                                <td id="reduction"></td>
+                                <td id="actualOdds"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr id="expandRowTemplate" class="expand" style="display: none">
+                <td colspan="2"></td>
+                <td colspan="9">
+                    <img class="expand-arrow" src="/images/transparent.gif">
+                    <table id="txTableTemplate">
+                        <tbody>
+                            <tr>
+                                <th>Bet taken
+                                </th>
+                                <th width="16%">Odds req.
+                                </th>
+                                <th width="17%">Stake
+                                </th>
+                                <th width="24%">Liability
+                                </th>
+                                <th width="24%">Odds matched
+                                </th>
+                            </tr>
+
+                            <tr id="txRowTemplate" style="display: none">
+                                <td><span id="betTaken" class="small-date"></span></td>
+                                <td id="txOddsReq"></td>
+                                <td id="txStake"></td>
+                                <td id="txLiability"></td>
+                                <td id="txOddsMatched"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="matchTable" class="table-s" style="display: table;">
+    <thead>
+    <tr>
+                <th width="9%" class="align-L">Bet ID
+                </th>
+                <th width="9%" class="align-L">PL ID
+                </th>
+                <th width="7%" class="align-L" id="siteTitle" style="display: none;">Site
+                </th>
+                <th width="" class="align-L">Market
+                </th>
+                <th width="12%">Selection
+                </th>
+                <th width="4%">Type
+                </th>
+                <th width="8%">Bet placed
+                </th>
+                <th width="7%">Odds req.
+                </th>
+                <th width="8%">Stake
+                </th>
+                <th width="8%">Avg. odds matched
+                </th>
+                <th width="10%">Profit/Loss
+                </th>
+                <th width="10%" id="userCancelTitle" style="display: none;">User Cancel
+                </th>
+            </tr>
+    </thead>
+        <tbody id="matchedBetsList">
+
+            
+        </tbody>
+    </table>
+
+    <p class="table-other">
+
+    </p>
+
+
+    <div>
+        <ul id="pageNumberContent" class="pages">
+        </ul>
+    </div>
+
+</div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="/adminfiles/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js?v=0.9" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
+<script src="/js/encryptDecrypt.js"></script>
+
+<script>
+var userid = 'satest';
+var loginType = '0';
+var type="Odds";
+var status = "Settled"
+var betsList= []
+var betstatus = "Odds"
+var active = false;
+var deleted = false;
+var suspended = false;
+var pageno = 1;
+var betActiveStatus = "Settled"
+$(document).ready(function(){
+	
+	var now = new Date();
+	 var day = ("0" + now.getDate()).slice(-2);
+		var month = ("0" + (now.getMonth() + 1)).slice(-2);
+		
+		var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+		
+		$("#startDate").val(today)
+		$("#endDate").val(today)
+		var minutes = now.getMinutes();
+		if(minutes.toString().length==1){
+			minutes = "0"+minutes
+		}
+		$("#startTime").val(now.getHours()+":"+minutes)
+		$("#endTime").val(now.getHours()+":"+minutes)
+	
+		var newDate = new Date();
+		newDate.setDate(newDate.getDate() - 30);
+		var day1 = ("0" + (newDate.getDate())).slice(-2);
+		var month1 = ("0" + (newDate.getMonth() + 1))
+				.slice(-2);
+		var weekdiff = newDate.getFullYear() + "-"
+				+ (month1) + "-" + (day1);
+   		
+   		
+	loadUserDetails();
+		getBetHistory("today",1)
+	
+});
+
+
+function changeDate(date){
+	if(date=="today"){
+		var now = new Date();
+   	 var day = ("0" + now.getDate()).slice(-2);
+   		var month = ("0" + (now.getMonth() + 1)).slice(-2);
+   		
+   		var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+   		
+   		$("#startDate").val(today)
+   		$("#endDate").val(today)
+   		var minutes = now.getMinutes();
+		if(minutes.toString().length==1){
+			minutes = "0"+minutes
+		}
+		$("#startTime").val("00:01")
+		$("#endTime").val(now.getHours()+":"+minutes)
+		getBetHistory('today',1);
+	}else if(date=="yesterday"){
+		var now = new Date();
+		var yes = new Date();
+		yes.setDate(yes.getDate() - 1);
+   	 var day = ("0" + now.getDate()).slice(-2);
+   		var month = ("0" + (now.getMonth() + 1)).slice(-2);
+   		
+   	 var day1 = ("0" + yes.getDate()).slice(-2);
+		var month1 = ("0" + (yes.getMonth() + 1)).slice(-2);
+   		
+   		var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+   		
+   		$("#endDate").val(today)
+   		
+   		$("#startDate").val(yes.getFullYear()+"-"+(month1)+"-"+(day1))
+   		var minutes = now.getMinutes();
+		if(minutes.toString().length==1){
+			minutes = "0"+minutes
+		}
+		$("#startTime").val("00:01")
+		$("#endTime").val(now.getHours()+":"+minutes)
+		getBetHistory('yesterday',1);
+	}
+}
+
+function setNewBets(status){
+	betstatus = status
+	$(".report-tab").removeClass('select')
+	$("#reportType_"+status).addClass('select')
+	$("#matchedBetsList").html('')
+	$("#pageNumberContent").html('')
+	getBetHistory("all",1)
+}
+
+function showBetInfo(id){
+	if($("#expandMatched"+id).is(":visible")){
+		$("#expandMatched"+id).hide()
+		$("#betID"+id).addClass('expand-close').removeClass('expand-open')
+	}else{
+		$("#expandMatched"+id).show()
+		$("#betID"+id).addClass('expand-open').removeClass('expand-close')
+	}
+}
+
+function goToPage(totalPages){
+	 var pageNo = $("#gotoPage").val();
+	 if(pageNo.length<=0){
+		 return;
+	 }else if(parseInt(pageNo)<=0){
+		 showMessage("error","You can go to only Page number 1");
+		 window.scrollTo({ top: 0, behavior: 'smooth' });
+	 }else if(parseInt(pageNo)>parseInt(totalPages)){
+		 showMessage("error","You can go Upto Page number "+totalPages);
+		 window.scrollTo({ top: 0, behavior: 'smooth' });
+	 }else{
+		 changePage(pageNo);
+	 }
+}
+
+function changePage(pageNo){
+ pageno = pageNo;
+ getBetHistory("all",pageno)
+}
+
+    function changeStatus(){
+    	if($("#betStatus").val()==2){
+    	    active = false;
+    	    deleted = false;
+    	    suspended = false;
+    	    betActiveStatus = "Settled"
+    	}else if($("#betStatus").val()==3){
+    	    active = false;
+    	    deleted = false;
+    	    suspended = true;    	
+    	    betActiveStatus = "suspended"
+    	}else if($("#betStatus").val()==4){
+    	    active = false;
+    	    deleted = true;
+    	    suspended = false;
+    	    betActiveStatus = "deleted"
+    	}
+    }
+
+function loadUserDetails(){
+	 setTimeout(() => {
+	 $.ajax({
+			type:'POST',
+			url:'/api/loadUserDetails'+"?userid="+userid,
+			success: function(jsondata, textStatus, xhr) {
+				if(jsondata.type == "1"){
+					
+					var key = jsondata.user;
+					var unf = nf.format(key.myBalance);
+					$("#availableToBet").text(unf);
+					$("#availableToWithDraw").text(unf);
+					var exnf = nf.format(jsondata.expo);
+					$("#currentExposure").text(exnf);
+					
+					$("#muserId").html(key.userid);
+					$("#puserId").html(key.userid);
+					$("#plastName").html(key.lastName);
+					$("#pemail").html(key.email);
+					$("#ptimeZone").html(key.timeZone.split(" ")[0]);
+					$("#pMob").html(key.mobileNumber);
+					if(key.usertype == 6){
+						$("#expoDiv").show();
+					}else{
+						$("#expoDiv").hide();
+					}
+				
+					$("#pmainwalletExposureLimit").html(nf.format(key.exposureLimit));
+					$("#pcommission").html(key.partnership.userComm +" %");
+					$("#exposureLimitText").html(nf.format(key.exposureLimit));
+					$("#newCommission").val(key.partnership.userComm);
+					if(key.usertype == 1){
+						if(loginType == 1){
+							$("#patha").hide();
+	 						$("#pathsua").show();
+	 						$("#suaUser").html(key.userid);
+	 						/* var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Amemberactsmry/"+userid); */
+						}else{
+							$("#patha").show();
+	 						$("#pathsua").show();
+	 						$("#adminUser").html(key.adminUserId);
+	 						$("#suaUser").html(key.userid);
+	 					
+	 					/* 	var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Amemberactsmry/"+userid); */
+						}
+						
+					}else if(key.usertype == 2){
+						if(loginType == 1){
+							$("#patha").hide();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.userid);
+	 						/* var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/0/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.id+"/3/1/100"); */
+						}else if(loginType == 2){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").show();
+	 						$("#sabUser").html(key.userid);
+	 						/* var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/0/3/1/100"); */
+						}else{
+							$("#patha").show();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#adminUser").html(key.adminUserId);
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.userid);
+	 						/* var a = document.getElementById("adminLink");
+	 						a.setAttribute("href" , "/Adminhome/0/1/1/100");
+	 						var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/"+key.subadminId+"/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.id+"/3/1/100");	 */
+						}
+					}else if(key.usertype == 3){
+						if(loginType == 1){
+							$("#patha").hide();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.userid);
+	 						/* var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/0/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.miniadminId+"/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.id+"/4/1/100"); */
+						}else if(loginType == 2){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.userid);
+	 						/* var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/0/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.id+"/4/1/100"); */
+						}else if(loginType == 3){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").hide();
+	 						$("#pathsup").show();
+	 						$("#supUser").html(key.userid);
+	 						/* var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/0/4/1/100"); */
+						}else{
+							$("#patha").show();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#adminUser").html(key.adminUserId);
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.userid);
+	 						/* var a = document.getElementById("adminLink");
+	 						a.setAttribute("href" , "/Adminhome/0/1/1/100");
+	 						var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/"+key.subadminId+"/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.miniadminId+"/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.id+"/4/1/100"); */
+						}
+					}else if(key.usertype == 4){
+						if(loginType == 1){
+							$("#patha").hide();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.userid);
+	 						/* var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/0/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.miniadminId+"/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.supersuperId+"/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.id+"/5/1/100"); */
+						}else if(loginType == 2){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.userid);
+	 						/* var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/0/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.supersuperId+"/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.id+"/5/1/100"); */
+						}else if(loginType == 3){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").hide();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.userid);
+	 						/* var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/0/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.id+"/5/1/100"); */
+						}else if(loginType == 4){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").hide();
+	 						$("#pathsup").hide();
+	 						$("#pathsa").show();
+	 						$("#saUser").html(key.userid);
+	 						/* var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.id+"/5/1/100"); */
+						}else{
+							$("#patha").show();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#adminUser").html(key.adminUserId);
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.userid);
+	 						/* var a = document.getElementById("adminLink");
+	 						a.setAttribute("href" , "/Adminhome/0/1/1/100");
+	 						var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/"+key.subadminId+"/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.miniadminId+"/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.supersuperId+"/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.id+"/5/1/100");	 */
+						}
+					}else if(key.usertype == 5){
+						if(loginType == 1){
+							$("#patha").hide();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#pathc").show();
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.supermasterUserId);
+	 						$("#cUser").html(key.userid);
+	 						/* var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/0/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.miniadminId+"/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.supersuperId+"/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.supermasterId+"/5/1/100");
+	 						var f = document.getElementById("userLink");
+	 						f.setAttribute("href" , "/Adminhome/"+key.id+"/6/1/100"); */
+						}else if(loginType == 2){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#pathc").show();
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.supermasterUserId);
+	 						$("#cUser").html(key.userid);
+	 						/* var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/0/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.supersuperId+"/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.supermasterId+"/5/1/100");
+	 						var f = document.getElementById("userLink");
+	 						f.setAttribute("href" , "/Adminhome/"+key.id+"/6/1/100"); */
+						}else if(loginType == 3){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").hide();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#pathc").show();
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.supermasterUserId);
+	 						$("#cUser").html(key.userid);
+	 						/* var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/0/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.supermasterId+"/5/1/100");
+	 						var f = document.getElementById("userLink");
+	 						f.setAttribute("href" , "/Adminhome/"+key.id+"/6/1/100"); */
+						}else if(loginType == 4){
+							$("#patha").hide();
+	 						$("#pathsua").hide();
+	 						$("#pathsab").hide();
+	 						$("#pathsup").hide();
+	 						$("#pathsa").show();
+	 						$("#pathc").show();
+	 						$("#saUser").html(key.supermasterUserId);
+	 						$("#cUser").html(key.userid);
+	 						/* var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/0/5/1/100");
+	 						var f = document.getElementById("userLink");
+	 						f.setAttribute("href" , "/Adminhome/"+key.id+"/6/1/100"); */
+						}else{
+							$("#patha").show();
+	 						$("#pathsua").show();
+	 						$("#pathsab").show();
+	 						$("#pathsup").show();
+	 						$("#pathsa").show();
+	 						$("#pathc").show();
+	 						$("#adminUser").html(key.adminUserId);
+	 						$("#suaUser").html(key.subadminUserId);
+	 						$("#sabUser").html(key.miniadminUserId);
+	 						$("#supUser").html(key.supersuperUserId);
+	 						$("#saUser").html(key.supermasterUserId);
+	 						$("#cUser").html(key.userid);
+	 						/* var a = document.getElementById("adminLink");
+	 						a.setAttribute("href" , "/Adminhome/0/1/1/100");
+	 						var b = document.getElementById("suaLink");
+	 						b.setAttribute("href" , "/Adminhome/"+key.subadminId+"/2/1/100");
+	 						var c = document.getElementById("sabLink");
+	 						c.setAttribute("href" , "/Adminhome/"+key.miniadminId+"/3/1/100");
+	 						var d = document.getElementById("supLink");
+	 						d.setAttribute("href" , "/Adminhome/"+key.supersuperId+"/4/1/100");
+	 						var e = document.getElementById("saLink");
+	 						e.setAttribute("href" , "/Adminhome/"+key.supermasterId+"/5/1/100");
+	 						var f = document.getElementById("userLink");
+	 						f.setAttribute("href" , "/Adminhome/"+key.id+"/6/1/100"); */
+						}
+					}
+					
+					
+				}else{
+					
+				}
+			}
+	});
+	 }, 300);
+}
+
+var betfilter = "today"
+    function getBetHistory(filter,pageNo){
+    	$(".loader").show()
+    	betfilter = filter
+    	var sports = "Cricket"
+    	var betType = "Back"
+    	$.ajax({
+				type:'POST',
+				url: '/api/getBetHistoryByParent?filter='+betfilter+'&startDate='+$("#startDate").val()+'&startTime='+$("#startTime").val()+'&endDate='+$("#endDate").val()+'&endTime='+$("#endTime").val()+'&pageNo='+pageNo+"&sourceType="+betstatus+"&resultType="+betActiveStatus+"&findBy="+userid,
+				success: function(jsondata, textStatus, xhr){
+						if(xhr.status==200){
+								$("#matchedBetsList").html('');
+								betsList = jsondata.betlist;
+								var length = betsList.length;
+								var colorClass = "red"
+								for(var i =0;i<length;i++){
+									if(betsList[i].sportId==1){
+										sports = "Soccer"
+									}else if(betsList[i].sportId==2){
+										sports = "Tennis"
+									}else if(betsList[i].sportId==4){
+										sports = "Cricket"
+									}else{
+										sports = "Casino"
+									}
+									if(betsList[i].isBack==false){
+										betType = "Lay"
+									}else if(betsList[i].isBack==true){
+										betType = "Back"
+									}
+									if(betsList[i].isActive==active&&betsList[i].isDeleted==deleted&&(betsList[i].isSuspended==suspended)){
+										if(betsList[i].resultPnl<0.00){
+											colorClass = "red"
+										}else{
+											colorClass = "green"
+										}
+										if(betsList[i].type=="Fancy" || betsList[i].type=="Fancy1"){
+											if(betsList[i].isBack==false){
+	    										betType = "No"
+	    									}else if(betsList[i].isBack==true){
+	    										betType = "Yes"
+	    									}
+											$("#matchedBetsList").append('<tr id="matchRow0" style="display: table-row;"><td class="align-L"><a id="betID'+betsList[i].id+'" style="color:blue;" class="expand-close" onclick="showBetInfo(\''+betsList[i].id+'\')">'+(betsList[i].id).substring(3, 10)+'</a></td><td class="align-L" id="playerID">'+(betsList[i].userid)+'</td><td id="matchTitle" class="align-L">'+sports+'<img class="fromto"src="/images/transparent.gif"><strong>'+(betsList[i].matchName)+'</strong><img class="fromto" src="/images/transparent.gif">'+(betsList[i].sourceBetType)+'</td><td id="matchSelection">'+betsList[i].sourceName+'</td><td><span id="matchType" class="back">'+betType+'</span></td><td><span id="betPlaced" class="small-date">'+(betsList[i].placeTime)+'</span></td><td id="matchOddsReq">'+(betsList[i].odds)+'</td><td id="matchStake">'+(betsList[i].stake)+'</td><td id="matchAvgOdds">'+(betsList[i].odds)+'</td><td><span id="pol" class="small-date"><span class="'+colorClass+'">('+(betsList[i].resultPnl)+')</span></span></td><td id="userCancel" style="display: none;"></td></tr>')										
+											$("#matchedBetsList").append('<tr id="expandMatched'+betsList[i].id+'" style="display:none;" class="expand" ><td colspan="2"></td><td colspan="9"><img class="expand-arrow" src="/images/transparent.gif"><table id="txTable0"><tbody><tr><th>Bet taken</th><th width="16%">Odds req.</th><th width="17%">Stake</th><th width="24%">Liability</th><th width="24%">Odds matched</th></tr><tr id="txRowTemplate" style="display: none"><td><span id="betTaken" class="small-date"></span></td><td id="txOddsReq"></td><td id="txStake"></td><td id="txLiability"></td><td id="txOddsMatched"></td></tr><tr id="txRow0" style="display: table-row;" class="even"><td><span id="betTaken" class="small-date">'+betsList[i].matchedTime+'</span></td><td id="txOddsReq">'+betsList[i].odds+'/'+betsList[i].priceValue+'</td><td id="txStake">'+betsList[i].stake+'</td><td id="txLiability">-</td><td id="txOddsMatched">'+betsList[i].odds+'/'+betsList[i].priceValue+'</td></tr></tbody></table></td></tr>')
+										}else if(betsList[i].type=="Premium"){
+											$("#matchedBetsList").append('<tr id="matchRow0" style="display: table-row;"><td class="align-L"><a id="betID'+betsList[i].id+'" style="color:blue;" class="expand-close" onclick="showBetInfo(\''+betsList[i].id+'\')">'+(betsList[i].id).substring(3, 10)+'</a></td><td class="align-L" id="playerID">'+(betsList[i].userid)+'</td><td id="matchTitle" class="align-L">'+sports+'<img class="fromto"src="/images/transparent.gif"><strong>'+(betsList[i].matchName)+'</strong><img class="fromto" src="/images/transparent.gif">'+(betsList[i].sourceName)+'</td><td id="matchSelection">'+(betsList[i].selectionName)+'</td><td><span id="matchType" class="back">'+betType+'</span></td><td><span id="betPlaced" class="small-date">'+(betsList[i].placeTime)+'</span></td><td id="matchOddsReq">'+(betsList[i].odds)+'</td><td id="matchStake">'+(betsList[i].stake)+'</td><td id="matchAvgOdds">'+(betsList[i].odds)+'</td><td><span id="pol" class="small-date"><span class="'+colorClass+'">('+(betsList[i].resultPnl)+')</span></span></td><td id="userCancel" style="display: none;"></td></tr>')										
+											$("#matchedBetsList").append('<tr id="expandMatched'+betsList[i].id+'" style="display:none;" class="expand" ><td colspan="2"></td><td colspan="9"><img class="expand-arrow" src="/images/transparent.gif"><table id="txTable0"><tbody><tr><th>Bet taken</th><th width="16%">Odds req.</th><th width="17%">Stake</th><th width="24%">Liability</th><th width="24%">Odds matched</th></tr><tr id="txRowTemplate" style="display: none"><td><span id="betTaken" class="small-date"></span></td><td id="txOddsReq"></td><td id="txStake"></td><td id="txLiability"></td><td id="txOddsMatched"></td></tr><tr id="txRow0" style="display: table-row;" class="even"><td><span id="betTaken" class="small-date">'+betsList[i].matchedTime+'</span></td><td id="txOddsReq">'+betsList[i].odds+'</td><td id="txStake">'+betsList[i].stake+'</td><td id="txLiability">-</td><td id="txOddsMatched">'+betsList[i].odds+'</td></tr></tbody></table></td></tr>')
+										}else{
+											$("#matchedBetsList").append('<tr id="matchRow0" style="display: table-row;"><td class="align-L"><a id="betID'+betsList[i].id+'" style="color:blue;" class="expand-close" onclick="showBetInfo(\''+betsList[i].id+'\')">'+(betsList[i].id).substring(3, 10)+'</a></td><td class="align-L" id="playerID">'+(betsList[i].userid)+'</td><td id="matchTitle" class="align-L">'+sports+'<img class="fromto"src="/images/transparent.gif"><strong>'+(betsList[i].matchName)+'</strong><img class="fromto" src="/images/transparent.gif">'+(betsList[i].sourceBetType)+'</td><td id="matchSelection">'+(betsList[i].selectionName)+'</td><td><span id="matchType" class="back">'+betType+'</span></td><td><span id="betPlaced" class="small-date">'+(betsList[i].placeTime)+'</span></td><td id="matchOddsReq">'+(betsList[i].odds)+'</td><td id="matchStake">'+(betsList[i].stake)+'</td><td id="matchAvgOdds">'+(betsList[i].odds)+'</td><td><span id="pol" class="small-date"><span class="'+colorClass+'">('+(betsList[i].resultPnl)+')</span></span></td><td id="userCancel" style="display: none;"></td></tr>')										
+											$("#matchedBetsList").append('<tr id="expandMatched'+betsList[i].id+'" style="display:none;" class="expand" ><td colspan="2"></td><td colspan="9"><img class="expand-arrow" src="/images/transparent.gif"><table id="txTable0"><tbody><tr><th>Bet taken</th><th width="16%">Odds req.</th><th width="17%">Stake</th><th width="24%">Liability</th><th width="24%">Odds matched</th></tr><tr id="txRowTemplate" style="display: none"><td><span id="betTaken" class="small-date"></span></td><td id="txOddsReq"></td><td id="txStake"></td><td id="txLiability"></td><td id="txOddsMatched"></td></tr><tr id="txRow0" style="display: table-row;" class="even"><td><span id="betTaken" class="small-date">'+betsList[i].matchedTime+'</span></td><td id="txOddsReq">'+betsList[i].odds+'</td><td id="txStake">'+betsList[i].stake+'</td><td id="txLiability">-</td><td id="txOddsMatched">'+betsList[i].odds+'</td></tr></tbody></table></td></tr>')
+										}											
+									}
+								}
+								
+								if($("#matchedBetsList").html()==''){
+									$("#matchedBetsList").html('<tr id="noDataTemplate" style="display: table-row;"><td class="no-data" colspan="9"><p>You have no bets in this time period.</p></td></tr>')
+								}
+								var pitems = "";
+								pageno = parseInt(pageno)
+								var tpage = jsondata.totalPages ;
+								if(tpage<1){
+									pitems = pitems +'<li id="prev"><a href="javascript:void(0);" class="disable" style="pointer-events: none;">Prev</a></li><li id="pageNumber"><a href="javascript:void(0);" class="select" style="pointer-events: none;">1</a></li>'+
+									'<li id="next"><a href="javascript:void(0);" class="disable" style="pointer-events: none;">Next</a></li><input type="text" id="goToPageNumber_1"  maxlength="6" size="4"><a id="goPageBtn_1">GO</a>';
+								}else if(pageno==1 && tpage == 1){
+									pitems = pitems +'<li id="prev"><a href="javascript:void(0);" class="disable" style="pointer-events: none;">Prev</a></li><li id="pageNumber"><a href="javascript:void(0);" class="select" style="pointer-events: none;">1</a></li>'+
+									'<li id="next"><a href="javascript:void(0);" class="disable" style="pointer-events: none;">Next</a></li><input type="text" id="goToPageNumber_1"  maxlength="6" size="4"><a id="goPageBtn_1">GO</a>';
+								}else{
+									var cp = 0;
+									var opage = (pageno)
+									if(pageno>1){
+										opage = pageno-1
+									}
+									if(pageno>2){
+										opage = pageno-2
+									}
+									 if(pageno==1){
+										 pitems = pitems +'<li id="prev"><a href="javascript:void(0);" class="disable" style="pointer-events: none;">Prev</a></li>';
+									 }else{
+										 pitems = pitems +'<li id="prev" onclick="changePage('+(pageno - 1)+')"><a href="javascript:void(0);"  class="enable" style="pointer-events: none;">Prev</a></li>';
+									 }
+									
+									for(var p = opage-1; p<(pageno+1); p++){
+										cp = p + 1;
+										if(p<tpage){
+										if(cp == pageno){
+											pitems = pitems +'<li id="pageNumber"><a href="javascript:void(0);" class="select" style="pointer-events: none;">'+cp+'</a></li>';
+										}else{
+											pitems = pitems +'<li id="pageNumber" onclick="changePage('+(cp)+')"><a href="javascript:void(0);" class="" style="pointer-events: none;">'+cp+'</a></li>';
+										}
+									}
+									}
+									if(pageno == tpage){
+										pitems = pitems +'<li id="next"><a href="javascript:void(0);" class="disable" style="pointer-events: none;">Next</a></li><input type="number" style="width:50px" onkeypress="return isNumberKey(event)" id="gotoPage"  maxlength="6" size="4"><a id="goPageBtn_1" onclick="goToPage('+tpage+')">GO</a>';
+									}else{
+										pitems = pitems +'<li id="next" onclick="changePage('+(pageno + 1)+')"><a href="javascript:void(0);" class="enable" style="pointer-events: none;">Next</a></li><input type="number" style="width:50px" onkeypress="return isNumberKey(event)" id="gotoPage"  maxlength="6" size="4"><a id="goPageBtn_1" onclick="goToPage('+tpage+')">GO</a>';
+									}
+									
+								}
+								
+								$("#pageNumberContent").html(pitems);
+						}else{
+							$("#matchedBetsList").html('<tr id="noDataTemplate" style="display: table-row;"><td class="no-data" colspan="9"><p>You have no bets in this time period.</p></td></tr>')
+						}
+						$(".loader").hide()
+				}
+			
+			});
+    }
+
+
+</script>
+</html>

@@ -298,3 +298,40 @@ select {
   padding: 0;
   padding-bottom: 10px;
 }
+
+.btnnn{
+  width: 26px;
+    height: 26px;
+    margin-left: 3px;
+}
+.person{
+  font-size: 14px;
+}
+.align1{
+width: 17%;
+}
+.align2{
+  width: 11%;
+}
+.align3{
+width: 12%;
+}
+.align4{
+  width: 10%;
+}
+.align5{
+  width: 9%;
+}
+.align6{
+  width: 11%;
+}
+.align7{
+  width: 10%;
+}
+
+.arrowbtn{
+  margin-right: 5px;
+}
+.btn1{
+  margin-right: 5px;
+}
