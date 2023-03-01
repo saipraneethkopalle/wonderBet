@@ -11,6 +11,9 @@ import { ApiServicesService } from '../api-services.service';
 export class HomeComponent implements OnInit {
   accountDetails:any=[{account:"main",accountType:"SUA",creditRef:"60,00,000",balance:"60,000,000",exposure:"0.00",availBal:"6,00,00,000",playerBal:"2,00,000",refPL:"4,34,00,345",status:"Active"}];
   error:any;
+  currentSearch:any='';
+  EdataList:any;
+
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
@@ -50,10 +53,28 @@ export class HomeComponent implements OnInit {
     // }
     )
   }
+
   getAdmin() {
     this.apiService.getSuperUser().subscribe((res:any)=>{
       console.log(res)
+      res.data.map((rs:any)=>{
+        rs.name=rs.userName
+      })
       this.accountDetails = res.data;
+      this.EdataList = res.data;
     })
+  }
+
+  searchValue(value:any){
+    // if(value.target.value != null && value.target.value != ""){
+    // this.currentSearch = value.target.value;
+    //   this.accountDetails = this.accountDetails.filter((val:any)=>
+    //     {
+    //     val.name=val.userName
+    //     val.name.toLowerCase().includes(value.target.value)}
+    //   );
+    // }else{
+    //   this.accountDetails = this.EdataList
+    // }
   }
 }

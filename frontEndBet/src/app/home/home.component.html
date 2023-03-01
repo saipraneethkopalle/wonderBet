@@ -9,7 +9,7 @@
 <div class="searchblock">
   <div class="searchtd">
     <div class="search-wrap searchbox">
-      <i class="fa fa-search"></i><input type="text" placeholder="Find member..." class="searchTB"><button type="button" class="btnSearch">Search</button>
+      <i class="fa fa-search"></i><input type="text" placeholder="Find member..." class="searchTB" (keyup)="searchValue($event)"><button type="button" class="btnSearch" (click)="searchValue(currentSearch)">Search</button>
     </div>
   </div>
   <div class="statusfilter">
@@ -65,7 +65,7 @@
     <td>Status</td>
     <td>Action</td>
   </tr>
-  <tr *ngFor="let item of accountDetails" class="accountData">
+  <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
     <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
     <td><a href="#" class="credRef">{{item.creditRef}}</a> <i class='fas fa-pen'></i></td>
     <td><a href="#" class="bal">{{item.balance}}</a></td>
