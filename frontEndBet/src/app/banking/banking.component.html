@@ -4,7 +4,7 @@
     <div class="total_all banking-top">
       <div class="search-wrap" id="userSearchUl">
         <div class="search-wrap searchbox">
-          <i class="fa fa-search"></i><input class="search-input" id="searchUserId" type="text" placeholder="Enter userId...">
+          <i class="fa fa-search"></i><input class="search-input" id="searchUserId" type="text" (keyup)="search($event)" placeholder="Enter userId...">
         </div>
       </div>
       <ul class="input-list" id="companySearchUl">
@@ -32,10 +32,10 @@
             <dt>Your Balance</dt>
             <dt id="pbu">PBU</dt>
             <dd>
-               <label>389,175,898.50</label> 
+               <label>389,175,898.50</label>
             </dd>
         </div>
-      </div>  
+      </div>
       <table id="table_log" class="table01">
         <thead>
           <tr>
@@ -51,8 +51,8 @@
           </tr>
         </thead>
         <tbody id="content">
-          <tr>
-            <td class="align-L" id="ad"><span class="order">1.</span>main</td>
+          <tr *ngFor="let item of bankList | searchFilter: searchTerm;let i=index;">
+            <td class="align-L" id="ad"><span class="order">1.</span>{{item.uid}}</td>
             <td class="align-L" id="sa">604,135,082.246</td>
             <td class="align-L" id="ma">54,560,390.39</td>
             <td class="align-L" id="exp">0.00</td>
@@ -108,4 +108,3 @@
         </ul>
     </div>
 </div>
-  
