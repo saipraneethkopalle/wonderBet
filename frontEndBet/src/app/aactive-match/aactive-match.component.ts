@@ -20,9 +20,9 @@ export class AactiveMatchComponent implements OnInit {
       this.matchList = res.data.filter((element:any)=>{
         console.log("res.data",res.data)
         if(element.sportId==='4'){
-          console.log("element",element);
           if(element.isActive===true && element.isResult===false){
             console.log(element);
+            element.name=element.eventName
             return res.data;
 
           }
@@ -35,9 +35,10 @@ export class AactiveMatchComponent implements OnInit {
   searchValue(value:any) {
     console.log(value.target.value);
     if(value.target.value != null && value.target.value != ''){
-    this.matchList = this.matchList.filter((val:any) =>
-      val.eventName.toLowerCase().includes(value.target.value)
-    );
+    this.matchList = this.matchList.filter((val:any) =>{
+      val.name=val.eventName
+      val.name.toLowerCase().includes(value.target.value)
+     });
     }else{
       this.matchList = this.beforeList
     }
