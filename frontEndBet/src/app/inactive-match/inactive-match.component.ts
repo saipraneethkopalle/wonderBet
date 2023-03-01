@@ -20,11 +20,12 @@ export class InactiveMatchComponent implements OnInit {
   getAllMatches(){
     this.apiService.getAllMatches().subscribe((res:any)=>{
       this.matchList = res.data.filter((element:any)=>{
-        // console.log("res.data",res.data)
+        console.log("res.data",res.data)
         if(element.sportId==='4'){
           console.log("element",element);
           if(element.isActive===true && element.isResult===true){
-            console.log("DADA",element);
+            // console.log("DADA",element);
+            element.name=element.eventName
             return res.data;
             
           }
@@ -38,9 +39,10 @@ export class InactiveMatchComponent implements OnInit {
   searchValue(value:any) {
     console.log(value.target.value);
     if(value.target.value != null && value.target.value != ''){
-    this.matchList = this.matchList.filter((val:any) =>
+    this.matchList = this.matchList.filter((val:any) =>{
+      val.name=val.eventName
       val.eventName.toLowerCase().includes(value.target.value)
-    );
+    });
     }else{
       this.matchList = this.beforeList
     }
