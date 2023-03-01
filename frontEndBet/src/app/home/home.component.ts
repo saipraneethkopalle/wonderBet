@@ -61,20 +61,23 @@ export class HomeComponent implements OnInit {
         rs.name=rs.userName
       })
       this.accountDetails = res.data;
+      console.log(this.accountDetails)
       this.EdataList = res.data;
     })
   }
 
   searchValue(value:any){
-    // if(value.target.value != null && value.target.value != ""){
-    // this.currentSearch = value.target.value;
-    //   this.accountDetails = this.accountDetails.filter((val:any)=>
-    //     {
-    //     val.name=val.userName
-    //     val.name.toLowerCase().includes(value.target.value)}
-    //   );
-    // }else{
-    //   this.accountDetails = this.EdataList
-    // }
+    if(value.target.value != null && value.target.value != ""){
+    this.currentSearch = value.target.value;
+      this.accountDetails = this.accountDetails.filter((val:any)=>
+        {
+        val.name=val.userName
+        if(val.name.toLowerCase().includes(value.target.value)){
+          return val;
+        }}
+      );
+    }else{
+      this.accountDetails = this.EdataList
+    }
   }
 }
