@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   error:any;
   currentSearch:any='';
   EdataList:any;
+  status:any;
 
   constructor(private apiService:ApiServicesService) { }
 
@@ -61,7 +62,6 @@ export class HomeComponent implements OnInit {
         rs.name=rs.userName
       })
       this.accountDetails = res.data;
-      console.log(this.accountDetails)
       this.EdataList = res.data;
     })
   }
@@ -78,6 +78,18 @@ export class HomeComponent implements OnInit {
       );
     }else{
       this.accountDetails = this.EdataList
+    }
+  }
+
+  getUserByStatus(status:any){
+    if (status.target.value === 'All') {
+      this.accountDetails = this.EdataList;
+    } else {
+      this.accountDetails = this.EdataList.filter((val:any) =>{ 
+      if(val.adminstatus == status.target.value){
+        return val;
+      }}
+      );
     }
   }
 }

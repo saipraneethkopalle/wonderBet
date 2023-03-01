@@ -14,11 +14,11 @@
   </div>
   <div class="statusfilter">
     Status
-    <select>
-      <option>ACTIVE</option>
-      <option>SUSPENDED</option>
-      <option>LOCKED</option>
-      <option>ALL</option>
+    <select id="adminStatusFilter" (change)="getUserByStatus($event)">
+      <option value="Active">ACTIVE</option>
+      <option value="Suspended">SUSPENDED</option>
+      <option value="Locked">LOCKED</option>
+      <option value="All">ALL</option>
   </select></div>
   <div class="addAdminblock">
     <button type="button" class="addAdmin" data-toggle="modal" data-target="#superAdminpop"><i class="fa fa-user-plus" aria-hidden="true"></i>
