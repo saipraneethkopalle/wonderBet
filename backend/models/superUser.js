@@ -14,7 +14,7 @@ const matchSchema = new mongoose.Schema({
     exposure:{type:Number,default:0.0},
     availBalance:{type:Number,default:0},
     refProfitLoss:{type:Number,default:0},
-    adminstatus:{type:Boolean,default:true}
+    adminstatus:{type:String,default:'Active'}
 },{ timestamps: true })
 
 matchSchema.index({ isActive: 1, userName: 1});
