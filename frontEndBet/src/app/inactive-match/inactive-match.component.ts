@@ -23,7 +23,7 @@ export class InactiveMatchComponent implements OnInit {
         console.log("res.data",res.data)
         if(element.sportId==='4'){
           console.log("element",element);
-          if(element.isActive===true && element.isResult===false){
+          if(element.isActive===true && element.isResult===true){
             console.log("DADA",element);
             element.name=element.eventName
             return element;
