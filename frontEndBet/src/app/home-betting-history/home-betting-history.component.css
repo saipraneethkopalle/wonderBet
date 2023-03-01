@@ -1,0 +1,224 @@
+.main{
+    width:100%;
+    min-height: 650px;
+    height:auto;
+    overflow:hidden;
+    padding-left:13%;
+    padding-right:7%;
+    font-size:14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:5px;
+    background-color: #f0ece1;cursor: pointer;
+  }
+  .abadge{
+    background-color: #D77319;
+    border-radius: 3px 0px;
+    width:23px;
+    font-size:10px;
+    margin-top:2px;
+    color:#fff;
+    float:left;
+  }
+  .Bbadge{
+    background-color: #D65D5D;
+    border-radius: 3px 0px;
+    width:23px;
+    font-size:10px;
+    margin-top:2px;
+    color:#fff;
+    float:left;
+  }
+  .subBlock{
+    width:85%;
+    height:auto;
+    overflow: hidden;
+  }
+  .sideBlock{
+    float:left;
+    padding:5px;
+    width:20%;
+    text-align: left;
+  }
+  .rightBlock{
+    float:left;
+    padding:5px;
+    width:80%;
+  }
+  .head{
+    color: #fff;
+      padding: 0 10px;
+      background: #243a48;
+      line-height: 25px;
+      padding: 0 10px;
+      font-size: 12px;
+  }
+  ul{
+    width:100%;
+  }
+  li{
+    list-style-type: none;
+  }
+  .heading{
+    font-weight: bold;
+    font-size:18px;
+    padding:5px;
+    color: #243a48;
+  }
+  .menu{
+    border-bottom: 1px solid #E0E6E6;
+    font-size:12px;
+    background-color: #ffffff;
+    padding:5px;
+    cursor: pointer;
+    color:rgb(71, 127, 180);
+    padding-left: 8px;
+  }
+  
+  .user{
+    border: 1px solid #7E97A7;
+    border-radius: 3px;
+    font-size: 14px;
+    color:#212121;
+    width:100px;
+    height:30px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-weight: bold;
+  }
+
+  .reportBtn{
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .reportBtn button{
+    display: inline-block;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-right: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #243a48;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    color: #243a48;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.exch{
+    background-color: white;
+}
+.aexch{
+    background-color: #243a48;
+}
+
+/* .reportBtn button::selection{
+    background-color: #243a48;
+    color: #ffffff;
+} */
+/* .reportBtn button:active{
+    background-color: #243a48;
+    color: #ffffff;
+} */
+.Exchange {
+    background-color: #243a48;
+}
+.betStatusUl{
+    display: flex;
+    padding: 0;
+}
+.betStatusUl input {
+    font-size: 12px;
+    margin: 5px;
+    height: 27px;
+    border: none;
+    border-radius: 4px;
+    border-top: solid 1px gray;
+    padding: 5px;
+}
+.betStatusUl select{
+    font-size: 12px;
+    margin-right: 10px;
+    margin-left: 15px;
+    height: 25px;
+    width: 120px;
+}
+label{
+    font-size: 12px;
+}
+#pl{
+    margin-right: 10px;
+}
+.betStatusBtn{
+    display: flex;
+    padding: 0;
+}  
+
+.betStatusBtn button{
+    display: inline-block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-right: 5px;
+    background-color: #faf5f5;
+    border: 1px solid #b1b4b6;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;   
+}
+
+#gth{
+    background-color: rgb(255,160,12);
+    font-weight: bold;
+    border-color: rgb(202, 127, 7);
+}
+
+#sDate{
+    width: 20%;
+}
+
+#timeIpt{
+    width: 10%;
+}
+
+table,tr{
+    width:100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #7e97a7;
+}
+.betlisttb{
+    border-top:1px solid #7e97a7;
+    border-bottom:1px solid #7e97a7;
+    background-color: #e4e4e4;
+    color:#243a48;
+}
+.betlisttb td{
+    padding:10px;
+    font-weight: 600;
+    font-size:13px;
+}
+.bet,.err{
+    background-color: #ffffff;
+}
+.err td{
+    font-weight: normal;
+    font-size:12px;
+}
+.f{
+    padding:5px;
+    font-size:12px;
+}
+.m{
+    background-color: #e2e4e5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: solid 1px rgb(133, 133, 133);
+    border-top: solid 3px #243a48;
+}
