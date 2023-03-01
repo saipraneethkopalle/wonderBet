@@ -53,6 +53,7 @@ import { AccountStatementComponent } from './account-statement/account-statement
 import { ProfileComponent } from './profile/profile.component';
 import { ActivitylogComponent } from './activitylog/activitylog.component';
 import { BlockMarketListComponent } from './block-market-list/block-market-list.component';
+import { HomeProfileComponent } from './home-profile/home-profile.component';
 import { HomeBettingHistoryComponent } from './home-betting-history/home-betting-history.component';
 @NgModule({
   declarations: [
@@ -104,7 +105,7 @@ import { HomeBettingHistoryComponent } from './home-betting-history/home-betting
     ProfileComponent,
     ActivitylogComponent,
     BlockMarketListComponent,
-    HomeBettingHistoryComponent,
+    HomeProfileComponent,
   
   ],
   imports: [

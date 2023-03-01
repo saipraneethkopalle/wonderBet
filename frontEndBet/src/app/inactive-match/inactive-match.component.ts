@@ -29,7 +29,6 @@ export class InactiveMatchComponent implements OnInit {
             return element;
             
           }
-          
         }
       })
       this.beforeList = this.matchList
