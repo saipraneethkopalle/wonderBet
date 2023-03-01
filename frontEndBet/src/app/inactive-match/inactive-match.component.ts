@@ -24,9 +24,9 @@ export class InactiveMatchComponent implements OnInit {
         if(element.sportId==='4'){
           console.log("element",element);
           if(element.isActive===true && element.isResult===true){
-            // console.log("DADA",element);
+            console.log("DADA",element);
             element.name=element.eventName
-            return res.data;
+            return element;
             
           }
           
@@ -41,7 +41,9 @@ export class InactiveMatchComponent implements OnInit {
     if(value.target.value != null && value.target.value != ''){
     this.matchList = this.matchList.filter((val:any) =>{
       val.name=val.eventName
-      val.eventName.toLowerCase().includes(value.target.value)
+      if(val.eventName.toLowerCase().includes(value.target.value)){
+        return val
+      }
     });
     }else{
       this.matchList = this.beforeList

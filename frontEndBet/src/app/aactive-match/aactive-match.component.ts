@@ -17,18 +17,17 @@ export class AactiveMatchComponent implements OnInit {
   }
   getAllMatches(){
     this.apiService.getAllMatches().subscribe((res:any)=>{
+      console.log(res);
       this.matchList = res.data.filter((element:any)=>{
-        console.log("res.data",res.data)
-        if(element.sportId==='4'){
-          if(element.isActive===true && element.isResult===false){
-            console.log(element);
+        console.log("res.data",element)
+        if(element.sportId=='4'){
+          if(element.isActive==true && element.isResult==false){
             element.name=element.eventName
-            return res.data;
-
+            return element;
           }
-
         }
       })
+      console.log("match",this.matchList)
       this.beforeList = this.matchList
     })
   }
@@ -37,7 +36,9 @@ export class AactiveMatchComponent implements OnInit {
     if(value.target.value != null && value.target.value != ''){
     this.matchList = this.matchList.filter((val:any) =>{
       val.name=val.eventName
-      val.name.toLowerCase().includes(value.target.value)
+      if(val.name.toLowerCase().includes(value.target.value)){
+        return val;
+      }
      });
     }else{
       this.matchList = this.beforeList
