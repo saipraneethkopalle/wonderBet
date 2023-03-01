@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit {
         title:"Created Super Admin",
         text:"Successfully Created!"
       })
+      this.getAdmin();
     }
     // ,(error:any)=>{
     //     this.error = "Invalid details"
@@ -85,7 +86,7 @@ export class HomeComponent implements OnInit {
     if (status.target.value === 'All') {
       this.accountDetails = this.EdataList;
     } else {
-      this.accountDetails = this.EdataList.filter((val:any) =>{ 
+      this.accountDetails = this.EdataList.filter((val:any) =>{
       if(val.adminstatus == status.target.value){
         return val;
       }}
