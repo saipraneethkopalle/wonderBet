@@ -9,16 +9,16 @@
 <div class="searchblock">
   <div class="searchtd">
     <div class="search-wrap searchbox">
-      <i class="fa fa-search"></i><input type="text" placeholder="Find member..." class="searchTB"><button type="button" class="btnSearch">Search</button>
+      <i class="fa fa-search"></i><input type="text" placeholder="Find member..." class="searchTB" (keyup)="searchValue($event)"><button type="button" class="btnSearch" (click)="searchValue(currentSearch)">Search</button>
     </div>
   </div>
   <div class="statusfilter">
     Status
-    <select>
-      <option>ACTIVE</option>
-      <option>SUSPENDED</option>
-      <option>LOCKED</option>
-      <option>ALL</option>
+    <select id="adminStatusFilter" (change)="getUserByStatus($event)">
+      <option value="Active">ACTIVE</option>
+      <option value="Suspended">SUSPENDED</option>
+      <option value="Locked">LOCKED</option>
+      <option value="All">ALL</option>
   </select></div>
   <div class="addAdminblock">
     <button type="button" class="addAdmin" data-toggle="modal" data-target="#superAdminpop"><i class="fa fa-user-plus" aria-hidden="true"></i>
@@ -55,17 +55,17 @@
 <div class="data">
 <table class="accountdetails">
   <tr class="th">
-    <td>Account</td>
-    <td>Credit Ref.</td>
-    <td>Balance</td>
-    <td>Exposure</td>
-    <td>Avail. bal.</td>
-    <td>Player Balance</td>
-    <td>Ref. P/L</td>
+    <td class="align1">Account</td>
+    <td class="align2">Credit Ref.</td>
+    <td class="align3">Balance</td>
+    <td class="align4">Exposure</td>
+    <td class="align5">Avail. bal.</td>
+    <td class="align6">Player Balance</td>
+    <td class="align7">Ref. P/L</td>
     <td>Status</td>
-    <td>Action</td>
+    <td style="text-align: right;">Action</td>
   </tr>
-  <tr *ngFor="let item of accountDetails" class="accountData">
+  <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
     <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
     <td><a href="#" class="credRef">{{item.creditRef}}</a> <i class='fas fa-pen'></i></td>
     <td><a href="#" class="bal">{{item.balance}}</a></td>
@@ -74,11 +74,12 @@
     <td>{{item.balance}}</td>
     <td>{{item.refProfitLoss}}</td>
     <td><button type="button" class="status">{{item.adminstatus}}</button></td>
-    <td>
-      <!-- <button type="button"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
-      <button type="button"></button>
-      <button type="button"><i class="fa fa-gear"></i></button>
-      <button type="button"><i class="material-icons">person</i></button> -->
+    
+    <td style="float: right">
+      <button type="button" class="arrowbtn refresh"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
+      <button type="button" class="btn1  refresh" ><i class='fas fa-user-alt'></i></button>
+      <button type="button"class=" btn1 refresh" ><i class="fa fa-gear"></i></button>
+      <button type="button "class="btn1 refresh" ><i class='fas fa-user-alt'></i></button>
     </td>
   </tr>
 </table>
