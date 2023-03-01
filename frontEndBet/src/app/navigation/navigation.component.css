@@ -29,6 +29,9 @@
   font-size: 12px;
   font-weight: bold;
 }
+.dropdown-menu a:hover{
+  color:#212121 !important;
+}
 .right{
   padding-left:8%;
   display: flex;
@@ -68,7 +71,7 @@ strong{
     margin-right: 3px;
 
 }
-.btnn{   
+.btnn{
   border: 1px solid #bbb;
   border-radius: 4px;
   color: #1e1e1e;
