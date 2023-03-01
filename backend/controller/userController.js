@@ -42,7 +42,7 @@ exports.getSuperAdmin = async(req,res)=>{
 exports.updateSuperAdminStatus = async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload)
-        let udateObj = await superUser.updateOne({userName:payload.userName},{$set:{adminstatus:payload.adminStatus}})
+        let udateObj = await superUser.updateOne({userName:payload.userName},{$set:{adminstatus:payload.adminstatus}})
         return res.status(STATUS.OK).send({message:'Updated Successfully'})
     }catch(err) {
         return res.status(STATUS.BAD_REQUEST).send({message:'error',error:err.message})
