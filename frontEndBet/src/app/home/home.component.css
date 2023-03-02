@@ -332,6 +332,26 @@ width: 12%;
 .arrowbtn{
   margin-right: 5px;
 }
+.refresh1{
+  border: 1px solid #bbb;
+  color:#212121;
+  border-radius:4px;
+  font-size:12px;
+  height: 25px;
+  width: 27px;
+}
 .btn1{
   margin-right: 5px;
+}
+.bank, .betPL,.bH ,.profile ,.changeStatus{
+  margin-top: 5px;
+  font-size: 13px;
+}
+.image{
+  height: 22px;
+}
+.image1{
+  height: 30px;
+  width: 28px;
+  margin-right: 6px;
 }
