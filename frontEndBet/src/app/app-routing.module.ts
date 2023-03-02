@@ -95,7 +95,8 @@ const routes: Routes = [
   {path:"Aprofile",component:ProfileComponent},
   {path:"activitylog",component:ActivitylogComponent},
   {path:"AblockMarketlist",component:BlockMarketListComponent},
-  {path:"Amemberactsmry",component:HomeProfileComponent}
+  {path:"Amemberactsmry",component:HomeProfileComponent},
+  {path:"homeBetting",component:HomeBettingHistoryComponent}
 ];
 
 @NgModule({
