@@ -8,10 +8,20 @@ import { ApiServicesService } from '../api-services.service';
 })
 export class BetlistliveComponent implements OnInit {
   selectedOption: any;
+  betlistLive:any
+  user:any
   constructor(private api: ApiServicesService) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.onclick()
+  }
   onRadioChange(type: any) {
     console.log('fjkdf', type.value);
     this.selectedOption = type.value;
   }
+onclick(){
+  this.api.getAllMatches().subscribe((res:any)=>{
+    console.log(res.data)
+  this.user=res.data
+  })
+}
 }
