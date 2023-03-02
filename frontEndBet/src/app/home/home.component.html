@@ -1,165 +1,270 @@
 <app-navigation></app-navigation>
 <div class="main">
-<div class="newsBlock">
-  <div class="content">
-    <span>News</span>
-    <marquee class="message"><i class="idate">31 Jul 2022</i>Notice: S RAJU RUN FANCY WRONG ODDS BETS WILL BE DELETED</marquee>
-  </div>
-</div>
-<div class="searchblock">
-  <div class="searchtd">
-    <div class="search-wrap searchbox">
-      <i class="fa fa-search"></i><input type="text" placeholder="Find member..." class="searchTB" (keyup)="searchValue($event)"><button type="button" class="btnSearch" (click)="searchValue(currentSearch)">Search</button>
+  <div class="newsBlock">
+    <div class="content">
+      <span>News</span>
+      <marquee class="message"><i class="idate">31 Jul 2022</i>Notice: S RAJU RUN FANCY WRONG ODDS BETS WILL BE DELETED
+      </marquee>
     </div>
   </div>
-  <div class="statusfilter">
-    Status
-    <select id="adminStatusFilter" (change)="getUserByStatus($event)">
-      <option value="Active">ACTIVE</option>
-      <option value="Suspended">SUSPENDED</option>
-      <option value="Locked">LOCKED</option>
-      <option value="All">ALL</option>
-  </select></div>
-  <div class="addAdminblock">
-    <button type="button" class="addAdmin" data-toggle="modal" data-target="#superAdminpop"><i class="fa fa-user-plus" aria-hidden="true"></i>
-      Add Super Admin</button>
-    <button type="button" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i>
-    </button>
-  </div>
-</div>
-<div class="statistics">
-  <div class="stats1"><li>Total Balance</li>
-    <li class="pbu">PBU 613,771,780.316</li>
+  <div class="searchblock">
+    <div class="searchtd">
+      <div class="search-wrap searchbox">
+        <i class="fa fa-search"></i><input type="text" placeholder="Find member..." class="searchTB"
+          (keyup)="searchValue($event)"><button type="button" class="btnSearch"
+          (click)="searchValue(currentSearch)">Search</button>
+      </div>
     </div>
-  <div class="stats2">
-    <li>Total Exposure</li>
-    <li class="pbu">PBU 22.00</li>
+    <div class="statusfilter">
+      Status
+      <select id="adminStatusFilter" (change)="getUserByStatus($event)">
+        <option value="Active">ACTIVE</option>
+        <option value="Suspended">SUSPENDED</option>
+        <option value="Locked">LOCKED</option>
+        <option value="All">ALL</option>
+      </select>
+    </div>
+    <div class="addAdminblock">
+      <button type="button" class="addAdmin" data-toggle="modal" data-target="#superAdminpop"><i class="fa fa-user-plus"
+          aria-hidden="true"></i>
+        Add Super Admin</button>
+      <button type="button" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i>
+      </button>
+    </div>
   </div>
-  <div class="stats3">
-    <li>Total Avail. bal.</li>
-    <li class="pbu">PBU 613,771,758.316</li>
+  <div class="statistics">
+    <div class="stats1">
+      <li>Total Balance</li>
+      <li class="pbu">PBU 613,771,780.316</li>
+    </div>
+    <div class="stats2">
+      <li>Total Exposure</li>
+      <li class="pbu">PBU 22.00</li>
+    </div>
+    <div class="stats3">
+      <li>Total Avail. bal.</li>
+      <li class="pbu">PBU 613,771,758.316</li>
+    </div>
+    <div class="stats4">
+      <li>Balance</li>
+      <li class="pbu">PBU 389,175,898.50</li>
+    </div>
+    <div class="stats5">
+      <li>Available Balance</li>
+      <li class="pbu">PBU 1,002,947,656.816</li>
+    </div>
+    <div class="stats6">
+      <li>Total Player Balance</li>
+      <li class="pbu">PBU 130,779,882.99</li>
+    </div>
   </div>
-  <div class="stats4">
-    <li>Balance</li>
-    <li class="pbu">PBU 389,175,898.50</li>
-  </div>
-  <div class="stats5">
-    <li>Available Balance</li>
-    <li class="pbu">PBU 1,002,947,656.816</li>
-  </div>
-  <div class="stats6">
-    <li>Total Player Balance</li>
-    <li class="pbu">PBU 130,779,882.99</li>
-  </div>
-</div>
-<div class="data">
-<table class="accountdetails">
-  <tr class="th">
-    <td class="align1">Account</td>
-    <td class="align2">Credit Ref.</td>
-    <td class="align3">Balance</td>
-    <td class="align4">Exposure</td>
-    <td class="align5">Avail. bal.</td>
-    <td class="align6">Player Balance</td>
-    <td class="align7">Ref. P/L</td>
-    <td>Status</td>
-    <td style="text-align: right;">Action</td>
-  </tr>
-  <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
-    <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
-    <td><a href="#" class="credRef">{{item.creditRef}}</a> <i class='fas fa-pen'></i></td>
-    <td><a href="#" class="bal">{{item.balance}}</a></td>
-    <td><button type="button" class="exposure">{{item.exposure}}</button></td>
-    <td>{{item.availBalance}}</td>
-    <td>{{item.balance}}</td>
-    <td>{{item.refProfitLoss}}</td>
-    <td><button type="button" class="status">{{item.adminstatus}}</button></td>
+  <div class="data">
+    <table class="accountdetails">
+      <tr class="th">
+        <td class="align1">Account</td>
+        <td class="align2">Credit Ref.</td>
+        <td class="align3">Balance</td>
+        <td class="align4">Exposure</td>
+        <td class="align5">Avail. bal.</td>
+        <td class="align6">Player Balance</td>
+        <td class="align7">Ref. P/L</td>
+        <td>Status</td>
+        <td style="text-align: right;">Action</td>
+      </tr>
+      <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
+        <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
+        <td><a href="#" class="credRef">{{item.creditRef}}</a> <i class='fas fa-pen'></i></td>
+        <td><a href="#" class="bal">{{item.balance}}</a></td>
+        <td><button type="button" class="exposure">{{item.exposure}}</button></td>
+        <td>{{item.availBalance}}</td>
+        <td>{{item.balance}}</td>
+        <td>{{item.refProfitLoss}}</td>
+        <td><button type="button" class="status">{{item.adminstatus}}</button></td>
 
-    <td style="float: right">
-      <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
-      <img class="image1" src="../../assets/icons.png" routerLink="/homeBetting">
-      <button type="button"class=" btn1 refresh" id="Change Status"><i class="fa fa-gear"></i></button>
-      <button type="button "class="btn1 refresh" id="profile" routerLink="/homeProfile" ><i class='fas fa-user-alt'></i></button>
-    </td>
-  </tr>
-</table>
-</div>
-<div class="bottomBlock" >
-  <div class="changeStatus"><button type="button"class="refresh1" id="Change Status"><i class="fa fa-gear"></i></button>Change Status</div>
-  <div class="profile"><button type="button "class="refresh1" id="profile" ><i class='fas fa-user-alt'></i></button>
-    Profile</div>
-  <div class="bH" routerLink="/homeBetting"><img class="image" src="../../assets/icons.png">
-    Betting History</div>
-  <div class="betPL"> <button type="button" class="arrowbtn refresh1" id="Betting Profit & Loss"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
-    Betting Profit & Loss</div>
-  <div class="bank"><button type="button" class="refresh1" id="Bank"><i class='fas fa-dollar-sign'></i></button>Bank</div>
-</div>
+        <td style="float: right">
+          <button type="button" class="arrowbtn refresh" id="Betting Profit & Loss"><i
+              class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
+          <img class="image1" src="../../assets/icons.png" routerLink="/homeBetting">
+          <button type="button"class=" btn1 refresh"  data-toggle="modal"  data-target="#depositChip"><i class="fa fa-gear"></i></button>          <button type="button " class="btn1 refresh" id="profile" routerLink="/homeProfile"><i
+              class='fas fa-user-alt'></i></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="bottomBlock">
+    <div class="changeStatus"><button type="button" class="refresh1" id="Change Status"><i
+          class="fa fa-gear"></i></button>Change Status</div>
+    <div class="profile"><button type="button " class="refresh1" id="profile"><i class='fas fa-user-alt'></i></button>
+      Profile</div>
+    <div class="bH" routerLink="/homeBetting"><img class="image" src="../../assets/icons.png">
+      Betting History</div>
+    <div class="betPL"> <button type="button" class="arrowbtn refresh1" id="Betting Profit & Loss"><i
+          class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
+      Betting Profit & Loss</div>
+    <div class="bank"><button type="button" class="refresh1" id="Bank"><i class='fas fa-dollar-sign'></i></button>Bank
+    </div>
+  </div>
 </div>
 
 <!-- Add super admin popup -->
 <div class="modal" id="superAdminpop" role="dailog">
   <div class="modal-dailog modal-sm">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h4 class="modal-title">Add Super Admin</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span id="crs" aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-            <form method="post" autocomplete="off" [formGroup]="superUserForm" (ngSubmit)="createAdmin()">
-              <table class="table2">
-                  <tr><td id="lb"><label>Select Website</label></td><td><select name="webs" id="openselectWebsite" formControlName="site">
-                    <option>Select Website</option>
-                    <option>wonderbets.in</option>
-                    <option>laserbook23.com</option>
-                  </select><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>E-mail</label></td><td><input type="email" placeholder="Enter Email" formControlName="email"><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>Username</label></td><td><input type="text" placeholder="Enter" formControlName="userName"><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>Password</label></td><td><input type="password" placeholder="Enter" formControlName="password"><span class="must">*</span></td></tr>
-                  <tr class="passwordConfrim"><td id="lb"><label>Confrim Password</label></td><td><input type="password" formControlName="confirmPassword" placeholder="Enter"><span class="must">*</span></td></tr>
-                  <tr><td></td></tr>
-                  <tr id="pad"><td id="lb"><label>First Name</label></td><td><input type="text" placeholder="Enter" formControlName="firstName"><span class="must">*</span></td></tr>
-                  <tr><td id="lb"><label>Last Name</label></td><td><input type="text" placeholder="Enter" formControlName="lastName"></td></tr>
-                  <tr><td id="lb"><label>Phone</label></td><td><input type="text" placeholder="Enter" formControlName="phone"></td></tr>
-                  <tr><td id="lb"><label>Time Zone</label></td><td><select name="timezone" formControlName="timezone" id="opentimezone">
-                    <option value="Pacific/Midway">Pacific/Midway(GMT-11:00)</option>
-                    <option value="Pacific/Honolulu GMT-10:00">Pacific/Honolulu(GMT-10:00)</option>
-                    <option value="America/Juneau GMT-9:00">America/Juneau(GMT-9:00)</option>
-                    <option value="America/Los_Angeles GMT-8:00">America/Los_Angeles(GMT-8:00)</option>
-                    <option value="America/Phoenix GMT-7:00">America/Phoenix(GMT-7:00)</option>
-                    <option value="America/Chicago GMT-6:00">America/Chicago(GMT-6:00)</option>
-                    <option value="America/New_York GMT-5:00">America/New_York(GMT-5:00)</option>
-                    <option value="America/Santiago GMT-4:00">America/Santiago(GMT-4:00)</option>
-                    <option value="America/Sao_Paulo GMT-3:00">America/Sao_Paulo(GMT-3:00)</option>
-                    <option value="Atlantic/South_Georgia GMT-2:00">Atlantic/South_Georgia(GMT-2:00)</option>
-                    <option value="Atlantic/Azores GMT-1:00">Atlantic/Azores(GMT-1:00)</option>
-                    <option value="Europe/London GMT+0:00">Europe/London(GMT+0:00)</option>
-                    <option value="Europe/Paris GMT+1:00">Europe/Paris(GMT+1:00)</option>
-                    <option value="Africa/Cairo GMT+2:00">Africa/Cairo(GMT+2:00)</option>
-                    <option value="Asia/Qatar GMT+3:00">Asia/Qatar(GMT+3:00)</option>
-                    <option value="Asia/Dubai GMT+4:00">Asia/Dubai(GMT+4:00)</option>
-                    <option value="Asia/Karachi GMT+5:00">Asia/Karachi(GMT+5:00)</option>
-                    <option value="IST GMT+5:30" selected="selected">IST(Bangalore / Bombay / New Delhi) (GMT+5:30)</option>
-                    <option value="Asia/Kathmandu GMT+5:45">Asia/Kathmandu(GMT+5:45)</option>
-                    <option value="Asia/Dhaka GMT+6:00">Asia/Dhaka(GMT+6:00)</option>
-                    <option value="Asia/Bangkok GMT+7:00">Asia/Bangkok(GMT+7:00)</option>
-                    <option value="Asia/Hong_Kong GMT+8:00">Asia/Hong_Kong(GMT+8:00)</option>
-                    <option value="Asia/Tokyo GMT+9:00">Asia/Tokyo(GMT+9:00)</option>
-                    <option value="Australia/Adelaide GMT+9:30">Australia/Adelaide(GMT+9:30)</option>
-                    <option value="Australia/Melbourne GMT+10:00">Australia/Melbourne(GMT+10:00)</option>
-                    <option value="Asia/Magadan GMT+11:00">Asia/Magadan(GMT+11:00)</option>
-                    <option value="Pacific/Fiji GMT+12:00">Pacific/Fiji(GMT+12:00)</option>
-                  </select><span class="must">*</span></td></tr>
-                  <tr><td class="er" *ngIf="error">{{error}}</td><td></td></tr>
-              </table>
-              <div class="modal-footer">
-              <button type="submit" class="btn btn-primary" id="cpBtn">Create</button>
-              </div>
-              </form>
-          </div>
-          <!-- <div class="modal-footer"> -->
-          <!-- </div> -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Add Super Admin</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span id="crs" aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body">
+        <form method="post" autocomplete="off" [formGroup]="superUserForm" (ngSubmit)="createAdmin()">
+          <table class="table2">
+            <tr>
+              <td id="lb"><label>Select Website</label></td>
+              <td><select name="webs" id="openselectWebsite" formControlName="site">
+                  <option>Select Website</option>
+                  <option>wonderbets.in</option>
+                  <option>laserbook23.com</option>
+                </select><span class="must">*</span></td>
+            </tr>
+            <tr>
+              <td id="lb"><label>E-mail</label></td>
+              <td><input type="email" placeholder="Enter Email" formControlName="email"><span class="must">*</span></td>
+            </tr>
+            <tr>
+              <td id="lb"><label>Username</label></td>
+              <td><input type="text" placeholder="Enter" formControlName="userName"><span class="must">*</span></td>
+            </tr>
+            <tr>
+              <td id="lb"><label>Password</label></td>
+              <td><input type="password" placeholder="Enter" formControlName="password"><span class="must">*</span></td>
+            </tr>
+            <tr class="passwordConfrim">
+              <td id="lb"><label>Confrim Password</label></td>
+              <td><input type="password" formControlName="confirmPassword" placeholder="Enter"><span
+                  class="must">*</span></td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            <tr id="pad">
+              <td id="lb"><label>First Name</label></td>
+              <td><input type="text" placeholder="Enter" formControlName="firstName"><span class="must">*</span></td>
+            </tr>
+            <tr>
+              <td id="lb"><label>Last Name</label></td>
+              <td><input type="text" placeholder="Enter" formControlName="lastName"></td>
+            </tr>
+            <tr>
+              <td id="lb"><label>Phone</label></td>
+              <td><input type="text" placeholder="Enter" formControlName="phone"></td>
+            </tr>
+            <tr>
+              <td id="lb"><label>Time Zone</label></td>
+              <td><select name="timezone" formControlName="timezone" id="opentimezone">
+                  <option value="Pacific/Midway">Pacific/Midway(GMT-11:00)</option>
+                  <option value="Pacific/Honolulu GMT-10:00">Pacific/Honolulu(GMT-10:00)</option>
+                  <option value="America/Juneau GMT-9:00">America/Juneau(GMT-9:00)</option>
+                  <option value="America/Los_Angeles GMT-8:00">America/Los_Angeles(GMT-8:00)</option>
+                  <option value="America/Phoenix GMT-7:00">America/Phoenix(GMT-7:00)</option>
+                  <option value="America/Chicago GMT-6:00">America/Chicago(GMT-6:00)</option>
+                  <option value="America/New_York GMT-5:00">America/New_York(GMT-5:00)</option>
+                  <option value="America/Santiago GMT-4:00">America/Santiago(GMT-4:00)</option>
+                  <option value="America/Sao_Paulo GMT-3:00">America/Sao_Paulo(GMT-3:00)</option>
+                  <option value="Atlantic/South_Georgia GMT-2:00">Atlantic/South_Georgia(GMT-2:00)</option>
+                  <option value="Atlantic/Azores GMT-1:00">Atlantic/Azores(GMT-1:00)</option>
+                  <option value="Europe/London GMT+0:00">Europe/London(GMT+0:00)</option>
+                  <option value="Europe/Paris GMT+1:00">Europe/Paris(GMT+1:00)</option>
+                  <option value="Africa/Cairo GMT+2:00">Africa/Cairo(GMT+2:00)</option>
+                  <option value="Asia/Qatar GMT+3:00">Asia/Qatar(GMT+3:00)</option>
+                  <option value="Asia/Dubai GMT+4:00">Asia/Dubai(GMT+4:00)</option>
+                  <option value="Asia/Karachi GMT+5:00">Asia/Karachi(GMT+5:00)</option>
+                  <option value="IST GMT+5:30" selected="selected">IST(Bangalore / Bombay / New Delhi) (GMT+5:30)
+                  </option>
+                  <option value="Asia/Kathmandu GMT+5:45">Asia/Kathmandu(GMT+5:45)</option>
+                  <option value="Asia/Dhaka GMT+6:00">Asia/Dhaka(GMT+6:00)</option>
+                  <option value="Asia/Bangkok GMT+7:00">Asia/Bangkok(GMT+7:00)</option>
+                  <option value="Asia/Hong_Kong GMT+8:00">Asia/Hong_Kong(GMT+8:00)</option>
+                  <option value="Asia/Tokyo GMT+9:00">Asia/Tokyo(GMT+9:00)</option>
+                  <option value="Australia/Adelaide GMT+9:30">Australia/Adelaide(GMT+9:30)</option>
+                  <option value="Australia/Melbourne GMT+10:00">Australia/Melbourne(GMT+10:00)</option>
+                  <option value="Asia/Magadan GMT+11:00">Asia/Magadan(GMT+11:00)</option>
+                  <option value="Pacific/Fiji GMT+12:00">Pacific/Fiji(GMT+12:00)</option>
+                </select><span class="must">*</span></td>
+            </tr>
+            <tr>
+              <td class="er" *ngIf="error">{{error}}</td>
+              <td></td>
+            </tr>
+          </table>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="cpBtn">Create</button>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="modal-footer"> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+<div class="modal" id="depositChip" role="dailog">
+  <div class="modal-dailog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Change Status</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span id="crs" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- <div class="modal-body" id="dcmodal"> -->
+      <div class="card">
+        <div class="d">
+          <div>
+            <div class="b1"><button class="badg">SUA</button></div>
+          <div class="b2"><p >satest</p></div>
+          <div class="b3"><p class="pp2" >Active</p></div>
+          </div>
+        </div>
+        <hr style="margin:0;">
+        <!-- </div> -->
+        <div class="seconddiv">
+          <button class="btn98">
+            <a href="#" class="a">
+              <img class="img1" src="../../assets/active.png">
+            </a>
+            <br>
+            Active
+          </button>
+          <button class="btn99">
+            <a href="#" class="b">
+              <img class="img1" src="../../assets/Prohibb.png">
+
+            </a>
+            <br>
+            Suspend
+          </button>
+
+          <button class="btn100">
+            <a href="#" class="c">
+              <i class="fa fa-lock iconspn"></i>
+
+            </a>
+            <br>
+            Locked
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="passblock">
+        <tr>
+        <td>Password</td>
+        <td><input type="password" class="plh" placeholder="Enter" ></td>
+        <td><button type="button" class="chbtn" >Change</button></td>
+        </tr>
+
+      </div>
+    </div>
   </div>
 </div>
