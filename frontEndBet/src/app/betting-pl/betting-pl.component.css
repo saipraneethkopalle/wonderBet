@@ -270,3 +270,10 @@ table,tr{
   margin-bottom: 5px;
   font-size: 12px;
 }
+
+#dmt{
+  width: 75%;
+}
+#dpl{
+  text-align: right;
+}

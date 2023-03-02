@@ -112,6 +112,10 @@ sub {
   line-height: 20px;
   font-weight: bold;
   height: 20px;
+  border-top: 2px solid #52616a;
+
+}
+thead th{
   border-bottom: 2px solid #52616a;
 
 }
@@ -143,6 +147,7 @@ sub {
 
 .firstclon6 {
   width: 10%;
+  text-align: right;
 
 }
 

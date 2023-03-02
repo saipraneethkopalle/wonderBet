@@ -53,7 +53,7 @@ element.style {
 thead{
     background-color: #e4e4e4;
     font-size: 13px;
-    border-top: 1px solid #7e97a7;;
+    border-top: 2px solid #7e97a7;;
     line-height: 7px;
 } 
 
@@ -72,6 +72,10 @@ thead{
     margin-bottom: 6px;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 6px;
+  }
+
+  thead th{
+    border-bottom: 2px solid #52616a;
   }
 
   /* thead{
