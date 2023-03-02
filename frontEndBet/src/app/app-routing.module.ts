@@ -14,6 +14,7 @@ import { AupdateFancyStatusComponent } from './aupdate-fancy-status/aupdate-fanc
 import { BankingComponent } from './banking/banking.component';
 import { BetlistComponent } from './betlist/betlist.component';
 import { BetlistliveComponent } from './betlistlive/betlistlive.component';
+import { BettingPLComponent } from './betting-pl/betting-pl.component';
 import { BlockMarketListComponent } from './block-market-list/block-market-list.component';
 import { BlockmarketComponent } from './blockmarket/blockmarket.component';
 import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
@@ -47,7 +48,8 @@ import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspended
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 import { UsermessageComponent } from './usermessage/usermessage.component';
 import { UserplComponent } from './userpl/userpl.component';
-
+import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
+import { TransactionHistory2Component } from './transaction-history2/transaction-history2.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -96,7 +98,10 @@ const routes: Routes = [
   {path:"activitylog",component:ActivitylogComponent},
   {path:"AblockMarketlist",component:BlockMarketListComponent},
   {path:"homeProfile",component:HomeProfileComponent},
-  {path:"homeBetting",component:HomeBettingHistoryComponent}
+  {path:"homeBetting",component:HomeBettingHistoryComponent},
+  {path:"transactionHistory",component:TransactionHistoryComponent},
+  {path:"transactionHistory2",component:TransactionHistory2Component},
+  {path:"bettingPL",component:BettingPLComponent}
 ];
 
 @NgModule({

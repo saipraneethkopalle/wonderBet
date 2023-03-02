@@ -1,6 +1,6 @@
 .main{
     width:100%;
-    min-height: 850px;
+    min-height: 650px;
     height:auto;
     overflow:hidden;
     padding-left:7%;
@@ -8,10 +8,7 @@
     font-size:14px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top:5px;
-    background-color: #f0ece1;
-  }
-  .edit a{
-    margin-top:-10px;
+    background-color: #f0ece1;cursor: pointer;
   }
   .abadge{
     background-color: rgba(165, 55, 4, 0.911);
@@ -52,9 +49,8 @@
     list-style-type: none;
   }
   .heading{
-    font-size: 16px;
-    line-height: 15px;
     font-weight: bold;
+    font-size:18px;
     padding:5px;
   }
   .menu{
@@ -65,7 +61,7 @@
     cursor: pointer;
     color:#243a48;
   }
-
+  
   .menu2{
     font-size: 15px;
       font-weight: bold;
@@ -88,7 +84,7 @@
     padding: 7px 10px 5px;
     border-bottom: 1px solid #7e97a7;
     margin-bottom: 15px;
-
+  
   }
   .user{
     border: 1px solid #7E97A7;
@@ -113,47 +109,33 @@
     color: whitesmoke;
   }
 
-
-  .subBlock .menu:hover {
-    background-color: #e3e9e5;
-    /* color: white; */
-  }
-
-
-
-
-
-
   thead{
     background-color: #e4e4e4;
     border-top: 2px solid #7e97a7;
-    border-bottom: 2px solid #7e97a7;
     line-height: 14px;
   }
+thead  .firstcloun{
+    text-align: left;
+  }
   thead th{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
+    text-align: right;
     border-bottom: 2px solid #7e97a7;
-    padding:10px !important;
+
   }
 
+  .green{
+    color: darkgreen;
+}
 
+.red{
+    color: red;
+}
+.head{
+    color: whitesmoke;
+  }
 
-  .column1{
-    width: 30%;
-  }
-  .column2{
-    width: 20%;
-  }
-
-
-  .column3{
-    width: 20%;
-  }
-  .column4{
-    width: 20%;
-    text-align: end;
-  }
   table{
     width: 100%;
     background-color: #fff;
@@ -161,101 +143,4 @@
 
   tbody td{
     font-size: 12px;
-    padding:10px !important;
   }
-.eventleft{
-    width: 49.5%;
-    font-size: 11px;
-}
-
-.profile-wrap {
-    background-color: #fff;
-    border-bottom: 1px solid #7e97a7;
-    margin-bottom: 15px;
-
-}
-button span{
-  height: 20px;
-}
-
-.profile-wrap h3 {
-    background-color: #7e97a7;
-    color: #fff;
-    font-size: 16px;
-    padding: 0 10px;
-    font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-dl {
-    display: flex;
-}
-
-
-.profile-wrap dl {
-    position: relative;
-    border-bottom: 1px solid #E0E6E6;
-    line-height: 10px;
-}
-
-.profile-wrap dt {
-    width: 125px;
-    padding-left: 10px;
-    color: #243a48;
-}
-
-dt{
-  font-size: 11px;
-  font-weight: 200;
-}
-
-.profile-wrap dd:last-child {
-    border-bottom-width: 5;
-}
-.d1{
-    display: flex;
-}
-.profile-wrap .favor-set {
-    position: absolute;
-    right: 2px;
-    top: 1px;
-}
-
-h2{
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.favor-set {
-    line-height: 25px;
-    border-bottom-width: 0;
-    padding-right: 23px;
-    /* margin-bottom: 2px; */
-    background-position: 100% -2975px;
-}
-
-.persion{
-  /* background-color: #7e97a7; */
-  color: #7e97a7;
-}
-
-
-
-.pen{
-    font-size: 12px;
-    margin-left: 5px;
-    /* padding-bottom: 20px; */
-}
-.icon{
-    margin-left: 145px;
-
-}
-
-
-
-.agent_path {
-    margin: 18px 0 14px 0;
-    width: 20%;
-}
-

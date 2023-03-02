@@ -55,6 +55,9 @@ import { ActivitylogComponent } from './activitylog/activitylog.component';
 import { BlockMarketListComponent } from './block-market-list/block-market-list.component';
 import { HomeProfileComponent } from './home-profile/home-profile.component';
 import { HomeBettingHistoryComponent } from './home-betting-history/home-betting-history.component';
+import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
+import { TransactionHistory2Component } from './transaction-history2/transaction-history2.component';
+import { BettingPLComponent } from './betting-pl/betting-pl.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -106,7 +109,10 @@ import { HomeBettingHistoryComponent } from './home-betting-history/home-betting
     ActivitylogComponent,
     BlockMarketListComponent,
     HomeProfileComponent,
-    HomeBettingHistoryComponent
+    HomeBettingHistoryComponent,
+    TransactionHistoryComponent,
+    TransactionHistory2Component,
+    BettingPLComponent
   ],
   imports: [
     BrowserModule,

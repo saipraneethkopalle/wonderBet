@@ -104,7 +104,7 @@
     padding-bottom: 3px;
     padding-left: 17px;
     padding-right: 17px;
-    width: 120px;
+    width: 110px;
     margin-right: 5px;
     background-color: #FFFFFF;
     border: 1px solid #243a48;
@@ -230,4 +230,43 @@ table,tr{
     padding-left: 10px;
     border-bottom: solid 1px rgb(133, 133, 133);
     border-top: solid 3px #243a48;
+}
+#btmText{
+  font-size: 12px;
+  margin-top: 5px;
+}
+.reportUL{
+  display: flex;
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.tplLi{
+  width: 80%;
+}
+#tpl{
+  font-size: 14px;
+  margin: 0;
+}
+#tplSpan{
+  margin-left: 5px;
+}
+#pbu{
+  font-size: 15px;
+  margin: 0;
+}
+
+.sprtSel{
+  margin-right: 8px;
+  width: 140px;
+  height: 25px;
+}
+
+.pblLi{
+  width: 10%;
+}
+
+.profileD{
+  margin-bottom: 5px;
+  font-size: 12px;
 }
