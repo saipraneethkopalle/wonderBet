@@ -1,0 +1,137 @@
+<app-navigation></app-navigation>
+<div class="main">
+    <div class="userProfile">
+      <button type="button" class="user">
+        <div class="abadge">A</div>
+        admin
+      </button>
+      <button type="button" class="user">
+        <div class="Bbadge">SUA</div>
+        satest
+      </button>
+    </div>
+    <div class="subBlock">
+      <div class="sideBlock">
+        <li class="head" >Position</li>
+        <li class="menu" routerLink="/homeProfile">Account Summary</li>
+        <li class="head">Performance</li>
+        <li class="menu" routerLink="/homeBetting">Betting History</li>
+        <li class="menu" routerLink="/bettingPL">Betting Profit & Loss</li>
+        <li class="menu" routerLink="/transactionHistory">Transaction History</li>
+        <li class="menu" routerLink="/transactionHistory2">Transaction History 2</li>
+        <li class="menu" routerLink="/activitylog">Activity Log</li>
+      </div>
+      <div class="rightBlock">
+        <div class="heading">Betting Profit & Loss : Main wallet</div>
+        <div class="profileD">satest</div>
+        <div class="mainTab">
+            <div class="t">
+                <ul class="reportBtn">
+                    <li >
+                        <button type="button" [class]="currentTab==0?'aexch':'exch'" (click)="go(0)">Exchange</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==1?'aexch':'exch'" (click)="go(1)">FancyBet</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==2?'aexch':'exch'" (click)="go(2)">FancyBet1</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==3?'aexch':'exch'" (click)="go(3)">Toss</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==4?'aexch':'exch'" (click)="go(4)">Casino</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==5?'aexch':'exch'" (click)="go(5)">SportsBook</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==6?'aexch':'exch'" (click)="go(6)">BookMaker</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==7?'aexch':'exch'" (click)="go(7)">BPoker</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==8?'aexch':'exch'" (click)="go(8)">Premium</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="m">
+                <ul class="betStatusUl">
+                        <li>
+                            <label id="pl">Period</label>
+                        </li>
+                        <li>
+                            <input type="date" placeholder="YYYY-MM-DD" id="sDate">
+                            <input type="text" placeholder="HH:MM" maxlength="5" readonly="readonly" id="timeIpt">
+                            <label >to</label>
+                            <input type="date" placeholder="YYYY-MM-DD" id="sDate">
+                            <input type="text" placeholder="HH:MM" maxlength="5" readonly="readonly" id="timeIpt">
+                        </li>
+                </ul>
+                <ul class="betStatusBtn">
+                    <li>
+                        <button>Just For Today</button>
+                    </li>
+                    <li>
+                        <button>From Yesterday</button>
+                    </li>
+                    <li>
+                        <button id="gth">Get P & L</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="f">
+                <p>
+                    Betting Profit & Loss enables you to review the bets you have placed.
+                    <br>
+                    Specify the time period during which your bets were placed, the type of markets on which the bets were placed, and the sport.
+                </p>
+                <p>Betting Profit & Loss is available online for the past 30 days.</p>
+            </div>
+            <div class="plReport">
+                <ul class="reportUL">
+                    <li class="tplLi">
+                        <label id="tpl">Total P/L: PBU</label>
+                        <span id="tplSpan">(0.00)</span>
+                    </li>
+                    <li>
+                        <select class="sprtSel">
+                            <option>ALL</option>
+                            <option>SOCCER</option>
+                            <option>TENNIS</option>
+                            <option>CRICKET</option>
+                        </select>
+                    </li>
+                    <li class="pblLi">
+                        <label id="pbu">PBU</label>
+                        <span>(0.00)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="tbl">
+                <table class="betlisttb">
+                    <tr class="betlisthead">
+                        <td id="dmt">Market</td>
+                        <td id="dsd">Settled date</td>
+                        <td id="dpl">Profit / Loss</td>
+                      </tr>
+                      <!-- <tr class="bet">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr> -->
+                      <tr class="err">
+                        <td colspan="1" scope="col">You have no bets in this time period.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>  
+                </table>
+            </div>
+            <div id="btmText">
+                <p>Profit and Loss is shown net of commission.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

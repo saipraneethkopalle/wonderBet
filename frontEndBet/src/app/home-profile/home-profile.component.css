@@ -1,6 +1,6 @@
 .main{
     width:100%;
-    min-height: 650px;
+    min-height: 850px;
     height:auto;
     overflow:hidden;
     padding-left:7%;
@@ -107,11 +107,26 @@
     margin-right: 10px;
   }
   .subBlock .menu{
-    color: blue;
+    color:rgb(18, 48, 245);
   }
   .head{
     color: whitesmoke;
   }
+
+
+  .subBlock .menu:hover {
+    background-color: #e3e9e5;
+    /* color: white; */
+  }
+
+  #bettingfixed{
+    background-color: rgb(235, 193, 84);
+  }
+
+
+
+
+
 
   thead{
     background-color: #e4e4e4;
@@ -163,7 +178,9 @@
     margin-bottom: 15px;
 
 }
-
+button span{
+  height: 20px;
+}
 
 .profile-wrap h3 {
     background-color: #7e97a7;
@@ -171,6 +188,8 @@
     font-size: 16px;
     padding: 0 10px;
     font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 dl {
