@@ -109,29 +109,15 @@
   thead{
     background-color: #e4e4e4;
     border-top: 2px solid #7e97a7;
-    border-bottom: 2px solid #7e97a7;
     line-height: 14px;
   }
   thead th{
     font-size: 12px;
     font-weight: bold;
+    border-bottom: 2px solid #7e97a7;
+
   }
 
-  .column1{
-    width: 30%;
-  }
-  .column2{
-    width: 20%;
-  }
-
-
-  .column3{
-    width: 20%;
-  }
-  .column4{
-    width: 20%;
-    text-align: end;
-  }
   table{
     width: 100%;
     background-color: #fff;
@@ -140,104 +126,11 @@
   tbody td{
     font-size: 12px;
   }
-.eventleft{
-    width: 49.5%;
-    font-size: 11px;
+
+.green{
+    color: darkgreen;
 }
 
-.profile-wrap {
-    background-color: #fff;
-    border-bottom: 1px solid #7e97a7;
-    margin-bottom: 15px;
+.red{
+    color: red;
 }
-
-
-.profile-wrap h3 {
-    background-color: #7e97a7;
-    color: #fff;
-    font-size: 20px;
-    padding: 0 10px;
-}
-
-dl {
-    display: flex;
-   
-}
-
-.event-left dt, .event-right dt {
-    font-size: 11px;
-}
-
-.profile-wrap dl {
-    position: relative;
-    border-bottom: 1px solid #E0E6E6;
-}
-
-.profile-wrap dt {
-    width: 125px;
-    padding: 5px 0 5px 10px;
-    color: #243a48;
-}
-
-.profile-wrap dd:last-child {
-    border-bottom-width: 5;
-}
-.d1{
-    display: flex;
-}
-.profile-wrap .favor-set {
-    position: absolute;
-    right: 2px;
-    top: 1px;
-}
-
-h2{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.favor-set {
-    line-height: 25px;
-    border-bottom-width: 0;
-    padding-right: 23px;
-    background-position: 100% -2975px;
-}
-
-.pen{
-    font-size: 12px;
-    margin-left: 5px;
-}
-.icon{
-    margin-left: 145px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.agent_path {
-    margin: 18px 0 14px 0;
-    width: 20%;
-}
-
