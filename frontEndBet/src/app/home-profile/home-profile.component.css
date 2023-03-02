@@ -107,7 +107,7 @@
     margin-right: 10px;
   }
   .subBlock .menu{
-    color: blue;
+    color:rgb(18, 48, 245);
   }
   .head{
     color: whitesmoke;
@@ -117,6 +117,10 @@
   .subBlock .menu:hover {
     background-color: #e3e9e5;
     /* color: white; */
+  }
+
+  #bettingfixed{
+    background-color: rgb(235, 193, 84);
   }
 
 
