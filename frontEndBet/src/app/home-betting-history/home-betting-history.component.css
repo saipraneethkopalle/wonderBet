@@ -8,7 +8,7 @@
     font-size:14px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top:5px;
-    background-color: #f0ece1;cursor: pointer;
+    background-color: #f0ece1;
   }
   .abadge{
     background-color: #D77319;
@@ -73,7 +73,7 @@
     color:rgb(71, 127, 180);
     padding-left: 8px;
   }
-  
+
   .user{
     border: 1px solid #7E97A7;
     border-radius: 3px;
@@ -157,7 +157,7 @@ label{
 .betStatusBtn{
     display: flex;
     padding: 0;
-}  
+}
 
 .betStatusBtn button{
     display: inline-block;
@@ -170,7 +170,7 @@ label{
     border: 1px solid #b1b4b6;
     border-radius: 3px;
     font-size: 12px;
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 #gth{
