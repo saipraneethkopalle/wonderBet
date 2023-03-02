@@ -122,26 +122,31 @@ thead th{
 
 .firstclon1 {
   width: 12%;
+  text-align: left;
 
 }
 
 .firstclon2 {
   width: 13%;
+  text-align: left;
 
 }
 
 .firstclon3 {
   width: 12%;
+  text-align: left;
 
 }
 
 .firstclon4 {
   width: 10%;
 
+  text-align: right;
 }
 
 .firstclon5 {
   width: 10%;
+  text-align: right;
 
 }
 
