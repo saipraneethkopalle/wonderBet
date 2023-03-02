@@ -1,0 +1,65 @@
+
+
+<app-navigation></app-navigation>
+<div class="main">
+  <div class="userProfile">
+    <button type="button" class="user">
+      <div class="abadge">A</div>
+      admin
+    </button>
+    <button type="button" class="user">
+        <div class="abadge">SUB</div>
+        satest
+      </button>
+  </div>
+  <div class="subBlock">
+    <div class="sideBlock">
+      <li class="head">Position</li>
+      <li class="menu" routerLink="/homeProfile">Account Summary</li>
+      <li class="head">Performance</li>
+      <li class="menu" routerLink="/homeBetting">Betting History</li>
+      <li class="menu" routerLink="/bettingPL" >Betting Profit & Loss</li>
+      <li class="menu" routerLink="/transactionHistory">Transaction History</li>
+      <li class="menu" routerLink="/transactionHistory2">Transaction History2</li>
+      <li class="menu" routerLink="/activitylog">Activity Log</li>
+    </div>
+    <div class="heading">Transaction History</div>
+    <div class="rightBlock">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Date/Time</th>
+                <th scope="col">Deposit From Upline	</th>
+                <th scope="col">Deposit to Downline	</th>
+                <th scope="col">WihtDraw By Upline	</th>
+                <th scope="col">WithDraw From Downline	</th>
+                <th scope="col">Balance</th>
+                <th scope="col">Remark</th>
+                <th scope="col">From/To</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>28/02/2023 15:07:13</td>
+                    <td  class="green">-</td>
+                    <td>-</td>
+                    <td class="red">200000.00</td>
+                    <td >-</td>
+                    <td class="red">30000000.0</td>
+                    <td>-</td>
+                    <td>Admin -> sates</td>
+                  </tr>
+                  <tr>
+                    <td>28/02/2023 15:04:56</td>
+                    <td class="green">500000.00</td>
+                    <td class="red">-</td>
+                    <td  >-</td>
+                    <td  class="red">500000.00</td>
+                    <td>0.00</td>
+                    <td>500000.00</td>
+                    <td>Own Deposit	</td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
