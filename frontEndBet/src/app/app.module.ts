@@ -106,7 +106,7 @@ import { HomeBettingHistoryComponent } from './home-betting-history/home-betting
     ActivitylogComponent,
     BlockMarketListComponent,
     HomeProfileComponent,
-  
+    HomeBettingHistoryComponent
   ],
   imports: [
     BrowserModule,

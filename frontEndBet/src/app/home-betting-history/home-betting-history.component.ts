@@ -10,9 +10,11 @@ export class HomeBettingHistoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.go(0); 
   }
   go(value:any){
     this.currentTab =value;
+    console.log(this.currentTab);
   }
 
 

@@ -22,6 +22,7 @@ import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/ca
 import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
+import { HomeBettingHistoryComponent } from './home-betting-history/home-betting-history.component';
 import { HomeProfileComponent } from './home-profile/home-profile.component';
 import { HomeComponent } from './home/home.component';
 import { HypermessageComponent } from './hypermessage/hypermessage.component';

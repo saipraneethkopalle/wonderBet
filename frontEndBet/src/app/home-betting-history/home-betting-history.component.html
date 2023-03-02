@@ -27,28 +27,28 @@
             <div class="t">
                 <ul class="reportBtn">
                     <li >
-                        <button class="Exchange">Exchange</button>
+                        <button type="button" [class]="currentTab==0?'aexch':'exch'" (click)="go(0)">Exchange</button>
                     </li>
                     <li>
-                        <button>FancyBet</button>
+                        <button [class]="currentTab==1?'aexch':'exch'" (click)="go(1)">FancyBet</button>
                     </li>
                     <li>
-                        <button>Fancy1Bet</button>
+                        <button [class]="currentTab==2?'aexch':'exch'" (click)="go(2)">Fancy1Bet</button>
                     </li>
                     <li>
-                        <button>Toss</button>
+                        <button [class]="currentTab==3?'aexch':'exch'" (click)="go(3)">Toss</button>
                     </li>
                     <li>
-                        <button>Casino Bet</button>
+                        <button [class]="currentTab==4?'aexch':'exch'" (click)="go(4)">Casino Bet</button>
                     </li>
                     <li>
-                        <button>SportsBook</button>
+                        <button [class]="currentTab==5?'aexch':'exch'" (click)="go(5)">SportsBook</button>
                     </li>
                     <li>
-                        <button>BookMaker</button>
+                        <button [class]="currentTab==6?'aexch':'exch'" (click)="go(6)">BookMaker</button>
                     </li>
                     <li>
-                        <button>Premium</button>
+                        <button [class]="currentTab==7?'aexch':'exch'" (click)="go(7)">Premium</button>
                     </li>
                 </ul>
             </div>
