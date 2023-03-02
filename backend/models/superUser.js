@@ -6,15 +6,15 @@ const matchSchema = new mongoose.Schema({
     userName:{type:String,required:true,unique:true},
     password:{type:String,required:true},
     firstName:{type:String,required:true},
-    lastName:{type:String,required:true},
-    phone:{type:String,required:true},
+    lastName:{type:String},
+    phone:{type:String},
     timeZone:{type:Boolean,default:true},
     creditRef:{type:Number,default:0},
     balance:{type:Number,default:0},
     exposure:{type:Number,default:0.0},
     availBalance:{type:Number,default:0},
     refProfitLoss:{type:Number,default:0},
-    adminstatus:{type:Boolean,default:true}
+    adminstatus:{type:String,default:'Active'}
 },{ timestamps: true })
 
 matchSchema.index({ isActive: 1, userName: 1});
