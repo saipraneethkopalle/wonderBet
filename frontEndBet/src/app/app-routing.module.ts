@@ -22,6 +22,7 @@ import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/ca
 import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
+import { HomeBettingHistoryComponent } from './home-betting-history/home-betting-history.component';
 import { HomeProfileComponent } from './home-profile/home-profile.component';
 import { HomeComponent } from './home/home.component';
 import { HypermessageComponent } from './hypermessage/hypermessage.component';
@@ -46,6 +47,8 @@ import { SuspendedfancyResultComponent } from './suspendedfancy-result/suspended
 import { SuspendedmarketResultComponent } from './suspendedmarket-result/suspendedmarket-result.component';
 import { UsermessageComponent } from './usermessage/usermessage.component';
 import { UserplComponent } from './userpl/userpl.component';
+import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
+import { TransactionHistory2Component } from './transaction-history2/transaction-history2.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -93,7 +96,10 @@ const routes: Routes = [
   {path:"Aprofile",component:ProfileComponent},
   {path:"activitylog",component:ActivitylogComponent},
   {path:"AblockMarketlist",component:BlockMarketListComponent},
-  {path:"Amemberactsmry",component:HomeProfileComponent}
+  {path:"homeProfile",component:HomeProfileComponent},
+  {path:"homeBetting",component:HomeBettingHistoryComponent},
+  {path:"transactionHistory",component:TransactionHistoryComponent},
+  {path:"transactionHistory2",component:TransactionHistory2Component}
 ];
 
 @NgModule({

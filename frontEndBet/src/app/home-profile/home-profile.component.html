@@ -1,2 +1,93 @@
-<p>home-profile works!</p>
 
+
+<app-navigation></app-navigation>
+<div class="main">
+  <div class="userProfile">
+    <button type="button" class="user">
+      <div class="abadge">A</div>
+      admin
+    </button>
+    <button type="button" class="user">
+        <div class="abadge">SUB</div>
+        statest
+      </button>
+  </div>
+  <div class="subBlock">
+    <div class="sideBlock">
+      <li class="head">Position</li>
+      <li class="menu" routerLink="/homeProfile">Account Summary</li>
+      <li class="head" routerLink="/account">Account Details</li>
+      <li class="menu" routerLink="/homeBetting">Betting History</li>
+      <li class="menu" routerLink="/bettingPL" >Betting Profit & Loss</li>
+      <li class="menu" routerLink="/transactionHistory">Transaction History</li>
+      <li class="menu" routerLink="/transactionHistory2">Transaction History2</li>
+      <li class="menu" routerLink="/activitylog">Activity Log</li>
+    </div>
+    <div class="heading">Account Summary</div>
+    <div><i class='fas fa-user'></i> state</div>
+    <div class="rightBlock">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="column1" scope="col">Wallet</th>
+            <th class="column2" scope="col">Available to Bet</th>
+            <th class="column3" scope="col">Funds available to withdraw	</th>
+            <th class="column4" scope="col">Current exposure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="column1">Main wallet	</td>
+            <td class="column2">100,000.00</td>
+            <td class="column3">100,000.00</td>
+            <td class="column4" >0.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Profile</h2>
+      <div class="eventleft">
+        <div class="profile-wrap">
+            <h3>About you</h3>
+            <dl>
+                <dt>First Name</dt>
+                <dd id="puserId">satest</dd>
+            </dl>
+            <dl>
+                <dt>Last Name</dt>
+                <dd id="plastName"></dd>
+            </dl>
+            <dl>
+                <dt>Birthday</dt>
+                <dd>--</dd>
+            </dl>
+            <dl>
+                <dt>E-mail</dt>
+                <dd id="pemail">as@oiasd.co</dd>
+            </dl>
+            <dl>
+                <dt>Password</dt>
+                <dd>********************************	
+                    <a href="#" class="favor-set openchangepwdmodal">Edit<i class="fa fa-pencil pen"></i></a>  
+                </dd>
+            </dl>
+            <dl>
+                <dt>Time Zone</dt>
+                <dd id="ptimeZone">Asia/Karachi</dd>
+            </dl>
+    </div>
+    <div>
+        <div class="profile-wrap">
+            <h3>Contact Details</h3>
+            <dl>
+                <dt>Primary number</dt>
+                <dd id="pMob"></dd>
+            </dl>
+        </div>
+</div>
+
+   
+
+
+
+  </div>
+</div>
