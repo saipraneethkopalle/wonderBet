@@ -5,7 +5,7 @@ const generateAccessToken = require("../constants/generateToken");
 const superUser = require("../models/superUser");
 const user = require("../models/user");
 
-exports.changePassword=async(req,res)=>{
+exports.changePassword=async(req,res)=>{    
     try{
         let payload = await cryp.decryptData(req.body.payload);
         let updatUser = await user.updateOne({password:payload.oldPassword},{$set:{password:payload.newPassword}})
