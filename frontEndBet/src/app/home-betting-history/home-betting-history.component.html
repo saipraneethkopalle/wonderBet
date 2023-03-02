@@ -1,0 +1,141 @@
+<app-navigation></app-navigation>
+<div class="main">
+    <div class="userProfile">
+      <button type="button" class="user">
+        <div class="abadge">A</div>
+        admin
+      </button>
+      <button type="button" class="user">
+        <div class="Bbadge">SUA</div>
+        satest
+      </button>
+    </div>
+    <div class="subBlock">
+      <div class="sideBlock">
+        <li class="head">Position</li>
+        <li class="menu">Account Summary</li>
+        <li class="head">Performance</li>
+        <li class="menu">Betting History</li>
+        <li class="menu">Betting Profit & Loss</li>
+        <li class="menu">Transaction History</li>
+        <li class="menu">Transaction History 2</li>
+        <li class="menu">Activity Log</li>
+      </div>
+      <div class="rightBlock">
+        <div class="heading">Betting History</div>
+        <div class="mainTab">
+            <div class="t">
+                <ul class="reportBtn">
+                    <li >
+                        <button type="button" [class]="currentTab==0?'aexch':'exch'" (click)="go(0)">Exchange</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==1?'aexch':'exch'" (click)="go(1)">FancyBet</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==2?'aexch':'exch'" (click)="go(2)">Fancy1Bet</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==3?'aexch':'exch'" (click)="go(3)">Toss</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==4?'aexch':'exch'" (click)="go(4)">Casino Bet</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==5?'aexch':'exch'" (click)="go(5)">SportsBook</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==6?'aexch':'exch'" (click)="go(6)">BookMaker</button>
+                    </li>
+                    <li>
+                        <button [class]="currentTab==7?'aexch':'exch'" (click)="go(7)">Premium</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="m">
+                <ul class="betStatusUl">
+                        <li>
+                            <label>Bet Status:</label>
+                        </li>
+                        <li>
+                            <select id="betStatusSelect">
+                                <option>Settled</option>
+                                <option>Cancelled</option>
+                                <option>Voided</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label id="pl">Period</label>
+                        </li>
+                        <li>
+                            <input type="date" placeholder="YYYY-MM-DD" id="sDate">
+                            <input type="text" placeholder="HH:MM" maxlength="5" readonly="readonly" id="timeIpt">
+                            <label >to</label>
+                            <input type="date" placeholder="YYYY-MM-DD" id="sDate">
+                            <input type="text" placeholder="HH:MM" maxlength="5" readonly="readonly" id="timeIpt">
+                        </li>
+                </ul>
+                <ul class="betStatusBtn">
+                    <li>
+                        <button>Just For Today</button>
+                    </li>
+                    <li>
+                        <button>From Yesterday</button>
+                    </li>
+                    <li>
+                        <button id="gth">Get History</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="f">
+                <p>
+                    Betting History enables you to review the bets you have placed.
+                    <br>
+                    Specify the time period during which your bets were placed, the type of markets on which the bets were placed, and the sport.
+                </p>
+                <p>Betting History is available online for the past 30 days.</p>
+            </div>
+            <div class="tbl">
+                <table class="betlisttb">
+                    <tr class="betlisthead">
+                        <td>PL ID</td>
+                        <td>Bet ID</td>
+                        <td>Bet placed</td>
+                        <td>IP Address</td>
+                        <td>Market</td>
+                        <td>Selection</td>
+                        <td>Type</td>
+                        <td>Odds req.</td>
+                        <td>Stake</td>
+                        <td>Liability</td>
+                        <td>Profit / Loss</td>
+                      </tr>
+                      <!-- <tr class="bet">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr> -->
+                      <tr class="err"><td colspan="2" scope="col">You have no bets in this time period.</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

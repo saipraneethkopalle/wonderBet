@@ -196,6 +196,7 @@ td{
 .bank,.betPL,.bH,.profile,.changeStatus{
   padding-right:25px;
   float:right;
+  cursor: pointer;
 }
 /* Add super admin pop up */
 .modal-content{
