@@ -25,29 +25,35 @@ export class ApiServicesService {
     const url = environment.url + "/api/v1/noAuth/login"
     return this.http.post(url,data)
   }
+
   getMatches(){
     const url = environment.customUrl + "/api/v1-custom/customMatches"
     return this.http.get(url)
   }
+
   addMatches(data:any){
     data = {payload:this.encrypt(JSON.stringify(data))};
     const url =  environment.url + "/api/v1/auth/addMatch"
     return this.http.post(url,data,{headers:this.headers})
   }
+
   getAllMatches(){
     const url =  environment.url + "/api/v1/auth/getAllMatches"
     return this.http.get(url,{headers:this.headers})
   }
+
   changePassword(data:any){
     data = {payload:this.encrypt(JSON.stringify(data))};
     const url =  environment.url + "/api/v1/auth/changePassword"
     return this.http.post(url,data,{headers:this.headers})
   }
+
   createSuperUser(data:any){
     data = {payload:this.encrypt(JSON.stringify(data))};
     const url = environment.url + "/api/v1/auth/addSuperAdmin"
     return this.http.post(url,data,{headers:this.headers})
   }
+  
   getSuperUser() {
     const url = environment.url + "/api/v1/auth/getSuperAdmin"
     return this.http.get(url,{headers:this.headers})
