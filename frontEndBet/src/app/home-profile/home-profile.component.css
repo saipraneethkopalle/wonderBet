@@ -113,6 +113,17 @@
     color: whitesmoke;
   }
 
+
+  .subBlock .menu:hover {
+    background-color: #e3e9e5;
+    /* color: white; */
+  }
+
+
+
+
+
+
   thead{
     background-color: #e4e4e4;
     border-top: 2px solid #7e97a7;
@@ -163,7 +174,9 @@
     margin-bottom: 15px;
 
 }
-
+button span{
+  height: 20px;
+}
 
 .profile-wrap h3 {
     background-color: #7e97a7;
