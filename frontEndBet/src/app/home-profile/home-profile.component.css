@@ -49,8 +49,9 @@
     list-style-type: none;
   }
   .heading{
+    font-size: 16px;
+    line-height: 15px;
     font-weight: bold;
-    font-size:18px;
     padding:5px;
   }
   .menu{
@@ -116,9 +117,12 @@
     line-height: 14px;
   }
   thead th{
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
+    border-bottom: 2px solid #7e97a7;
   }
+
+
 
   .column1{
     width: 30%;
@@ -159,18 +163,15 @@
 .profile-wrap h3 {
     background-color: #7e97a7;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     padding: 0 10px;
+    font-weight: bold;
 }
 
 dl {
     display: flex;
-   
 }
 
-.event-left dt, .event-right dt {
-    font-size: 11px;
-}
 
 .profile-wrap dl {
     position: relative;
@@ -180,8 +181,13 @@ dl {
 
 .profile-wrap dt {
     width: 125px;
-    padding: 5px 0 5px 10px;
+    padding-left: 10px;
     color: #243a48;
+}
+
+dt{
+  font-size: 11px;
+  font-weight: 200;
 }
 
 .profile-wrap dd:last-child {
@@ -197,7 +203,7 @@ dl {
 }
 
 h2{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -205,39 +211,26 @@ h2{
     line-height: 25px;
     border-bottom-width: 0;
     padding-right: 23px;
+    /* margin-bottom: 2px; */
     background-position: 100% -2975px;
 }
+
+.persion{
+  /* background-color: #7e97a7; */
+  color: #7e97a7;
+}
+
+
 
 .pen{
     font-size: 12px;
     margin-left: 5px;
+    /* padding-bottom: 20px; */
 }
 .icon{
     margin-left: 145px;
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

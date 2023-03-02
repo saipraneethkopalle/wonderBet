@@ -102,8 +102,11 @@
     border-right:1px solid #d8d8d8;
     margin-right: 10px;
   }
-  .subBlock li{
+  .subBlock .menu{
     color: blue;
+  }
+  .head{
+    color: whitesmoke;
   }
 
   thead{
@@ -125,6 +128,9 @@
 .red{
     color: red;
 }
+.head{
+    color: whitesmoke;
+  }
 
   table{
     width: 100%;
