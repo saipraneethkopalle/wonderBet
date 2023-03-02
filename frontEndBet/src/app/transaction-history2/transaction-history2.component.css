@@ -144,3 +144,12 @@ thead  .firstcloun{
   tbody td{
     font-size: 12px;
   }
+
+  .subBlock .menu:hover {
+    background-color: #e3e9e5;
+    /* color: white; */
+  }
+
+  #bettingfixed{
+    background-color: rgb(235, 193, 84);
+  }

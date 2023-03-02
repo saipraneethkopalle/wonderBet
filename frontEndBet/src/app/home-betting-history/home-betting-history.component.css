@@ -127,6 +127,7 @@
     margin-right:5px;
     border-top-right-radius:4px;
     border-top-left-radius: 4px;
+    border: solid 1px #243a48;
     font-weight: bold;
     height:27px;
     width:110px;
@@ -141,6 +142,7 @@
     margin-right:5px;
     border-top-right-radius:4px;
     border-top-left-radius: 4px;
+    border: solid 1px #243a48;
     height: 27px;
     width:110px;
     border-bottom: none;
