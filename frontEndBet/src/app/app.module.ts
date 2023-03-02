@@ -57,6 +57,7 @@ import { HomeProfileComponent } from './home-profile/home-profile.component';
 import { HomeBettingHistoryComponent } from './home-betting-history/home-betting-history.component';
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 import { TransactionHistory2Component } from './transaction-history2/transaction-history2.component';
+import { BettingPLComponent } from './betting-pl/betting-pl.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -110,7 +111,8 @@ import { TransactionHistory2Component } from './transaction-history2/transaction
     HomeProfileComponent,
     HomeBettingHistoryComponent,
     TransactionHistoryComponent,
-    TransactionHistory2Component
+    TransactionHistory2Component,
+    BettingPLComponent
   ],
   imports: [
     BrowserModule,
