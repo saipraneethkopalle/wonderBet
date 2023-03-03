@@ -4,65 +4,65 @@
   <div class="betlistfilter">
     <div class="selectGroup">
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-        <label class="form-check-label" for="inlineRadio1">All</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" (click)="onRadioChange($event.target)" value="All" />
+        <label class="form-check-label" for="inlineRadio1"  #sportsvalue>All</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-        <label class="form-check-label" for="inlineRadio1">Soccer</label>
-      </div>
-
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-        <label class="form-check-label" for="inlineRadio2">Tennis</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-        <label class="form-check-label" for="inlineRadio1">Cricket</label>
+        <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio1" (click)="onRadioChange($event.target)" value="Soccer" />
+        <label class="form-check-label" for="inlineRadio1" value="Soccer">Soccer</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-        <label class="form-check-label" for="inlineRadio2">Cricket / Fancy Bet</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"  (click)="onRadioChange($event.target)" value="Tennis" />
+        <label class="form-check-label" for="inlineRadio2" value="Tennis">Tennis</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-        <label class="form-check-label" for="inlineRadio1">Cricket / Fancy1 Bet</label>
-      </div>
-
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-        <label class="form-check-label" for="inlineRadio2">BOOK Cricket</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-        <label class="form-check-label" for="inlineRadio1">Toss</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" (click)="onRadioChange($event.target)" value="Cricket" />
+        <label class="form-check-label" for="inlineRadio1"  value="Cricket">Cricket</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-        <label class="form-check-label" for="inlineRadio2">Casino</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"  (click)="onRadioChange($event.target)" value="Cricket / Fancy1 Bet" />
+        <label class="form-check-label" for="inlineRadio2" value="Cricket / Fancy Bet">Cricket / Fancy Bet</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-        <label class="form-check-label" for="inlineRadio1">Election/Fancy Bet</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"  (click)="onRadioChange($event.target)" value="Cricket / Fancy1 Bet" />
+        <label class="form-check-label" for="inlineRadio1" value="Cricket / Fancy1 Bet">Cricket / Fancy1 Bet</label>
       </div>
 
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-        <label class="form-check-label" for="inlineRadio2">FancyBet</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" (click)="onRadioChange($event.target)" value="BOOK Cricket"/>
+        <label class="form-check-label" for="inlineRadio2"value="BOOK Cricket">BOOK Cricket</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-        <label class="form-check-label" for="inlineRadio1">Premium Fancy</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"  (click)="onRadioChange($event.target)" value="Toss"/>
+        <label class="form-check-label" for="inlineRadio1" value="Toss">Toss</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" (click)="onRadioChange($event.target)" value="Casino"/>
+        <label class="form-check-label" for="inlineRadio2" value="Casino">Casino</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"  (click)="onRadioChange($event.target)" value="Election/Fancy Bet"/>
+        <label class="form-check-label" for="inlineRadio1" value="Election/Fancy Bet">Election/Fancy Bet</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" (click)="onRadioChange($event.target)" value="FancyBet"/>
+        <label class="form-check-label" for="inlineRadio2" value="FancyBet">FancyBet</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"  (click)="onRadioChange($event.target)" value="Premium Fancy"/>
+        <label class="form-check-label" for="inlineRadio1" value="Premium Fancy">Premium Fancy</label>
       </div>
     </div>
     <div class="filter2">
       <div class="funtion_wraper ">
         <div class="sportsBody" >
           <div>
-              <label class="input">Order of display:</label><select class="sportStatus"><option>Stake</option><option>Player Id</option><option>Time</option></select>
-               <label class="inputbody input">of</label><select class="sportStatus"><option>Ascending</option><option>Descending</option></select>
+              <label class="input">Order of display:</label><select class="sportStatus"><option value="Stake">Stake</option><option value="Player Id">Player Id</option><option value="Time">Time</option></select>
+               <label class="inputbody input">of</label><select class="sportStatus"><option value="Ascending">Ascending</option><option value="Descending">Descending</option></select>
                <label class="inputbody input">Last:</label><select class="sportStatus"><option value="100">100 Txn</option><option value="50">50 Txn</option><option value="25" selected>25 Txn</option></select>
                <label class="inputbody input">Auto Refresh (Seconds)</label><select class="sportStatus"><option value="stop">Stop</option><option value="60">60</option><option value="30" >30</option> <option value="15" selected>15</option> <option value="5" >5</option> <option value="2">2</option></select>
                <label class="inputbody input">Bet Status:</label><select class="sportStatus"><option value="All">All</option></select>
@@ -96,7 +96,7 @@
         </tr>
       </thead>
       <table class="table table_data ">
-        <thead>
+        <thead class="headJ">
           <tr class="fw-bold tr"  >
             <th class="align-L1">PL ID</th>
             <th class="align-L2">Bet ID</th>
@@ -105,7 +105,7 @@
             <th class="align-L5">Market</th>
             <th class="align-L6">Selection</th>
             <th class="align-L7">Type</th>
-            <th class="align-L8">Odds req.	</th>
+            <th class="align-L8">Odds req.</th>
             <th class="align-L9">Stake</th>
             <th class="align-L10">Liability</th>
           </tr>
