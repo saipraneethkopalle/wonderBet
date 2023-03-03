@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServicesService } from '../api-services.service';
 
 @Component({
   selector: 'app-betlistlive',
   templateUrl: './betlistlive.component.html',
-  styleUrls: ['./betlistlive.component.css']
+  styleUrls: ['./betlistlive.component.css'],
 })
 export class BetlistliveComponent implements OnInit {
-
-  constructor() { }
-
+  selectedOption: any;
+  betlistLive:any
+  user:any
+  constructor(private api: ApiServicesService) {}
   ngOnInit(): void {
+    this.onclick()
   }
-
+  onRadioChange(type: any) {
+    console.log('fjkdf', type.value);
+    this.selectedOption = type.value;
+  }
+onclick(){
+  this.api.getAllMatches().subscribe((res:any)=>{
+    console.log(res.data)
+  this.user=res.data
+  })
+}
 }
