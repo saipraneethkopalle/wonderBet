@@ -571,9 +571,11 @@ height: fit-content;
   height: 29px;
   position: relative;
   margin-left: 206px;
-  border: 1px solid #bbb;
+  border: 3px solid #bbb;
   border-radius: 4px; background-color: white;
 }
+
+
 .span1{
   position: relative;top: -3px;
   font-size: 13px;
