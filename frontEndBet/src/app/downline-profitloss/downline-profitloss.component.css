@@ -178,3 +178,40 @@ table tr #first_clomum {
     text-align: left;
     padding-left: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///// */
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+
+
+
+.table-pt .ico_account {
+  width: calc(100% - 15px);
+  float: none;
+}

@@ -1,6 +1,6 @@
-#firstContainer{
+/* #firstContainer{
     background-color: rgb(240, 248, 245);
-}
+} */
 li{
     list-style: none;
 }
@@ -10,6 +10,7 @@ li{
 .main{
     width:100%;
     min-height: 650px;
+    background-color: #f0ece1;
     height:auto;
     overflow:hidden;
     padding-left:7%;
@@ -130,6 +131,8 @@ li{
     font-weight: bold;    padding-top: 6px;
     margin-bottom: 6px;
 }
+
+
  tr{
     display: table-row ;
     vertical-align: inherit;
@@ -144,7 +147,6 @@ li{
     text-align: right;
     display: block;
     overflow-y: scroll !important;
-
     }
   td{
     width:18.9%;
@@ -163,19 +165,15 @@ li{
 
   .headindata{
     padding-right: 60px;
-
-
   }
   table tr #first_clomum {
     text-align: left;
     padding-left: 10px;
 }
 
-
+tbody tr td{
+  text-align: right;
+}
 table tr{
   background-color: #fff;
 }
-  
-
-
-

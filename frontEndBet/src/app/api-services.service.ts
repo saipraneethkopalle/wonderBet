@@ -68,4 +68,9 @@ export class ApiServicesService {
     const url=environment.url + "/api/v1/auth/getAllWebsite"
     return this.http.get(url,{headers:this.headers})
   }
+  updateUserState(data:any) {
+    data={payload:this.encrypt(JSON.stringify(data))}
+    const url=environment.url + "/api/v1/auth/updateSuperAdminStatus"
+    return this.http.post(url,data,{headers:this.headers});
+  }
 }

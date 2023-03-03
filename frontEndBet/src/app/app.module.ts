@@ -18,7 +18,7 @@ import { AdminsettingsComponent } from './adminsettings/adminsettings.component'
 import { ResultComponent } from './result/result.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
-import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
+// import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { SportWiseProfitlossComponent } from './sport-wise-profitloss/sport-wise-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
@@ -58,6 +58,7 @@ import { HomeBettingHistoryComponent } from './home-betting-history/home-betting
 import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 import { TransactionHistory2Component } from './transaction-history2/transaction-history2.component';
 import { BettingPLComponent } from './betting-pl/betting-pl.component';
+import { PaginationComponent } from './pagination/pagination.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +77,7 @@ import { BettingPLComponent } from './betting-pl/betting-pl.component';
     ResultComponent,
     DownlineProfitlossComponent,
     MarketProfitlossComponent,
-    CasinoProfitlossDateComponent,
+    // CasinoProfitlossDateComponent,
     DownlineReportProfitlossComponent,
     SportWiseProfitlossComponent,
     MatchProfitlossComponent,
@@ -112,7 +113,8 @@ import { BettingPLComponent } from './betting-pl/betting-pl.component';
     HomeBettingHistoryComponent,
     TransactionHistoryComponent,
     TransactionHistory2Component,
-    BettingPLComponent
+    BettingPLComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
