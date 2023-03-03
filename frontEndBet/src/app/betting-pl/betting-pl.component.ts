@@ -11,6 +11,7 @@ export class BettingPLComponent implements OnInit {
 
   ngOnInit(): void {
     this.go(0); 
+    document.body.style.backgroundColor="#f0ece1";
   }
   go(value:any){
     this.currentTab =value;

@@ -1,6 +1,5 @@
 .main {
   width: 100%;
-  min-height: 650px;
   height: auto;
   overflow: hidden;
   padding-left: 7%;
@@ -8,7 +7,6 @@
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 5px;
-  background-color: #f0ece1;
 }
 
 .betlistfilter {
@@ -17,6 +15,7 @@
   border-bottom: 1px solid #7e97a7;
   margin-bottom: 22px;
 }
+
 label {
   font-size: 12px;
 }
@@ -24,12 +23,15 @@ label {
 .filter1 label {
   padding-right: 5px;
 }
+
 .betStatus {
   height: 28px;
   width: 120px;
-  margin-right: 5px;
+  margin-right: 13px;
+  margin-left:-7px;
   border-radius: 2px;
 }
+
 .date,
 .time {
   font-family: Tahoma, Helvetica, sans-serif;
@@ -43,6 +45,7 @@ label {
   margin: 0 5px 5px 0;
   box-sizing: border-box;
 }
+
 .btn1,
 .btn2 {
   background: #eee;
@@ -54,6 +57,7 @@ label {
   font-size: 12px;
   margin-right: 8px;
 }
+
 .btn3 {
   margin-left: 2px;
   background: #ffb90e;
@@ -68,71 +72,155 @@ label {
   font-size: 12px;
   margin-bottom: 12px;
 }
+
 .betDetails {
   padding: 5px;
   font-size: 12px;
 }
+
 table,
 tr {
   width: 100%;
   border-collapse: collapse;
   border-bottom: 1px solid #7e97a7;
 }
+
 .betlisttb {
   border-top: 1px solid #7e97a7;
   border-bottom: 1px solid #7e97a7;
   background-color: #e4e4e4;
   color: #243a48;
 }
+
 .betlisttb td {
   padding: 10px;
   font-weight: 600;
   font-size: 13px;
 }
+
 .bet,
 .err {
   background-color: #ffffff;
 }
+
 .err td {
   font-weight: normal;
   font-size: 12px;
 }
+
 .width1 {
   width: 30%;
 }
+
 .width2 {
   width: 13%;
 }
+
 .width3 {
   width: 19%;
 }
+
 .width4 {
   width: 17%;
 }
+
 .width5 {
   width: 12%;
 }
+
 .select {
   width: 7rem;
   height: 29px;
 }
+
 span {
-  margin-right: 15px;
-  margin-left: 12px;
+  margin-right: 8px;
+  margin-left: 7px;
 }
+
 .filter1 label {
   padding-right: 15px;
-  margin-left: 12px;
+  margin-left: 1px;
 }
+
 h6 {
   font-size: 14px;
   font-weight: 600;
   margin-top: 5px;
 }
+
 .filter2 {
-  margin-left: 10px;
+  margin-left: 1px;
   margin-bottom: -2px;
 }
+
 .betlisthead {
   line-height: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tbody tr {
+  background-color: #fff;
+}
+
+
+
+#content .expand-close {
+  background: #eee;
+  border: 2px solid #bbb;
+  border-radius: 4px;
+  color: #1e1e1e;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+
+
+.lv_0,
+.lv_1,
+.lv_2,
+.lv_3,
+.lv_4,
+.lv_sub {
+  width: 26px;
+  height: 15px;
+  line-height: 15px;
+  text-decoration: none !important;
+  color: #fff;
+  background: #D77319;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+
+.table01 span,
+.table-s span,
+.table_one span {
+  vertical-align: middle;
+}
+
+.lv_2 {
+  background: #A762B5;
 }

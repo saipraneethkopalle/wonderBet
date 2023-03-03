@@ -10,6 +10,7 @@ export class AccountStatementComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
   }
 
 }

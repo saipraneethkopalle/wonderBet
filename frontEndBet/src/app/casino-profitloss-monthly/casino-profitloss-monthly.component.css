@@ -1,7 +1,4 @@
-#firstContainer{
-    background-color: rgb(240, 248, 245);
-}
- .main #datasource{
+.main #datasource{
     margin: 5px;
 }
 li{
@@ -10,6 +7,7 @@ li{
 .main{
     width:100%;
     min-height: 650px;
+    background-color: #f0ece1;
     height:auto;
     overflow:hidden;
     padding-left:7%;

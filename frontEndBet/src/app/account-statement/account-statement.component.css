@@ -1,6 +1,5 @@
 .main{
     width:100%;
-    min-height: 850px;
     height:auto;
     overflow:hidden;
     padding-left:7%;
@@ -8,7 +7,6 @@
     font-size:14px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top:5px;
-    background-color: #f0ece1;
   }
   .abadge{
     background-color: rgba(137, 199, 75, 0.911);
@@ -53,13 +51,13 @@
     font-size:18px;
     padding:5px;
   }
-  .menu{
+  .menu {
     border-bottom: 1px solid #E0E6E6;
-    font-size:12px;
+    font-size: 12px;
     background-color: #ffffff;
-    padding:5px;
+    padding: 5px;
     cursor: pointer;
-    color:#243a48;
+    color: rgb(18, 18, 253);
   }
 
   .menu2{

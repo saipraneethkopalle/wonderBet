@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
     this.getAdmin();
   }
   passwordForm = new FormGroup({
