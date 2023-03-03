@@ -16,6 +16,7 @@ changepassword=new FormGroup({
   constructor(private apiservice:ApiServicesService) { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
   }
   updatePassword(){
     if(this.changepassword.value.newPassword===this.changepassword.value.newPassword){
