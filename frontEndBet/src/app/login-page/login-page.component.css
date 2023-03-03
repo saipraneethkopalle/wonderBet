@@ -56,7 +56,7 @@ dt {
 .kv {
     width: 250px;
     height: 100%;
-    /* background: #ffb80c url(/assets/bg-login_wrap.webp) no-repeat; */
+    background: #ffb80c url(/assets/bg-login_wrap.webp) no-repeat;
     border-radius: 8px 0 0 8px;
     padding-top: 20px;
 }
