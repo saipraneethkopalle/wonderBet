@@ -1,6 +1,6 @@
-#firstContainer{
+/* #firstContainer{
     background-color: rgb(240, 248, 245);
-}
+} */
 li{
     list-style: none;
 }
@@ -177,7 +177,3 @@ tbody tr td{
 table tr{
   background-color: #fff;
 }
-  
-
-
-
