@@ -25,7 +25,7 @@ label {
 .betStatus {
   height: 28px;
   width: 120px;
-  margin-right: 5px;
+  margin-right: 4px;
   border-radius: 2px;
 }
 .date,
@@ -112,12 +112,12 @@ tr {
   width: 14%;
 }
 span {
-  margin-right: 15px;
-  margin-left: 12px;
+  margin-right: 7px;
+  margin-left: 3px;
 }
 .filter1 label {
   padding-right: 15px;
-  margin-left: 12px;
+  margin-left: 0px;
 }
 h6 {
   font-size: 14px;
@@ -125,7 +125,7 @@ h6 {
   margin-top: 5px;
 }
 .filter2 {
-  margin-left: 10px;
+  margin-left: 0px;
   margin-bottom: -2px;
 }
 .betlisthead {
@@ -134,4 +134,10 @@ h6 {
 .select {
   width: 7rem;
   height: 29px;
+}
+#tz{
+  margin-left:7px;
+}
+#pd{
+  margin-left:10px;
 }
