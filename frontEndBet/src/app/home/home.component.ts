@@ -14,12 +14,17 @@ export class HomeComponent implements OnInit {
   currentSearch:any='';
   EdataList:any;
   status:any;
-
+  currentStatus:any;
+  currentUser:any;
+  passError:any
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
     this.getAdmin();
   }
+  passwordForm = new FormGroup({
+    password: new FormControl('',[Validators.required])
+  })
   superUserForm=new FormGroup({
     site:new FormControl('',[Validators.required]),
     email:new FormControl('',[Validators.required]),
@@ -93,4 +98,45 @@ export class HomeComponent implements OnInit {
       );
     }
   }
+  getCurrentUser(data:any){
+    this.currentUser = data;
+  }
+  changeStatus(data:any) {
+    console.log("data is ",data)
+       this.currentStatus=data;
+  }
+  // updateUserStatus() {
+  //   let payload :any= {userName:this.currentUser.userName};
+  //   let password = {password:this.passwordForm.value.password}
+  //   if(password.password==this.currentUser.password ) {
+  //     if(this.currentStatus!=undefined) {
+
+      
+  //     console.log("jfjdf",this.currentStatus)
+  //     if(this.currentStatus==0 ) {
+  //       payload.adminstatus='suspended'
+
+  //     } else if(this.currentStatus==1){
+  //       payload.adminstatus = 'locked'
+  //     }
+  //     console.log("payload is ",payload)
+  //     this.apiService.updateUserState(payload).subscribe((res:any)=>{
+  //     if(res.status) {
+  //       Swal.fire({
+  //         title:'Updated!',
+  //         text:'Update Successfully!',
+  //         timer:1500
+  //       })
+  //     }
+  //     })
+
+  //   } else {
+  //     console.log("fhdsaf")
+  //   }
+  // } else {
+  //   this.passError='Invalid Password'
+  // }
+  
+
+  // }
 }

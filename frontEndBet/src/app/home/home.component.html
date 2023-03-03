@@ -84,7 +84,7 @@
     <td style="float: right">
       <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss" routerLink="/bettingPL"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
       <img class="image1" src="../../assets/icons.png" routerLink="/homeBetting">
-      <button type="button"class=" btn1 refresh"  data-toggle="modal"  data-target="#depositChip"><i class="fa fa-gear"></i></button>
+      <button type="button"class=" btn1 refresh"  data-toggle="modal" (click)="getCurrentUser(item)" data-target="#depositChip"><i class="fa fa-gear"></i></button>
       <button type="button "class="btn1 refresh" id="profile" routerLink="/homeProfile" ><i class='fas fa-user-alt'></i></button>
     </td>
   </tr>
@@ -231,7 +231,7 @@
             <br>
             Active
           </button>
-          <button class="btn99">
+          <button [class]="currentStatus==0?'btn99a':'btn99'" (click)="changeStatus(0)">
             <a href="#" class="b">
               <img class="img1" src="../../assets/Prohibb.png">
 
@@ -240,7 +240,7 @@
             Suspend
           </button>
 
-          <button class="btn100">
+          <button [class]="currentStatus==1?'btn100a':'btn100'" (click)="changeStatus(1)">
             <a href="#" class="c">
               <i class="fa fa-lock iconspn"></i>
 
@@ -253,12 +253,16 @@
 
       </div>
 
-      <div class="passblock">
+      <div class="passblock"  >
+        <form method="post" autocomplete="off" [formGroup]="passwordForm">
         <tr>
         <td>Password</td>
-        <td><input type="password" class="plh" placeholder="Enter" ></td>
-        <td><button type="button" class="chbtn" >Change</button></td>
+        <td><input type="password" formControlName="password" class="plh"  placeholder="Enter" ></td>
+        <td><button type="button" class="chbtn">Change</button></td>
+        <small *ngIf="passError" class="red">{{passError}}</small>
+
         </tr>
+      </form>
 
       </div>
     </div>
