@@ -12,6 +12,7 @@ export class BetlistliveComponent implements OnInit {
   user:any
   constructor(private api: ApiServicesService) {}
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
     this.onclick()
   }
   onRadioChange(type: any) {

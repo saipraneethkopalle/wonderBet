@@ -13,6 +13,7 @@ export class BetlistComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
     console.log("currentDate",this.currentDate);
   }
 
