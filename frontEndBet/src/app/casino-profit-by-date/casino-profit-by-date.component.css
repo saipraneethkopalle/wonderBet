@@ -1,6 +1,4 @@
-/* #firstContainer{
-    background-color: rgb(240, 248, 245);
-} */
+
 li {
   list-style: none;
 }
@@ -8,6 +6,17 @@ li {
 .main #datasource {
   margin: 5px;
 }
+
+.main{
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    padding-left:7%;
+    padding-right:6%;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:5px;
+  }
 
 .main {
   width: 100%;
