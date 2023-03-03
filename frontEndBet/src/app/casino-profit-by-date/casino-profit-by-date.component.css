@@ -130,6 +130,8 @@ li{
     font-weight: bold;    padding-top: 6px;
     margin-bottom: 6px;
 }
+
+
  tr{
     display: table-row ;
     vertical-align: inherit;
@@ -144,7 +146,6 @@ li{
     text-align: right;
     display: block;
     overflow-y: scroll !important;
-
     }
   td{
     width:18.9%;
@@ -163,15 +164,15 @@ li{
 
   .headindata{
     padding-right: 60px;
-
-
   }
   table tr #first_clomum {
     text-align: left;
     padding-left: 10px;
 }
 
-
+tbody tr td{
+  text-align: right;
+}
 table tr{
   background-color: #fff;
 }

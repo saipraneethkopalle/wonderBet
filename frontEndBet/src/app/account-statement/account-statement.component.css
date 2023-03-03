@@ -126,8 +126,7 @@
     border: 1px solid #7e97a7;
     border-width: 1px 0 1px 0;
     padding: 8px 10px;
-  /* padding: 12px; */
-  /* text-align: right; */
+ 
 }
   .width1 {
     width: 15%;
@@ -140,7 +139,6 @@
   }
   .width4 {
     width: 18%;
-    /* padding-: 70px; */
   }
   .width5 {
     width: 18%;
@@ -149,7 +147,6 @@
   }
   .width6 {
     width: 18%;
-    /* padding-left: 30px; */
   }
   .width7 {
     width: 16%;
@@ -157,6 +154,4 @@
   #ss{
     padding-left: 40px;
   }
-  /* .width8 {
-    width: 1%;
-  } */
+  

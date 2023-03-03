@@ -115,33 +115,39 @@ sub {
   border-top: 2px solid #52616a;
 
 }
-thead th{
+
+thead th {
   border-bottom: 2px solid #52616a;
 
 }
 
 .firstclon1 {
   width: 12%;
+  text-align: left;
 
 }
 
 .firstclon2 {
   width: 13%;
+  text-align: left;
 
 }
 
 .firstclon3 {
   width: 12%;
+  text-align: left;
 
 }
 
 .firstclon4 {
   width: 10%;
 
+  text-align: right;
 }
 
 .firstclon5 {
   width: 10%;
+  text-align: right;
 
 }
 
@@ -200,12 +206,7 @@ tbody tr td {
 
 .p3 {
   width: 8%;
-  /* margin-right: 15px;
-    border: 1px #aaa solid;
-    border-radius: 5px;
-    text-align: center;
-    padding-top: 6px;
-    line-height: 23px; */
+
   background-color: #eee8e8;
   text-align: center;
   border: 1px solid #bbb;
