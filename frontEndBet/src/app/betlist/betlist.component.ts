@@ -6,14 +6,16 @@ import * as moment from 'moment';
   styleUrls: ['./betlist.component.css']
 })
 export class BetlistComponent implements OnInit {
-  betListData:any;
+  betListData:any=[];
   error:any =true;
   currentDate:any=moment().format("YYYY-MM-DD");
   currentTime:any=moment().format("hh:mm");
+  range:any;
   constructor() { }
 
   ngOnInit(): void {
-    console.log("currentDate",this.currentDate);
+    localStorage.setItem('pageCount',this.betListData.length)
+    localStorage.setItem('pagelist',this.betListData);
   }
 
 }

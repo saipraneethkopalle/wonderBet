@@ -1,8 +1,12 @@
-<div class="pagination">
+<div class="pagination" *ngIf="pageCount!=0">
   <div class="pgblock">
-    <button type="button" class="prev" disabled>Prev</button>
-    <button type="button" class="pages" *ngFor="let page of pages;let i=index;">{{page}}</button>
-    <button type="button" class="next" disabled>Next</button>
+    <button type="button" class="prev" *ngIf="!showPrev" disabled>Prev</button>
+    <button type="button" class="prev" *ngIf="showPrev" (click)="prev()">Prev</button>
+
+    <button type="button" class="pages" *ngFor="let page of pages;let i=index;"><span (click)="setCurrent(page)">{{page}}</span></button>
+    <button type="button" class="next" *ngIf="!showNext" disabled>Next</button>
+    <button type="button" class="next" *ngIf="showNext" (click)="next()">Next</button>
+
     <input type="text" class="currentPage" (keyup)="setCurrentPage($event)">
     <button type="button" class="go">GO</button>
   </div>
