@@ -496,6 +496,14 @@ height: fit-content;
 
 }
 
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: green;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
 .searchbtn {
   width: 251px;
   height: 29px;
