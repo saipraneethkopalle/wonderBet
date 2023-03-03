@@ -53,13 +53,13 @@
     font-size:18px;
     padding:5px;
   }
-  .menu{
+  .menu {
     border-bottom: 1px solid #E0E6E6;
-    font-size:12px;
+    font-size: 12px;
     background-color: #ffffff;
-    padding:5px;
+    padding: 5px;
     cursor: pointer;
-    color:#243a48;
+    color: rgb(18, 18, 253);
   }
 
   .menu2{
