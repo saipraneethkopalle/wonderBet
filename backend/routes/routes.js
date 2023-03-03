@@ -11,5 +11,6 @@ router.get('/getSuperAdmin',userController.getSuperAdmin)
 router.post('/addWebsite',addWebsite.addWebsite)
 router.get("/getAllWebsite",addWebsite.getAllWebsite)
 router.post("/updateSuperAdminStatus",userController.updateSuperAdminStatus)
+router.get("/getLevelDetails",userController.getLevelDetails);
 router.get('/health',(req,res)=>{res.send({"message":"apis working fine"})})
 module.exports = router;

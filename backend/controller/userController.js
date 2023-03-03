@@ -2,9 +2,17 @@ const { STATUS } = require("../constants/Config");
 const CONST = require("../constants/CONST");
 const cryp = require("../constants/cryptojs");
 const generateAccessToken = require("../constants/generateToken");
-const superUser = require("../models/superUser");
 const user = require("../models/user");
+const userLevel = require("../models/userLevel");
 
+exports.getLevelDetails = async(req,res)=>{
+    try{
+        let result = await userLevel.find().lean()
+        return res.status(STATUS.OK).send({"message":"Result fetched!","data":result})
+    }catch(err){
+        return res.status(STATUS.BAD_REQUEST).send(err);
+    }
+}
 exports.changePassword=async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload);
@@ -18,7 +26,7 @@ exports.addSuperAdmin =async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload);
         // console.log(payload);
-        let exist = await superUser.find({userName:payload.userName}).lean();
+        let exist = await user.find({userName:payload.userName}).lean();
         if(exist.length > 0){
             return res.status(STATUS.BAD_REQUEST).send({"error":"Already Exist"})
         }
@@ -31,7 +39,7 @@ exports.addSuperAdmin =async(req,res)=>{
 }
 exports.getSuperAdmin = async(req,res)=>{
     try{
-        let adminDetails = await superUser.find().lean().exec();
+        let adminDetails = await user.find().lean().exec();
         return res.status(STATUS.OK).send({message:'Success',data:adminDetails})
 
     }catch(err) {
@@ -42,7 +50,7 @@ exports.getSuperAdmin = async(req,res)=>{
 exports.updateSuperAdminStatus = async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload)
-        let udateObj = await superUser.updateOne({userName:payload.userName},{$set:{adminstatus:payload.adminstatus}})
+        let udateObj = await user.updateOne({userName:payload.userName},{$set:{adminstatus:payload.adminstatus}})
         return res.status(STATUS.OK).send({message:'Updated Successfully'})
     }catch(err) {
         return res.status(STATUS.BAD_REQUEST).send({message:'error',error:err.message})
