@@ -66,7 +66,7 @@ const routes: Routes = [
   {path:"result",component:ResultComponent},
   {path:"profitdownline",component:DownlineReportProfitlossComponent},
   {path:"profitmarket",component:MarketProfitlossComponent},
-  // {path:"casinoProfitByDate",component:CasinoProfitByDateComponent},
+  {path:"casinoProfitByDate",component:CasinoProfitByDateComponent},
   {path:"dowlineprofitloss",component:DownlineProfitlossComponent},
   {path:"sportWiseprofitloss",component:SportWiseProfitlossComponent},
   {path:"matchProfitloss",component:MatchProfitlossComponent},
