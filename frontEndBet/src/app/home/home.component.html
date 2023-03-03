@@ -79,7 +79,7 @@
         <td>{{item.availBalance}}</td>
         <td>{{item.balance}}</td>
         <td>{{item.refProfitLoss}}</td>
-        <td><button type="button" class="status">{{item.adminstatus}}</button></td>
+        <td><button type="button" class="status"><span class="dot"></span>{{item.adminstatus}}</button></td>
 
     <td style="float: right">
       <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss" routerLink="/bettingPL"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
@@ -91,7 +91,7 @@
 </table>
 </div>
 <div class="bottomBlock" >
-  <div class="changeStatus"><button type="button"class="refresh1" id="Change Status"><i class="fa fa-gear"></i></button>Change Status</div>
+  <div class="changeStatus"><button type="button"class="refresh1" data-toggle="modal" data-target="#depositChip" id="Change Status"><i class="fa fa-gear"></i></button> Change Status</div>
   <div class="profile"  routerLink="/homeProfile"><button type="button "class="refresh1" id="profile" ><i class='fas fa-user-alt'></i></button>
     Profile</div>
   <div class="bH" routerLink="/homeBetting"><img class="image" src="../../assets/icons.png">
@@ -218,7 +218,7 @@
           <div>
             <div class="b1"><button class="badg">SUA</button></div>
           <div class="b2"><p >satest</p></div>
-          <div class="b3"><p class="pp2" >Active</p></div>
+          <div class="b3"><p class="pp2" ><span class="dot"></span>Active</p></div>
           </div>
         </div>
         <hr style="margin:0;">

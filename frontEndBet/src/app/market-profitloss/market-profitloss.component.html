@@ -35,7 +35,7 @@
         <option>SABA</option>
         <option>BINARY</option>
       </select>
-      <label>Time Zone</label>
+      <label id="tz">Time Zone</label>
       <select class="betStatus">
         <option>Pacific/Midway(GMT-11:00)</option>
         <option>Pacific/Honolulu(GMT-10:00)</option>
@@ -54,7 +54,7 @@
         <option>Asia/Qatar(GMT-3:00)</option>
         <option>Asia/Dubai(GMT+4:00)</option>
         <option>Asia/Karachi(GMT+5:00)</option>
-        <option>IST(Bangalore / Bombay / New Delhi(GMT+5:30)</option>
+        <option>IST(Bangalore / Bombay / New Delhi(GMT+5:30))</option>
         <option>Asia/Kathmandu(GMT+5:45)</option>
         <option>Asia/Dhaka(GMT+6:00)</option>
         <option>Asia/Bangkok(GMT+7:00)</option>
@@ -65,7 +65,7 @@
         <option>Asia/Magadan(GMT+11:00)</option>
         <option>Pacific/Fiji(GMT+12:00)</option>
       </select>
-      <label>Period </label><input type="date" class="date" [value]="currentDate" /><input
+      <label id="pd">Period </label><input type="date" class="date" [value]="currentDate" /><input
         type="time"
         class="time"
         [value]="currentTime"
