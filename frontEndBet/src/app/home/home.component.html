@@ -75,9 +75,9 @@
         <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
         <td data-toggle="modal"
         class="but_suspend openchangepwdmodal icon"
-        data-target="#myModal"><a href="#"
-          class="credRef"
-          >{{item.creditRef}}</a> <i class='fas fa-pen' style=" color: #2789ce; cursor: pointer;"></i></td>
+        data-target="#myModal"><a href="#"  
+          class="credRef a"
+          >{{item.creditRef}}</a> <i class='fas fa-pen icon1' ></i></td>
         <td><a href="#" class="bal">{{item.balance}}</a></td>
         <td><button type="button" class="exposure">{{item.exposure}}</button></td>
         <td>{{item.availBalance}}</td>
@@ -212,9 +212,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Change Status</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span id="crs" aria-hidden="true">&times;</span>
-        </button>
+        <span class="xbttn" data-dismiss="modal"
+        aria-label="Close">X</span>
       </div>
       <!-- <div class="modal-body" id="dcmodal"> -->
       <div class="card">
@@ -278,17 +277,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Credit Reference Edit</h4>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span id="crs" aria-hidden="true">&times;</span>
-        </button>
+        <span class="xbttn" data-dismiss="modal"
+        aria-label="Close">x</span>
       </div>
       <!-- <div> -->
-      <div class="card-body body">
+      <div class="card-body body" id="abc">
         <div class="d-flex">
           <p class="p1">Current</p>
           <p class="p2">0</p>

@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAdmin();
+    
   }
   passwordForm = new FormGroup({
     password: new FormControl('',[Validators.required])
