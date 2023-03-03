@@ -1,6 +1,5 @@
 .main {
   width: 100%;
-  min-height: 650px;
   height: auto;
   overflow: hidden;
   padding-left: 1%;
@@ -8,7 +7,6 @@
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 5px;
-  background-color: #f0ece1;
 }
 
 .betlistfilter {
@@ -22,7 +20,7 @@ label {
 }
 .filter1 label {
   padding-right: 15px;
-  margin-left: 12px;
+  margin-left: 0px;
 }
 h6 {
   font-size: 14px;
@@ -95,7 +93,7 @@ h6 {
   background: #ffb90e;
   border-color: #cb8009;
   width: 103px;
-  margin-right: 1px;
+  margin-right: 7px;
   border: 1px solid #bbb;
   border-radius: 4px;
   color: #1e1e1e;
@@ -105,8 +103,8 @@ h6 {
   margin-bottom: 12px;
 }
 span {
-  margin-right: 15px;
-  margin-left: 12px;
+  margin-right: 7px;
+  margin-left: 5px;
 }
 .betDetails {
   padding: 5px;

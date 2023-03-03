@@ -1,6 +1,5 @@
 .main{
   width: 99%;
-  min-height: 650px;
   height: auto;
   overflow: hidden;
   padding-left: 2%;
@@ -8,7 +7,6 @@
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 5px;
-  background-color: #f0ece1;
 }
 .betlistfilter{
   padding: 10px 10px 0;
@@ -25,11 +23,10 @@
 }
 .match_btn{
   margin-left: 31px;
-  background: #ffb90e;
-  border-color: #cb8009;
+  background: #fdb500;
   width: 59px;
   margin-right: 1px;
-  border: 1px solid #bbb;
+  border: 1px solid #cb8009;
   border-radius: 4px;
   color: #1e1e1e;
   font-weight: bold;
@@ -61,7 +58,7 @@
 
 .head{
   background-color: #3b5160;
-  border-bottom: 1px solid #7e97a7;
+  border-bottom: 1px solid #3d4246;
   color: #fff;
   line-height: 14px;
   font-weight: bold;
@@ -98,37 +95,53 @@ h5{
 }
 .align{
   font-size: 12px;
+  background-color: #7e97a7;
 }
 .align-L1{
-  width: 5%
+  width: 8.5%;
+  padding: 5px;
 }
 .align-L2{
-  width: 10%
+  width: 5%;
+  padding: 5px;
 }
 .align-L3{
-  width: 10%
+  width: 6%;
+  padding: 5px;
 }
 .align-L4{
-  width: 10%
+  width: 6%;
+  padding: 5px;
+  
 }
 .align-L5{
-  width: 26%
+  width: 46%;
+  padding: 5px;
 }
 
 .align-L6{
-  width: 10%
+  width: 7%;
+  padding: 5px;
 }
 .align-L7{
-  width: 10%
+  width: 4%;
+  padding: 5px;
+  text-align: center;
 }
 .align-L8{
-  width: 10%
+  width: 4%;
+  padding: 5px;
+  text-align: right;
 }
 .align-L9{
-  width: 10%
+  width: 7.5%;
+  padding: 5px;
+  text-align: right;
 }
 .align-L10{
-  width: 10%
+  /* width: 10% */
+  padding: 5px;
+  text-align: right;
 }
 .play{
   color:beige;
@@ -143,4 +156,7 @@ h5{
 }
 .game_date{
   list-style: none
+}
+.headJ{
+  background-color: #d9dfe4;
 }

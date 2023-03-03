@@ -10,6 +10,7 @@ export class RiskmanagementComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
   }
   listPlayer(num:any){
     this.currentTab = num;

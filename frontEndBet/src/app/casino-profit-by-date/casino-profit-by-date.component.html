@@ -1,12 +1,12 @@
 <app-navigation></app-navigation>
 <div class="main">
         <h2>Profit/Loss Report by Market</h2>
-         <label>Data source :</label>
+        <label>Data source :</label>
           <select class="firstseletor" id="datasource">
-        <option  value="11">DB</option>
-        <option value="12">ELK</option>
-      </select>
-   <div class="function_wrapper">
+            <option  value="11">DB</option>
+            <option value="12">ELK</option>
+          </select>
+    <div class="function_wrapper">
         <label class="input">Sports </label><select class="sportStatus"><option>CASINO</option></select>
          <label class="inputbody input">Time Zone  </label><select class="sportStatus"><option>Pacific/Midway(GMT-11:00)</option><option>Pacific/Honolulu(GMT-10:00)</option>America/Juneau(GMT-9:00)<option>America/Los_Angeles(GMT-8:00)</option>
           <option>America/Phoenix(GMT-7:00)</option><option>America/Chicago(GMT-6:00)</option><option>America/New_York(GMT-5:00)</option><option>America/Santiago(GMT-4:00)</option>
@@ -18,46 +18,47 @@
          <label class="inputbody input">to</label><input class="inputbody1" type="date"   placeholder="YYY-MM-DD">
          <input class="date1"  type="time"  [value]="currentTime" placeholder="00:00:00"/>
 
-         <div >
-         <button class='match_btn' >Just For Today</button>
-        <button class='match_btn'>Form Yesterday</button>
-         <button class='match' >Get P & L</button>
-         </div>
+        <div >
+          <button class='match_btn' >Just For Today</button>
+          <button class='match_btn'>Form Yesterday</button>
+          <button class='match' >Get P & L</button>
+        </div>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <tr class="heading">
+            <th id="first_clomum" width class=align-L>UID</th>
+            <th >Stake</th>
+            <th>Downline P/L</th>
+            <th>Player P/L</th>
+            <th class="headingcolm">Comm.</th>
+            <th>Upline P/L</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td  id="first_clomum" width class=align-L>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td class="headindata">Germany</td>
+          <td>Germany</td>
+      
+         </tr>
+         <tr>
+          <td  id="first_clomum" >Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td class="headindata">Germany</td>
+          <td>Germany</td>
+      
+         </tr>
+        </tbody>
+      </table> 
     </div>
     
-<table>
-  <thead>
-    <tr class="heading">
-      <th id="first_clomum" width class=align-L>UID</th>
-      <th >Stake</th>
-      <th>Downline P/L</th>
-      <th>Player P/L</th>
-      <th class="headingcolm">Comm.</th>
-      <th>Upline P/L</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td  id="first_clomum" width class=align-L>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Germany</td>
-    <td class="headindata">Germany</td>
-    <td>Germany</td>
-
-  </tr>
-  <tr>
-    <td  id="first_clomum" >Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Germany</td>
-    <td class="headindata">Germany</td>
-    <td>Germany</td>
-
-  </tr>
-</tbody>
-  
-</table>
 
 </div>
 

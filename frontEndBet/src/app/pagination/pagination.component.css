@@ -6,7 +6,8 @@
   padding:15px;
 }
 .pgblock{
-  width:30%;
+  min-width:30%;
+  max-width: fit-content;
   margin-left:auto;
   margin-right:auto;
 }
@@ -24,8 +25,7 @@
 }
 .pages{
   background: #ffcc2e;
-  border-color: #cb8009;
-  border:1px outset #212121;
+  border:1px outset #cb8009;
   margin-right:5px;
   border-radius: 4px;
   height:fit-content;

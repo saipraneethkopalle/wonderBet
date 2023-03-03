@@ -1,18 +1,11 @@
-#firstContainer{
-    background-color: rgb(240, 248, 245);
-}
- .main #datasource{
+.main #datasource{
     margin: 5px;
-}
-.main{
-  background-color: #f0ece1;
 }
 li{
     list-style: none;
 }
 .main{
     width:100%;
-    min-height: 650px;
     height:auto;
     overflow:hidden;
     padding-left:7%;
@@ -180,6 +173,45 @@ table tr #first_clomum {
 }
 
 
+tbody tr{
+  line-height: 30px;
+  border-bottom: 1px solid #7e97a7;
+}
+
+
+
+.align-L{
+  text-align: left;
+
+}
+#first tr td {
+  background-color: #A762B5;
+
+}
+
+
+.lv_2 {
+  background: #A762B5;
+  color: #fff;
+  line-height: 20px;
+  text-decoration: none !important;
+  color: #fff;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 9px;
+}
+
+.red{
+  color: red;
+  margin-right: 10px;
+}
+.green{
+  color: green;
+}
+
+
+
+
 
 
 
@@ -214,4 +246,13 @@ tbody {
 .table-pt .ico_account {
   width: calc(100% - 15px);
   float: none;
+}
+
+
+.ico_account{
+  margin-left: 10px;
+}
+
+#ff{
+  padding-left: 10px;
 }

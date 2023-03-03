@@ -20,7 +20,7 @@ export class DownlineReportProfitlossComponent implements OnInit {
   matchDate: any;
 
   ngOnInit(): void {
-
+    document.body.style.backgroundColor="#f0ece1";
   }
 
 
