@@ -73,7 +73,11 @@
       </tr>
       <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
         <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
-        <td><a href="#" class="credRef">{{item.creditRef}}</a> <i class='fas fa-pen'></i></td>
+        <td data-toggle="modal"
+        class="but_suspend openchangepwdmodal icon"
+        data-target="#myModal"><a href="#"
+          class="credRef"
+          >{{item.creditRef}}</a> <i class='fas fa-pen' style=" color: #2789ce; cursor: pointer;"></i></td>
         <td><a href="#" class="bal">{{item.balance}}</a></td>
         <td><button type="button" class="exposure">{{item.exposure}}</button></td>
         <td>{{item.availBalance}}</td>
@@ -263,6 +267,47 @@
 
         </tr>
       </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myModal" role="dailog">
+  <div class="modal-dailog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Credit Reference Edit</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span id="crs" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- <div> -->
+      <div class="card-body body">
+        <div class="d-flex">
+          <p class="p1">Current</p>
+          <p class="p2">0</p>
+          <button class="button5">
+            <span class="span1">Log</span>
+          </button>
+        </div>
+        <div>
+          <label class="inputbody">New</label>
+          <input class="searchbtn" placeholder="Enter" />
+        </div>
+        <div class="div1">
+          <label class="inputbody1">password</label>
+          <input class="searchbtn1" placeholder="Enter" />
+        </div>
+        <!--  -->
+      </div>
+      <div class="body1">
+        <button class="match_buttons">Submit</button>
 
       </div>
     </div>
