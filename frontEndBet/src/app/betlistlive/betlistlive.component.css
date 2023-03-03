@@ -1,6 +1,5 @@
 .main{
   width: 99%;
-  min-height: 650px;
   height: auto;
   overflow: hidden;
   padding-left: 2%;
@@ -8,7 +7,6 @@
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 5px;
-  background-color: #f0ece1;
 }
 .betlistfilter{
   padding: 10px 10px 0;
@@ -25,11 +23,10 @@
 }
 .match_btn{
   margin-left: 31px;
-  background: #ffb90e;
-  border-color: #cb8009;
+  background: #fdb500;
   width: 59px;
   margin-right: 1px;
-  border: 1px solid #bbb;
+  border: 1px solid #cb8009;
   border-radius: 4px;
   color: #1e1e1e;
   font-weight: bold;

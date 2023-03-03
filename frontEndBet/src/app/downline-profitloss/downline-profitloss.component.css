@@ -1,18 +1,11 @@
-#firstContainer{
-    background-color: rgb(240, 248, 245);
-}
- .main #datasource{
+.main #datasource{
     margin: 5px;
-}
-.main{
-  background-color: #f0ece1;
 }
 li{
     list-style: none;
 }
 .main{
     width:100%;
-    min-height: 650px;
     height:auto;
     overflow:hidden;
     padding-left:7%;
