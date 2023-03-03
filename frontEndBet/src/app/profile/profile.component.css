@@ -218,6 +218,11 @@ tr{
     font-size: 13px;
     color: #d0021b;
 }
+.li{
+  /* text-decoration: none; */
+    color: #2789ce;
+    outline: none;
+}
 
 .modal-footer{
     padding: 0;
