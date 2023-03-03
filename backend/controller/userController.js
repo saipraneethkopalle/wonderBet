@@ -22,7 +22,7 @@ exports.changePassword=async(req,res)=>{
         return res.status(STATUS.BAD_REQUEST).send(err);
     }
 }
-exports.addSuperAdmin =async(req,res)=>{
+exports.addUser =async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload);
         // console.log(payload);
@@ -30,16 +30,17 @@ exports.addSuperAdmin =async(req,res)=>{
         if(exist.length > 0){
             return res.status(STATUS.BAD_REQUEST).send({"error":"Already Exist"})
         }
-        let addSuperAdmin = new superUser(payload);
-        addSuperAdmin.save();
+        let addUser = new user(payload);
+        addUser.save();
         return res.status(STATUS.OK).send({"message":"Super User Admin added Successfully"})
     }catch(err){
         return res.status(STATUS.BAD_REQUEST).send(err);
     }
 }
-exports.getSuperAdmin = async(req,res)=>{
+exports.getUserByRole = async(req,res)=>{
     try{
-        let adminDetails = await user.find().lean().exec();
+        let role_id=await cryp.decryptData(req.params.id);
+        let adminDetails = await user.find({userRoleId:role_id}).lean().exec();
         return res.status(STATUS.OK).send({message:'Success',data:adminDetails})
 
     }catch(err) {
@@ -47,7 +48,7 @@ exports.getSuperAdmin = async(req,res)=>{
 
     }
 }
-exports.updateSuperAdminStatus = async(req,res)=>{
+exports.updateUserStatus = async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload)
         let udateObj = await user.updateOne({userName:payload.userName},{$set:{adminstatus:payload.adminstatus}})
