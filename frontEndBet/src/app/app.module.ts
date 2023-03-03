@@ -18,7 +18,7 @@ import { AdminsettingsComponent } from './adminsettings/adminsettings.component'
 import { ResultComponent } from './result/result.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
 import { MarketProfitlossComponent } from './market-profitloss/market-profitloss.component';
-import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
+// import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
 import { DownlineReportProfitlossComponent } from './downline-report-profitloss/downline-report-profitloss.component';
 import { SportWiseProfitlossComponent } from './sport-wise-profitloss/sport-wise-profitloss.component';
 import { MatchProfitlossComponent } from './match-profitloss/match-profitloss.component';
@@ -77,7 +77,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     ResultComponent,
     DownlineProfitlossComponent,
     MarketProfitlossComponent,
-    CasinoProfitlossDateComponent,
+    // CasinoProfitlossDateComponent,
     DownlineReportProfitlossComponent,
     SportWiseProfitlossComponent,
     MatchProfitlossComponent,

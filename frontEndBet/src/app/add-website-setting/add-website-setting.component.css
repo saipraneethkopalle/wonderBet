@@ -1,8 +1,9 @@
 .full-wrap {
     position: relative;
-    min-width: 80%;
-    max-width: calc(100% - 40px);
+    width: 100%;
     padding-left: 20px;
+    background-color: #f0ece1;
+    min-height: 750px;
 }
 h2 {
     font-size: 15px;
@@ -71,7 +72,6 @@ tbody {
 }
 
 tbody td {
-    /* border-top: 1px solid #eee; */
     background-color: white;
     border-bottom: 1px solid #e7e5e5;
     padding: 8px 10px;

@@ -18,7 +18,7 @@ import { BettingPLComponent } from './betting-pl/betting-pl.component';
 import { BlockMarketListComponent } from './block-market-list/block-market-list.component';
 import { BlockmarketComponent } from './blockmarket/blockmarket.component';
 import { CasinoProfitByDateComponent } from './casino-profit-by-date/casino-profit-by-date.component';
-import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
+// import { CasinoProfitlossDateComponent } from './casino-profitloss-date/casino-profitloss-date.component';
 import { CasinoProfitlossMonthlyComponent } from './casino-profitloss-monthly/casino-profitloss-monthly.component';
 import { CheatBetComponent } from './cheat-bet/cheat-bet.component';
 import { DownlineProfitlossComponent } from './downline-profitloss/downline-profitloss.component';
@@ -66,7 +66,7 @@ const routes: Routes = [
   {path:"result",component:ResultComponent},
   {path:"profitdownline",component:DownlineReportProfitlossComponent},
   {path:"profitmarket",component:MarketProfitlossComponent},
-  {path:"casinoProfitByDate",component:CasinoProfitByDateComponent},
+  // {path:"casinoProfitByDate",component:CasinoProfitByDateComponent},
   {path:"dowlineprofitloss",component:DownlineProfitlossComponent},
   {path:"sportWiseprofitloss",component:SportWiseProfitlossComponent},
   {path:"matchProfitloss",component:MatchProfitlossComponent},
