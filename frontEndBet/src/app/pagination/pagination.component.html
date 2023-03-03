@@ -1,0 +1,9 @@
+<div class="pagination">
+  <div class="pgblock">
+    <button type="button" class="prev" disabled>Prev</button>
+    <button type="button" class="pages" *ngFor="let page of pages;let i=index;">{{page}}</button>
+    <button type="button" class="next" disabled>Next</button>
+    <input type="text" class="currentPage" (keyup)="setCurrentPage($event)">
+    <button type="button" class="go">GO</button>
+  </div>
+</div>
