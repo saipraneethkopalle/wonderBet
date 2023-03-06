@@ -28,9 +28,7 @@ export class DownlineReportProfitlossComponent implements OnInit {
   searchDate() {
     const arr = [{ name: "subhashbi", lastname: "maurya", date: "2023-02-26" }, { name: "subhashbi", lastname: "maurya", date: "2023-02-27" }, { name: "subhashbi", lastname: "maurya", date: "2023-02-28" }, { name: "shivani", lastname: "yadav", date: "2023-02-25" }]
 
-    // var startDate = this.currentDate;
-    // var endDate = this.endDate;
-    // console.log(startDate,"ggg",endDate);
+   
     
   
     this.matchDate = arr.filter((a:any) => {

@@ -29,6 +29,15 @@ h2 {
     border-style: inset;
     border-width: 2px;
 }
+.fa-search{
+    position: absolute;
+    top: 45px;
+    padding-left: 4px;
+   
+  }
+  #searchUserId{
+    padding-left: 20px;
+  }
 
 
 element.style {
