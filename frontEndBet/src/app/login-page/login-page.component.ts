@@ -21,6 +21,7 @@ export class LoginPageComponent implements OnInit {
   get f() { return this.register.controls; }
   ngOnInit(): void {
   this.generateValidationCode()
+
   }
   generateValidationCode(){
     var val = Math.floor(1000 + Math.random() * 9000);
@@ -32,6 +33,7 @@ export class LoginPageComponent implements OnInit {
     this.error=''
     this.apiService.login(payload).subscribe((res:any)=>{
       localStorage.setItem("token",res.data.token);
+      localStorage.setItem("userRoleId",res.data.userRoleId)
       this.router.navigate([""])
     })
     }else{

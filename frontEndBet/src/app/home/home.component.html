@@ -27,7 +27,7 @@
     <div class="addAdminblock">
       <button type="button" class="addAdmin" data-toggle="modal" data-target="#superAdminpop"><i class="fa fa-user-plus"
           aria-hidden="true"></i>
-        Add Super Admin</button>
+        Add {{childRoleData?.userName}}</button>
       <button type="button" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i>
       </button>
     </div>
@@ -75,7 +75,7 @@
         <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
         <td data-toggle="modal"
         class="but_suspend openchangepwdmodal icon"
-        data-target="#myModal"><a href="#"  
+        data-target="#myModal"><a href="#"
           class="credRef a"
           >{{item.creditRef}}</a> <i class='fas fa-pen icon1' ></i></td>
         <td><a href="#" class="bal">{{item.balance}}</a></td>

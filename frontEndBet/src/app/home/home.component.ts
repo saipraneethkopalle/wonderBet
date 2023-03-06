@@ -16,13 +16,22 @@ export class HomeComponent implements OnInit {
   status:any;
   currentStatus:any;
   currentUser:any;
-  passError:any
+  passError:any;
+  childRoleData:any;
+  levels:any;
+  currentroleId:any;
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
     document.body.style.backgroundColor="#f0ece1";
+    this.currentroleId=localStorage.getItem('userRoleId')
+    console.log("rd",this.currentroleId);
+    this.apiService.getLevelDetails().subscribe((res:any)=>{
+      this.levels=res.data;
+      this.childRoleData = res.data[this.currentroleId]
+      console.log(this.childRoleData)
     this.getAdmin();
-    
+    })
   }
   passwordForm = new FormGroup({
     password: new FormControl('',[Validators.required])
@@ -47,7 +56,8 @@ export class HomeComponent implements OnInit {
       confirmPassword:this.superUserForm.value.confirmPassword,
       firstName:this.superUserForm.value.firstName,
       lastName:this.superUserForm.value.lastName,
-      phone:this.superUserForm.value.phone
+      phone:this.superUserForm.value.phone,
+      userRoleId:this.childRoleData?.userId
     }
     console.log("payload",payload);
     this.apiService.createSuperUser(payload).subscribe((res:any)=>{
@@ -64,7 +74,7 @@ export class HomeComponent implements OnInit {
   }
 
   getAdmin() {
-    this.apiService.getSuperUser().subscribe((res:any)=>{
+    this.apiService.getSuperUser(this.childRoleData?.userId).subscribe((res:any)=>{
       console.log(res)
       res.data.map((rs:any)=>{
         rs.name=rs.userName
@@ -113,7 +123,7 @@ export class HomeComponent implements OnInit {
   //   if(password.password==this.currentUser.password ) {
   //     if(this.currentStatus!=undefined) {
 
-      
+
   //     console.log("jfjdf",this.currentStatus)
   //     if(this.currentStatus==0 ) {
   //       payload.adminstatus='suspended'
@@ -138,7 +148,7 @@ export class HomeComponent implements OnInit {
   // } else {
   //   this.passError='Invalid Password'
   // }
-  
+
 
   // }
 }
