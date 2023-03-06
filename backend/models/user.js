@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require("mongoose-unique-validator");
 const matchSchema = new mongoose.Schema({
-    website:{type:String,required:true},
-    email:{type:String,required:true},
+    website:{type:String},
+    email:{type:String},
     userName:{type:String,required:true,unique:true},
-    userRoleId:{type:String,required:true},
+    userRoleId:{type:Number,required:true},
     password:{type:String,required:true},
-    firstName:{type:String,required:true},
+    firstName:{type:String},
     lastName:{type:String},
     phone:{type:String},
     timeZone:{type:Boolean,default:true},

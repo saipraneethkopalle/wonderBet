@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require("mongoose-unique-validator");
 const matchSchema = new mongoose.Schema({
-    userId:{type:String,unique:true,required:true},
+    userId:{type:Number,unique:true,required:true},
     userName:{type:String,required:true},
     userShortCut:{type:String,required:true},
 },{ timestamps: true })

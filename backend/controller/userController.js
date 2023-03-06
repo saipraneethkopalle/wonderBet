@@ -39,8 +39,8 @@ exports.addUser =async(req,res)=>{
 }
 exports.getUserByRole = async(req,res)=>{
     try{
-        let role_id=await cryp.decryptData(req.params.id);
-        let adminDetails = await user.find({userRoleId:role_id}).lean().exec();
+        let role_id=req.params.id;
+        let adminDetails = await user.find({userRoleId:role_id}).lean();
         return res.status(STATUS.OK).send({message:'Success',data:adminDetails})
 
     }catch(err) {
