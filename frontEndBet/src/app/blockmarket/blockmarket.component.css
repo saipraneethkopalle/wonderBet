@@ -61,3 +61,11 @@ td{
 .tbox .sno{
   text-align: left;
 }
+
+#nameRut{
+  color: rgb(26, 140, 185);
+  font-weight: 300;
+  font-size: 12px;
+  /* border-bottom: 1px solid rgb(26, 140, 185); */
+  text-decoration: none;
+}

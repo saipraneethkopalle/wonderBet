@@ -17,6 +17,7 @@ export class AddWebsiteSettingComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllWebsite();
+    document.body.style.backgroundColor="#f0ece1";
   }
   getAllWebsite(){
     this.apiService.getAllWebsite().subscribe((res:any)=>{

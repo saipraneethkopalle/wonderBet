@@ -41,7 +41,7 @@ export class AactiveMatchComponent implements OnInit {
       if(val.name.toLowerCase().includes(value.target.value)){
         return val;
       }
-     });
+     });   
     }else{
       this.matchList = this.beforeList
     }

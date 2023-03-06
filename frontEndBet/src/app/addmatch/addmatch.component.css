@@ -29,18 +29,30 @@
  th{
     color: #243a48;
     background-color: #e4e4e4;
-    border: 1px solid #7e97a7;
+    border-top: 1px solid #7e97a7;
     border-width: 1px 0 1px 0;
-    padding: 6px
+    padding: 6px;
+
+}
+thead th{
+    border-bottom: 1px solid #7e97a7;
+
+}
+.firstclun{
+    font-weight: bold;
+    font-size: 12px;
+
 }
 .game_date{
     color: #113a17;
+    font-weight: bold;
     font-size: 12px;
     list-style: none
 }
  .game_name{
     color: #4083a9;
     font-size: 14px;
+    font-weight: bold;
     list-style: none;
 }
 .match_btn{
@@ -48,7 +60,7 @@
     border-color: #cb8009;
     width: 120px;
     margin-right: 1px;
-    border: 1px solid #bbb;
+    border: 1px solid #cb8009;
     border-radius: 4px;
     color: #1e1e1e;
     font-weight: bold;
@@ -75,7 +87,7 @@
     width: 10%
 }
 .align-L2{
-    width: 10%
+    width: 13%
 }
 .align-L3{
     width: 60%

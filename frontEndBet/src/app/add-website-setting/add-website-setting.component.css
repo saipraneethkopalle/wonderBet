@@ -2,8 +2,6 @@
     position: relative;
     width: 100%;
     padding-left: 20px;
-    background-color: #f0ece1;
-    min-height: 750px;
 }
 h2 {
     font-size: 15px;
@@ -23,11 +21,13 @@ h2 {
 #searchUserId {
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 190px;
-    border-radius: 5px;
+    width: 170px;
+    border-radius: 7px;
     border: none;
     border-style: inset;
     border-width: 2px;
+    height: 25px;
+
 }
 
 
@@ -93,7 +93,7 @@ body{
     color:#212121;
     width:fit-content;
     border-radius:4px;
-    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 10%);
     position: relative;
   }
 
@@ -104,5 +104,5 @@ body{
     width: 290px;
     height: 32px;
     border: 1px solid #aaa;
-    box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
+    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 10%);
   }

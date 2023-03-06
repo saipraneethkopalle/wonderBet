@@ -12,6 +12,7 @@ export class SetmarketresultComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
     console.log("current date",this.currentDate)
   }
   // get(v:any){
