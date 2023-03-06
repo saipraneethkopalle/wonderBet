@@ -23,6 +23,7 @@ export class AactiveMatchComponent implements OnInit {
         if(element.sportId=='4'){
           if(element.isActive==true && element.isResult==false){
             element.name=element.eventName
+            console.log("subrat",element)
             return element;
           }
         }
