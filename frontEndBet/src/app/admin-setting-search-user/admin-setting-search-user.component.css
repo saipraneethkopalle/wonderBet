@@ -39,6 +39,10 @@ h2 {
     padding-left: 20px;
   }
 
+#companySearchUl{
+    padding-left: 10px;
+}
+
 
 element.style {
     font-weight: bold;
@@ -76,7 +80,7 @@ thead{
     background-color: #ffa00c;
     color: black;
     font-weight: 900;
-    margin-right: 8px;
+    margin-right: 2px;
     border: 1px solid #cd8009;
     border-radius: 5px;
     cursor: pointer;

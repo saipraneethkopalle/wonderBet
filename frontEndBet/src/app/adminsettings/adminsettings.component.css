@@ -142,3 +142,28 @@ label{
  font-weight: 900;
  padding : 1px 0px
 }
+
+.xbttn{
+    background: black;
+    color:#fff;
+    margin-right: 20px;
+      width: 18px;
+      text-align: center;
+      height: 19px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+  }
+  .xbttn1{
+    background: black;
+    color:#fff;
+    margin-right: 4px;
+      width: 18px;
+      text-align: center;
+      height: 19px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+  }

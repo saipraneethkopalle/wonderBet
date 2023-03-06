@@ -10,6 +10,7 @@ export class AupdateFancyStatusComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
   }
 
 }

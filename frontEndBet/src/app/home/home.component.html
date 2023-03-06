@@ -27,7 +27,7 @@
     <div class="addAdminblock">
       <button type="button" class="addAdmin" data-toggle="modal" data-target="#superAdminpop"><i class="fa fa-user-plus"
           aria-hidden="true"></i>
-        Add Super Admin</button>
+        Add {{childRoleData?.userName}}</button>
       <button type="button" class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i>
       </button>
     </div>
@@ -72,18 +72,18 @@
         <td style="text-align: right;">Action</td>
       </tr>
       <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
-        <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
+        <td><span class="badge badge-primary">{{shortCut}}</span> &nbsp;<a href="#">{{item.userName}}</a></td>
         <td data-toggle="modal"
         class="but_suspend openchangepwdmodal icon"
         data-target="#myModal"><a href="#"
-          class="credRef"
-          >{{item.creditRef}}</a> <i class='fas fa-pen' style=" color: #2789ce; cursor: pointer;"></i></td>
+          class="credRef a"
+          >{{item.creditRef}}</a> <i class='fas fa-pen icon1' ></i></td>
         <td><a href="#" class="bal">{{item.balance}}</a></td>
         <td><button type="button" class="exposure">{{item.exposure}}</button></td>
         <td>{{item.availBalance}}</td>
         <td>{{item.balance}}</td>
         <td>{{item.refProfitLoss}}</td>
-        <td><button type="button" class="status"><span class="dot"></span>{{item.adminstatus}}</button></td>
+        <td><button type="button" class="status"><span class="dot"></span>{{item.userstatus}}</button></td>
 
     <td style="float: right">
       <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss" routerLink="/bettingPL"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
@@ -212,9 +212,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Change Status</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span id="crs" aria-hidden="true">&times;</span>
-        </button>
+        <span class="xbttn" data-dismiss="modal"
+        aria-label="Close">X</span>
       </div>
       <!-- <div class="modal-body" id="dcmodal"> -->
       <div class="card">
@@ -278,17 +277,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Credit Reference Edit</h4>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span id="crs" aria-hidden="true">&times;</span>
-        </button>
+        <span class="xbttn" data-dismiss="modal"
+        aria-label="Close">x</span>
       </div>
       <!-- <div> -->
-      <div class="card-body body">
+      <div class="card-body body" id="abc">
         <div class="d-flex">
           <p class="p1">Current</p>
           <p class="p2">0</p>
