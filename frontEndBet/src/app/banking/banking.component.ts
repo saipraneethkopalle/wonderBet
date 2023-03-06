@@ -13,6 +13,7 @@ export class BankingComponent implements OnInit {
 
   ngOnInit(): void {
       this.getBankList();
+      document.body.style.backgroundColor="#f0ece1";
   }
   getBankList(){
     this.bankList = [{uid:"main",name:'',balance:604349342,available:354345462,exposure:0.00,depositWithDraw:0,creditRef:6000000,refPL:45335325,remark:0}]

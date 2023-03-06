@@ -133,6 +133,7 @@ th{
   color: #243a48;
   background-color: #e4e4e4;
   border: 1px solid #7e97a7;
+  border-bottom: 1px solid #7e97a7 !important;
   border-width: 1px 0 1px 0;
   padding: 8px 10px
 }

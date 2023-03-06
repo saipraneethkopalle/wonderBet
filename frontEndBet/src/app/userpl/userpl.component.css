@@ -1,6 +1,5 @@
 .main {
     width: 100%;
-    min-height: 650px;
     height: auto;
     overflow: hidden;
     padding-left: 1%;
@@ -8,8 +7,6 @@
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 5px;
-    background-color: #f0ece1;
-    
   }
   
   .betlistfilter {
@@ -83,7 +80,7 @@
   .btn5,
   .btn6 {
     background: #f5a11b;
-    border-color: #cb8009;
+    border: 1px solid #cb8009;
     border-radius: 3px;
     color: #1e1e1e;
     font-weight: bold;
@@ -96,10 +93,9 @@
   .btn3 {
     margin-left: 2px;
     background: #ffb90e;
-    border-color: #cb8009;
     width: 103px;
     margin-right: 1px;
-    border: 1px solid #bbb;
+    border: 1px solid #cb8009;
     border-radius: 4px;
     color: #1e1e1e;
     font-weight: bold;
@@ -192,7 +188,7 @@
   }
   .btn7 {
     background: #ffa00c;
-    border-color: #cb8009;
+    border: 1px solid #cb8009;
     border-radius: 6px;
     color: #1e1e1e;
     font-weight: bold;

@@ -179,7 +179,7 @@ thead th{
     margin-top: 5px;
     margin-bottom: 5px;
     background: #ffa00c;
-    border-color: #cb8009;
+    border: 1px solid #cb8009;
     border-radius: 4px;
     font-weight: bold;
     height: 32px;
