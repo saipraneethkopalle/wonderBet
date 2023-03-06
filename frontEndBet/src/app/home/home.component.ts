@@ -20,16 +20,20 @@ export class HomeComponent implements OnInit {
   childRoleData:any;
   levels:any;
   currentroleId:any;
+  loggedUser:any;
+  shortCut:any;
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
     document.body.style.backgroundColor="#f0ece1";
     this.currentroleId=localStorage.getItem('userRoleId')
+    this.loggedUser = localStorage.getItem('userName');
     console.log("rd",this.currentroleId);
     this.apiService.getLevelDetails().subscribe((res:any)=>{
       this.levels=res.data;
       this.childRoleData = res.data[this.currentroleId]
       console.log(this.childRoleData)
+      this.shortCut = this.childRoleData.userShortCut
     this.getAdmin();
     })
   }
@@ -57,7 +61,8 @@ export class HomeComponent implements OnInit {
       firstName:this.superUserForm.value.firstName,
       lastName:this.superUserForm.value.lastName,
       phone:this.superUserForm.value.phone,
-      userRoleId:this.childRoleData?.userId
+      userRoleId:this.childRoleData?.userId,
+      createdBy:this.loggedUser
     }
     console.log("payload",payload);
     this.apiService.createSuperUser(payload).subscribe((res:any)=>{

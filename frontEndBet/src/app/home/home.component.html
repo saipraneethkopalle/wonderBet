@@ -72,7 +72,7 @@
         <td style="text-align: right;">Action</td>
       </tr>
       <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
-        <td><span class="badge badge-primary">SUA</span> &nbsp;<a href="#">{{item.userName}}</a></td>
+        <td><span class="badge badge-primary">{{shortCut}}</span> &nbsp;<a href="#">{{item.userName}}</a></td>
         <td data-toggle="modal"
         class="but_suspend openchangepwdmodal icon"
         data-target="#myModal"><a href="#"
@@ -83,7 +83,7 @@
         <td>{{item.availBalance}}</td>
         <td>{{item.balance}}</td>
         <td>{{item.refProfitLoss}}</td>
-        <td><button type="button" class="status"><span class="dot"></span>{{item.adminstatus}}</button></td>
+        <td><button type="button" class="status"><span class="dot"></span>{{item.userstatus}}</button></td>
 
     <td style="float: right">
       <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss" routerLink="/bettingPL"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
