@@ -60,10 +60,9 @@ h2{
   .match_button{
     margin-left: 1px;
     background: #ffb90e;
-    border-color: #cb8009;
     width: 105px;
     margin-right: 9px;
-    border: 1px solid #bbb;
+    border: 1px solid #cb8009;
     border-radius: 4px;
     color: #1e1e1e;
     font-weight: bold;
@@ -84,10 +83,9 @@ h2{
   .match_btn{
     margin-left: 8px;
     background: #ffb90e;
-    border-color: #cb8009;
     width: 77px;
     margin-right: 1px;
-    border: 1px solid #bbb;
+    border: 1px solid #cb8009;
     border-radius: 4px;
     color: #1e1e1e;
     font-weight: bold;
@@ -115,10 +113,9 @@ h2{
   .match_buttons{
     margin-left: 1px;
     background: #ffb90e;
-    border-color: #cb8009;
     width: 105px;
     margin-right: 9px;
-    border: 1px solid #bbb;
+    border: 1px solid #cb8009;
     border-radius: 4px;
     color: #1e1e1e;
     font-weight: bold;
