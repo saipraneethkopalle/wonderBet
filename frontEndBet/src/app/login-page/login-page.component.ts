@@ -33,6 +33,7 @@ export class LoginPageComponent implements OnInit {
     this.error=''
     this.apiService.login(payload).subscribe((res:any)=>{
       localStorage.setItem("token",res.data.token);
+      localStorage.setItem("userName",res.data.userName);
       localStorage.setItem("userRoleId",res.data.userRoleId)
       this.router.navigate([""])
     })
