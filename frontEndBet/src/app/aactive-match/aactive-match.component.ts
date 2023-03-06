@@ -14,6 +14,7 @@ export class AactiveMatchComponent implements OnInit {
   searchTerm:any='';
   ngOnInit(): void {
     this.getAllMatches();
+    document.body.style.backgroundColor="#f0ece1";
   }
   getAllMatches(){
     this.apiService.getAllMatches().subscribe((res:any)=>{

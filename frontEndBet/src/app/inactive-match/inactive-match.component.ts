@@ -15,6 +15,7 @@ export class InactiveMatchComponent implements OnInit {
   searchTerm:any='';
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
     this.getAllMatches();
   }
   getAllMatches(){

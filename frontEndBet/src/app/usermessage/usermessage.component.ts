@@ -12,6 +12,7 @@ currentDate:any=moment().format("YYYY-MM-DD")
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
   }
 
 }

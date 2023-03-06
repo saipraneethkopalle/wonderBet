@@ -25,7 +25,10 @@ export class ApiServicesService {
     const url = environment.url + "/api/v1/noAuth/login"
     return this.http.post(url,data)
   }
-
+  getLevelDetails(){
+    const url = environment.url + "/api/v1/Auth/getLevelDetails"
+    return this.http.get(url,{headers:this.headers})
+  }
   getMatches(){
     const url = environment.customUrl + "/api/v1-custom/customMatches"
     return this.http.get(url)
@@ -50,12 +53,12 @@ export class ApiServicesService {
 
   createSuperUser(data:any){
     data = {payload:this.encrypt(JSON.stringify(data))};
-    const url = environment.url + "/api/v1/auth/addSuperAdmin"
+    const url = environment.url + "/api/v1/auth/addUser"
     return this.http.post(url,data,{headers:this.headers})
   }
-  
-  getSuperUser() {
-    const url = environment.url + "/api/v1/auth/getSuperAdmin"
+
+  getSuperUser(roleId:any) {
+    const url = environment.url + "/api/v1/auth/getUsersByRole/"+roleId
     return this.http.get(url,{headers:this.headers})
   }
 
