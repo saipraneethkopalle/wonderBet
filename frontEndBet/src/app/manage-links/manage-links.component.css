@@ -39,12 +39,15 @@
   }
 
   h3{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     padding-left: 10px;
     line-height: 20px;
     padding-top: 6px;
     margin-bottom: 6px;
+  }
+  .input{
+    font-size: 12px;
   }
 
   .form-check-input {
@@ -54,9 +57,10 @@
 }
 
   .inputs{
-    width: 55%;
+    width:63%;
     height: 26px;
     font-size: 13px;
+    margin-left: 3px;
     font-family: Tahoma, Helvetica, sans-serif;
     color: #1e1e1e;
     font-size: 12px;
@@ -75,7 +79,7 @@
     margin-left: 100px;
     background: #ffb90e;
     border-color: #cb8009;
-    width: 100px;
+    width: 80px;
     margin-right: 1px;
     border: 1px solid #bbb;
     border-radius: 4px;
