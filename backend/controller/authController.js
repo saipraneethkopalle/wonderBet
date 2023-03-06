@@ -13,6 +13,7 @@ exports.register = async(req,res)=>{
             isUserExist = await user.find({userName:userData.userName}).lean()
         }else{
             isUserExist = await user.find({userRoleId:1}).lean()
+            userData.createdBy="default"
         }        
         if(isUserExist.length > 0){
             return res.status(STATUS.BAD_REQUEST).send({"error":"User Already Exist"})
