@@ -211,11 +211,23 @@ td {
   font-weight: bold;
 }
 .bottomBlock {
-  display: block;
+  /* display: block;
   width: 100%;
   margin-top: 10px;
-  border-top: 1px solid #7e97a7;
+  border-top: 1px solid #7e97a7; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  background-color: #eee;
+  padding: 8px 0px;
 }
+
+/* .bottom-block-items {
+  padding-right: 15px;
+} */
+
 .bank,
 .betPL,
 .bH,
@@ -620,4 +632,13 @@ height: fit-content;
 
 #change-status-body {
   margin: 0px 10px;
+}
+
+.bottom-block-items {
+  padding-right: 30px;
+  font-size: 11px;
+}
+
+#home-pagination {
+  margin: 25px 0px;
 }
