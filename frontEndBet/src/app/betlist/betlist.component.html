@@ -74,17 +74,17 @@
   </div>
   <table class="betlisttb">
     <tr class="betlisthead">
-      <td>PL ID</td>
-      <td>Bet ID</td>
-      <td>Bet placed</td>
-      <td>IP Address</td>
-      <td>Market</td>
-      <td>Selection</td>
-      <td>Type</td>
-      <td>Odds req.</td>
-      <td>Stake</td>
-      <td>Liability</td>
-      <td>Profit / Loss</td>
+      <td class="td1">PL ID</td>
+      <td class="td2">Bet ID</td>
+      <td class="td3">Bet placed</td>
+      <td class="td4">IP Address</td>
+      <td class="td5">Market</td>
+      <td class="td6">Selection</td>
+      <td class="td7">Type</td>
+      <td class="td8">Odds req.</td>
+      <td class="td9">Stake</td>
+      <td class="td10">Liability</td>
+      <td class="td11">Profit / Loss</td>
     </tr>
     <tr *ngFor="let item of betListData;let i=index" class="bet">
       <td>{{i+1}} {{item.plId}}</td>
