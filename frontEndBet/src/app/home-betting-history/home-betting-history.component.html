@@ -45,7 +45,7 @@
             </div>
             <div class="m">
                 <ul class="betStatusUl">
-                        <li>
+                        <li id="bet-status">
                             <label>Bet Status:</label>
                         </li>
                         <li>
@@ -86,20 +86,19 @@
                 </p>
                 <p>Betting History is available online for the past 30 days.</p>
             </div>
-            <div class="tbl">
+            <div>
                 <table class="betlisttb">
                     <tr class="betlisthead">
-                        <td>PL ID</td>
-                        <td>Bet ID</td>
-                        <td>Bet placed</td>
-                        <td>IP Address</td>
-                        <td>Market</td>
-                        <td>Selection</td>
-                        <td>Type</td>
-                        <td>Odds req.</td>
-                        <td>Stake</td>
-                        <td>Liability</td>
-                        <td>Profit / Loss</td>
+                        <td id="td-all">Bet ID</td>
+                        <td id="td-all">pl ID</td>
+                        <td id="market">Market</td>
+                        <td id="td-all">Selection</td>
+                        <td id="td-all">Type</td>
+                        <td id="td-all">Bet placed</td>
+                        <td id="td-odds-req">Odds req.</td>
+                        <td id="td-all">Stake</td>
+                        <td id="td-avg-odds">Avg. odds <p>matched</p></td>
+                        <td id="td-all">Profit / Loss</td>
                       </tr>
                       <!-- <tr class="bet">
                         <td></td>
@@ -114,16 +113,16 @@
                         <td></td>
                         <td></td>
                       </tr> -->
-                      <tr class="err"><td colspan="2" scope="col">You have no bets in this time period.</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                      <tr class="err"><td colspan="2" scope="col" id="table-values">You have no bets in this time period.</td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
+                        <td id="table-values"></td>
                       </tr>   
                 </table>
             </div>

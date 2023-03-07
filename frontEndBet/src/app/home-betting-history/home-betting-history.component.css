@@ -2,7 +2,7 @@
     width:100%;
     height:auto;
     overflow:hidden;
-    padding-left:12%;
+    padding-left:7%;
     font-size:14px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top:5px;
@@ -60,7 +60,9 @@
   }
   ul{
     width:100%;
+    margin: 5px 0px;
   }
+
   li{
     list-style-type: none;
   }
@@ -69,6 +71,9 @@
     font-size:18px;
     padding:5px;
     color: #243a48;
+  }
+  #bet-status{
+    margin-right: -7px;
   }
   .menu{
     border-bottom: 1px solid #E0E6E6;
@@ -145,14 +150,14 @@
     border-bottom: none;
 }
 
-/* .reportBtn button::selection{
+.reportBtn button::selection{
     background-color: #243a48;
     color: #ffffff;
-} */
-/* .reportBtn button:active{
+}
+.reportBtn button:active{
     background-color: #243a48;
     color: #ffffff;
-} */
+}
 .Exchange {
     background-color: #243a48;
 }
@@ -228,10 +233,36 @@ table,tr{
     color:#243a48;
 }
 .betlisttb td{
-    padding:10px;
+    /* padding: 7px; */
+    /* padding: 10px 0px; */
     font-weight: 600;
     font-size:13px;
 }
+
+
+
+#table-values {
+  padding: 10px 0px;
+}
+
+#td-all {
+  padding-right: 20px;
+}
+
+#td-odds-req {
+  padding-right: 40px;
+}
+
+#market{
+  padding-right: 200px;
+}
+
+#td-avg-odds {
+  padding-left: 5px;
+  padding-right: 60px;
+  padding-top: 12px;
+}
+
 .bet,.err{
     background-color: #ffffff;
 }

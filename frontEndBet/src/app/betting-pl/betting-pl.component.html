@@ -1,5 +1,108 @@
 <app-navigation></app-navigation>
-<div class="main">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" id="admin-satest">
+            <button type="button" class="user">
+                <div class="abadge">A</div>
+                admin
+              </button>
+              <button type="button" class="user">
+                <div class="Bbadge">SUA</div>
+                satest
+              </button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="position-performance-betting-main-div">
+    <div class="row">
+        <div class="col-3" id="position-performance-betting-links">
+        <li class="head" >Position</li>
+        <li class="menu" routerLink="/homeProfile">Account Summary</li>
+        <li class="head">Performance</li>
+        <li class="menu" routerLink="/homeBetting">Betting History</li>
+        <li class="menu" routerLink="/bettingPL">Betting Profit & Loss</li>
+        <li class="menu" routerLink="/transactionHistory">Transaction History</li>
+        <li class="menu" routerLink="/transactionHistory2">Transaction History 2</li>
+        <li class="menu" routerLink="/activitylog">Activity Log</li>
+        </div>
+        <div class="col-9" id="position-performance-betting-wallet">
+            <h3 class="heading">Betting Profit & Loss : Main wallet</h3>
+            <div class="profileD"><button class="pflIcon"><i class='fas fa-user-alt' id="icon-color"></i></button> satest</div>
+            <div id="buttons-sizes">
+                <button type="button" [class]="currentTab==0?'aexch':'exch'" (click)="go(0)" id="buttons-sizes-all">Exchange</button>
+                    
+                <button [class]="currentTab==1?'aexch':'exch'" (click)="go(1)" id="buttons-sizes-all">FancyBet</button>
+                    
+                <button [class]="currentTab==2?'aexch':'exch'" (click)="go(2)" id="buttons-sizes-all">FancyBet1</button>
+                    
+                <button [class]="currentTab==3?'aexch':'exch'" (click)="go(3)" id="buttons-sizes-all">Toss</button>
+                    
+                <button [class]="currentTab==4?'aexch':'exch'" (click)="go(4)" id="buttons-sizes-all">Casino</button>
+                    
+                <button [class]="currentTab==5?'aexch':'exch'" (click)="go(5)" id="buttons-sizes-all">SportsBook</button>
+                    
+                <button [class]="currentTab==6?'aexch':'exch'" (click)="go(6)" id="buttons-sizes-all">BookMaker</button>
+                    
+                <button [class]="currentTab==7?'aexch':'exch'" (click)="go(7)" id="buttons-sizes-all">BPoker</button>
+        
+                <button [class]="currentTab==8?'aexch':'exch'" (click)="go(8)" id="buttons-sizes-all">Premium</button>
+                <hr id="hr">
+                </div>
+                <div id="bottom-border">
+                    <ul class="betStatusUl">
+                        <li>
+                            <label id="pl">Period</label>
+                        </li>
+                        <li>
+                            <input type="date" placeholder="YYYY-MM-DD" id="sDate">
+                            <input type="text" placeholder="HH:MM" maxlength="5" readonly="readonly" id="timeIpt">
+                            <label >to</label>
+                            <input type="date" placeholder="YYYY-MM-DD" id="sDate">
+                            <input type="text" placeholder="HH:MM" maxlength="5" readonly="readonly" id="timeIpt">
+                        </li>
+                </ul>
+                    <ul class="betStatusBtn">
+                        <li>
+                            <button>Just For Today</button>
+                        </li>
+                        <li>
+                            <button>From Yesterday</button>
+                        </li>
+                        <li>
+                            <button id="gth">Get P & L</button>
+                        </li>
+                    </ul>
+            </div>
+            <div class="f">
+                <p>
+                    Betting Profit & Loss enables you to review the bets you have placed.
+                    <br>
+                    Specify the time period during which your bets were placed, the type of markets on which the bets were placed, and the sport.
+                </p>
+                <p>Betting Profit & Loss is available online for the past 30 days.</p>
+            </div>
+            <div class="tbl">
+                <table class="betlisttb">
+                    <tr class="betlisthead">
+                        <td id="dmt">Market</td>
+                        <td id="dsd">Settled date</td>
+                        <td id="dpl">Profit / Loss</td>
+                      </tr>
+                      <tr class="err">
+                        <td colspan="1" scope="col">You have no bets in this time period.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>  
+                </table>
+            </div>
+            <div id="btmText">
+                <p>Profit and Loss is shown net of commission.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="main">
     <div class="userProfile">
       <button type="button" class="user">
         <div class="abadge">A</div>
@@ -25,7 +128,7 @@
         <div class="heading">Betting Profit & Loss : Main wallet</div>
         <div class="profileD"><button class="pflIcon"><i class='fas fa-user-alt'></i></button> satest</div>
         <div class="mainTab">
-            <div class="t">
+            <div id="betting-profit-loss">
                         
                 <button type="button" [class]="currentTab==0?'aexch':'exch'" (click)="go(0)">Exchange</button>
                     
@@ -105,11 +208,11 @@
                         <td id="dsd">Settled date</td>
                         <td id="dpl">Profit / Loss</td>
                       </tr>
-                      <!-- <tr class="bet">
+                      <tr class="bet">
                         <td></td>
                         <td></td>
                         <td></td>
-                      </tr> -->
+                      </tr>
                       <tr class="err">
                         <td colspan="1" scope="col">You have no bets in this time period.</td>
                         <td></td>
@@ -123,4 +226,4 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->

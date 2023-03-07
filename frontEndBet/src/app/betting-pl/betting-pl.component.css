@@ -41,9 +41,9 @@
     padding:5px;
     width:80%;
   }
-  .mainTab{
+  /* .mainTab{
     width:100%;
-  }
+  } */
   .t{
     width:100%;
     display:block;
@@ -293,7 +293,7 @@ table,tr{
 }
 
 #dmt{
-  width: 75%;
+  /* width: 75%; */
 }
 #dpl{
   text-align: right;
@@ -301,3 +301,47 @@ table,tr{
 .pflIcon{
   border: none;
 }
+
+#betting-profit-loss {
+  width: 100%;
+}
+
+#admin-satest {
+  padding: 5px 107px; 
+}
+
+#position-performance-betting-links {
+  padding-left: 107px;
+  /* padding-right: 65px; */
+}
+
+#position-performance-betting-wallet {
+  padding-right: 100px;
+}
+
+#bottom-border{
+  margin: 0;
+  background-color: #E0E6E6;
+  margin-top: 2px;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  /* margin-bottom: 2px; */
+  /* width: 91%; */
+  padding-left: 10px;
+}
+
+.tbl {
+  /* width: 91%; */
+}
+
+#hr {
+  background-color: #243a48;
+  position: relative;
+  top: 27px;
+  padding-bottom: 4px;
+}
+
+#icon-color{
+  color:#7e97a7;
+}
+
