@@ -49,9 +49,10 @@ li{
   list-style-type: none;
 }
 .heading{
-  font-weight: bold;
-  font-size:18px;
+  font-weight: 600;
+  font-size:16px;
   padding:5px;
+  color: #243a48;
 }
 .menu {
   border-bottom: 1px solid #E0E6E6;

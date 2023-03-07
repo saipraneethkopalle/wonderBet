@@ -10,7 +10,7 @@
 }
 
 .betlistfilter {
-  padding: 10px 10px 0;
+  padding: 8px 10px 0;
   background-color: #e0e6e6;
   border-bottom: 1px solid #7e97a7;
   margin-bottom: 10px;
@@ -55,10 +55,9 @@ label {
 .btn3 {
   margin-left: 2px;
   background: #ffb90e;
-  border-color: #cb8009;
   width: 103px;
   margin-right: 1px;
-  border: 1px solid #bbb;
+  border: 1px solid #cb8009;
   border-radius: 4px;
   color: #1e1e1e;
   font-weight: bold;

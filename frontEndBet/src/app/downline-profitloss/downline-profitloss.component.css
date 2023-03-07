@@ -48,7 +48,7 @@ li{
     position: relative;
     padding: 10px 10px 0;
     background-color: #E0E6E6;
-    border-bottom: 2px solid #7e97a7;
+    border-bottom: 1px solid #7e97a7;
     margin-bottom: 10px;
 }
 .match_btn{
@@ -68,10 +68,9 @@ li{
   .match{
     margin-left: 2px;
     background: #ffb90e;
-    border-color: #cb8009;
     width: 103px;
     margin-right: 1px;
-    border: 1px solid #bbb;
+    border: 1px solid #cb8009;
     border-radius: 4px;
     color: #1e1e1e;
     font-weight: bold;
@@ -91,8 +90,7 @@ li{
     font-family: Tahoma, Helvetica, sans-serif;
     color: #1e1e1e;
     font-size: 12px;
-    border: 0px #aaa solid;
-    background: #fff;
+    background: #740a0a;
     box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
     border-radius: 4px;
     padding: 5px;
@@ -209,9 +207,12 @@ tbody tr{
   color: green;
 }
 
-
-
-
+#spto{
+  margin: 0;
+}
+#date2{
+  margin-left: 5px;
+}
 
 
 
