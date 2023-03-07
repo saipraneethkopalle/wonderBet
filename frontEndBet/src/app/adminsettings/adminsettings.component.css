@@ -43,18 +43,6 @@ img{
     transform: translate(-50%, 0);
     border-radius: 7px;
 }
-.btn-primary{
-    background: #ffa00c url(/adminfiles/img/bg-send.gif) repeat-x;
-    border-color: #be7f1a;
-    color: #1e1e1e;
-}
-.btn-primary#cpBtn{
-    margin-right: 120px;
-    width: 35%;
-    font-size: 10px;
-    font-weight: 900;
-}
-
 h4{
     font-size: 16px;
     color: #3b5160;
@@ -84,9 +72,7 @@ tr{
 .btBox{
   text-align: center;
 }
-#cpBtn{
-  width:80px;
-}
+
 .must{
     font-size: 13px;
     color: #d0021b;
@@ -119,7 +105,6 @@ label{
     margin-left: 105px;
     width: 50%;
     border: solid 0.3px black;
-    background-color: rgb(223, 227, 230);
 }
 
 #balance{
@@ -135,35 +120,31 @@ label{
     padding-top: 10px;
     border-radius: 2px;
 }
-.btn-primary#dcBtn{
- margin-top: 20px;
- width: 20%;
- font-size: 13px;
- font-weight: 900;
- padding : 1px 0px
-}
 
-.xbttn{
-    background: black;
-    color:#fff;
-    margin-right: 20px;
-      width: 18px;
-      text-align: center;
-      height: 19px;
-      font-size: 12px;
-      font-weight: bold;
-      border-radius: 3px;
-      cursor: pointer;
+  .cross{
+    font-size: 20px;
+    cursor: pointer;
   }
-  .xbttn1{
-    background: black;
-    color:#fff;
-    margin-right: 4px;
-      width: 18px;
-      text-align: center;
-      height: 19px;
-      font-size: 12px;
-      font-weight: bold;
-      border-radius: 3px;
-      cursor: pointer;
-  }
+  .pass1{
+    margin-left: 47px;
+}
+.pass2{
+    margin-left: 47px;
+}
+.btn1{
+width: 139px;
+margin-left: 90px;
+border-radius: 5px;
+background-color: #ffa00c;
+border-color: #be7f1a;
+}
+.btn2{
+    width: 82px;
+    margin-right: -2px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #ffa00c;
+    border-color: #be7f1a;
+    font-size: 13px;
+    font-weight: 600;
+    }

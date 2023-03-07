@@ -151,3 +151,17 @@ thead{
     box-shadow: inset 0px 2px 0px rgb(0 0 0 / 10%);
   }
 
+  .sporthead{
+    border-top:1px solid #7e97a7;
+    border-bottom:1px solid #7e97a7;
+    background-color: #e4e4e4;
+    color:#243a48;
+    line-height: 18px;
+  }
+  .sporthead th{
+    color: #243a48;
+    background-color: #e4e4e4;
+    border: 1px solid #7e97a7;
+    border-width: 1px 0 1px 0;
+    padding: 8px 10px;
+  }

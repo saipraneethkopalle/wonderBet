@@ -12,7 +12,7 @@
     <tr *ngFor="let item of sportsData;let i=index;" class="tbox">
       <td class="sno">{{i+1}}</td>
       <td>{{item.betfairId}}</td>
-      <td><a routerLink="/AblockMarketlist" >{{item.Name}}</a></td>
+      <td><a routerLink="/AblockMarketlist" id="nameRut" ><u>{{item.Name}}</u></a></td>
       <td>{{item.status}}</td>
       <td><!-- Default switch -->
         <div class="custom-control custom-switch">

@@ -12,8 +12,9 @@
   }
   .filter3 {
     margin-bottom: 10px;
+    /* padding: 10px; */
   }
-  .btn4,
+/* .btn4,
 .btn5,
 .btn6 {
   background: #ffa00c;
@@ -25,7 +26,7 @@
   width: 80px;
   font-size: 12px;
   margin-right: 8px;
-}
+} */
 .full-wrap {
   position: relative;
   min-width: 80%;
@@ -81,14 +82,19 @@ element.style {
 thead{
   background-color: #e4e4e4;
   font-size: 13px;
-  border-top: 1px solid #7e97a7;;
+  border-top: 1px solid #7e97a7;
   line-height: 7px;
 } 
+thead th{
+  border-top: 1px solid #7e97a7;
+  border-bottom: 1px solid #7e97a7;
+
+}
 
 .matchs{
   margin-left: 2px;
   background: #ffb90e;
-  border-color: #cb8009;
+  /* border-color: #cb8009; */
   width: 118px;
   margin-right: 1px;
   border: 1px solid #bbb;
@@ -170,15 +176,16 @@ thead{
 .btn4,
   .btn5,
   .btn6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     background: #ffa00c;
-    border-color: #cb8009;
-    border-radius: 6px;
-    color: #1e1e1e;
+    border: 1px solid #cb8009;
+    border-radius: 4px;
     font-weight: bold;
-    height: 30px;
-    width: 120px;
+    height: 32px;
+    width: max-content;
     font-size: 12px;
-    margin-right:1px;
+    margin-right:6px;
   }
   
   .betStatus {

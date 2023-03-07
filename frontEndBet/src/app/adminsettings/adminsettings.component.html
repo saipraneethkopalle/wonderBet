@@ -118,39 +118,70 @@
         </div>
     </div>
 </div>
+
+
+
 <div class="modal" id="myModal" role="dailog">
     <div class="modal-dailog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Change Password</h4>
-                <span class="xbttn" data-dismiss="modal"
-        aria-label="Close">X</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span id="crs" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <form class="newform" method="post" autocomplete="off" [formGroup]="changePassword">
+                <table class="text-center">
+                    <tr><td ><label class="pass1">New Password</label><input class="input1" type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                    <tr><td><label>Confirm New Password </label><input type="text" placeholder="Enter" ><span class="must">*</span></td></tr>
+                    <tr><td><label class="pass2">Your Password</label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                  <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
+                  </table>
+                <div class="btBox"><button type="submit" class=" btn1">Change</button></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="modal" id="myModal" role="dailog">
+    <div class="modal-dailog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Change Password</h4>
+                <i class="fa-solid fa-square-xmark cross" data-dismiss="modal"
+                aria-label="Close"></i>
             </div>
             <div class="modal-body">
               <form method="post" autocomplete="off" [formGroup]="changePassword">
                 <table>
                     <tr><td><label>New Password</label><input type="text" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
-                    <tr><td><label>New Password </label><input type="text" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
-                    <tr><td class="confrimPassword">Confirm</td></tr>
+                    <tr><td><label>Confirm New Password </label><input type="text" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
+                    <tr><td class="confrimPassword"></td></tr>
                     <tr><td><label>Your Password</label><input type="text" placeholder="Enter" formControlName="oldPassword"><span class="must">*</span></td></tr>
                   <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
                   </table>
                 <div class="btBox"><button type="submit" class="btn btn-primary" id="cpBtn">Change</button></div>
                 </form>
             </div>
-            <!-- <div class="modal-footer"> -->
-            <!-- </div> -->
+           <div class="modal-footer">
+            </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="modal" id="depositChip" role="dailog">
     <div class="modal-dailog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Deposit Chips</h4>
-                <span class="xbttn1" data-dismiss="modal"
-        aria-label="Close">X</span>
+                <i class="fa-solid fa-square-xmark cross" data-dismiss="modal"
+                aria-label="Close"></i>
+
             </div>
             <div class="modal-body" id="dcmodal">
                 <table>
@@ -159,7 +190,7 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="dcBtn">Deposit</button>
+                <button type="button" class="btn2">Deposit</button>
             </div>
         </div>
     </div>

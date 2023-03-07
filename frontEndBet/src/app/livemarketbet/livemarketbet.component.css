@@ -133,6 +133,9 @@ th{
   border-width: 1px 0 1px 0;
   padding: 8px 10px
 }
+thead th{
+  border-bottom: 1px solid #7e97a7;
+}
 .table_data,.h tr{
   font-size: 12px
 }

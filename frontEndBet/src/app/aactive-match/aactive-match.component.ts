@@ -24,6 +24,7 @@ export class AactiveMatchComponent implements OnInit {
         if(element.sportId=='4'){
           if(element.isActive==true && element.isResult==false){
             element.name=element.eventName
+            console.log("subrat",element)
             return element;
           }
         }
@@ -40,7 +41,7 @@ export class AactiveMatchComponent implements OnInit {
       if(val.name.toLowerCase().includes(value.target.value)){
         return val;
       }
-     });
+     });   
     }else{
       this.matchList = this.beforeList
     }
