@@ -232,37 +232,21 @@ table,tr{
     background-color: #e4e4e4;
     color:#243a48;
 }
-.betlisttb td{
-    /* padding: 7px; */
-    /* padding: 10px 0px; */
+.betlisttb tr td{
     font-weight: 600;
-    font-size:13px;
+    font-size:12px;
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-left:5px;
+    padding-right:5px;
 }
-
-
-
 #table-values {
   padding: 10px 0px;
 }
 
-#td-all {
-  padding-right: 20px;
-}
-
-#td-odds-req {
-  padding-right: 40px;
-}
-
 #market{
-  padding-right: 200px;
+  width:200px;
 }
-
-#td-avg-odds {
-  padding-left: 5px;
-  padding-right: 60px;
-  padding-top: 12px;
-}
-
 .bet,.err{
     background-color: #ffffff;
 }
