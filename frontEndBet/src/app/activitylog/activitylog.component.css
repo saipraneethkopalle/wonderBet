@@ -58,6 +58,8 @@ li {
   font-weight: bold;
   font-size: 18px;
   padding: 5px;
+  color: #243A48;
+  padding-left: 10px;
 }
 
 .menu {
@@ -100,23 +102,28 @@ sub {
   width: 100%;
   background-color: #fff;
   border-collapse: collapse;
-  border-bottom: 2px solid #52616a;
+  border-bottom: 1px solid #52616a !important;
   margin-bottom: 15px;
 }
 
 .table thead {
   font-size: 12px;
-  background-color: #cbcfd1;
+  background-color: #dfe1e4;
   line-height: 20px;
   font-weight: bold;
-  height: 20px;
-  border-top: 2px solid #52616a;
+  height: 18px;
+  border-top: 1px solid #52616a !important;
 
 }
 
 thead th {
-  border-bottom: 2px solid #52616a;
-
+  border-bottom: 1px solid #52616a;
+  border-top: 1px solid #52616a;
+  padding-top: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 5px;
+  color: #243A48;
 }
 
 .firstclon1 {

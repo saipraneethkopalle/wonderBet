@@ -79,8 +79,8 @@ h6 {
 .btn5,
 .btn6 {
   background: #ffa00c;
-  border-color: #cb8009;
   border-radius: 6px;
+  border: 1px solid #cb8009;
   color: #1e1e1e;
   font-weight: bold;
   height: 30px;
@@ -90,8 +90,8 @@ h6 {
 }
 .btn3 {
   margin-left: 2px;
-  background: #ffb90e;
-  border-color: #cb8009;
+  background: #ffa00c;
+  border: 1px solid #cb8009 !important;
   width: 103px;
   margin-right: 7px;
   border: 1px solid #bbb;
@@ -147,15 +147,21 @@ tr {
 }
 .td1 {
   border-left: 1px solid #b7b7b7;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .td2 {
   border-left: 1px solid #b7b7b7;
   color: red;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .td3,
 .td4 {
   border-left: 1px solid #b7b7b7;
   color: green;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .betlisttb {

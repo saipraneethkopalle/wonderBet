@@ -65,7 +65,7 @@
                <label class="inputbody input">of</label><select class="sportStatus"><option value="Ascending">Ascending</option><option value="Descending">Descending</option></select>
                <label class="inputbody input">Last:</label><select class="sportStatus"><option value="100">100 Txn</option><option value="50">50 Txn</option><option value="25" selected>25 Txn</option></select>
                <label class="inputbody input">Auto Refresh (Seconds)</label><select class="sportStatus"><option value="stop">Stop</option><option value="60">60</option><option value="30" >30</option> <option value="15" selected>15</option> <option value="5" >5</option> <option value="2">2</option></select>
-               <label class="inputbody input">Bet Status:</label><select class="sportStatus"><option value="All">All</option></select>
+               <label class="inputbody input">Bet Status:</label><select class="sportStatus" id="betstt1"><option value="All">All</option></select>
                <button class="match_btn">Refresh</button>
           </div>
         </div>
@@ -96,7 +96,7 @@
         </tr>
       </thead>
       <table class="table table_data ">
-        <thead class="headJ">
+        <thead class="headJ" id="headJ1">
           <tr class="fw-bold tr"  >
             <th class="align-L1">PL ID</th>
             <th class="align-L2">Bet ID</th>
@@ -137,6 +137,9 @@
         </tbody>
       </table>
     </table>
+  </div>
+  <div>
+    <app-pagination></app-pagination>
   </div>
   
 </section>
