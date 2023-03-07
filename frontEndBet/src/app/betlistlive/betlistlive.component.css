@@ -70,7 +70,8 @@
 .table_body{
   font-weight: 400;
   height: 1rem !important;
-  border-bottom: 1px solid black; background-color: white;
+  border-bottom: 1px solid black; 
+  background-color: white;
 }
 .table_data{
   font-size: 11px;
@@ -86,7 +87,9 @@
 .table_body_section{
   font-weight: 400;
   height: 1rem !important;
-  border-bottom: 1px solid black; background-color: white;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  background-color: white;
   line-height: 11px;
 }
 h5{
@@ -100,48 +103,57 @@ h5{
 .align-L1{
   width: 8.5%;
   padding: 5px;
+  border-bottom: 1px solid #3d4246;
 }
 .align-L2{
   width: 5%;
   padding: 5px;
+  border-bottom: 1px solid #3d4246;
 }
 .align-L3{
   width: 6%;
   padding: 5px;
+  border-bottom: 1px solid #3d4246;
 }
 .align-L4{
   width: 6%;
   padding: 5px;
-  
+  border-bottom: 1px solid #3d4246;
 }
 .align-L5{
   width: 46%;
   padding: 5px;
+  border-bottom: 1px solid #3d4246;
 }
 
 .align-L6{
   width: 7%;
   padding: 5px;
+  border-bottom: 1px solid #3d4246;
 }
 .align-L7{
   width: 4%;
   padding: 5px;
   text-align: center;
+  border-bottom: 1px solid #3d4246;
 }
 .align-L8{
   width: 4%;
   padding: 5px;
   text-align: right;
+  border-bottom: 1px solid #3d4246;
 }
 .align-L9{
   width: 7.5%;
   padding: 5px;
   text-align: right;
+  border-bottom: 1px solid #3d4246;
 }
 .align-L10{
   /* width: 10% */
   padding: 5px;
   text-align: right;
+  border-bottom: 1px solid #3d4246;
 }
 .play{
   color:beige;
@@ -153,10 +165,11 @@ h5{
 .tr{
   font-size: 12px;
   background-color: #e4e4e4;
+  border-bottom: 1px solid black !important;
 }
 .game_date{
   list-style: none
 }
-.headJ{
-  background-color: #d9dfe4;
+#betstt1{
+  width: 7%;
 }

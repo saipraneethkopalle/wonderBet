@@ -50,6 +50,9 @@ label {
   margin: 0 5px 5px 0;
   box-sizing: border-box;
 }
+.time{
+  width: 6%;
+}
 .btn1,
 .btn2 {
   background: #eee;
@@ -64,10 +67,9 @@ label {
 .btn3 {
   margin-left: 2px;
   background: #ffb90e;
-  border-color: #cb8009;
   width: 103px;
   margin-right: 1px;
-  border: 1px solid #bbb;
+  border: 1px solid #cb8009;
   border-radius: 4px;
   color: #1e1e1e;
   font-weight: bold;
