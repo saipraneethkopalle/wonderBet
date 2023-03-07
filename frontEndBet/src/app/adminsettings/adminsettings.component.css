@@ -72,6 +72,8 @@ tr{
 .btBox{
   text-align: center;
 }
+<div class="btBox"><button type="submit" class=" btn1">Change</button></div>
+
 
 .must{
     font-size: 13px;
@@ -138,6 +140,8 @@ border-radius: 5px;
 background-color: #ffa00c;
 border-color: #be7f1a;
 }
+
+
 .btn2{
     width: 82px;
     margin-right: -2px;

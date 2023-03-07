@@ -72,20 +72,20 @@
         <td style="text-align: right;">Action</td>
       </tr>
       <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
-        <td><span class="badge badge-primary">{{shortCut}}</span> &nbsp;<a href="#">{{item.userName}}</a></td>
-        <td data-toggle="modal"
-        class="but_suspend openchangepwdmodal icon"
+        <td class="tdd"><span class="badge badge-primary">{{shortCut}}</span> &nbsp;<a href="#">{{item.userName}}</a></td>
+        <td  data-toggle="modal"
+        class="but_suspend openchangepwdmodal icon tdd"
         data-target="#myModal"><a href="#"
-          class="credRef a"
+          class="credRef a "
           >{{item.creditRef}}</a> <i class='fas fa-pen icon1' ></i></td>
-        <td><a href="#" class="bal">{{item.balance}}</a></td>
-        <td><button type="button" class="exposure">{{item.exposure}}</button></td>
-        <td>{{item.availBalance}}</td>
-        <td>{{item.balance}}</td>
-        <td>{{item.refProfitLoss}}</td>
-        <td><button type="button" class="status"><span class="dot"></span>{{item.userstatus}}</button></td>
+        <td class="tdd"><a href="#" class="bal">{{item.balance}}</a></td>
+        <td class="tdd"><button type="button" class="exposure">{{item.exposure}}</button></td>
+        <td class="tdd">{{item.availBalance}}</td>
+        <td class="tdd">{{item.balance}}</td>
+        <td class="tdd">{{item.refProfitLoss}}</td>
+        <td class="tdd"><button type="button" class="status"><span class="dot"></span>{{item.userstatus}}</button></td>
 
-    <td style="float: right">
+    <td  class="tdd" id="float" >
       <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss" routerLink="/bettingPL"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
       <img class="image1" src="../../assets/icons.png" routerLink="/homeBetting">
       <button type="button"class=" btn1 refresh"  data-toggle="modal" (click)="getCurrentUser(item)" data-target="#depositChip"><i class="fa fa-gear"></i></button>
@@ -106,8 +106,10 @@
     Profile</div>
   <div class="bottom-block-items" routerLink="/homeBetting"><img class="image" src="../../assets/icons.png">
     Betting History</div>
-  <div class="bottom-block-items"> <button type="button" class="refresh1" id="Betting Profit & Loss" routerLink="/bettingPL"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="bottom-block-items" routerLink="/bettingPL"><button type="button"  class="arrowbtn refresh2" id="Betting Profit & Loss" ><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
+
     Betting Profit & Loss</div>
+
   <div class="bottom-block-items"><button type="button" class="refresh1" id="Bank"><i class='fas fa-dollar-sign'></i></button>
     Bank</div>
 </div>
@@ -219,8 +221,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Change Status</h4>
-        <span class="xbttn" data-dismiss="modal"
-        aria-label="Close">X</span>
+        <i class="fa-solid fa-square-xmark cross" data-dismiss="modal"
+                aria-label="Close"></i>
       </div>
       <!-- <div class="modal-body" id="dcmodal"> -->
       <div class="card" id="change-status-body">
@@ -266,11 +268,12 @@
       <div class="passblock"  >
         <form method="post" autocomplete="off" [formGroup]="passwordForm">
         <tr>
-        <td>Password</td>
-        <td><input type="password" formControlName="password" class="plh"  placeholder="Enter" ></td>
-        <td><button type="button" class="chbtn">Change</button></td>
+        <td class="label">Password</td>
+        <td><div><input type="password" formControlName="password" class="plh"  placeholder="Enter" >
+          <button type="button" class="matchs" id="change">Change</button>
+        </div></td>
+        <!-- <td></td> -->
         <small *ngIf="passError" class="red">{{passError}}</small>
-
         </tr>
       </form>
 

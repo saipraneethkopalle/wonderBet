@@ -9,7 +9,7 @@
 }
   .abadge{
     background-color: #D77319;
-    border-radius: 3px 0px;
+    border-radius: 5px;
     width:23px;
     font-size:10px;
     margin-top:2px;
@@ -18,7 +18,7 @@
   }
   .Bbadge{
     background-color: #D65D5D;
-    border-radius: 3px 0px;
+    border-radius: 5px;
     width:23px;
     font-size:10px;
     margin-top:2px;
@@ -232,6 +232,9 @@ table,tr{
     font-weight: 600;
     font-size:13px;
 }
+.betlisthead{
+  line-height: 11px;
+}
 .bet,.err{
     background-color: #ffffff;
 }
@@ -330,9 +333,9 @@ table,tr{
   padding-left: 10px;
 }
 
-.tbl {
+/* .tbl { */
   /* width: 91%; */
-}
+/* } */
 
 #hr {
   background-color: #243a48;
@@ -345,3 +348,31 @@ table,tr{
   color:#7e97a7;
 }
 
+.para{
+  font-weight: bold;
+  position: relative;
+  top: 6px;
+}
+.para1{
+  font-weight: bold;
+  position: relative;
+  top: 8px;
+}
+.p{
+  line-height: 0px;
+}
+.total{
+  justify-content: space-between;
+}
+.tdf{
+  width: 139px;
+}
+.sportnames{
+  width: 135px;
+  font-weight: 500;
+  border: 1px solid grey;
+  position: relative;
+  top: 8px;
+  font-size: 14px;
+  height: 24px;
+}
