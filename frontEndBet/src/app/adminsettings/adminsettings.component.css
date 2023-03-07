@@ -69,11 +69,6 @@ tr{
   color:#E83523;
   font-size:12px;
 }
-.btBox{
-  text-align: center;
-}
-<div class="btBox"><button type="submit" class=" btn1">Change</button></div>
-
 
 .must{
     font-size: 13px;
