@@ -617,3 +617,7 @@ height: fit-content;
 .icon1{
   color: #2789ce; cursor: pointer;
 }
+
+#change-status-body {
+  margin: 0px 10px;
+}

@@ -24,9 +24,9 @@
       <li class="menu" routerLink="/activitylog">Activity Log</li>
     </div>
     <div class="heading">Account Summary</div>
-    <div><i class='fas fa-user    persion'></i> state</div>
+    <div class="prficon"><i class='fas fa-user    persion'></i> state</div>
     <div class="rightBlock">
-      <table class="table">
+      <table class="table1">
         <thead>
           <tr>
             <th class="column1" scope="col">Wallet</th>
@@ -67,7 +67,7 @@
             <dl>
                 <dt>Password</dt>
                 <dd class="edit">********************************
-                    <a href="#" class="favor-set openchangepwdmodal">Edit<i class="fa fa-pencil pen"></i></a>
+                    <a href="#" data-toggle="modal" class="favor-set openchangepwdmodal" data-target="#myModal">Edit<i class="fa fa-pencil pen"></i></a>
                 </dd>
             </dl>
             <dl>
@@ -89,5 +89,33 @@
 
 
 
+  </div>
+</div>
+
+
+
+<div class="modal" id="myModal" role="dailog">
+  <div class="modal-dailog modal-sm">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Change Password</h4>
+              <span class="xbttn" data-dismiss="modal"
+      aria-label="Close">X</span>
+          </div>
+          <div class="modal-body">
+            <form method="post" autocomplete="off" [formGroup]="changePassword">
+              <table class="table2">
+                  <tr><td><label>New Password</label><input type="password" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
+                  <tr><td><label id="cnfrm">Confirm New Password</label><input type="password" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
+                
+                  <tr><td><label>Your Password</label><input type="password" placeholder="Enter" formControlName="oldPassword"><span class="must">*</span></td></tr>
+                <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
+                </table>
+              <div class="btBox"><button type="submit" class="btn btn-primary" id="cpBtn">Change</button></div>
+              </form>
+          </div>
+          <!-- <div class="modal-footer"> -->
+          <!-- </div> -->
+      </div>
   </div>
 </div>
