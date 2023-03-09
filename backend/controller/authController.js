@@ -3,7 +3,7 @@ const CONST = require("../constants/CONST");
 const cryp = require("../constants/cryptojs");
 const generateAccessToken = require("../constants/generateToken");
 const user = require("../models/user");
-// console.log("====",cryp.encryptData(JSON.stringify({userName:"owner",password:"own@123",userRoleId:1})))
+// console.log("====",cryp.encryptData(JSON.stringify({roleId:2})))
 exports.register = async(req,res)=>{
     try{
         let userData = await cryp.decryptData(req.body.payload);
