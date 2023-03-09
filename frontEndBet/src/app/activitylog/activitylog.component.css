@@ -9,7 +9,7 @@
   padding-top: 5px; 
 }
 
-.abadge {
+.adminBtn {
   background-color: rgba(137, 199, 75, 0.911);
   border-radius: 40px 40px;
   width: 23px;
@@ -86,7 +86,7 @@ sub {
 
 }
 
-.user {
+.admin-btn {
   border: 1px solid #7E97A7;
   border-radius: 3px;
   font-size: 14px;
