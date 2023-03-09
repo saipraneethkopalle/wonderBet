@@ -7,7 +7,7 @@ const user = require("../models/user");
 exports.register = async(req,res)=>{
     try{
         let userData = await cryp.decryptData(req.body.payload);
-        // console.log(userData);
+        console.log(userData);
         let isUserExist = [];
         if(userData.userRoleId != 1){
             isUserExist = await user.find({userName:userData.userName}).lean()
@@ -37,7 +37,9 @@ exports.login = async(req,res)=>{
             return res.status(STATUS.BAD_REQUEST).send({"error":"Invalid User"})
         }
         let token = generateAccessToken(userCred);
-        return res.status(STATUS.OK).send({"message":"logged in successfully","data":{token:token,userName:userName,isActive:userData[0].isActive,userRoleId:userData[0].userRoleId,validationCode:validationCode}})
+        res.status(STATUS.OK).send({"message":"logged in successfully","data":{token:token,userName:userName,isActive:userData[0].isActive,userRoleId:userData[0].userRoleId,validationCode:validationCode}})
+        let data=await user.updateOne({userName:userName},{$set:{storeToken:token.token,expiry:token.expiry}})
+        console.log("fdsakfsad",data,token);
     }catch(err){
         return res.status(STATUS.BAD_REQUEST).send(err.message)
     }
