@@ -1,22 +1,22 @@
 <app-navigation></app-navigation>
 <div class="main">
   <div class="userProfile">
-    <button type="button" class="user"><div class="abadge">A</div>admin</button>
+    <button type="button" class="user"><div class="user_heading">A</div>admin</button>
   </div>
   <div class="subBlock">
     <div class="sideBlock">
-        <li class="head" >Position</li>
-        <li class="menu" routerLink="/Aaccountstatement">Account Statement</li>
-        <li class="menu" routerLink="/account">Account Summary</li>
-        <li class="head">Account Details</li>
-        <li class="menu" routerLink="/Aprofile">Profile</li>
-        <li class="menu" routerLink="/activitylog">Activity Log</li>
+        <li class="head_position" >Position</li>
+        <li class="menu_position" routerLink="/Aaccountstatement">Account Statement</li>
+        <li class="menu_position" routerLink="/account">Account Summary</li>
+        <li class="head_position">Account Details</li>
+        <li class="menu_position" routerLink="/Aprofile">Profile</li>
+        <li class="menu_position" routerLink="/activitylog">Activity Log</li>
     </div>
     <div class="rightBlock">
-      <div class="heading">Profile</div>
+      <div class="user_pro_heading">Profile</div>
       <div class="d-flex">
       <div class="col-md-6" >
-      <div class="pro_wrap">
+      <div class="profile_data">
     <h3>About you</h3>
     <dl >
         <dt>First Name</dt>
@@ -50,7 +50,7 @@
 </div>
       </div>
       <div class="col-md-6 ">
-        <div class="pro_wrap">
+        <div class="profile_data">
             <h3>Contact Details</h3>
             <dl >
                 <dt>Primary Number</dt>
@@ -72,14 +72,14 @@
                 aria-label="Close"></i>
             </div>
             <div class="modal-body">
-              <form class="newform" method="post" autocomplete="off">
+              <form class="change_pass_form" method="post" autocomplete="off">
                 <table class="text-center">
-                    <tr><td ><label class="pass1">New Password</label><input class="input1" type="text" placeholder="Enter"  ><span class="must">*</span></td></tr>
+                    <tr><td ><label class="newpass1">New Password</label><input class="input1" type="text" placeholder="Enter"  ><span class="must">*</span></td></tr>
                     <tr><td><label>Confirm New Password </label><input type="text" placeholder="Enter" ><span class="must">*</span></td></tr>
-                    <tr><td><label class="pass2">Your Password</label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
+                    <tr><td><label class="newpass2">Your Password</label><input type="text" placeholder="Enter"><span class="must">*</span></td></tr>
                   <tr><td class="error"></td></tr>
                   </table>
-                <div class="btBox"><button type="submit" class="btn btn-primary btn1" >Change</button></div>
+                <div class="change_btn_box"><button type="submit" class="btn btn-primary changebtn" >Change</button></div>
                 </form>
             </div>
 
