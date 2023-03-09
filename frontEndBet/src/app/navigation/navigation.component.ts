@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
   isActive:Boolean = false;
+  currentUserName:any;
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -15,6 +16,7 @@ export class NavigationComponent implements OnInit {
     console.log("token",token);
     if(token != null){
         this.isActive = true
+        this.currentUserName = localStorage.getItem('userName')
     }else{
       this.isActive =false
       this.router.navigate(['/login'])
