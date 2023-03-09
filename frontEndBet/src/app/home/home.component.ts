@@ -71,6 +71,7 @@ export class HomeComponent implements OnInit {
         text:"Successfully Created!"
       })
       this.getAdmin();
+      document.getElementById('close')?.click();
     }
     // ,(error:any)=>{
     //     this.error = "Invalid details"
