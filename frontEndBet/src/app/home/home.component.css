@@ -500,7 +500,7 @@ height: fit-content;
 .pp2{
   float:right;
   color:#508D0E;
-  font-size:13px;  
+  font-size:13px;
 }
 
 .matchs{
@@ -613,7 +613,7 @@ height: fit-content;
   position: relative;
   margin-left: 181px;
   border: 2px solid #bbb;
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 
 
@@ -662,4 +662,9 @@ height: fit-content;
     margin-right: 16px;
     cursor: pointer;
 }
-
+.er{
+  color:red;
+  font-size:10px;
+  width:100%;
+  text-align:center;
+}

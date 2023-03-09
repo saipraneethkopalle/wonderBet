@@ -42,19 +42,49 @@ export class HomeComponent implements OnInit {
   })
   superUserForm=new FormGroup({
     site:new FormControl('',[Validators.required]),
-    email:new FormControl('',[Validators.required]),
+    // email:new FormControl('',[Validators.required]),
     userName:new FormControl('',[Validators.required]),
-    password:new FormControl('',[Validators.required]),
+    password:new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
     confirmPassword:new FormControl('',[Validators.required]),
     firstName:new FormControl('',[Validators.required]),
     lastName:new FormControl('',[Validators.required]),
-    phone:new FormControl('',[Validators.required]),
+    phone:new FormControl('',[Validators.required,Validators.pattern('[- +()0-9]+')]),
     timezone:new FormControl('',[Validators.required])
   })
+  restrictSpecialChar(str:any){
+    let nospecial=/[^A-Za-z0-9&. ]/g;
+    let valid=nospecial.test(str)
+    if(valid){
+      this.error = "Special Character is not allowed!"
+    }else{
+      this.error=""
+    }
+  }
+  validateUser(user:any){
+    user = user.target.value;
+    console.log("user",user)
+    this.restrictSpecialChar(user);
+    this.apiService.getAllUsers().subscribe((res:any)=>{
+      for(var r of res.data){
+        if(r.userName == user){
+          console.log('dgdgf')
+        this.error ="UserName is not valid!"
+        console.log(this.error);
+        }
+      }
+
+    })
+  }
+
+  validatePassword(pwd:any){
+    var reg=[/[0-9]/, /[A-Z]/, /[a-z]/]
+    var passwordOk=reg.every(function(r) { return r.test(pwd.target.value) });
+    this.error=!passwordOk?"password is invalid":""
+  }
   createAdmin(){
     let payload={
       website:this.superUserForm.value.site,
-      email:this.superUserForm.value.email,
+      // email:this.superUserForm.value.email,
       userName:this.superUserForm.value.userName,
       password:this.superUserForm.value.password,
       confirmPassword:this.superUserForm.value.confirmPassword,
@@ -67,7 +97,7 @@ export class HomeComponent implements OnInit {
     console.log("payload",payload);
     this.apiService.createSuperUser(payload).subscribe((res:any)=>{
       Swal.fire({
-        title:"Created Super Admin",
+        title:"Created"+ this.childRoleData?.userName+" !",
         text:"Successfully Created!"
       })
       this.getAdmin();
