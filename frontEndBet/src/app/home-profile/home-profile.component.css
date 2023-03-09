@@ -247,7 +247,7 @@ dt {
 
 .profile-wrap .favor-set {
   position: absolute;
-  right: 2px;
+  right: -12px;
   top: 1px;
 }
 #impdl{
@@ -476,4 +476,27 @@ label {
 .prficon {
   position: relative;
   left: 5px;
+}
+.cross{
+  font-size: 20px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.matchs{
+  margin-left: 129px;
+  background: #ffb90e;
+  width: 137px;
+  margin-right: 1px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  color: #1e1e1e;
+  font-weight: bold;
+  line-height: 23px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 6px;
+}
+#change{
+  border-color: #cb8009;
 }

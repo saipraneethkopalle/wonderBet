@@ -280,3 +280,8 @@ label{
 .newform{
     margin-left: -41px;
 }
+.cross{
+  font-size: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}

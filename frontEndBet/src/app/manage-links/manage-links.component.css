@@ -1,93 +1,90 @@
-
-
-.main{
-    width: 100%;
-    min-height: 650px;
-    height: auto;
-    overflow: hidden;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0ece1;
-  }
-  select{
-    margin-left: 12px;
-    height: 25px;
-    font-size: 15px;
+.main {
+  width: 100%;
+  min-height: 650px;
+  height: auto;
+  overflow: hidden;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0ece1;
 }
-.inputs{
-    margin-left: 12px;
+select {
+  margin-left: 12px;
+  height: 25px;
+  font-size: 15px;
 }
-.dd1{
-    padding: 10px 0px 0;
-    background-color: #E0E6E6;
-    height: 40px;
-    border-bottom: 1px solid #7e97a7;
-    margin-bottom: 12px;
+.inputs {
+  margin-left: 12px;
 }
-  .sportsBody{
-    padding: 10px 0px 0;
-    background-color: #E0E6E6;
-    height: 80px;
-    border-bottom: 1px solid #7e97a7;
-    margin-bottom: 10px;
-  }
-
-  .daad{
-    padding-left: 1%;
-  }
-
-  h3{
-    font-size: 14px;
-    font-weight: bold;
-    padding-left: 10px;
-    line-height: 20px;
-    padding-top: 6px;
-    margin-bottom: 6px;
-  }
-  .input{
-    font-size: 12px;
-  }
-
-  .form-check-input {
-    position: absolute;
-    margin-top: 0.1rem;
-    margin-left: -1.25rem;
+.dd1 {
+  padding: 10px 0px 0;
+  background-color: #e0e6e6;
+  height: 40px;
+  border-bottom: 1px solid #7e97a7;
+  margin-bottom: 12px;
+}
+.sportsBody {
+  padding: 10px 0px 0;
+  background-color: #e0e6e6;
+  height: 80px;
+  border-bottom: 1px solid #7e97a7;
+  margin-bottom: 10px;
 }
 
-  .inputs{
-    width:63%;
-    height: 26px;
-    font-size: 13px;
-    margin-left: 3px;
-    font-family: Tahoma, Helvetica, sans-serif;
-    color: #1e1e1e;
-    font-size: 12px;
-    border: 0px #aaa solid;
-    background: #fff;
-    box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  .lables2{
-    margin-left: 110px;
-    font-size: 12px;
-  }
+.daad {
+  padding-left: 1%;
+}
 
-  button{
-    margin-left: 100px;
-    background: #ffb90e;
-    border-color: #cb8009;
-    width: 80px;
-    margin-right: 1px;
-    border: 1px solid #bbb;
-    border-radius: 4px;
-    color: #1e1e1e;
-    font-weight: bold;
-    line-height: 23px;
-    font-size: 12px;
-    margin-bottom: 6px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 6px;
-  }
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  line-height: 20px;
+  padding-top: 6px;
+  margin-bottom: 6px;
+}
+.input {
+  font-size: 12px;
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.1rem;
+  margin-left: -1.25rem;
+}
+
+.inputs {
+  width: 63%;
+  height: 26px;
+  font-size: 13px;
+  margin-left: 3px;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: #1e1e1e;
+  font-size: 12px;
+  border: 0px #aaa solid;
+  background: #fff;
+  box-shadow: inset 0px 1px 0px rgb(0 0 0 / 50%);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.lables2 {
+  margin-left: 110px;
+  font-size: 12px;
+}
+
+button {
+  margin-left: 100px;
+  background: #ffb90e;
+  width: 80px;
+  margin-right: 1px;
+  border: 1px solid #cb8009;
+  border-radius: 4px;
+  color: #1e1e1e;
+  font-weight: bold;
+  line-height: 23px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 6px;
+}

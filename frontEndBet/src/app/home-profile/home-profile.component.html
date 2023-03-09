@@ -99,8 +99,8 @@
       <div class="modal-content">
           <div class="modal-header">
               <h4 class="modal-title">Change Password</h4>
-              <span class="xbttn" data-dismiss="modal"
-      aria-label="Close">X</span>
+              <i class="fa-solid fa-square-xmark cross" data-dismiss="modal"
+                aria-label="Close"></i>
           </div>
           <div class="modal-body">
             <form method="post" autocomplete="off" [formGroup]="changePassword">
@@ -111,6 +111,7 @@
                   <tr><td><label>Your Password</label><input type="password" placeholder="Enter" formControlName="oldPassword"><span class="must">*</span></td></tr>
                 <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
                 </table>
+                <!-- <button type="button" class="matchs" id="change">Change</button> -->
               <div class="btBox"><button type="submit" class="btn btn-primary" id="cpBtn">Change</button></div>
               </form>
           </div>
