@@ -38,7 +38,7 @@ thead th{
     border-bottom: 1px solid #7e97a7;
 
 }
-.firstclun{
+.table_data1{
     font-weight: bold;
     font-size: 12px;
 
@@ -83,16 +83,16 @@ thead th{
     padding-top: 10px;
 }
 
-.align-L1{
+.table_head1{
     width: 10%
 }
-.align-L2{
+.table_head2{
     width: 13%
 }
-.align-L3{
+.table_head3{
     width: 60%
 }
-.align-L4{
+.table_head4{
     width: 20%
 }
 .tbody{

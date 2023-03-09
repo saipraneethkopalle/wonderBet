@@ -75,7 +75,7 @@
       width: 153px;
       margin-left: 13px;
   }
-  .match_button{
+  .buttons{
     margin-left: 7px;
     background: black;
     border-color: black;
@@ -84,14 +84,11 @@
     border: 1px solid black;
     border-radius: 6px;
     color: white;
-    /* font-weight: bold; */
     line-height: 8px;
     font-size: 12px;
     height: 26px;
     font-family: Tahoma, Helvetica, sans-serif;
-
   }
-  
   .search{
     position: relative;
     border: none;
@@ -105,7 +102,7 @@
     font-family: Arial, Helvetica, sans-serif;
     height: 1px;
 } 
-.searchbtn{
+.searchinput{
   width: 257px;
   height: 29px;
   margin-top: 4px;
@@ -139,33 +136,33 @@ thead th{
 .table_data,.h tr{
   font-size: 12px
 }
-.alignL1{
+.table_head1{
   width: 17%; text-align: center;
 }
-.alignL2{
+.table_head2{
   width: 13%;
 }
-.alignL3{
+.table_head3{
   width: 7%;
 }
-.alignL4{
+.table_head4{
   width: 10%;
 }
-.alignL5{
+.table_head5{
   width: 11%;
 }
-.alignL6{
+.table_head6{
   width: 11%;
 }
-.alignL7{
+.table_head7{
   width: 10%;
 }
-.alignL8{
+.table_head8{
   width: 9%;
 }
-.alignL9{
+.table_head9{
   width: 6%;
 }
-.alignL10{
+.table_head10{
   width: 20%;
 }

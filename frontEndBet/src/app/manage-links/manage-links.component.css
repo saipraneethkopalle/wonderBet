@@ -17,7 +17,7 @@ select {
 .inputs {
   margin-left: 12px;
 }
-.dd1 {
+.div {
   padding: 10px 0px 0;
   background-color: #e0e6e6;
   height: 40px;
@@ -32,7 +32,7 @@ select {
   margin-bottom: 10px;
 }
 
-.daad {
+.div_body {
   padding-left: 1%;
 }
 
