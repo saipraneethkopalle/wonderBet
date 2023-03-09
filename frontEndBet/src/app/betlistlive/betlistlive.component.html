@@ -58,15 +58,15 @@
       </div>
     </div>
     <div class="filter2">
-      <div class="funtion_wraper ">
-        <div class="sportsBody" >
+      <div class="betlistselecter">
+        <div class="betlistselecterBody" >
           <div>
-              <label class="input">Order of display:</label><select class="sportStatus"><option value="Stake">Stake</option><option value="Player Id">Player Id</option><option value="Time">Time</option></select>
-               <label class="inputbody input">of</label><select class="sportStatus"><option value="Ascending">Ascending</option><option value="Descending">Descending</option></select>
-               <label class="inputbody input">Last:</label><select class="sportStatus"><option value="100">100 Txn</option><option value="50">50 Txn</option><option value="25" selected>25 Txn</option></select>
-               <label class="inputbody input">Auto Refresh (Seconds)</label><select class="sportStatus"><option value="stop">Stop</option><option value="60">60</option><option value="30" >30</option> <option value="15" selected>15</option> <option value="5" >5</option> <option value="2">2</option></select>
-               <label class="inputbody input">Bet Status:</label><select class="sportStatus" id="betstt1"><option value="All">All</option></select>
-               <button class="match_btn">Refresh</button>
+              <label class="input">Order of display:</label><select class="selectedoption"><option value="Stake">Stake</option><option value="Player Id">Player Id</option><option value="Time">Time</option></select>
+               <label class="input_label">of</label><select class="selectedoption"><option value="Ascending">Ascending</option><option value="Descending">Descending</option></select>
+               <label class="input_label">Last:</label><select class="selectedoption"><option value="100">100 Txn</option><option value="50">50 Txn</option><option value="25" selected>25 Txn</option></select>
+               <label class="input_label">Auto Refresh (Seconds)</label><select class="selectedoption"><option value="stop">Stop</option><option value="60">60</option><option value="30" >30</option> <option value="15" selected>15</option> <option value="5" >5</option> <option value="2">2</option></select>
+               <label class="input_label">Bet Status:</label><select class="selectedoption" id="betstt1"><option value="All">All</option></select>
+               <button class="refresh_btn">Refresh</button>
           </div>
         </div>
     </div>
@@ -74,48 +74,48 @@
   </div>
 
   <div>
-      <table class="table table_data mb-2">
+      <table class="table table_head_wrapper mb-2">
         <thead>
           <tr class="fw-bold" >
-            <th class="head" scope="align-L table_head" >UnMatched</th>
+            <th class="table_head"  >UnMatched</th>
           </tr>
         </thead>
         <tbody class="table_body"
           >
             <tr>
-              <td class="table_data">You have no bets in this time period.</td>
+              <td class="table_head_wrapper">You have no bets in this time period.</td>
             </tr>
         </tbody>
       </table>
   </div>
   <div>
-    <table class="table table_data mb-2">
+    <table class="table table_head_wrapper mb-2">
       <thead>
         <tr class="fw-bold" >
-          <th class="head" scope="align-L">Matched</th>
+          <th class="table_head" scope="align-L">Matched</th>
         </tr>
       </thead>
-      <table class="table table_data ">
-        <thead class="headJ" id="headJ1">
+      <table class="table table_head_wrapper">
+        <thead>
           <tr class="fw-bold tr"  >
-            <th class="align-L1">PL ID</th>
-            <th class="align-L2">Bet ID</th>
-            <th class="align-L3">Bet placed</th>
-            <th class="align-L4">IP Address</th>
-            <th class="align-L5">Market</th>
-            <th class="align-L6">Selection</th>
-            <th class="align-L7">Type</th>
-            <th class="align-L8">Odds req.</th>
-            <th class="align-L9">Stake</th>
-            <th class="align-L10">Liability</th>
+            <th class="table_head1">PL ID</th>
+            <th class="table_head2">Bet ID</th>
+            <th class="table_head3">Bet placed</th>
+            <th class="table_head4">IP Address</th>
+            <th class="table_head5">Market</th>
+            <th class="table_head6">Selection</th>
+            <th class="table_head7">Type</th>
+            <th class="table_head8">Odds req.</th>
+            <th class="table_head9">Stake</th>
+            <th class="table_head10">Liability</th>
           </tr>
         </thead>
         <tbody  class="table_body_section">
           <tr>
-            <td>nasir</td>
-            <td><a href="#">9ae1420</a></td>
+            <td class="table_head1">nasir</td>
+            <td class="table_head2"><a href="#">9ae1420</a></td>
             
-            <td>
+            <td class="table_head3">
               <li class="game_date" >
                 Wed Aug 03 
               </li>
@@ -126,13 +126,13 @@
                 IST 2022              
               </li>
             </td>
-            <td>223.233.7.178</td>
-            <td>Cricket <i class="fa fa-play play" ></i> <strong>Ireland v South Africa</strong><i class="fa fa-play" style="color:beige;"></i> Match odds</td>
-            <td>South Africa</td>
-            <td> <a href="#">Lay</a></td>
-            <td>0.21</td>
-            <td>20</td>
-            <td>4.2</td>
+            <td class="table_head4">223.233.7.178</td>
+            <td class="table_head5">Cricket <i class="fa fa-play play" ></i> <strong>Ireland v South Africa</strong><i class="fa fa-play" style="color:beige;"></i> Match odds</td>
+            <td class="table_head6">South Africa</td>
+            <td class="table_head7"> <a href="#">Lay</a></td>
+            <td class="table_head8">0.21</td>
+            <td class="table_head9">20</td>
+            <td class="table_head10">4.2</td>
           </tr>
         </tbody>
       </table>

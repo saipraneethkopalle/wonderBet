@@ -17,14 +17,14 @@ select {
 .inputs {
   margin-left: 12px;
 }
-.div {
+.selectwebsite {
   padding: 10px 0px 0;
   background-color: #e0e6e6;
   height: 40px;
   border-bottom: 1px solid #7e97a7;
   margin-bottom: 12px;
 }
-.sportsBody {
+.set_link {
   padding: 10px 0px 0;
   background-color: #e0e6e6;
   height: 80px;
@@ -32,7 +32,7 @@ select {
   margin-bottom: 10px;
 }
 
-.div_body {
+.select_body{
   padding-left: 1%;
 }
 
@@ -44,7 +44,7 @@ h3 {
   padding-top: 6px;
   margin-bottom: 6px;
 }
-.input {
+.input{
   font-size: 12px;
 }
 

@@ -2,7 +2,7 @@
 <section class="main">
   <div class="full-body">
     <div class="games">
-      <h2 class="heading">Cricket</h2>
+      <h2 class="sports_heading">Cricket</h2>
       <table class="table table_data mb-2">
         <thead>
           <tr class="fw-bold">
@@ -31,7 +31,7 @@
     </div>
 
     <div class="games1">
-      <h2 class="heading">Tennis</h2>
+      <h2 class="sports_heading">Tennis</h2>
 
       <table class="table table_data mb-2">
         <thead>
@@ -42,7 +42,7 @@
             <th class="table_head4">Action</th>
           </tr>
         </thead>
-        <tbody class="tbody">
+        <tbody class="sports_body">
         <tr *ngFor="let item of soccerList;let i=index;">
             <td class="table_data1">{{item.eventId}}</td>
             <td class="table_data1">{{item.marketId}}</td>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="games2">
-      <h2 class="heading">Soccer</h2>
+      <h2 class="sports_heading">Soccer</h2>
 
       <table class="table table_data mb-2">
         <thead>
@@ -72,7 +72,7 @@
             <th class="table_head4">Action</th>
           </tr>
         </thead>
-        <tbody class="tbody">
+        <tbody class="sports_body">
         <tr *ngFor="let item of tennisList;let i=index;">
             <td class="table_data1">{{item.eventId}}</td>
             <td class="table_data1">{{item.marketId}}</td>
