@@ -58,3 +58,11 @@ exports.updateUserStatus = async(req,res)=>{
 
     }
 }
+exports.getAllUsers = async(req,res)=>{
+    try{
+        let usersList = await user.find().lean();
+        return res.status(STATUS.OK).send({message:'Users Fetched!',data:usersList})        
+    }catch(err){
+        return res.status(STATUS.BAD_REQUEST).send({message:'error',error:err.message})        
+    }
+}

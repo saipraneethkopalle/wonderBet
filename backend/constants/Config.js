@@ -19,3 +19,4 @@ exports.levelDetails=[
     {userId:8,userName:"Agent",userShortCut:"ag"},
     {userId:9,userName:"User (Punter)",userShortCut:"pl"}
 ]
+exports.defaultPassword="Abcd1234"

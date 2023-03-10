@@ -1,4 +1,4 @@
-const { STATUS } = require("../constants/Config");
+const { STATUS,defaultPassword } = require("../constants/Config");
 const CONST = require("../constants/CONST");
 const cryp = require("../constants/cryptojs");
 const generateAccessToken = require("../constants/generateToken");
@@ -36,8 +36,15 @@ exports.login = async(req,res)=>{
         if(userData.length == 0){
             return res.status(STATUS.BAD_REQUEST).send({"error":"Invalid User"})
         }
+        let trackUser=await user.updateOne({userName:userName},{$set:{validationCode:validationCode}});
+        let isLogin=true;
+        if(password == defaultPassword){
+            isLogin = false;
+        }else{
+            isLogin = true;
+        }
         let token = generateAccessToken(userCred);
-        return res.status(STATUS.OK).send({"message":"logged in successfully","data":{token:token,userName:userName,isActive:userData[0].isActive,userRoleId:userData[0].userRoleId,validationCode:validationCode}})
+        return res.status(STATUS.OK).send({"message":"logged in successfully","data":{token:token,userName:userName,isActive:userData[0].isActive,userRoleId:userData[0].userRoleId,validationCode:validationCode,isLogin:isLogin}})
     }catch(err){
         return res.status(STATUS.BAD_REQUEST).send(err.message)
     }
