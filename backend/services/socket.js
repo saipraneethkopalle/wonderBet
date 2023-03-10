@@ -22,10 +22,6 @@ const addRooms = async (io) => {
   const rooms = await io.of('/').adapter.allRooms();
   const room = Array.from(rooms); 
   let leaveRooms=JSON.parse(await redisdb.GetRedis("OutRooms"));
-for(var rms of leaveRooms){ 
-    // console.log(rms);
-  io.emit('leaveRoom/',rms)
-}
 }
 
 const getET = (io) => {

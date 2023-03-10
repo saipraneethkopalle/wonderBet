@@ -67,29 +67,32 @@ if (cluster.isMaster) {
     app.set("port", port);
 Socketconnection.configure(http, 'worker');
 Socketconnection.io.on("connection", async (socket) => {
+    
 //    console.log("connected to admin socket");
     
     socket.on('join_user',async function(data){
         // console.log("data",data);
         socket.join(data);
+        // Socketconnection.io.on("connection",async(socket)=>{socket.emit())
         var userRoom = data.slice(0,data.lastIndexOf("/"))
         const rooms = await io.of('/').adapter.allRooms();
         const room = Array.from(rooms);
         let user= room.filter(rs=>rs.includes(userRoom)) 
         // console.log("===",user);
         if(user.length > 1){
-           user = user.filter(async(ur)=>{             
-                if(ur != data){
-                    socket.leave(ur)
-                    const rooms = await io.of('/').adapter.allRooms();
-                    const room = Array.from(rooms);
-                    // console.log("after",room)                    
-                    socket.emit("leaveRoom/",ur)     
-                    return ur               
-                }
-            })
-            await redisdb.SetRedis("OutRooms",JSON.stringify(user));
+           user = user.filter((ur)=>{  
+             if(ur != data){ 
+                // console.log("valid",ur!=data)
+                // console.log('fdfdf',ur,data)
+
+                return ur}})
+            // console.log(user);
+            await redisdb.SetRedisEx('OutRooms',JSON.stringify(user),2);
         }
+    })  
+  
+    socket.on('leaveRoom',function(data){
+        console.log("emitting",data);
     })
      socket.on('stats', function (data) {
         socket.join("room-stats");

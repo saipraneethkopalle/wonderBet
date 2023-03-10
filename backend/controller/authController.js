@@ -38,7 +38,7 @@ exports.login = async(req,res)=>{
         }
         let trackUser=await user.updateOne({userName:userName},{$set:{validationCode:validationCode}});
         let isLogin=true;
-        if(password == defaultPassword){
+        if(userData.default){
             isLogin = false;
         }else{
             isLogin = true;

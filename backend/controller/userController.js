@@ -16,7 +16,7 @@ exports.getLevelDetails = async(req,res)=>{
 exports.changePassword=async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload);
-        let updatUser = await user.updateOne({password:payload.oldPassword},{$set:{password:payload.newPassword}})
+        let updatUser = await user.updateOne({password:payload.oldPassword},{$set:{password:payload.newPassword,default:false}})
         return res.status(STATUS.OK).send({"message":"Password Changed Successfully"});
     }catch(err){
         return res.status(STATUS.BAD_REQUEST).send(err);
