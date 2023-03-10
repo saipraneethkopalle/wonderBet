@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ApiServicesService } from '../api-services.service';
+import { SocketServiceService } from '../socket.service';
 
 @Component({
   selector: 'app-home',
@@ -25,9 +26,14 @@ export class HomeComponent implements OnInit {
   pwdError:any;
   isFirst:any;
   isSubmitted:any=false;
-  constructor(private apiService:ApiServicesService) { }
+  validCode:any;
+  constructor(private apiService:ApiServicesService,private socket:SocketServiceService) { }
 
   ngOnInit(): void {
+    this.validCode=localStorage.getItem("validationCode");
+    console.log("validcode",this.validCode);
+    this.socket.generateLoginId(localStorage.getItem("userName")+"/",this.validCode);
+    this.socket.leaveRoom(localStorage.getItem("userName")+"/"+this.validCode)
     document.body.style.backgroundColor="#f0ece1";
     this.currentroleId=localStorage.getItem('userRoleId')
     this.loggedUser = localStorage.getItem('userName');

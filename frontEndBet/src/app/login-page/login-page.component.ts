@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ApiServicesService } from '../api-services.service';
+import { SocketServiceService } from '../socket.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class LoginPageComponent implements OnInit {
   error:any;
   pwdError: any;
   isLogin = true;
-  constructor(private router:Router,private apiService:ApiServicesService) { }
+  constructor(private router:Router,private apiService:ApiServicesService,private socket:SocketServiceService) { }
   register = new FormGroup({
     userName:new FormControl('',[Validators.required,Validators.minLength(18),Validators.pattern(/[a-zA-Z0-9]/)]),
     password:new FormControl('',[Validators.required]),
@@ -39,10 +40,12 @@ export class LoginPageComponent implements OnInit {
       localStorage.setItem("userName",res.data.userName);
       localStorage.setItem("userRoleId",res.data.userRoleId)
       localStorage.setItem("isLogin",res.data.isLogin);
+      localStorage.setItem("validationCode",this.validationCode);
       this.isLogin = res.data.isLogin
       console.log(this.isLogin);
       if(this.isLogin) {
         this.router.navigate([""])
+        this.socket.generateLoginId(res.data.userName + "/",this.validationCode)
       } else {
         this.isLogin = false
       }
@@ -59,7 +62,7 @@ export class LoginPageComponent implements OnInit {
     this.error=!passwordOk?"password is invalid":""
     this.pwdError=!passwordOk?"password is invalid":""
   }
-  
+
   changePassword = new FormGroup({
     newPassword: new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
     confirmPassword:new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
@@ -73,7 +76,7 @@ export class LoginPageComponent implements OnInit {
       oldPassword:this.changePassword.value.oldPassword
     }
     console.log("payload", payload);
-    
+
     this.apiService.changePassword(payload).subscribe((res:any)=>{
     this.pwdError = ""
       Swal.fire({
