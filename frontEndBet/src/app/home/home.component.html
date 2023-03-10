@@ -126,7 +126,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" [formGroup]="superUserForm" (ngSubmit)="createAdmin()" autocomplete="off">
+        <form  [formGroup]="superUserForm" (ngSubmit)="createAdmin()" autocomplete="off">
           <table class="table2">
             <tr>
               <td id="lb"><label>Select Website</label></td>
@@ -185,7 +185,7 @@
               <small *ngIf="lastName?.errors?.['pattern']" class="text-danger">Special Character is not allowed.</small>
             <tr>
               <td id="lb"><label>Phone</label></td>
-              <td><input placeholder="Enter" formControlName="phone" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==12) return false;"><span class="must">*</span></td>
+              <td><input placeholder="Enter" formControlName="phone" type="number" ><span class="must">*</span></td>
             </tr>
             <p *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)" class="validations-p">
               <small *ngIf="phone?.errors?.['required']" class="text-danger error-message-place">phone number is required.</small>
