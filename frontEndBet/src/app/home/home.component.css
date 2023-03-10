@@ -675,6 +675,8 @@ height: fit-content;
   font-size:10px;
   width:100%;
   text-align:center;
+  margin-left:auto;
+  margin-right:auto;
 }
 .error{
   color:#E83523;

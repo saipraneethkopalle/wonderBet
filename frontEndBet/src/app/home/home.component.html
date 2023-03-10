@@ -140,6 +140,7 @@
               <td id="lb"><label>Username</label></td>
               <td><input type="text" placeholder="Enter" autocomplete="false" formControlName="userName" maxlength="12" (keyup)="validateUser($event)"><span class="must">*</span></td>
             </tr>
+          <div class="er" *ngIf="error">{{error}}</div>
             <tr>
               <td id="lb"><label>Password</label></td>
               <td><input type="password" placeholder="Enter" autocomplete="false" formControlName="password" minlength="8" maxlength="14" (keyup)="validatePassword($event)"><span class="must">*</span></td>
@@ -198,7 +199,6 @@
                 </select><span class="must">*</span></td>
             </tr>
           </table>
-          <div class="er" *ngIf="error">{{error}}</div>
 
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary" id="cpBtn2" *ngIf="!isSubmitted" disabled>Create</button>
