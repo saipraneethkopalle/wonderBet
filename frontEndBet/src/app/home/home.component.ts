@@ -51,6 +51,13 @@ export class HomeComponent implements OnInit {
       console.log(this.childRoleData)
       this.shortCut = this.childRoleData.userShortCut
     this.getAdmin();
+    this.apiService.getAllUsers().subscribe((res:any)=>{
+          if (res && res.data) {
+            this.userData = res.data.map((items: { userName: any }):any => items.userName);
+            console.log(this.userData);
+
+          }
+        });
     })
   }
 
@@ -78,9 +85,19 @@ export class HomeComponent implements OnInit {
     confirmPassword:new FormControl('', [Validators.required]),
     firstName:new FormControl('',[Validators.required, Validators.pattern(/^[a-zA-Z0-9_.-]*$/)]),
     lastName:new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z0-9_.-]*$/)]),
-    phone:new FormControl('',[Validators.required,Validators.minLength(10), Validators.maxLength(10), Validators.pattern('[- +()0-9]+')]),
+    phone:new FormControl('',[Validators.required,Validators.minLength(10), Validators.maxLength(12), Validators.pattern('[- +()0-9]+')]),
     timezone:new FormControl('',)
   });
+
+  validateuser(value: any) {
+    console.log("this.userData", this.userData);
+
+    if(this.userData && this.userData?.includes(value.target.value)) {
+      this.error.invalidUser = true;
+    } else {
+      this.error.invalidUser = false;
+    }
+  }
 
 
   get userName() { return this.superUserForm.get('userName') }
@@ -107,30 +124,30 @@ export class HomeComponent implements OnInit {
   //     this.error=""
   //   }
   // }
-  validateUser(user:any){
-    // this.restrictSpecialChar(user);
-    this.apiService.getAllUsers().subscribe((res:any)=>{
-      if (res && res.data) {
-        this.userData = res.data;
-      }
-        for(var r of res.data){
-        if(r.userName == user.target.value){
-        this.error.userName ="UserName is not valid!"
-        console.log(this.error);
-        }
-      }
+  // validateUser(user:any){
+  //   // this.restrictSpecialChar(user);
+  //   this.apiService.getAllUsers().subscribe((res:any)=>{
+  //     if (res && res.data) {
+  //       this.userData = res.data;
+  //     }
+  //       for(var r of res.data){
+  //       if(r.userName == user.target.value){
+  //       this.error.userName ="UserName is not valid!"
+  //       console.log(this.error);
+  //       }
+  //     }
 
-    })
-  }
+  //   })
+  // }
 
-  validatePassword(pwd:any){
-    var reg=[/[0-9]/, /[A-Z]/, /[a-z]/]
-    var passwordOk=reg.every(function(r) { return r.test(pwd.target.value) });
-    this.error.passwordOk=!passwordOk?"password is invalid":""
-    console.log(this.error);
+  // validatePassword(pwd:any){
+  //   var reg=[/[0-9]/, /[A-Z]/, /[a-z]/]
+  //   var passwordOk=reg.every(function(r) { return r.test(pwd.target.value) });
+  //   this.error.passwordOk=!passwordOk?"password is invalid":""
+  //   console.log(this.error);
 
-    // this.pwdError=!passwordOk?"password is invalid":""
-  }
+  //   // this.pwdError=!passwordOk?"password is invalid":""
+  // }
   createAdmin(){
     console.log("this.superUserForm", this.superUserForm);
     console.log("document.getElementsByClassName('ng-invalid')", document.getElementsByClassName('ng-invalid'));

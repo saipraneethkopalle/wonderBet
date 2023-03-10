@@ -141,13 +141,14 @@
             </p>
             <tr>
               <td id="lb"><label>Username</label></td>
-              <td><input type="text" placeholder="Enter" autocomplete="false" formControlName="userName" maxlength="12"><span class="must">*</span></td>
+              <td><input type="text" placeholder="Enter" autocomplete="false" formControlName="userName" maxlength="12" (keyup)="validateuser($event)"><span class="must">*</span></td>
             </tr>
             <!-- <div class="er" *ngIf="error && error?.Special">{{error?.Special}}</div> -->
             <p  *ngIf="userName?.invalid && (userName?.touched || userName?.dirty)" class="validations-p">
                 <small *ngIf="userName?.errors?.['required']" class="text-danger error-message-place">Name is required.</small>
                 <small *ngIf="userName?.errors?.['pattern']" class="text-danger error-message-place">Special Characters are not allowed.</small>
             </p>
+            <small *ngIf="error?.invalidUser" class="text-danger error-message-place">user already exists.</small>
             <tr>
               <td id="lb"><label>Password</label></td>
               <td><input type="password" placeholder="Enter" autocomplete="false" formControlName="password" minlength="8" maxlength="14"><span class="must">*</span></td>
@@ -185,12 +186,14 @@
               <small *ngIf="lastName?.errors?.['pattern']" class="text-danger error-message-place">Special Character is not allowed.</small>
             <tr>
               <td id="lb"><label>Phone</label></td>
-              <td><input placeholder="Enter" formControlName="phone" type="text" maxlength="10"><span class="must">*</span></td>
+              <td><input placeholder="Enter" formControlName="phone" type="text" maxlength="12"><span class="must">*</span></td>
             </tr>
             <p *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)" class="validations-p">
               <small *ngIf="phone?.errors?.['required']" class="text-danger error-message-place">phone number is required.</small>
               <small *ngIf="phone?.errors?.['minlength']" class="text-danger error-message-place">Please enter a valid phone number.</small>
               <small *ngIf="phone?.errors?.['maxlength']" class="text-danger error-message-place">Please enter a valid phone number.</small>
+              <small *ngIf="phone?.errors?.['pattern']" class="text-danger error-message-place">Only Numeric values are allowed.</small>
+
             </p>
             <tr>
               <td id="lb"><label>Time Zone</label></td>
