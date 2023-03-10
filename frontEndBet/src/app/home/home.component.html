@@ -312,26 +312,3 @@
   </div>
 </div>
 <button id="suspendedB" role="button" data-toggle="modal" class="but_suspend openchangepwdmodal" data-target="#mypwd">click</button>
-<div class="modal" id="mypwd" role="dailog">
-  <div class="modal-dailog modal-sm">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h4 class="modal-title">Change Password</h4>
-              <i class="fa-solid fa-square-xmark cross" data-dismiss="modal"
-              aria-label="Close" id="pclose"></i>
-          </div>
-          <div class="modal-body">
-            <form class="newform" method="post" autocomplete="off" [formGroup]="changePassword" (ngSubmit)="updatePassword()">
-              <table class="text-center">
-                  <tr><td ><label class="pass1">New Password</label><input class="input1" type="password" placeholder="Enter" minlength="8" maxlength="14" formControlName="newPassword" (keyup)="validatePassword($event)"><span class="must">*</span></td></tr>
-                  <tr><td><label class="cpass">Confirm New Password </label><input type="password" placeholder="Enter" minlength="8" maxlength="14" formControlName="confirmPassword" (keyup)="validatePassword($event)"><span class="must">*</span></td></tr>
-                  <tr><td><label class="pass2">Your Password</label><input type="password" placeholder="Enter" minlength="8" maxlength="14" formControlName="oldPassword"><span class="must">*</span></td></tr>
-                <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
-                </table>
-              <div class="btBox"><button type="submit" class="chbtn">Change</button></div>
-              </form>
-          </div>
-
-      </div>
-  </div>
-</div>
