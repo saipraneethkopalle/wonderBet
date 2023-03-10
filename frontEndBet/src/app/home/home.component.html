@@ -142,11 +142,11 @@
             </tr>
             <tr>
               <td id="lb"><label>Password</label></td>
-              <td><input type="password" placeholder="Enter" autocomplete="false" formControlName="password" maxlength="8" (keyup)="validatePassword($event)"><span class="must">*</span></td>
+              <td><input type="password" placeholder="Enter" autocomplete="false" formControlName="password" minlength="8" maxlength="14" (keyup)="validatePassword($event)"><span class="must">*</span></td>
             </tr>
             <tr class="passwordConfrim">
               <td id="lb"><label>Confrim Password</label></td>
-              <td><input type="password" formControlName="confirmPassword" autocomplete="false" placeholder="Enter" maxlength="8" (keyup)="validatePassword($event)"><span
+              <td><input type="password" formControlName="confirmPassword" autocomplete="false" placeholder="Enter" minlength="8" maxlength="14" (keyup)="validatePassword($event)"><span
                   class="must">*</span></td>
             </tr>
             <tr>
@@ -154,11 +154,11 @@
             </tr>
             <tr id="pad">
               <td id="lb"><label>First Name</label></td>
-              <td><input type="text" placeholder="Enter" formControlName="firstName" maxlength="20"><span class="must">*</span></td>
+              <td><input type="text" placeholder="Enter" formControlName="firstName" maxlength="20" (keyup)="restrictSpecialChar($event)"><span class="must">*</span></td>
             </tr>
             <tr>
               <td id="lb"><label>Last Name</label></td>
-              <td><input type="text" placeholder="Enter" formControlName="lastName" maxlength="20"></td>
+              <td><input type="text" placeholder="Enter" formControlName="lastName" maxlength="20" (keyup)="restrictSpecialChar($event)"></td>
             </tr>
             <tr>
               <td id="lb"><label>Phone</label></td>
@@ -201,7 +201,8 @@
           <div class="er" *ngIf="error">{{error}}</div>
 
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="cpBtn">Create</button>
+            <button type="submit" class="btn btn-primary" id="cpBtn2" *ngIf="!isSubmitted" disabled>Create</button>
+            <button type="submit" class="btn btn-primary" id="cpBtn" *ngIf="isSubmitted">Create</button>
           </div>
         </form>
       </div>
@@ -308,5 +309,29 @@
 
       </div>
     </div>
+  </div>
+</div>
+<button id="suspendedB" role="button" data-toggle="modal" class="but_suspend openchangepwdmodal" data-target="#mypwd">click</button>
+<div class="modal" id="mypwd" role="dailog">
+  <div class="modal-dailog modal-sm">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Change Password</h4>
+              <i class="fa-solid fa-square-xmark cross" data-dismiss="modal"
+              aria-label="Close" id="pclose"></i>
+          </div>
+          <div class="modal-body">
+            <form class="newform" method="post" autocomplete="off" [formGroup]="changePassword" (ngSubmit)="updatePassword()">
+              <table class="text-center">
+                  <tr><td ><label class="pass1">New Password</label><input class="input1" type="password" placeholder="Enter" minlength="8" maxlength="14" formControlName="newPassword" (keyup)="validatePassword($event)"><span class="must">*</span></td></tr>
+                  <tr><td><label class="cpass">Confirm New Password </label><input type="password" placeholder="Enter" minlength="8" maxlength="14" formControlName="confirmPassword" (keyup)="validatePassword($event)"><span class="must">*</span></td></tr>
+                  <tr><td><label class="pass2">Your Password</label><input type="password" placeholder="Enter" minlength="8" maxlength="14" formControlName="oldPassword"><span class="must">*</span></td></tr>
+                <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
+                </table>
+              <div class="btBox"><button type="submit" class="chbtn">Change</button></div>
+              </form>
+          </div>
+
+      </div>
   </div>
 </div>

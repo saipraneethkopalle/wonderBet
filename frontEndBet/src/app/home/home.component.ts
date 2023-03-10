@@ -22,12 +22,21 @@ export class HomeComponent implements OnInit {
   currentroleId:any;
   loggedUser:any;
   shortCut:any;
+  pwdError:any;
+  isFirst:any;
+  isSubmitted:any=false;
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
     document.body.style.backgroundColor="#f0ece1";
     this.currentroleId=localStorage.getItem('userRoleId')
     this.loggedUser = localStorage.getItem('userName');
+    this.isFirst = localStorage.getItem("isLogin");
+    console.log(typeof(this.isFirst));
+    if(this.isFirst == "false"){
+      document.getElementById('suspendedB')?.click();
+      console.log("click")
+    }
     console.log("rd",this.currentroleId);
     this.apiService.getLevelDetails().subscribe((res:any)=>{
       this.levels=res.data;
@@ -38,7 +47,7 @@ export class HomeComponent implements OnInit {
     })
   }
   passwordForm = new FormGroup({
-    password: new FormControl('',[Validators.required])
+    password:new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')])
   })
   superUserForm=new FormGroup({
     site:new FormControl('',[Validators.required]),
@@ -52,6 +61,7 @@ export class HomeComponent implements OnInit {
     timezone:new FormControl('',[Validators.required])
   })
   restrictSpecialChar(str:any){
+    str = str.target.value;
     let nospecial=/[^A-Za-z0-9&. ]/g;
     let valid=nospecial.test(str)
     if(valid){
@@ -61,13 +71,10 @@ export class HomeComponent implements OnInit {
     }
   }
   validateUser(user:any){
-    user = user.target.value;
-    console.log("user",user)
     this.restrictSpecialChar(user);
     this.apiService.getAllUsers().subscribe((res:any)=>{
       for(var r of res.data){
-        if(r.userName == user){
-          console.log('dgdgf')
+        if(r.userName == user.target.value){
         this.error ="UserName is not valid!"
         console.log(this.error);
         }
@@ -80,8 +87,11 @@ export class HomeComponent implements OnInit {
     var reg=[/[0-9]/, /[A-Z]/, /[a-z]/]
     var passwordOk=reg.every(function(r) { return r.test(pwd.target.value) });
     this.error=!passwordOk?"password is invalid":""
+    this.pwdError=!passwordOk?"password is invalid":""
   }
   createAdmin(){
+    if(this.superUserForm.valid){
+      this.error = "";
     let payload={
       website:this.superUserForm.value.site,
       // email:this.superUserForm.value.email,
@@ -94,7 +104,6 @@ export class HomeComponent implements OnInit {
       userRoleId:this.childRoleData?.userId,
       createdBy:this.loggedUser
     }
-    console.log("payload",payload);
     this.apiService.createSuperUser(payload).subscribe((res:any)=>{
       Swal.fire({
         title:"Created"+ this.childRoleData?.userName+" !",
@@ -102,13 +111,36 @@ export class HomeComponent implements OnInit {
       })
       this.getAdmin();
       document.getElementById('close')?.click();
-    }
-    // ,(error:any)=>{
-    //     this.error = "Invalid details"
-    // }
-    )
+    })
+  }else{
+    this.error="Please fill mandatory fields!";
   }
+  }
+  changePassword = new FormGroup({
+    newPassword: new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
+    confirmPassword:new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
+    oldPassword: new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
+  })
 
+  updatePassword(){
+    if(this.changePassword.value.newPassword == this.changePassword.value.confirmPassword){
+    let payload = {
+      newPassword:this.changePassword.value.newPassword,
+      oldPassword:this.changePassword.value.oldPassword
+    }
+    this.apiService.changePassword(payload).subscribe((res:any)=>{
+    this.pwdError = ""
+      Swal.fire({
+        title:'Password updated successfully',
+        text:'Password changed successfully',
+        timer:2000
+      })
+      document.getElementById('pclose')?.click()
+    })
+  }else{
+    this.pwdError = "Password doesn't match"
+  }
+  }
   getAdmin() {
     this.apiService.getSuperUser(this.childRoleData?.userId).subscribe((res:any)=>{
       console.log(res)
