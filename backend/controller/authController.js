@@ -38,7 +38,8 @@ exports.login = async(req,res)=>{
         }
         let trackUser=await user.updateOne({userName:userName},{$set:{validationCode:validationCode}});
         let isLogin=true;
-        if(userData.default){
+        console.log(userData)
+        if(userData[0].default){
             isLogin = false;
         }else{
             isLogin = true;
