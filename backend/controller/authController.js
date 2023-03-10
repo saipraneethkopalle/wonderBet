@@ -37,9 +37,10 @@ exports.login = async(req,res)=>{
             return res.status(STATUS.BAD_REQUEST).send({"error":"Invalid User"})
         }
         let token = generateAccessToken(userCred);
+        // let data=await user.updateOne({userName:userName},{$set:{storeToken:token,expiry:token.expiry}})
+        // console.log("fdsakfsad",data,token);
         res.status(STATUS.OK).send({"message":"logged in successfully","data":{token:token,userName:userName,isActive:userData[0].isActive,userRoleId:userData[0].userRoleId,validationCode:validationCode}})
-        let data=await user.updateOne({userName:userName},{$set:{storeToken:token.token,expiry:token.expiry}})
-        console.log("fdsakfsad",data,token);
+
     }catch(err){
         return res.status(STATUS.BAD_REQUEST).send(err.message)
     }
