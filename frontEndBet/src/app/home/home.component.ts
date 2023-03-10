@@ -116,31 +116,6 @@ export class HomeComponent implements OnInit {
     this.error="Please fill mandatory fields!";
   }
   }
-  changePassword = new FormGroup({
-    newPassword: new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
-    confirmPassword:new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
-    oldPassword: new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')]),
-  })
-
-  updatePassword(){
-    if(this.changePassword.value.newPassword == this.changePassword.value.confirmPassword){
-    let payload = {
-      newPassword:this.changePassword.value.newPassword,
-      oldPassword:this.changePassword.value.oldPassword
-    }
-    this.apiService.changePassword(payload).subscribe((res:any)=>{
-    this.pwdError = ""
-      Swal.fire({
-        title:'Password updated successfully',
-        text:'Password changed successfully',
-        timer:2000
-      })
-      document.getElementById('pclose')?.click()
-    })
-  }else{
-    this.pwdError = "Password doesn't match"
-  }
-  }
   getAdmin() {
     this.apiService.getSuperUser(this.childRoleData?.userId).subscribe((res:any)=>{
       console.log(res)
