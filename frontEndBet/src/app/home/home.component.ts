@@ -165,7 +165,8 @@ export class HomeComponent implements OnInit {
       lastName:this.superUserForm.value.lastName,
       phone:this.superUserForm.value.phone,
       userRoleId:this.childRoleData?.userId,
-      createdBy:this.loggedUser
+      createdBy:this.loggedUser,
+      default:true
     }
     this.apiService.createSuperUser(payload).subscribe((res:any)=>{
       Swal.fire({
