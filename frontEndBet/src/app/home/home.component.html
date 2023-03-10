@@ -126,7 +126,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" [formGroup]="superUserForm" (ngSubmit)="createAdmin()" autocomplete="off">
+        <form  [formGroup]="superUserForm" (ngSubmit)="createAdmin()" autocomplete="off">
           <table class="table2">
             <tr>
               <td id="lb"><label>Select Website</label></td>
@@ -136,35 +136,62 @@
                   <option>laserbook23.com</option>
                 </select><span class="must">*</span></td>
             </tr>
+            <p *ngIf="site?.invalid && (site?.touched || site?.dirty)" class="validations-p">
+              <small *ngIf="site?.errors?.['required']" class="text-danger error-message-place">Website is required.</small>
+            </p>
             <tr>
               <td id="lb"><label>Username</label></td>
-              <td><input type="text" placeholder="Enter" autocomplete="false" formControlName="userName" maxlength="12" (keyup)="validateUser($event)"><span class="must">*</span></td>
+              <td><input type="text" placeholder="Enter" autocomplete="false" formControlName="userName" maxlength="12"><span class="must">*</span></td>
             </tr>
-          <div class="er" *ngIf="error">{{error}}</div>
+            <!-- <div class="er" *ngIf="error && error?.Special">{{error?.Special}}</div> -->
+            <p  *ngIf="userName?.invalid && (userName?.touched || userName?.dirty)" class="validations-p">
+                <small *ngIf="userName?.errors?.['required']" class="text-danger error-message-place">Name is required.</small>
+                <small *ngIf="userName?.errors?.['pattern']" class="text-danger error-message-place">Special Characters are not allowed.</small>
+            </p>
             <tr>
               <td id="lb"><label>Password</label></td>
-              <td><input type="password" placeholder="Enter" autocomplete="false" formControlName="password" minlength="8" maxlength="14" (keyup)="validatePassword($event)"><span class="must">*</span></td>
+              <td><input type="password" placeholder="Enter" autocomplete="false" formControlName="password" minlength="8" maxlength="14"><span class="must">*</span></td>
             </tr>
+            <p  *ngIf="password?.invalid && (password?.touched || password?.dirty)" class="validations-p">
+              <small *ngIf="password?.errors?.['required']" class="text-danger error-message-place">password is required.</small>
+              <small *ngIf="password?.errors?.['pattern']" class="text-danger error-message-place">password should require min 8 Characters.</small>
+          </p>
+            <!-- <div class="er" *ngIf="error && error?.passwordOk">{{error?.passwordOk}}</div> -->
             <tr class="passwordConfrim">
               <td id="lb"><label>Confrim Password</label></td>
-              <td><input type="password" formControlName="confirmPassword" autocomplete="false" placeholder="Enter" minlength="8" maxlength="14" (keyup)="validatePassword($event)"><span
+              <td><input type="password" formControlName="confirmPassword" autocomplete="false" placeholder="Enter" minlength="8" maxlength="14"><span
                   class="must">*</span></td>
             </tr>
+            <p  *ngIf="superUserForm?.errors?.['passwordMatchingValidatior'] && (superUserForm?.touched || superUserForm?.dirty)" class="validations-p">
+              <small class="text-danger error-message-place">password and conform password is required.</small>
+            </p>
+            <!-- <div class="er" *ngIf="error && error?.passwordOk">{{error?.passwordOk}}</div> -->
             <tr>
               <td></td>
             </tr>
             <tr id="pad">
               <td id="lb"><label>First Name</label></td>
-              <td><input type="text" placeholder="Enter" formControlName="firstName" maxlength="20" (keyup)="restrictSpecialChar($event)"><span class="must">*</span></td>
+              <td><input type="text" placeholder="Enter" formControlName="firstName" maxlength="20"><span class="must">*</span></td>
             </tr>
+            <p  *ngIf="firstName?.invalid && (firstName?.touched || firstName?.dirty)" class="validations-p">
+              <small *ngIf="firstName?.errors?.['required']" class="text-danger error-message-place">FirstName is required.</small>
+              <small *ngIf="firstName?.errors?.['pattern']" class="text-danger error-message-place">Special Character is not allowed.</small>
+          </p>
+            <!-- <div class="er" *ngIf="error && error?.Special">{{error?.Special}}</div> -->
             <tr>
               <td id="lb"><label>Last Name</label></td>
-              <td><input type="text" placeholder="Enter" formControlName="lastName" maxlength="20" (keyup)="restrictSpecialChar($event)"></td>
+              <td><input type="text" placeholder="Enter" formControlName="lastName" maxlength="20"></td>
             </tr>
+              <small *ngIf="lastName?.errors?.['pattern']" class="text-danger error-message-place">Special Character is not allowed.</small>
             <tr>
               <td id="lb"><label>Phone</label></td>
-              <td><input placeholder="Enter" formControlName="phone" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==12) return false;"></td>
+              <td><input placeholder="Enter" formControlName="phone" type="text" maxlength="10"><span class="must">*</span></td>
             </tr>
+            <p *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)" class="validations-p">
+              <small *ngIf="phone?.errors?.['required']" class="text-danger error-message-place">phone number is required.</small>
+              <small *ngIf="phone?.errors?.['minlength']" class="text-danger error-message-place">Please enter a valid phone number.</small>
+              <small *ngIf="phone?.errors?.['maxlength']" class="text-danger error-message-place">Please enter a valid phone number.</small>
+            </p>
             <tr>
               <td id="lb"><label>Time Zone</label></td>
               <td><select name="timezone" formControlName="timezone" id="opentimezone">
@@ -196,13 +223,11 @@
                   <option value="Australia/Melbourne GMT+10:00">Australia/Melbourne(GMT+10:00)</option>
                   <option value="Asia/Magadan GMT+11:00">Asia/Magadan(GMT+11:00)</option>
                   <option value="Pacific/Fiji GMT+12:00">Pacific/Fiji(GMT+12:00)</option>
-                </select><span class="must">*</span></td>
+                </select></td>
             </tr>
           </table>
-
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="cpBtn2" *ngIf="!isSubmitted" disabled>Create</button>
-            <button type="submit" class="btn btn-primary" id="cpBtn" *ngIf="isSubmitted">Create</button>
+            <button type="submit" class="btn btn-primary" id="cpBtn">Create</button>
           </div>
         </form>
       </div>

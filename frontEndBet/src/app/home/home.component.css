@@ -338,7 +338,7 @@ select {
 }
 .table2 td {
   padding: 0;
-  padding-bottom: 10px;
+  padding-top: 7px;
 }
 
 .btnnn {
@@ -681,4 +681,17 @@ height: fit-content;
 .error{
   color:#E83523;
   font-size:12px;
+}
+
+.error-message-place{
+  position: relative;
+  left: 162px;
+}
+
+.validations-p {
+  margin: 0px;
+  padding: 0px;
+}
+#crs{
+  margin-right:5px;
 }
