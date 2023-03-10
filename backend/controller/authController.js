@@ -7,7 +7,7 @@ const user = require("../models/user");
 exports.register = async(req,res)=>{
     try{
         let userData = await cryp.decryptData(req.body.payload);
-        // console.log(userData);
+        console.log(userData);
         let isUserExist = [];
         if(userData.userRoleId != 1){
             isUserExist = await user.find({userName:userData.userName}).lean()
