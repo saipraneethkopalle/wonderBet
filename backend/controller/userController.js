@@ -16,6 +16,7 @@ exports.getLevelDetails = async(req,res)=>{
 exports.changePassword=async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload);
+        // console.log("payload",payload);
         let updatUser = await user.updateOne({password:payload.oldPassword},{$set:{password:payload.newPassword,default:false}})
         return res.status(STATUS.OK).send({"message":"Password Changed Successfully"});
     }catch(err){
@@ -51,7 +52,7 @@ exports.getUserByRole = async(req,res)=>{
 exports.updateUserStatus = async(req,res)=>{
     try{
         let payload = await cryp.decryptData(req.body.payload)
-        let udateObj = await user.updateOne({userName:payload.userName},{$set:{adminstatus:payload.adminstatus}})
+        let udateObj = await user.updateOne({userName:payload.userName},{$set:{userstatus:payload.userstatus}})
         return res.status(STATUS.OK).send({message:'Updated Successfully'})
     }catch(err) {
         return res.status(STATUS.BAD_REQUEST).send({message:'error',error:err.message})

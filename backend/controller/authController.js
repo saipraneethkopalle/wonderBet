@@ -3,7 +3,7 @@ const CONST = require("../constants/CONST");
 const cryp = require("../constants/cryptojs");
 const generateAccessToken = require("../constants/generateToken");
 const user = require("../models/user");
-// console.log("====",cryp.encryptData(JSON.stringify({roleId:2})))
+console.log("====",cryp.encryptData(JSON.stringify({userName:"owner",password:"Owner1234",userRoleId:1,default:true})))
 exports.register = async(req,res)=>{
     try{
         let userData = await cryp.decryptData(req.body.payload);
@@ -13,7 +13,7 @@ exports.register = async(req,res)=>{
             isUserExist = await user.find({userName:userData.userName}).lean()
         }else{
             isUserExist = await user.find({userRoleId:1}).lean()
-            userData.createdBy="default"
+            // userData.createdBy="default"
         }        
         if(isUserExist.length > 0){
             return res.status(STATUS.BAD_REQUEST).send({"error":"User Already Exist"})
@@ -45,7 +45,7 @@ exports.login = async(req,res)=>{
             isLogin = true;
         }
         let token = generateAccessToken(userCred);
-        return res.status(STATUS.OK).send({"message":"logged in successfully","data":{token:token,userName:userName,isActive:userData[0].isActive,userRoleId:userData[0].userRoleId,validationCode:validationCode,isLogin:isLogin}})
+        return res.status(STATUS.OK).send({token:token,userName:userName,isActive:userData[0].isActive,level:userData[0].userRoleId,validationCode:validationCode,isLogin:isLogin,expiresIn:7200})
     }catch(err){
         return res.status(STATUS.BAD_REQUEST).send(err.message)
     }

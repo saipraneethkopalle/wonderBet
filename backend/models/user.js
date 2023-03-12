@@ -17,7 +17,6 @@ const matchSchema = new mongoose.Schema({
     refProfitLoss:{type:Number,default:0},
     userstatus:{type:String,default:'Active'},
     validationCode:{type:String},
-    createdBy:{type:String},
     default:{type:Boolean,default:false}
 },{ timestamps: true })
 

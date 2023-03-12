@@ -21,8 +21,20 @@ const Socketconnection = (function () {
 const addRooms = async (io) => {  
   const rooms = await io.of('/').adapter.allRooms();
   const room = Array.from(rooms); 
-  let leaveRooms=JSON.parse(await redisdb.GetRedis("OutRooms"));
+  // console.log("all",room);
+  const liveRoom = room.filter(dt => dt.startsWith('active')).map(mt => mt && mt.substring(mt.indexOf('/') + 1));
+  let newArr = []
+  let obj = {};
+  var s = liveRoom.filter(st => {
+    obj[st.split('/')[0]] = st.split('/')[1]
+    newArr.push(obj);
+  })
+  newArr = [...new Set(newArr)]
+  // console.log("currentRooms",newArr);
+  // await redisdb.SetRedis("rooms-available",JSON.stringify(newArr));
+  io.emit('activeUsers',newArr);
 }
+
 
 const getET = (io) => {
   setInterval(() => {
