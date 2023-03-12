@@ -14,8 +14,9 @@ import { SocketServiceService } from '../socket.service';
 export class LoginPageComponent implements OnInit {
   validationCode:any;
   error:any;
+  isAuthenticated=false;
   pwdError: any;
-  isLogin = true;
+  isLogin=true;
   constructor(private router:Router,private apiService:ApiServicesService,private socket:SocketServiceService) { }
   register = new FormGroup({
     userName:new FormControl('',[Validators.required,Validators.minLength(18),Validators.pattern(/[a-zA-Z0-9]/)]),
@@ -25,7 +26,16 @@ export class LoginPageComponent implements OnInit {
   get f() { return this.register.controls; }
   ngOnInit(): void {
   this.generateValidationCode()
-
+  this.logout();
+    this.apiService.getAuthStatusListner().subscribe((response) => {
+      this.error = this.apiService.getError();
+      // console.log("error message",this.isError);
+      this.isLogin =this.apiService.getisLogin();
+      if(this.error) {
+        this.isAuthenticated = false;
+      }
+  });
+  console.log("isLogin",this.isLogin);
   }
   generateValidationCode(){
     var val = Math.floor(1000 + Math.random() * 9000);
@@ -35,21 +45,9 @@ export class LoginPageComponent implements OnInit {
     let payload = {userName:this.register.value.userName,password:this.register.value.password,validationCode:this.register.value.validationCode}
     if(this.validationCode == payload.validationCode){
     this.error=''
-    this.apiService.login(payload).subscribe((res:any)=>{
-      localStorage.setItem("token",res.data.token);
-      localStorage.setItem("userName",res.data.userName);
-      localStorage.setItem("userRoleId",res.data.userRoleId)
-      localStorage.setItem("isLogin",res.data.isLogin);
-      localStorage.setItem("validationCode",this.validationCode);
-      this.isLogin = res.data.isLogin
-      console.log(this.isLogin);
-      if(this.isLogin) {
-        this.router.navigate([""])
-        this.socket.generateLoginId(res.data.userName + "/",this.validationCode)
-      } else {
-        this.isLogin = false
-      }
-    })
+    this.apiService.login(payload);
+    this.register.reset();
+    this.avoidback();
     }else{
       this.error = "Invalid Code"
       this.generateValidationCode();
@@ -90,5 +88,16 @@ export class LoginPageComponent implements OnInit {
     this.pwdError = "Password doesn't match"
   }
   }
+  avoidback(){
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = function () {
+      window.history.pushState(null, "", window.location.href);
+    };
+
+  }
+  logout() {
+    this.apiService.logout();
+
+}
 
 }

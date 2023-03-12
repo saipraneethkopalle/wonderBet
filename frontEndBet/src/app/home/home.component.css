@@ -411,7 +411,7 @@ select {
   height: auto;
   overflow: hidden;
 }
-.btn99,.btn98,.btn100,.btn99a,.btn100a{
+.btn99,.btn98,.btn98a,.btn100,.btn99a,.btn100a{
   float:left;
   display:block;
   margin-right:10px;
@@ -429,7 +429,13 @@ select {
   height: 72px;
   color: #b0b0b0;
   font-size: 17px;
-  cursor: none;
+}
+.btn98a{
+  color: #212121;
+  width: 112px;
+  height: 72px;
+  background-color: #b0b0b0;
+  font-size: 17px;
 }
 .btn99{
   width: 112px;

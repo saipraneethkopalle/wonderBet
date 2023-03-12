@@ -29,50 +29,24 @@ export class HomeComponent implements OnInit {
   validCode:any;
   constructor(private apiService:ApiServicesService,private socket:SocketServiceService) { }
   userData: any;
-
+  roomName:any;
   ngOnInit(): void {
-    this.validCode=localStorage.getItem("validationCode");
-    console.log("validcode",this.validCode);
-    this.socket.generateLoginId(localStorage.getItem("userName")+"/",this.validCode);
-    this.socket.leaveRoom(localStorage.getItem("userName")+"/"+this.validCode)
     document.body.style.backgroundColor="#f0ece1";
-    this.currentroleId=localStorage.getItem('userRoleId')
-    this.loggedUser = localStorage.getItem('userName');
-    this.isFirst = localStorage.getItem("isLogin");
-    console.log(typeof(this.isFirst));
-    if(this.isFirst == "false"){
-      document.getElementById('suspendedB')?.click();
-      console.log("click")
-    }
-    console.log("rd",this.currentroleId);
+    this.currentroleId =this.apiService.getUserLevel();
+    this.socket.leaveRoom(this.apiService.getUserName(), this.apiService.getId());
+    this.socket.enterRoom(this.apiService.getUserName() + "/" + this.apiService.getId());
     this.apiService.getLevelDetails().subscribe((res:any)=>{
       this.levels=res.data;
       this.childRoleData = res.data[this.currentroleId]
-      console.log(this.childRoleData)
-      this.shortCut = this.childRoleData.userShortCut
+      this.shortCut = this.childRoleData?.userShortCut
     this.getAdmin();
     this.apiService.getAllUsers().subscribe((res:any)=>{
           if (res && res.data) {
             this.userData = res.data.map((items: { userName: any }):any => items.userName);
-            console.log(this.userData);
-
           }
         });
     })
   }
-
-  // passwordMatchingValidatior: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
-  //   const password = control.get('password');
-  //   const confirmPassword = control.get('confirmPassword');
-
-  //   console.log('password',password);
-  //   console.log('conformPassword',confirmPassword);
-
-
-
-  //   return password?.value === confirmPassword?.value ? null : { notmatched: true };
-  // };
-
 
   passwordForm = new FormGroup({
     password:new FormControl('',[Validators.required,Validators.pattern('^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$')])
@@ -109,49 +83,9 @@ export class HomeComponent implements OnInit {
   get timeZone() { return this.superUserForm.get('timezone') }
   get site() { return this.superUserForm.get('site') }
 
-  // passwordMatchingValidatior(fg: FormGroup): Validators{
-  //   return this.registerationForm.get('password').value === this.registerationForm.get('confirmPassword').value ? null : {notmatched: true};
-  // }
-
-
-  // restrictSpecialChar(str:any){
-  //   str = str.target.value;
-  //   let nospecial=/[^A-Za-z0-9&. ]/g;
-  //   let valid=nospecial.test(str)
-  //   if(valid){
-  //     this.error.Special = "Special Character is not allowed!"
-  //   }else{
-  //     this.error=""
-  //   }
-  // }
-  // validateUser(user:any){
-  //   // this.restrictSpecialChar(user);
-  //   this.apiService.getAllUsers().subscribe((res:any)=>{
-  //     if (res && res.data) {
-  //       this.userData = res.data;
-  //     }
-  //       for(var r of res.data){
-  //       if(r.userName == user.target.value){
-  //       this.error.userName ="UserName is not valid!"
-  //       console.log(this.error);
-  //       }
-  //     }
-
-  //   })
-  // }
-
-  // validatePassword(pwd:any){
-  //   var reg=[/[0-9]/, /[A-Z]/, /[a-z]/]
-  //   var passwordOk=reg.every(function(r) { return r.test(pwd.target.value) });
-  //   this.error.passwordOk=!passwordOk?"password is invalid":""
-  //   console.log(this.error);
-
-  //   // this.pwdError=!passwordOk?"password is invalid":""
-  // }
   createAdmin(){
     console.log("this.superUserForm", this.superUserForm);
     console.log("document.getElementsByClassName('ng-invalid')", document.getElementsByClassName('ng-invalid'));
-
 
     if(this.superUserForm.valid){
       this.error = "";
@@ -173,6 +107,7 @@ export class HomeComponent implements OnInit {
         title:"Created"+ this.childRoleData?.userName+" !",
         text:"Successfully Created!"
       })
+      this.superUserForm.reset();
       this.getAdmin();
       document.getElementById('close')?.click();
     })
@@ -227,38 +162,42 @@ export class HomeComponent implements OnInit {
     console.log("data is ",data)
        this.currentStatus=data;
   }
-  // updateUserStatus() {
-  //   let payload :any= {userName:this.currentUser.userName};
-  //   let password = {password:this.passwordForm.value.password}
-  //   if(password.password==this.currentUser.password ) {
-  //     if(this.currentStatus!=undefined) {
+  updateUserStatus() {
+    let payload :any= {userName:this.currentUser.userName};
+    let password = {password:this.passwordForm.value.password}
+    if(password.password==this.currentUser.password ) {
+      if(this.currentStatus!=undefined) {
+      console.log("jfjdf",this.currentStatus)
+      if(this.currentStatus==0 ) {
+        payload.userstatus='Active'
+
+      } else if(this.currentStatus==1){
+        payload.userstatus = 'Suspended'
+      }else{
+        payload.userstatus ='Locked'
+      }
+      console.log("payload is ",payload)
+      this.apiService.updateUserState(payload).subscribe((res:any)=>{
+        Swal.fire({
+          title:'Updated!',
+          text:'Update Successfully!',
+          timer:1500
+        })
+        this.getAdmin();
+        this.passwordForm.reset();
+        document.getElementById('sclose')?.click();
+      })
+
+    } else {
+      console.log("fhdsaf")
+    }
+  } else {
+    this.passError='Invalid Password'
+  }
 
 
-  //     console.log("jfjdf",this.currentStatus)
-  //     if(this.currentStatus==0 ) {
-  //       payload.adminstatus='suspended'
-
-  //     } else if(this.currentStatus==1){
-  //       payload.adminstatus = 'locked'
-  //     }
-  //     console.log("payload is ",payload)
-  //     this.apiService.updateUserState(payload).subscribe((res:any)=>{
-  //     if(res.status) {
-  //       Swal.fire({
-  //         title:'Updated!',
-  //         text:'Update Successfully!',
-  //         timer:1500
-  //       })
-  //     }
-  //     })
-
-  //   } else {
-  //     console.log("fhdsaf")
-  //   }
-  // } else {
-  //   this.passError='Invalid Password'
-  // }
-
-
-  // }
+  }
+  ngOnDestroy() {
+    this.socket.destorySocket('active-'+this.roomName);
+  }
 }

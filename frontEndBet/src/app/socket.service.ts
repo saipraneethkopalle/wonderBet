@@ -3,35 +3,42 @@ import { io } from 'socket.io-client';
 import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { ApiServicesService } from './api-services.service';
 @Injectable({
   providedIn: 'root'
 })
 export class SocketServiceService {
   private url = environment.url;
   private socket;
-  loginId:any;
-  constructor(private router:Router) {
+  constructor(private router:Router,private apiService:ApiServicesService) {
     this.socket = io(this.url, {
       transports: ['websocket']
     });
    }
-   leaveRoom(ds:any){
-    let login = this.loginId
-    this.socket.on('leaveRoom',(data) =>{
-      if(data.includes(login)){
-        this.router.navigate(['/login'])
+   leaveRoom(userName:any,ds:any){
+    console.log('live-',userName,ds);
+    if(userName != null && userName != undefined){
+    this.socket.on('activeUsers',(data)=>{
+      // console.log(userName,"==dfs",data[0][userName],data[0].hasOwnProperty(userName));
+      if(data[0]?.hasOwnProperty(userName)){
+        // console.log("dd",data[0][userName],"sd",ds)
+        if(ds !=data[0][userName]){
+        this.destorySocket("active/"+userName+"/"+ds);
+        this.apiService.logout();
+        }
       }
     })
-   }
-   generateLoginId(current:any,data:any){
-    // console.log("v",data);
-    this.loginId =this.loginId|| current + data
-    console.log("loginId",this.loginId);
-    this.socket.emit('join_user',this.loginId)
+  }
+
+  }
+   enterRoom(data:any){
+    this.socket.emit('join_user',data)
    }
 
-  public destorySocket = (eventId:any) => {
-    this.socket.off(this.loginId);
-    this.socket.emit('destroy_room');
+  public destorySocket = (event:any) => {
+    console.log("destroy",event);
+    this.socket.off(event);
+    this.socket.off('activeUsers');
+    this.socket.emit('destroy_room',event);
   }
 }
