@@ -258,7 +258,15 @@ td {
   font-size: 11px;
   font-weight: 900;
 }
-
+.btn-primary#cpBtn2 {
+  margin-top: 25px;
+  margin-right: 120px;
+  margin-bottom: 15px;
+  width: 35%;
+  font-size: 11px;
+  font-weight: 900;
+  opacity: 0.5;
+}
 h4 {
   font-size: 17px;
   color: #3b5160;
@@ -330,7 +338,7 @@ select {
 }
 .table2 td {
   padding: 0;
-  padding-bottom: 10px;
+  padding-top: 7px;
 }
 
 .btnnn {
@@ -403,7 +411,7 @@ select {
   height: auto;
   overflow: hidden;
 }
-.btn99,.btn98,.btn100,.btn99a,.btn100a{
+.btn99,.btn98,.btn98a,.btn100,.btn99a,.btn100a{
   float:left;
   display:block;
   margin-right:10px;
@@ -421,7 +429,13 @@ select {
   height: 72px;
   color: #b0b0b0;
   font-size: 17px;
-  cursor: none;
+}
+.btn98a{
+  color: #212121;
+  width: 112px;
+  height: 72px;
+  background-color: #b0b0b0;
+  font-size: 17px;
 }
 .btn99{
   width: 112px;
@@ -500,7 +514,7 @@ height: fit-content;
 .pp2{
   float:right;
   color:#508D0E;
-  font-size:13px;  
+  font-size:13px;
 }
 
 .matchs{
@@ -613,7 +627,7 @@ height: fit-content;
   position: relative;
   margin-left: 181px;
   border: 2px solid #bbb;
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 
 
@@ -662,4 +676,28 @@ height: fit-content;
     margin-right: 16px;
     cursor: pointer;
 }
+.er{
+  color:red;
+  font-size:10px;
+  width:100%;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+.error{
+  color:#E83523;
+  font-size:12px;
+}
 
+.error-message-place{
+  position: relative;
+  left: 162px;
+}
+
+.validations-p {
+  margin: 0px;
+  padding: 0px;
+}
+#crs{
+  margin-right:5px;
+}
