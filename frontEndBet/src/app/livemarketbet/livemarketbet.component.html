@@ -12,22 +12,24 @@
                 <option value="2">Tenis</option>
               </select>
 
-               <label class="inputbody input">Select Match  </label>
-               <select class="sportStatus" (change)="getMatch($event)">
+              <label class="inputbody input">Select Match  </label>
+               <select class="sportStatus" (change)="matchDatalist($event)">
                 <option value="mAll">Select Match</option>
-                <option *ngFor="let item of matchesAllData; let i = index" [value]="item.eventName">{{ item.eventName }}</option>
-              </select>
-
+                <option *ngFor="let item of matchData; let i = index" [value]="item.eventName">{{ item.eventName }}</option>
+               </select>
               
-               <label class="inputbody input">Select Type  </label>
-               <select class="sportStatus">
-                <option value="">Select type</option>
+               <label class="inputbody input">Select Type</label>
+               <select class="sportStatus" (change)="matchTypelist($event)">
+                <option >Select type</option>
                 <option value="auto">Auto</option>
-                <option value="manual">manual</option>
+                <option value="manual">Manual</option>
               </select>
 
                <label class="inputbody input">Select Market</label>
-               <select class="sportStatus"></select>
+               <select class="sportStatus">
+                <option value="allM">Select Market</option>
+                <option *ngFor="let item of marketList">{{item}}</option>
+              </select>
           </div>
         </div>
     </div>
@@ -35,8 +37,8 @@
       <div class="sports_winner" >
         <div>
              <button class="search" ><i class="fa fa-search"></i></button>
-             <input class="searchbtn"  placeholder="Enter userId...">
-             <button class="match_button">Search</button>
+             <input type="text" class="searchbtn"  placeholder="Enter userId..." (keyup)="searchValue($event)">
+             <button class="match_button" (click)="searchValue(currentSearch)">Search</button>
              <button class="match_button">clear</button>
              
         </div>
@@ -60,7 +62,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of matchesAllData;let i=index;">
+          <tr *ngFor="let item of matchesAllData | searchFilter:currentSearch;let i=index;">
             <td>{{item.sportName}}</td>
             <td>{{item.eventName}}</td>
             <td>{{item.competitionName}}</td>

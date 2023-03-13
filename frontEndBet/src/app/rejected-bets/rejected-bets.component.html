@@ -4,16 +4,40 @@
     <div class="funtion_wraper">
       <div class="sportsBody" >
         <div class="inputt">
-            <label class="input">Select Sport</label><select class="sportStatus"><option>Select Sport</option><option>Cricket</option><option>Tennis</option><option>Soccer</option></select>
-             <label class="inputbody input">Select Match</label><select class="sportStatus"><option></option></select>
-             <label class="inputbody input">Select Type</label><select class="sportStatus"><option></option></select>
-             <label class="inputbody input">Select Market</label><select class="sportStatus"><option ></option></select>
+
+          <label class="input">Select Sport </label>
+          <select class="sportStatus" (change)="getMatchBySport($event)">
+            <option value="All">Select Sport</option>
+            <option value="4">Cricket</option>
+            <option value="1">Soccer</option>
+            <option value="2">Tenis</option>
+          </select>
+
+          <label class="inputbody input">Select Match  </label>
+            <select class="sportStatus" (change)="matchDatalist($event)">
+              <option value="mAll">Select Match</option>
+              <option *ngFor="let item of matchData; let i = index" [value]="item.eventName">{{ item.eventName }}</option>
+            </select>
+
+          <label class="inputbody input">Select Type</label>
+            <select class="sportStatus" (change)="matchTypelist($event)">
+             <option >Select type</option>
+             <option value="auto">Auto</option>
+             <option value="manual">Manual</option>
+            </select>
+
+          <label class="inputbody input">Select Market</label>
+            <select class="sportStatus">
+             <option value="allM">Select Market</option>
+             <option *ngFor="let item of marketList">{{item}}</option>
+            </select>
+
         </div>
       </div>
   </div>
   <div class="search-wrap searchbox">
     <i class="fa fa-search"></i>
-    <input type="text" placeholder="Search..." class="searchTB" >
+    <input type="text" placeholder="Search..." class="searchTB" (keyup)="searchValue($event)">
   </div>
 
   <div class="TBHead">
@@ -33,7 +57,21 @@
             <th scope="col">Roll.</th>
           </tr>
         </thead>
-
+        <tbody>
+          <tr *ngFor="let item of matchesAllData | searchFilter:currentSearch;let i=index;">
+            <td>{{item.sportName}}</td>
+            <td>{{item.eventName}}</td>
+            <td>{{item.competitionName}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.mEventId}}</td>
+            <td>{{item.oddsProvider}}</td>
+            <td></td>
+            <td>{{item.openDate}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
       </table>
       <app-pagination></app-pagination>
   </div>

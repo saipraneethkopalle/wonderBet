@@ -10,8 +10,19 @@ import { ApiServicesService } from '../api-services.service';
 })
 export class LivemarketbetComponent implements OnInit {
   matchesAllData:any;
+  eMatchesAllData:any;
+  mType:any;
   sport:any;
   match:any;
+  matchData:any;
+  isMatch:any=false;
+  isType:any=false;
+  marketList:any=[];
+  typeList:any;
+  beforeFilter :any;
+
+  currentSearch:any;
+
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
@@ -22,9 +33,31 @@ export class LivemarketbetComponent implements OnInit {
 
   getMatchData(){
     this.apiService.getAllMatches().subscribe((res:any)=>{
+      res.data.map((rs:any)=>{
+        rs.name=rs.eventName
+      })
       this.matchesAllData = res.data;
+      this.eMatchesAllData = res.data;
+      this.beforeFilter = res.data;
+  
       console.log(res);
     })
+  }
+
+  searchValue(value:any){
+    if(value.target.value != null && value.target.value != ""){
+      this.currentSearch = value.target.value;
+      this.matchesAllData = this.matchesAllData.filter((val:any)=>{
+        val.name = val.eventName  
+        if(val.name.toLowerCase().includes(value.target.value)){
+          return val
+        }else{
+          return val;
+        }
+      })
+    }else{
+      this.matchesAllData = this.eMatchesAllData;
+    }
   }
 
   getMatchBySport(name:any){
@@ -39,25 +72,28 @@ export class LivemarketbetComponent implements OnInit {
       // If user selects a specific sport, filter the matches by sportId
       this.apiService.getAllMatches().subscribe((res:any)=>{
         this.matchesAllData = res.data.filter((data:any) => data.sportId == this.sport);
+        this.matchData = res.data.filter((data:any) => data.sportId == this.sport);
       });
     }
   }
-  
-  getMatch(val:any){
-    if(val.target.value){
-      this.match = val.target.value;
-    }
+  matchDatalist(val:any){
+    val= val.target.value;
+    this.apiService.getAllMatches().subscribe((res:any)=>{
+      this.matchesAllData = res.data.filter((data:any) => data.eventName == val);
+      this.beforeFilter = this.matchesAllData;
+      this.isMatch=true;
+      this.marketList = this.matchesAllData[0]?.marketIds
+    });
+  }
 
-    if (this.match === "mAll"){
-      console.log(this.matchesAllData);
-      // If user selects "All", show all matches
-      this.getMatchData();
-    } else {
-      // If user selects a specific sport, filter the matches by sportId
-      this.apiService.getAllMatches().subscribe((res:any)=>{
-        this.matchesAllData = res.data.filter((data:any) => data.eventName == this.match);
-      });
-    }
+  matchTypelist(types:any){
+    types = types.target.value;
+      this.matchesAllData = this.beforeFilter.filter((data:any) => {if(data.type.toLowerCase() == types.toLowerCase()){return data;}});
+      
+      this.matchData = this.matchData.filter((data:any) => data.type.toLowerCase() == types.toLowerCase());
+      this.isType =true;
+      this.typeList = this.matchesAllData.type
   }
+
 }
 
