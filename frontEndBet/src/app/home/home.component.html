@@ -72,7 +72,7 @@
         <td style="text-align: right;">Action</td>
       </tr>
       <tr *ngFor="let item of accountDetails | searchFilter:currentSearch;let i=index;" class="accountData">
-        <td class="tdd"><span class="badge badge-primary">{{shortCut}}</span> &nbsp;<a href="#">{{item.userName}}</a></td>
+        <td class="tdd"><span class="badge badge-primary">{{shortCut | uppercase}}</span> &nbsp;<a href="#">{{item.userName}}</a></td>
         <td  data-toggle="modal"
         class="but_suspend openchangepwdmodal icon tdd"
         data-target="#myModal"><a href="#"
