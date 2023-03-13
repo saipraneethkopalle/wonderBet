@@ -48,17 +48,16 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  // passwordMatchingValidatior: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
-  //   const password = control.get('password');
-  //   const confirmPassword = control.get('confirmPassword');
+  passwordMatchingValidatior: ValidatorFn = (control: AbstractControl): any => {
+    const password = control.get('password');
+    const confirmPassword = control.get('confirmPassword');
 
-  //   console.log('password',password);
-  //   console.log('conformPassword',confirmPassword);
+    if (password?.pristine || confirmPassword?.pristine) {
+      return null;
+    }
     
-    
-  
-  //   return password?.value === confirmPassword?.value ? null : { notmatched: true };
-  // };
+    return password?.value === confirmPassword?.value ? null : { 'notmatched': true };
+  };
 
 
   passwordForm = new FormGroup({
@@ -74,7 +73,7 @@ export class HomeComponent implements OnInit {
     lastName:new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z0-9_.-]*$/)]),
     phone:new FormControl('',[Validators.required,Validators.minLength(10), Validators.maxLength(10), Validators.pattern('[- +()0-9]+')]),
     timezone:new FormControl('',)
-  });
+  }, { validators: this.passwordMatchingValidatior });
   
 
   get userName() { return this.superUserForm.get('userName') }

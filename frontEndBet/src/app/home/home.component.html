@@ -154,18 +154,14 @@
             </tr>
             <p  *ngIf="password?.invalid && (password?.touched || password?.dirty)" class="validations-p">
               <small *ngIf="password?.errors?.['required']" class="text-danger error-message-place">password is required.</small>
-              <small *ngIf="password?.errors?.['pattern']" class="text-danger error-message-place">password should require min 8 Characters.</small>
+              <small *ngIf="password?.errors?.['pattern']" class="text-danger error-message-place">password should require min 8 Characters and it should contain one uppercase and one number.</small>
           </p>
-            <!-- <div class="er" *ngIf="error && error?.passwordOk">{{error?.passwordOk}}</div> -->
             <tr class="passwordConfrim">
               <td id="lb"><label>Confrim Password</label></td>
               <td><input type="password" formControlName="confirmPassword" autocomplete="false" placeholder="Enter" minlength="8" maxlength="14"><span
                   class="must">*</span></td>
             </tr>
-            <p  *ngIf="superUserForm?.errors?.['passwordMatchingValidatior'] && (superUserForm?.touched || superUserForm?.dirty)" class="validations-p">
-              <small class="text-danger error-message-place">password and conform password is required.</small>
-            </p>
-            <!-- <div class="er" *ngIf="error && error?.passwordOk">{{error?.passwordOk}}</div> -->
+            <small *ngIf="superUserForm?.errors?.['notmatched']" class="text-danger error-message-place">Password and conform Password should be same.</small>
             <tr>
               <td></td>
             </tr>
@@ -183,10 +179,10 @@
               <td><input type="text" placeholder="Enter" formControlName="lastName" maxlength="20"></td>
             </tr>
               <small *ngIf="lastName?.errors?.['pattern']" class="text-danger">Special Character is not allowed.</small>
-            <tr>
+            <!-- <tr>
               <td id="lb"><label>Phone</label></td>
               <td><input placeholder="Enter" formControlName="phone" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==12) return false;"><span class="must">*</span></td>
-            </tr>
+            </tr> -->
             <p *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)" class="validations-p">
               <small *ngIf="phone?.errors?.['required']" class="text-danger error-message-place">phone number is required.</small>
               <small *ngIf="phone?.errors?.['minlength']" class="text-danger error-message-place">Please enter a valid phone number.</small>
