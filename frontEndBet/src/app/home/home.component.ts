@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
     if (password?.pristine || confirmPassword?.pristine) {
       return null;
     }
-    
+
     return password?.value === confirmPassword?.value ? null : { 'notmatched': true };
   };
 
@@ -74,8 +74,8 @@ export class HomeComponent implements OnInit {
     phone:new FormControl('',[Validators.required,Validators.minLength(10), Validators.maxLength(12), Validators.pattern('[- +()0-9]+')]),
     timezone:new FormControl('',)
   }, { validators: this.passwordMatchingValidatior });
-  
-  
+
+
 
   validateuser(value: any) {
     console.log("this.userData", this.userData);

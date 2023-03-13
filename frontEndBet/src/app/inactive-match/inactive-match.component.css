@@ -11,7 +11,6 @@ h2 {
     margin-bottom: 6px;
     font-weight: 900;
 }
-
 .banking-top{
     display: flex;
     margin: 10px 0 10px 0;
@@ -30,13 +29,9 @@ h2 {
    
    
 }
-
-
 element.style {
     font-weight: bold;
 }
-
-
 .table01 {
     width:100%;
     background-color: #fff;
@@ -79,10 +74,6 @@ thead{
     text-align: right;
   }
  
- 
-
- 
-
  .align-L1{
   width: 10%;
   font-size: 12px;
@@ -119,9 +110,6 @@ thead{
 .pp{
   color: #1e1e1e;
 }
-
-
-
   .searchblock{
     height:60px;
     padding-top:10px;
