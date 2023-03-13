@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServicesService } from '../api-services.service';
 
 @Component({
   selector: 'app-betting-pl',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BettingPLComponent implements OnInit {
   currentTab:any=[0,1,2,3,4,5,6,7,8];
-  constructor() { }
+  currentUserName:any;
+  shortCut:any;
+  selectedUser:any;
+  constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
-    this.go(0); 
+    this.go(0);
+    this.currentUserName =this.apiService.getUserName()
+    this.shortCut = localStorage.getItem('shortCut');
+    this.selectedUser = localStorage.getItem('selectedUser');
     document.body.style.backgroundColor="#f0ece1";
   }
   go(value:any){

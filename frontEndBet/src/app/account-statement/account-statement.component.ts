@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServicesService } from '../api-services.service';
 
 @Component({
   selector: 'app-account-statement',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-statement.component.css']
 })
 export class AccountStatementComponent implements OnInit {
-
-  constructor() { }
+  currentUserName:any;
+  constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
+    this.currentUserName =this.apiService.getUserName();
     document.body.style.backgroundColor="#f0ece1";
   }
 

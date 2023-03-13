@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ApiServicesService } from '../api-services.service';
 import { SocketServiceService } from '../socket.service';
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
   isFirst:any;
   isSubmitted:any=false;
   validCode:any;
-  constructor(private apiService:ApiServicesService,private socket:SocketServiceService) { }
+  constructor(private apiService:ApiServicesService,private socket:SocketServiceService,private router:Router) { }
   userData: any;
   roomName:any;
   ngOnInit(): void {
@@ -39,6 +40,7 @@ export class HomeComponent implements OnInit {
       this.levels=res.data;
       this.childRoleData = res.data[this.currentroleId]
       this.shortCut = this.childRoleData?.userShortCut
+      localStorage.setItem("shortCut",this.shortCut);
     this.getAdmin();
     this.apiService.getAllUsers().subscribe((res:any)=>{
           if (res && res.data) {
@@ -55,7 +57,7 @@ export class HomeComponent implements OnInit {
     if (password?.pristine || confirmPassword?.pristine) {
       return null;
     }
-    
+
     return password?.value === confirmPassword?.value ? null : { 'notmatched': true };
   };
 
@@ -74,8 +76,8 @@ export class HomeComponent implements OnInit {
     phone:new FormControl('',[Validators.required,Validators.minLength(10), Validators.maxLength(12), Validators.pattern('[- +()0-9]+')]),
     timezone:new FormControl('',)
   }, { validators: this.passwordMatchingValidatior });
-  
-  
+
+
 
   validateuser(value: any) {
     console.log("this.userData", this.userData);
@@ -210,6 +212,18 @@ export class HomeComponent implements OnInit {
   }
 
 
+  }
+  redirect(data:any,menu:any){
+    localStorage.setItem('selectedUser',data.userName);
+    if(menu == 0){
+      this.router.navigate(['/bettingPL'])
+    }
+    if(menu == 1){
+      this.router.navigate(['/homeBetting'])
+    }
+    if(menu == 2){
+      this.router.navigate(['/homeProfile'])
+    }
   }
   ngOnDestroy() {
     this.socket.destorySocket('active-'+this.roomName);
