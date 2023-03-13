@@ -85,8 +85,8 @@ export class ApiServicesService {
           }
         }
       }, error => {
-        this.error = error.error.message;
-        console.log("error",error);
+        this.error = error.error.error;
+        // console.log("error",error.error);
         this.authStatusListner.next(false);
       });
   }
