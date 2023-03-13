@@ -2,13 +2,13 @@
 <app-navigation></app-navigation>
 <div class="main">
   <div class="userProfile">
-    <button type="button" class="btn">
-      <div class="buttons1">A</div>
-      <a class="btn-a" href="">admin</a>  
+    <button type="button" class="user">
+      <div class="abadge">{{currentUserName |titlecase | slice:0:1}}</div>
+      <a href="">{{currentUserName |titlecase}}</a>
     </button>
-    <button type="button" class="btn">
-        <div class="buttons2">SUB</div>
-        <a class="btn-a" href="">satest</a>
+    <button type="button" class="user">
+        <div class="abadge2">{{shortCut | uppercase}}</div>
+        <a href="">{{selectedUser}}</a>
       </button>
   </div>
   <div class="subBlock">
@@ -106,7 +106,7 @@
               <table class="table2">
                   <tr><td><label>New Password</label><input type="password" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
                   <tr><td><label id="cnfrm">Confirm New Password</label><input type="password" placeholder="Enter" formControlName="newPassword"><span class="must">*</span></td></tr>
-                
+
                   <tr><td><label>Your Password</label><input type="password" placeholder="Enter" formControlName="oldPassword"><span class="must">*</span></td></tr>
                 <tr><td class="error" *ngIf="pwdError">{{pwdError}}</td></tr>
                 </table>

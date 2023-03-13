@@ -3,13 +3,13 @@
 <app-navigation></app-navigation>
 <div class="main">
   <div class="userProfile">
-    <button type="button" class="btn">
-      <div class="buttons1">A</div>
-      admin
+    <button type="button" class="user">
+      <div class="abadge">{{currentUserName |titlecase | slice:0:1}}</div>
+      {{currentUserName |titlecase}}
     </button>
-    <button type="button" class="btn">
-        <div class="buttons2">SUB</div>
-        satest
+    <button type="button" class="user">
+        <div class="abadge">{{shortCut | uppercase}}</div>
+        {{selectedUser}}
       </button>
   </div>
   <div class="subBlock">
@@ -60,7 +60,7 @@
                     <td id="right">500000.00</td>
                     <td id="right">Own Deposit	</td>
                   </tr>
-              
+
             </tbody>
           </table>
     </div>

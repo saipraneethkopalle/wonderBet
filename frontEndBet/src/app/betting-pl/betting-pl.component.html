@@ -3,12 +3,12 @@
     <div class="row">
         <div class="col" id="admin-satest">
             <button type="button" class="user">
-                <div class="abadge">A</div>
-                admin
+                <div class="abadge">{{currentUserName |titlecase | slice:0:1}}</div>
+                {{currentUserName |titlecase}}
               </button>
               <button type="button" class="user">
-                <div class="Bbadge">SUA</div>
-                satest
+                <div class="Bbadge">{{shortCut | uppercase}}</div>
+                {{selectedUser}}
               </button>
         </div>
     </div>
@@ -30,21 +30,21 @@
             <div class="profileD"><button class="pflIcon"><i class='fas fa-user-alt' id="icon-color"></i></button> satest</div>
             <div id="buttons-sizes">
                 <button type="button" [class]="currentTab==0?'aexch':'exch'" (click)="go(0)" id="buttons-sizes-all">Exchange</button>
-                    
+
                 <button [class]="currentTab==1?'aexch':'exch'" (click)="go(1)" id="buttons-sizes-all">FancyBet</button>
-                    
+
                 <button [class]="currentTab==2?'aexch':'exch'" (click)="go(2)" id="buttons-sizes-all">FancyBet1</button>
-                    
+
                 <button [class]="currentTab==3?'aexch':'exch'" (click)="go(3)" id="buttons-sizes-all">Toss</button>
-                    
+
                 <button [class]="currentTab==4?'aexch':'exch'" (click)="go(4)" id="buttons-sizes-all">Casino</button>
-                    
+
                 <button [class]="currentTab==5?'aexch':'exch'" (click)="go(5)" id="buttons-sizes-all">SportsBook</button>
-                    
+
                 <button [class]="currentTab==6?'aexch':'exch'" (click)="go(6)" id="buttons-sizes-all">BookMaker</button>
-                    
+
                 <button [class]="currentTab==7?'aexch':'exch'" (click)="go(7)" id="buttons-sizes-all">BPoker</button>
-        
+
                 <button [class]="currentTab==8?'aexch':'exch'" (click)="go(8)" id="buttons-sizes-all">Premium</button>
                 <hr id="hr">
                 </div>
@@ -106,14 +106,14 @@
                         <td colspan="1" scope="col">You have no bets in this time period.</td>
                         <td></td>
                         <td></td>
-                      </tr>  
+                      </tr>
                 </table>
             </div>
             <div id="btmText">
                 <p>Profit and Loss is shown net of commission.</p>
             </div>
         </div>
-       
+
     </div>
     <app-pagination></app-pagination>
 </div>
@@ -146,23 +146,23 @@
         <div class="profileD"><button class="pflIcon"><i class='fas fa-user-alt'></i></button> satest</div>
         <div class="mainTab">
             <div id="betting-profit-loss">
-                        
+
                 <button type="button" [class]="currentTab==0?'aexch':'exch'" (click)="go(0)">Exchange</button>
-                    
+
                 <button [class]="currentTab==1?'aexch':'exch'" (click)="go(1)">FancyBet</button>
-                    
+
                 <button [class]="currentTab==2?'aexch':'exch'" (click)="go(2)">FancyBet1</button>
-                    
+
                 <button [class]="currentTab==3?'aexch':'exch'" (click)="go(3)">Toss</button>
-                    
+
                 <button [class]="currentTab==4?'aexch':'exch'" (click)="go(4)">Casino</button>
-                    
+
                 <button [class]="currentTab==5?'aexch':'exch'" (click)="go(5)">SportsBook</button>
-                    
+
                 <button [class]="currentTab==6?'aexch':'exch'" (click)="go(6)">BookMaker</button>
-                    
+
                 <button [class]="currentTab==7?'aexch':'exch'" (click)="go(7)">BPoker</button>
-        
+
                 <button [class]="currentTab==8?'aexch':'exch'" (click)="go(8)">Premium</button>
             </div>
             <div class="m">
@@ -234,7 +234,7 @@
                         <td colspan="1" scope="col">You have no bets in this time period.</td>
                         <td></td>
                         <td></td>
-                      </tr>  
+                      </tr>
                 </table>
             </div>
             <div id="btmText">

@@ -8,6 +8,7 @@ import { ApiServicesService } from '../api-services.service';
 })
 export class ProfileComponent implements OnInit {
 err:any
+currentUserName:any;
 changepassword=new FormGroup({
   newPassword:new FormControl(''),
   confirmPassword:new FormControl(''),
@@ -16,6 +17,7 @@ changepassword=new FormGroup({
   constructor(private apiservice:ApiServicesService) { }
 
   ngOnInit(): void {
+    this.currentUserName= this.apiservice.getUserName();
     document.body.style.backgroundColor="#f0ece1";
   }
   updatePassword(){
@@ -25,7 +27,7 @@ changepassword=new FormGroup({
         oldPassword:this.changepassword.value.oldPassword
       }
       this.apiservice.changePassword(payload).subscribe((res:any)=>{
-        
+
       })
     }
 

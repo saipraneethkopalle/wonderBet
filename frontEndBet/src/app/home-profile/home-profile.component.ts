@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { ApiServicesService } from '../api-services.service';
 
 @Component({
   selector: 'app-home-profile',
@@ -9,11 +10,16 @@ import Swal from 'sweetalert2';
 })
 export class HomeProfileComponent implements OnInit {
   pwdError: string | undefined;
-
-  constructor() { }
+  currentUserName:any;
+  shortCut:any;
+  selectedUser:any;
+  constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
     document.body.style.backgroundColor="#f0ece1";
+    this.currentUserName =this.apiService.getUserName()
+    this.shortCut = localStorage.getItem('shortCut');
+    this.selectedUser = localStorage.getItem('selectedUser');
   }
   changePassword = new FormGroup({
     newPassword: new FormControl('',[Validators.required]),

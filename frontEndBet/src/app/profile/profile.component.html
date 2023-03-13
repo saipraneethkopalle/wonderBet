@@ -1,7 +1,8 @@
 <app-navigation></app-navigation>
 <div class="main">
   <div class="userProfile">
-    <button type="button" class="user"><div class="user_heading">A</div>admin</button>
+    <button type="button" class="user"><div class="abadge">{{currentUserName |titlecase | slice:0:1}}</div>
+      {{currentUserName |titlecase}}</button>
   </div>
   <div class="subBlock">
     <div class="sideBlock">

@@ -2,8 +2,8 @@
 <div class="main">
   <div class="userProfile">
     <button type="button" class="user">
-      <div class="abadge">A</div>
-      admin
+      <div class="abadge">{{currentUserName |titlecase | slice:0:1}}</div>
+      {{currentUserName |titlecase}}
     </button>
   </div>
   <div class="subBlock">

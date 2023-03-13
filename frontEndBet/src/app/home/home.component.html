@@ -86,10 +86,10 @@
         <td class="tdd"><button type="button" class="status"><span class="dot"></span>{{item.userstatus}}</button></td>
 
     <td  class="tdd" id="float" >
-      <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss" routerLink="/bettingPL"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
-      <img class="image1" src="../../assets/icons.png" routerLink="/homeBetting">
+      <button type="button"  class="arrowbtn refresh" id="Betting Profit & Loss"  (click)="redirect(item,0)"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></button>
+      <img class="image1" src="../../assets/icons.png" (click)="redirect(item,1)">
       <button type="button"class=" btn1 refresh"  data-toggle="modal" (click)="getCurrentUser(item)" data-target="#depositChip"><i class="fa fa-gear"></i></button>
-      <button type="button "class="btn1 refresh" id="profile" routerLink="/homeProfile" ><i class='fas fa-user-alt'></i></button>
+      <button type="button "class="btn1 refresh" id="profile" (click)="redirect(item,2)"><i class='fas fa-user-alt'></i></button>
     </td>
   </tr>
 </table>
