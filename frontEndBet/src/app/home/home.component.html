@@ -126,7 +126,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" [formGroup]="superUserForm" (ngSubmit)="createAdmin()" autocomplete="off">
+        <form  [formGroup]="superUserForm" (ngSubmit)="createAdmin()" autocomplete="off">
           <table class="table2">
             <tr>
               <td id="lb"><label>Select Website</label></td>
@@ -141,13 +141,14 @@
             </p>
             <tr>
               <td id="lb"><label>Username</label></td>
-              <td><input type="text" placeholder="Enter" autocomplete="false" formControlName="userName" maxlength="12"><span class="must">*</span></td>
+              <td><input type="text" placeholder="Enter" autocomplete="false" formControlName="userName" maxlength="12" (keyup)="validateuser($event)"><span class="must">*</span></td>
             </tr>
             <!-- <div class="er" *ngIf="error && error?.Special">{{error?.Special}}</div> -->
             <p  *ngIf="userName?.invalid && (userName?.touched || userName?.dirty)" class="validations-p">
                 <small *ngIf="userName?.errors?.['required']" class="text-danger error-message-place">Name is required.</small>
                 <small *ngIf="userName?.errors?.['pattern']" class="text-danger error-message-place">Special Characters are not allowed.</small>
             </p>
+            <small *ngIf="error?.invalidUser" class="text-danger error-message-place">user already exists.</small>
             <tr>
               <td id="lb"><label>Password</label></td>
               <td><input type="password" placeholder="Enter" autocomplete="false" formControlName="password" minlength="8" maxlength="14"><span class="must">*</span></td>
@@ -178,15 +179,17 @@
               <td id="lb"><label>Last Name</label></td>
               <td><input type="text" placeholder="Enter" formControlName="lastName" maxlength="20"></td>
             </tr>
-              <small *ngIf="lastName?.errors?.['pattern']" class="text-danger">Special Character is not allowed.</small>
-            <!-- <tr>
+              <small *ngIf="lastName?.errors?.['pattern']" class="text-danger error-message-place">Special Character is not allowed.</small>
+            <tr>
               <td id="lb"><label>Phone</label></td>
-              <td><input placeholder="Enter" formControlName="phone" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==12) return false;"><span class="must">*</span></td>
-            </tr> -->
+              <td><input placeholder="Enter" formControlName="phone" type="text" maxlength="12"><span class="must">*</span></td>
+            </tr>
             <p *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)" class="validations-p">
               <small *ngIf="phone?.errors?.['required']" class="text-danger error-message-place">phone number is required.</small>
               <small *ngIf="phone?.errors?.['minlength']" class="text-danger error-message-place">Please enter a valid phone number.</small>
               <small *ngIf="phone?.errors?.['maxlength']" class="text-danger error-message-place">Please enter a valid phone number.</small>
+              <small *ngIf="phone?.errors?.['pattern']" class="text-danger error-message-place">Only Numeric values are allowed.</small>
+
             </p>
             <tr>
               <td id="lb"><label>Time Zone</label></td>
@@ -237,7 +240,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Change Status</h4>
-        <i class="fa-solid fa-square-xmark cross" data-dismiss="modal"
+        <i class="fa-solid fa-square-xmark cross" id="sclose" data-dismiss="modal"
                 aria-label="Close"></i>
       </div>
       <!-- <div class="modal-body" id="dcmodal"> -->
@@ -252,14 +255,14 @@
         <hr style="margin:0;">
         <!-- </div> -->
         <div class="seconddiv">
-          <button class="btn98">
+          <button [class]="currentStatus==0?'btn98a':'btn98'" (click)="changeStatus(0)">
             <a href="#" class="a">
               <img class="img1" src="../../assets/active.png">
             </a>
             <br>
             Active
           </button>
-          <button [class]="currentStatus==0?'btn99a':'btn99'" (click)="changeStatus(0)">
+          <button [class]="currentStatus==1?'btn99a':'btn99'" (click)="changeStatus(1)">
             <a href="#" class="b">
               <img class="img1" src="../../assets/Prohibb.png">
 
@@ -268,7 +271,7 @@
             Suspend
           </button>
 
-          <button [class]="currentStatus==1?'btn100a':'btn100'" (click)="changeStatus(1)">
+          <button [class]="currentStatus==2?'btn100a':'btn100'" (click)="changeStatus(2)">
             <a href="#" class="c">
               <i class="fa fa-lock iconspn"></i>
 
@@ -282,11 +285,11 @@
       </div>
 
       <div class="passblock"  >
-        <form method="post" autocomplete="off" [formGroup]="passwordForm">
+        <form method="post" autocomplete="off" [formGroup]="passwordForm" (ngSubmit)="updateUserStatus()">
         <tr>
         <td class="label">Password</td>
         <td><div><input type="password" formControlName="password" class="plh"  placeholder="Enter" >
-          <button type="button" class="matchs" id="change">Change</button>
+          <button type="submit" class="matchs" id="change">Change</button>
         </div></td>
         <!-- <td></td> -->
         <small *ngIf="passError" class="red">{{passError}}</small>
@@ -332,4 +335,3 @@
     </div>
   </div>
 </div>
-<button id="suspendedB" role="button" data-toggle="modal" class="but_suspend openchangepwdmodal" data-target="#mypwd">click</button>

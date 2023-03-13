@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ApiServicesService } from '../api-services.service';
+import { SocketServiceService } from '../socket.service';
 
 @Component({
   selector: 'app-home',
@@ -25,26 +26,25 @@ export class HomeComponent implements OnInit {
   pwdError:any;
   isFirst:any;
   isSubmitted:any=false;
+  validCode:any;
+  constructor(private apiService:ApiServicesService,private socket:SocketServiceService) { }
   userData: any;
-  constructor(private apiService:ApiServicesService) { }
-
+  roomName:any;
   ngOnInit(): void {
     document.body.style.backgroundColor="#f0ece1";
-    this.currentroleId=localStorage.getItem('userRoleId')
-    this.loggedUser = localStorage.getItem('userName');
-    this.isFirst = localStorage.getItem("isLogin");
-    console.log(typeof(this.isFirst));
-    if(this.isFirst == "false"){
-      document.getElementById('suspendedB')?.click();
-      console.log("click")
-    }
-    console.log("rd",this.currentroleId);
+    this.currentroleId =this.apiService.getUserLevel();
+    this.socket.leaveRoom(this.apiService.getUserName(), this.apiService.getId());
+    this.socket.enterRoom(this.apiService.getUserName() + "/" + this.apiService.getId());
     this.apiService.getLevelDetails().subscribe((res:any)=>{
       this.levels=res.data;
       this.childRoleData = res.data[this.currentroleId]
-      console.log(this.childRoleData)
-      this.shortCut = this.childRoleData.userShortCut
+      this.shortCut = this.childRoleData?.userShortCut
     this.getAdmin();
+    this.apiService.getAllUsers().subscribe((res:any)=>{
+          if (res && res.data) {
+            this.userData = res.data.map((items: { userName: any }):any => items.userName);
+          }
+        });
     })
   }
 
@@ -71,10 +71,22 @@ export class HomeComponent implements OnInit {
     confirmPassword:new FormControl('', [Validators.required]),
     firstName:new FormControl('',[Validators.required, Validators.pattern(/^[a-zA-Z0-9_.-]*$/)]),
     lastName:new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z0-9_.-]*$/)]),
-    phone:new FormControl('',[Validators.required,Validators.minLength(10), Validators.maxLength(10), Validators.pattern('[- +()0-9]+')]),
+    phone:new FormControl('',[Validators.required,Validators.minLength(10), Validators.maxLength(12), Validators.pattern('[- +()0-9]+')]),
     timezone:new FormControl('',)
   }, { validators: this.passwordMatchingValidatior });
   
+  
+
+  validateuser(value: any) {
+    console.log("this.userData", this.userData);
+
+    if(this.userData && this.userData?.includes(value.target.value)) {
+      this.error.invalidUser = true;
+    } else {
+      this.error.invalidUser = false;
+    }
+  }
+
 
   get userName() { return this.superUserForm.get('userName') }
   get password() { return this.superUserForm.get('password') }
@@ -85,50 +97,10 @@ export class HomeComponent implements OnInit {
   get timeZone() { return this.superUserForm.get('timezone') }
   get site() { return this.superUserForm.get('site') }
 
-  // passwordMatchingValidatior(fg: FormGroup): Validators{
-  //   return this.registerationForm.get('password').value === this.registerationForm.get('confirmPassword').value ? null : {notmatched: true};
-  // }
-
-
-  // restrictSpecialChar(str:any){
-  //   str = str.target.value;
-  //   let nospecial=/[^A-Za-z0-9&. ]/g;
-  //   let valid=nospecial.test(str)
-  //   if(valid){
-  //     this.error.Special = "Special Character is not allowed!"
-  //   }else{
-  //     this.error=""
-  //   }
-  // }
-  validateUser(user:any){
-    // this.restrictSpecialChar(user);
-    this.apiService.getAllUsers().subscribe((res:any)=>{
-      if (res && res.data) {
-        this.userData = res.data;
-      }
-        for(var r of res.data){
-        if(r.userName == user.target.value){
-        this.error.userName ="UserName is not valid!"
-        console.log(this.error);
-        }
-      }
-
-    })
-  }
-
-  validatePassword(pwd:any){
-    var reg=[/[0-9]/, /[A-Z]/, /[a-z]/]
-    var passwordOk=reg.every(function(r) { return r.test(pwd.target.value) });
-    this.error.passwordOk=!passwordOk?"password is invalid":""
-    console.log(this.error);
-    
-    // this.pwdError=!passwordOk?"password is invalid":""
-  }
   createAdmin(){
     console.log("this.superUserForm", this.superUserForm);
     console.log("document.getElementsByClassName('ng-invalid')", document.getElementsByClassName('ng-invalid'));
-    
-    
+
     if(this.superUserForm.valid){
       this.error = "";
     let payload={
@@ -141,13 +113,15 @@ export class HomeComponent implements OnInit {
       lastName:this.superUserForm.value.lastName,
       phone:this.superUserForm.value.phone,
       userRoleId:this.childRoleData?.userId,
-      createdBy:this.loggedUser
+      createdBy:this.loggedUser,
+      default:true
     }
     this.apiService.createSuperUser(payload).subscribe((res:any)=>{
       Swal.fire({
         title:"Created"+ this.childRoleData?.userName+" !",
         text:"Successfully Created!"
       })
+      this.superUserForm.reset();
       this.getAdmin();
       document.getElementById('close')?.click();
     })
@@ -202,38 +176,42 @@ export class HomeComponent implements OnInit {
     console.log("data is ",data)
        this.currentStatus=data;
   }
-  // updateUserStatus() {
-  //   let payload :any= {userName:this.currentUser.userName};
-  //   let password = {password:this.passwordForm.value.password}
-  //   if(password.password==this.currentUser.password ) {
-  //     if(this.currentStatus!=undefined) {
+  updateUserStatus() {
+    let payload :any= {userName:this.currentUser.userName};
+    let password = {password:this.passwordForm.value.password}
+    if(password.password==this.currentUser.password ) {
+      if(this.currentStatus!=undefined) {
+      console.log("jfjdf",this.currentStatus)
+      if(this.currentStatus==0 ) {
+        payload.userstatus='Active'
+
+      } else if(this.currentStatus==1){
+        payload.userstatus = 'Suspended'
+      }else{
+        payload.userstatus ='Locked'
+      }
+      console.log("payload is ",payload)
+      this.apiService.updateUserState(payload).subscribe((res:any)=>{
+        Swal.fire({
+          title:'Updated!',
+          text:'Update Successfully!',
+          timer:1500
+        })
+        this.getAdmin();
+        this.passwordForm.reset();
+        document.getElementById('sclose')?.click();
+      })
+
+    } else {
+      console.log("fhdsaf")
+    }
+  } else {
+    this.passError='Invalid Password'
+  }
 
 
-  //     console.log("jfjdf",this.currentStatus)
-  //     if(this.currentStatus==0 ) {
-  //       payload.adminstatus='suspended'
-
-  //     } else if(this.currentStatus==1){
-  //       payload.adminstatus = 'locked'
-  //     }
-  //     console.log("payload is ",payload)
-  //     this.apiService.updateUserState(payload).subscribe((res:any)=>{
-  //     if(res.status) {
-  //       Swal.fire({
-  //         title:'Updated!',
-  //         text:'Update Successfully!',
-  //         timer:1500
-  //       })
-  //     }
-  //     })
-
-  //   } else {
-  //     console.log("fhdsaf")
-  //   }
-  // } else {
-  //   this.passError='Invalid Password'
-  // }
-
-
-  // }
+  }
+  ngOnDestroy() {
+    this.socket.destorySocket('active-'+this.roomName);
+  }
 }
