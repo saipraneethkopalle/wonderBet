@@ -30,6 +30,7 @@ app.use(bodyParser.json())
 app.use(express.json())
 // app.use(helmet());
 app.use(cors());
+
 const normalizePort = val => {
     var port = parseInt(val, 10);
   
@@ -66,25 +67,44 @@ if (cluster.isMaster) {
     app.set("port", port);
 Socketconnection.configure(http, 'worker');
 Socketconnection.io.on("connection", async (socket) => {
-        
-    socket.on('join_user',async function(user){
-      // console.log(user);
-        socket.join("active/"+user);
-        // let rooms= JSON.parse(await redisdb.GetRedis('rooms-available'))
-        // socket.emit("activeUsers",rooms)
-    });      
-
-       
+//    console.log("connected to admin socket");
+    
+    socket.on('join_user',async function(data){
+        // console.log("data",data);
+        socket.join(data);
+        var userRoom = data.slice(0,data.lastIndexOf("/"))
+        const rooms = await io.of('/').adapter.allRooms();
+        const room = Array.from(rooms);
+        let user= room.filter(rs=>rs.includes(userRoom)) 
+        // console.log("===",user);
+        if(user.length > 1){
+           user = user.filter(async(ur)=>{             
+                if(ur != data){
+                    socket.leave(ur)
+                    const rooms = await io.of('/').adapter.allRooms();
+                    const room = Array.from(rooms);
+                    // console.log("after",room)                    
+                    socket.emit("leaveRoom/",ur)     
+                    return ur               
+                }
+            })
+            await redisdb.SetRedis("OutRooms",JSON.stringify(user));
+        }
+    })
      socket.on('stats', function (data) {
         socket.join("room-stats");
       });
 
-    socket.on('destroy_room', function (data) {
-        socket.leave("active/"+data);
+    socket.on('destroy_room', function () {
+        var rooms = io.sockets.adapter.sids[socket.id];
+        for (var room in rooms) {
+            socket.leave(room);
+        }
     });
     socket.on('disconnect', () => {
         //console.log(`Socket ${socket.id} disconnected.`);
-        delete io.sockets.adapter.rooms[socket.id];     
+        delete io.sockets.adapter.rooms[socket.id];
+        
   
         
       });
