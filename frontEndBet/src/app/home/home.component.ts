@@ -71,6 +71,7 @@ export class HomeComponent implements OnInit {
         text:"Successfully Created!"
       })
       this.getAdmin();
+      document.getElementById('close')?.click();
     }
     // ,(error:any)=>{
     //     this.error = "Invalid details"
@@ -97,7 +98,10 @@ export class HomeComponent implements OnInit {
         val.name=val.userName
         if(val.name.toLowerCase().includes(value.target.value)){
           return val;
-        }}
+        }else{
+          return val;
+        }
+      }
       );
     }else{
       this.accountDetails = this.EdataList
@@ -109,7 +113,7 @@ export class HomeComponent implements OnInit {
       this.accountDetails = this.EdataList;
     } else {
       this.accountDetails = this.EdataList.filter((val:any) =>{
-      if(val.adminstatus == status.target.value){
+      if(val.userstatus == status.target.value){
         return val;
       }}
       );

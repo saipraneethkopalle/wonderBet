@@ -63,7 +63,7 @@ li{
     line-height: 21px;
     font-size: 12px;
     margin-bottom: 12px;
-    font-weight: normal; 
+    font-weight: normal;
   }
   .match{
     margin-left: 2px;
@@ -102,7 +102,7 @@ li{
     margin-left: 10px;  }
 
   .date1{
-   
+
     font-family: Tahoma, Helvetica, sans-serif;
     color: #1e1e1e;
     height: 30px;
@@ -123,7 +123,7 @@ li{
     font-weight: bold;    padding-top: 6px;
     margin-bottom: 6px;
 }
- 
+
 
 .table-pt {
     table-layout: fixed;
@@ -197,6 +197,7 @@ tbody tr{
   border-radius: 4px;
   margin-right: 5px;
   font-size: 9px;
+  padding:3px;
 }
 
 .red{
