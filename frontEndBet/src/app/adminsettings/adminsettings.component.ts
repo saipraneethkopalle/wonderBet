@@ -13,6 +13,7 @@ export class AdminsettingsComponent implements OnInit {
   constructor(private apiService:ApiServicesService) { }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor="#f0ece1";
   }
   changePassword = new FormGroup({
     newPassword: new FormControl('',[Validators.required]),
