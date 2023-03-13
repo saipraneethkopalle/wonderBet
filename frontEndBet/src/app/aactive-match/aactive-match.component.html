@@ -1,7 +1,7 @@
 <app-navigation></app-navigation>
-<div class="full-wrap">
+<div class="fuction-wrap">
     <h2>Active Matches</h2>
-    <div class="total_all banking-top">
+    <div class="active_matches_top">
       <div class="search-wrap" id="userSearchUl">
 
 
@@ -12,27 +12,27 @@
       </div>
     </div>
     <div class="table-wrap">
-        <table class="table table01">
+        <table class="table active_match_table">
             <thead>
                 <tr>
-                    <th class="align-L1  pp">Sports</th>
-                    <th class="align-L2">Event Id</th>
-                    <th class="align-L3">Market Id</th>
-                    <th class="align-L4">Match</th>
-                    <th class="align-L5">Date</th>
-                    <th class="align-L6">Status</th>
-                    <th class="align-L7">Action</th>
+                    <th class="table_head1  pp">Sports</th>
+                    <th class="table_head2">Event Id</th>
+                    <th class="table_head3">Market Id</th>
+                    <th class="table_head4">Match</th>
+                    <th class="table_head5">Date</th>
+                    <th class="table_head6">Status</th>
+                    <th class="table_head7">Action</th>
                   </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of matchList | searchFilter: searchTerm;let i=index;">
-                    <td class="align-L1" id="ad">{{item.sportName}}</td>
-                    <td class="align-L2" id="sa">{{item.eventId}}</td>
-                    <td class="align-L3" id="ma">{{item.marketId}}</td>
-                    <td class="align-L4" id="sm">{{item.eventName}}</td>
-                    <td class="align-L5" id="mm">{{item.openDate}}</td>
-                    <td class="align-L6" id="agm">{{item.isActive}}</td>
-                    <td class="align-L" id="client">
+                    <td class="table_data1" id="ad">{{item.sportName}}</td>
+                    <td class="table_data2" id="sa">{{item.eventId}}</td>
+                    <td class="table_data2" id="ma">{{item.marketId}}</td>
+                    <td class="table_data2" id="sm">{{item.eventName}}</td>
+                    <td class="table_data2" id="mm">{{item.openDate}}</td>
+                    <td class="table_data2" id="agm">{{item.isActive}}</td>
+                    <td class="table_head" id="client">
                         <button class="matchs">Mark Inactive</button>
                         <button class="matchs">Suspend Match</button>
                         <button class="matchs">Manuplation</button>

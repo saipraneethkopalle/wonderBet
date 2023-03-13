@@ -1,4 +1,4 @@
-.main{
+.main_block{
     width:100%;
     min-height: 650px;
     height:auto;
@@ -40,10 +40,10 @@
   .input{
     margin-right: 5px;
   }
-  .inputbody{
+  .inputbody_block{
     margin-left: 13px
   }
-  .match_btn{
+  .result_btn{
     margin-left: 31px;
     background: #ffb90e;
     width: 77px;
@@ -121,7 +121,7 @@
 .sports_winner{
   margin-bottom: 10px;
 }
-.table_data{
+.table_section{
   background-color: #E0E6E6;
     border-bottom: 1px solid #7e97a7;
     border-top: 1px solid #7e97a7;
@@ -135,6 +135,6 @@ th{
   border-width: 1px 0 1px 0;
   padding: 8px 10px
 }
-.table_data,.h tr{
+.table_section,.table_heading tr{
   font-size: 12px
 }

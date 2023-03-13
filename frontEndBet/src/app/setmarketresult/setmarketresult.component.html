@@ -1,8 +1,8 @@
 <app-navigation></app-navigation>
-<div class="main" >
+<div class="main_block" >
     <h2 class="header">Market Result</h2>
-    <div class="funtion_wraper ">
-        <div class="sportsBody" >
+    <div class="funtion_wraper">
+        <div class="sportsBody">
           <div>
 
               <label class="input">Select Sport </label>
@@ -30,26 +30,31 @@
 
               <button class="match_btn ">Set Result</button>
           </div>
-            
+
         </div>
     </div>
-    
-    <div class="funtion_wraper ">
-      <div class="sports_winner" >
+
+    <div class="funtion_wraper">
+      <div class="sports_winner">
         <div>
             <label>Sport:</label><select class="sports"><option>Select </option><option>Cricket</option><option>Soccer</option><option>Tenis</option></select>
-             <label class="inputbody">Form</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
-             <label class="inputbody">to</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
+             <label class="inputbody_block">Form</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
+             <label class="inputbody_block">to</label><input class="date" [value]="currentDate" type="datetime-local" placeholder="YYY-MM-DD">
              <button class="match_button">Search</button>
+<<<<<<< HEAD
              <button class="search" ><i class="fa fa-search"></i></button>
              <input class="searchbtn "  placeholder="Search here..." (keyup)="searchValue($event)">
-             
+=======
+             <button class="search"><i class="fa fa-search"></i></button>
+             <input class="searchbtn" placeholder="Search here...">
+>>>>>>> changes-css
+
         </div>
       </div>
     </div>
     <div>
-      <table class="table table_data" >
-        <thead class="h">
+      <table class="table table_section" >
+        <thead class="table_heading">
           <tr>
             <th scope="col">Sport</th>
             <th scope="col">Match ID</th>

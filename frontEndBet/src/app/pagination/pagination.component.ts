@@ -20,8 +20,7 @@ export class PaginationComponent implements OnInit {
 
   ngOnInit(): void {
     this.pageCount=localStorage.getItem('pageCount');
-    this.pageList = localStorage.getItem('pagelist');
-    console.log("list",this.pageList.split(','));
+    this.pageList = localStorage.getItem('pagelist')||[];
     this.pageCount = this.pageCount!=0?this.pageCount:10;
     this.pageCount =this.pageCount / this.limit;
     this.pages=Array.from({length: this.pageCount}, (_, i) => i + 1)

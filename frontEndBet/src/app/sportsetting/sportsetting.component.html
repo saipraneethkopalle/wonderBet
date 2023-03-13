@@ -2,7 +2,7 @@
 <div class="main">
     <h2>Sport Settings</h2>
     <div class="funtion_wraper ">
-        <div class="sportsBody" >
+        <div>
           <div>
                <button [class]="currentcompo==0?'match':'match_btn' "(click)="findcompo(0)">Cricket</button>
                <button [class]="currentcompo==1?'match':'match_btn' " (click)="findcompo(1)">Tennis</button>
@@ -14,11 +14,11 @@
             <table class="table table_data" >
               <thead>
                 <tr  class="table_row" >
-                  <th id="accountTh" class="align_L1">Match ID</th>
-                  <th class="align_L2 table_col" >Match Name</th>
-                  <th class="align_L3 table_col" >Market Id</th>
-                  <th class="align_L4 table_col" >Open Date	</th>
-                  <th class="align_L5 table_col" >Action</th>
+                  <th id="accountTh" class="table_head1">Match ID</th>
+                  <th class="table_head2">Match Name</th>
+                  <th class="table_head3">Market Id</th>
+                  <th class="table_head4">Open Date	</th>
+                  <th class="table_head5">Action</th>
                 </tr>
               </thead>
               <tbody class="table_body">
@@ -29,9 +29,9 @@
                     <td class="table_col">{{item.marketId}}</td>
                     <td class="table_col">{{item.openDate}}</td>
                     <td class="table_col">
-                        <button class="matchs">Set Limit</button>
-                        <button class="matchs">Set Bookmaker</button>
-                        <button class="matchs">Manuplation</button>
+                        <button class="sports_btn">Set Limit</button>
+                        <button class="sports_btn">Set Bookmaker</button>
+                        <button class="sports_btn">Manuplation</button>
                     </td>
                   </tr>
               </tbody>
@@ -41,11 +41,11 @@
             <table class="table table_data" >
               <thead>
                 <tr  class="table_row" >
-                  <th id="accountTh" class="align_L1"  >Match ID</th>
-                  <th class="align_L2 table_col" >Match Name</th>
-                  <th class="align_L3 table_col" >Market Id</th>
-                  <th class="align_L4 table_col" >Open Date	</th>
-                  <th class="align_L5 table_col" >Action</th>
+                  <th id="accountTh" class="table_head1"  >Match ID</th>
+                  <th class="table_head2">Match Name</th>
+                  <th class="table_head3">Market Id</th>
+                  <th class="table_head4">Open Date	</th>
+                  <th class="table_head5">Action</th>
                 </tr>
               </thead>
               <tbody class="table_body">
@@ -56,9 +56,9 @@
                     <td class="table_col">{{item.marketId}}</td>
                     <td class="table_col">{{item.openDate}}</td>
                     <td class="table_col">
-                        <button class="matchs">Set Limit</button>
-                        <button class="matchs">Set Bookmaker</button>
-                        <button class="matchs">Manuplation</button>
+                        <button class="sports_btn">Set Limit</button>
+                        <button class="sports_btn">Set Bookmaker</button>
+                        <button class="sports_btn">Manuplation</button>
                     </td>
                   </tr>
               </tbody>
@@ -68,11 +68,11 @@
             <table class="table table_data" >
               <thead>
                 <tr  class="table_row" >
-                  <th id="accountTh" class="align_L1" >Match ID</th>
-                  <th class="align_L2 table_col" >Match Name</th>
-                  <th class="align_L3 table_col" >Market Id</th>
-                  <th class="align_L4 table_col" >Open Date	</th>
-                  <th class="align_L5 table_col" >Action</th>
+                  <th id="accountTh" class="table_head1" >Match ID</th>
+                  <th class="table_head2">Match Name</th>
+                  <th class="table_head3">Market Id</th>
+                  <th class="table_head4">Open Date	</th>
+                  <th class="table_head5">Action</th>
                 </tr>
               </thead>
               <tbody class="table_body">
@@ -83,9 +83,9 @@
                     <td class="table_col">{{item.marketId}}</td>
                     <td class="table_col">{{item.openDate}}</td>
                     <td class="table_col">
-                        <button class="matchs">Set Limit</button>
-                        <button class="matchs">Set Bookmaker</button>
-                        <button class="matchs">Manuplation</button>
+                        <button class="sports_btn">Set Limit</button>
+                        <button class="sports_btn">Set Bookmaker</button>
+                        <button class="sports_btn">Manuplation</button>
                         
                     </td>
                   </tr>

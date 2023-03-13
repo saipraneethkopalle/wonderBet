@@ -8,7 +8,7 @@
     font-family: Arial, Helvetica, sans-serif;
     padding-top:10px;
 }
-.sportsBody{
+.messageBody{
     padding: 10px 10px 0;
     background-color: #E0E6E6;
     border-bottom: 1px solid #7e97a7;
@@ -57,7 +57,7 @@ h2{
     margin: 0 5px 5px 0;
     box-sizing: border-box;
   }
-  .match_button{
+  .message_button{
     margin-left: 1px;
     background: #ffb90e;
     width: 105px;
@@ -71,7 +71,7 @@ h2{
     height: 31px;
     margin-bottom: 11px;
   }
-  .sportStatus{
+  .messageStatus{
     height: 30px;
     width: 128px;
     border-radius: 1px;
@@ -80,7 +80,7 @@ h2{
     margin-right: 5px;
     font-size: 12px;
   }
-  .match_btn{
+  .action_btn{
     margin-left: 8px;
     background: #ffb90e;
     width: 77px;
@@ -111,7 +111,7 @@ h2{
   .table_data,.h tr{
     font-size: 12px
   }
-  .match_buttons{
+  .edit_button{
     margin-left: 1px;
     background: #ffb90e;
     width: 105px;
@@ -132,22 +132,22 @@ h2{
     font-weight: bold;
 
   }
-  .align1{
+  .table_data1{
     width: 9%
   }
-  .align2{
+  .table_data2{
     width: 24%
   }
-  .align3{
+  .table_data3{
     width: 20%
   }
-  .align4{
+  .table_data4{
     width: 17%
   }
-  .align5{
+  .table_data5{
     width: 12%
   }
-  .action{
+  .message_list_block{
     margin-bottom: 12px;
     margin-top: 12px;
   }

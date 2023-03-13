@@ -2,20 +2,20 @@
 <section class="main">
   <div class="full-body">
     <div class="games">
-      <h2 class="heading">Cricket</h2>
+      <h2 class="sports_heading">Cricket</h2>
       <table class="table table_data mb-2">
         <thead>
           <tr class="fw-bold">
-            <th class="align-L1" >Event Id</th>
-            <th class="align-L2" >Market Id</th>
-            <th class="align-L3" >Match Name</th>
-            <th class="align-L4" >Action</th>
+            <th class="table_head1" >Event Id</th>
+            <th class="table_head2" >Market Id</th>
+            <th class="table_head3" >Match Name</th>
+            <th class="table_head4" >Action</th>
           </tr>
         </thead>
         <tbody >
           <tr *ngFor="let item of cricketList;let i=index;">
-            <td class="firstclun">{{item.eventId}}</td>
-            <td class="firstclun">{{item.marketId}}</td>
+            <td class="table_data1">{{item.eventId}}</td>
+            <td class="table_data1">{{item.marketId}}</td>
             <td>
               <li class="game_date">
                 {{item.openDate}}
@@ -31,21 +31,21 @@
     </div>
 
     <div class="games1">
-      <h2 class="heading">Tennis</h2>
+      <h2 class="sports_heading">Tennis</h2>
 
       <table class="table table_data mb-2">
         <thead>
           <tr class="fw-bold">
-            <th class="align-L1">Event Id</th>
-            <th class="align-L2">Market Id</th>
-            <th class="align-L3">Match Name</th>
-            <th class="align-L4">Action</th>
+            <th class="table_head1">Event Id</th>
+            <th class="table_head2">Market Id</th>
+            <th class="table_head3">Match Name</th>
+            <th class="table_head4">Action</th>
           </tr>
         </thead>
-        <tbody class="tbody">
+        <tbody class="sports_body">
         <tr *ngFor="let item of soccerList;let i=index;">
-            <td class="firstclun">{{item.eventId}}</td>
-            <td class="firstclun">{{item.marketId}}</td>
+            <td class="table_data1">{{item.eventId}}</td>
+            <td class="table_data1">{{item.marketId}}</td>
             <td>
               <li class="game_date">
                 {{item.openDate}}
@@ -61,21 +61,21 @@
     </div>
 
     <div class="games2">
-      <h2 class="heading">Soccer</h2>
+      <h2 class="sports_heading">Soccer</h2>
 
       <table class="table table_data mb-2">
         <thead>
           <tr class="fw-bold">
-            <th class="align-L1">Event Id</th>
-            <th class="align-L2">Market Id</th>
-            <th class="align-L3">Match Name</th>
-            <th class="align-L4">Action</th>
+            <th class="table_head1">Event Id</th>
+            <th class="table_head2">Market Id</th>
+            <th class="table_head3">Match Name</th>
+            <th class="table_head4">Action</th>
           </tr>
         </thead>
-        <tbody class="tbody">
+        <tbody class="sports_body">
         <tr *ngFor="let item of tennisList;let i=index;">
-            <td class="firstclun">{{item.eventId}}</td>
-            <td class="firstclun">{{item.marketId}}</td>
+            <td class="table_data1">{{item.eventId}}</td>
+            <td class="table_data1">{{item.marketId}}</td>
             <td>
               <li class="game_date">
                 {{item.openDate}}

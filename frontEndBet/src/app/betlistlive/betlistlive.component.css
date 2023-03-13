@@ -15,13 +15,13 @@
   margin-bottom: 10px;
   font-size: 12px;
 }
-.sportsBody{
+.betlistselecterBody{
   padding: 10px 0px 0;
   background-color: #E0E6E6;
   /* border-bottom: 1px solid #7e97a7; */
   margin-bottom: 10px;
 }
-.match_btn{
+.refresh_btn{
   margin-left: 31px;
   background: #fdb500;
   width: 59px;
@@ -33,18 +33,18 @@
   line-height: 23px;
   font-size: 12px;
 }
-.sportStatus{
+.selectedoption{
   height: 24px;
   width: 128px;
   border-radius: 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .input{
-  margin-right: 12px;;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 12px;
 }
-.inputbody{
-  margin-left: 13px
+.input_label{
+  margin-left: 13px;
+  margin-right: 12px;
 }
 .heading{
   background: #ffb90e;
@@ -56,7 +56,7 @@
   margin: auto;
 } 
 
-.head{
+.table_head{
   background-color: #3b5160;
   border-bottom: 1px solid #3d4246;
   color: #fff;
@@ -73,7 +73,7 @@
   border-bottom: 1px solid black; 
   background-color: white;
 }
-.table_data{
+.table_head_wrapper{
   font-size: 11px;
   font-weight: 300;
   padding: 5px;
@@ -96,60 +96,56 @@ h5{
   font-size: 0.9rem;
   font-weight: 700;
 }
-.align{
-  font-size: 12px;
-  background-color: #7e97a7;
-}
-.align-L1{
+.table_head1{
   width: 8.5%;
   padding: 5px;
   border-bottom: 1px solid #3d4246;
 }
-.align-L2{
+.table_head2{
   width: 5%;
   padding: 5px;
   border-bottom: 1px solid #3d4246;
 }
-.align-L3{
+.table_head3{
   width: 6%;
   padding: 5px;
   border-bottom: 1px solid #3d4246;
 }
-.align-L4{
+.table_head4{
   width: 6%;
   padding: 5px;
   border-bottom: 1px solid #3d4246;
 }
-.align-L5{
+.table_head5{
   width: 46%;
   padding: 5px;
   border-bottom: 1px solid #3d4246;
 }
 
-.align-L6{
+.table_head6{
   width: 7%;
   padding: 5px;
   border-bottom: 1px solid #3d4246;
 }
-.align-L7{
+.table_head7{
   width: 4%;
   padding: 5px;
   text-align: center;
   border-bottom: 1px solid #3d4246;
 }
-.align-L8{
+.table_head8{
   width: 4%;
   padding: 5px;
   text-align: right;
   border-bottom: 1px solid #3d4246;
 }
-.align-L9{
+.table_head9{
   width: 7.5%;
   padding: 5px;
   text-align: right;
   border-bottom: 1px solid #3d4246;
 }
-.align-L10{
+.table_head10{
   /* width: 10% */
   padding: 5px;
   text-align: right;
@@ -159,7 +155,7 @@ h5{
   color:beige;
 }
 
-.funtion_wraper{
+.betlistselecter{
   font-size: 13px;
 }
 .tr{

@@ -130,10 +130,12 @@ label{
 }
 .btn1{
 width: 139px;
-margin-left: 90px;
+margin-left: 111px;
 border-radius: 5px;
+font-weight: 500;
+font-size: 12px;
 background-color: #ffa00c;
-border-color: #be7f1a;
+border: 1px solid #cb8009;
 }
 
 
@@ -143,7 +145,8 @@ border-color: #be7f1a;
     margin-top: 20px;
     border-radius: 5px;
     background-color: #ffa00c;
-    border-color: #be7f1a;
+    border: 1px solid #cb8009;
     font-size: 13px;
     font-weight: 600;
-    }
+}    
+      
