@@ -21,7 +21,7 @@
         <option value="Active">ACTIVE</option>
         <option value="Suspended">SUSPENDED</option>
         <option value="Locked">LOCKED</option>
-        <option value="All">ALL</option>
+        <option value="All" selected>ALL</option>
       </select>
     </div>
     <div class="addAdminblock">
@@ -247,9 +247,9 @@
       <div class="card" id="change-status-body">
         <div class="d">
           <div>
-            <div class="b1"><button class="badg">SUA</button></div>
-          <div class="b2"><p >satest</p></div>
-          <div class="b3"><p class="pp2" ><span class="dot"></span>Active</p></div>
+            <div class="b1"><button class="badg">{{shortCut | uppercase}}</button></div>
+          <div class="b2"><p >{{currentUser?.userName}}</p></div>
+          <div class="b3"><p class="pp2" ><span class="dot"></span>{{currentUser?.userstatus}}</p></div>
           </div>
         </div>
         <hr style="margin:0;">

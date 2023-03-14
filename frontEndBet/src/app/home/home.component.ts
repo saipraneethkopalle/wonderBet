@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit {
   constructor(private apiService:ApiServicesService,private socket:SocketServiceService,private router:Router) { }
   userData: any;
   roomName:any;
+  selected:any;
+  ustatus:any='Active';
   ngOnInit(): void {
     document.body.style.backgroundColor="#f0ece1";
     this.currentroleId =this.apiService.getUserLevel();
@@ -146,14 +148,14 @@ export class HomeComponent implements OnInit {
   }
 
   searchValue(value:any){
-    if(value.target.value != null && value.target.value != ""){
+    console.log("d",value.target.value.length,this.ustatus,this.EdataList);
+    if(value.target.value.length > 0){
+      console.log('searching..')
     this.currentSearch = value.target.value;
-      this.accountDetails = this.accountDetails.filter((val:any)=>
+      this.accountDetails = this.EdataList.filter((val:any)=>
         {
         val.name=val.userName
-        if(val.name.toLowerCase().includes(value.target.value)){
-          return val;
-        }else{
+        if(val.name.toLowerCase().includes(value.target.value) && val.userstatus == this.ustatus){
           return val;
         }
       }
@@ -164,6 +166,7 @@ export class HomeComponent implements OnInit {
   }
 
   getUserByStatus(status:any){
+    this.ustatus =status.target.value
     if (status.target.value === 'All') {
       this.accountDetails = this.EdataList;
     } else {
