@@ -203,9 +203,9 @@ export class HomeComponent implements OnInit {
           text:'Update Successfully!',
           timer:1500
         })
-        this.getAdmin();
         this.passwordForm.reset();
         document.getElementById('sclose')?.click();
+        this.getAdmin();
       })
 
     } else {
