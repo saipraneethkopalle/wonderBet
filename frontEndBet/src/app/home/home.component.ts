@@ -44,6 +44,9 @@ export class HomeComponent implements OnInit {
     this.getAdmin();
     this.apiService.getAllUsers().subscribe((res:any)=>{
           if (res && res.data) {
+            // console.log("res",this.apiService.getUserName(),res.data);
+            this.loggedUser = res.data.filter((re:any)=>re.userName == this.apiService.getUserName())
+            // console.log(this.loggedUser)
             this.userData = res.data.map((items: { userName: any }):any => items.userName);
           }
         });
@@ -124,8 +127,8 @@ export class HomeComponent implements OnInit {
         text:"Successfully Created!"
       })
       this.superUserForm.reset();
-      this.getAdmin();
       document.getElementById('close')?.click();
+      this.getAdmin();
     })
   }else{
     this.error="Please fill mandatory fields!";
@@ -179,9 +182,10 @@ export class HomeComponent implements OnInit {
        this.currentStatus=data;
   }
   updateUserStatus() {
+    console.log("log",this.loggedUser)
     let payload :any= {userName:this.currentUser.userName};
     let password = {password:this.passwordForm.value.password}
-    if(password.password==this.currentUser.password ) {
+    if(password.password==this.loggedUser[0]?.password ) {
       if(this.currentStatus!=undefined) {
       console.log("jfjdf",this.currentStatus)
       if(this.currentStatus==0 ) {
